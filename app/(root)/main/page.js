@@ -15,7 +15,7 @@ const Page = () => {
       <Services />
       <SelectedWork />
       <Pride />
-      {/* <Talks /> */}
+      <Talks />
       <Footer />
     </div>
   );

@@ -13,7 +13,7 @@ const Cases = () => {
               <img
                 src={port.img}
                 alt="portimg"
-                className="w-full h-full min-h-[560px]"
+                className="w-full h-full min-h-[560px] object-cover"
               />
               <div className="flex gap-4 items-center text-[15px]">
                 <p className="text-[#F9BC32] font-extrabold uppercase">
@@ -36,7 +36,7 @@ const Cases = () => {
               <img
                 src={port.img}
                 alt="portimg"
-                className="w-full h-full min-h-[560px]"
+                className="w-full h-full min-h-[560px] object-cover"
               />
               <div className="flex gap-4 items-center text-[15px]">
                 <p className="text-[#F9BC32] font-extrabold uppercase">

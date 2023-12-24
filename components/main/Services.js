@@ -47,7 +47,7 @@ const Services = () => {
                     alt="img"
                   />
                   <div className="absolute flex flex-col text-black top-0 left-0 w-full h-full sm:py-12 sm:pl-16 sm:pr-6 p-8">
-                    <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end">
+                    <span className="font-bold text-lg sm:text-[40px] text-left flex items-end justify-end">
                       {service.serial}
                     </span>
                     <div className="flex flex-col gap-6">

@@ -19,7 +19,7 @@ const Talks = () => {
             }`}
           >
             <div className="flex gap-6 items-start">
-              <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end text-[#F9BC32]">
+              <span className="font-bold text-lg sm:text-[40px] text-left flex items-end justify-end text-[#F9BC32]">
                 {talk.serial}
               </span>
               <div className="relative">
@@ -28,7 +28,7 @@ const Talks = () => {
                   src={talk.img}
                   alt="img"
                 />
-                <h1 className="font-extrabold absolute text-[70px] text-[#E6E0D2] top-[40%] -right-[200px] leading-[70px] tracking-[-3.5px]">
+                <h1 className="font-bold absolute text-[70px] text-[#E6E0D2] top-[40%] -right-[200px] leading-[70px] tracking-[-3.5px]">
                   {talk.about}
                 </h1>
               </div>

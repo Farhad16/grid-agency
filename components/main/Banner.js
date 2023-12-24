@@ -7,10 +7,10 @@ const Banner = () => {
   return (
     <Wrapper className="flex items-center justify-center">
       <div className="flex flex-col">
-        <p className="text-[#E6E0D2] text-4xl md:text-[40px] lg:text-[60px] font-extrabold">
+        <p className="text-[#E6E0D2] text-4xl md:text-[40px] lg:text-[60px] font-bold">
           We make
         </p>
-        <div className="text-[#E6E0D2] text-[80px] sm:text-[150px] md:text-[220px] lg:text-[280px] font-extrabold leading-[100px] sm:leading-[200px] tracking-wide flex relative">
+        <div className="text-[#E6E0D2] text-[80px] sm:text-[150px] md:text-[220px] lg:text-[280px] font-bold leading-[100px] sm:leading-[200px] tracking-wide flex relative">
           <h1>stup</h1>
           <div className="relative">
             <h1>i</h1>
@@ -37,7 +37,7 @@ const Banner = () => {
           <VerticleEl className="sm:-left-[180px] sm:top-14 -left-12 top-8">
             OUR STUPID
           </VerticleEl>
-          <p className="text-[#E6E0D2] md:text-[28px] lg:text-[34px] font-extrabold sm:!leading-[40px]">
+          <p className="text-[#E6E0D2] md:text-[28px] lg:text-[34px] font-bold sm:!leading-[40px]">
             We are the catalyst for
             <br />
             turning{" "}
@@ -57,7 +57,7 @@ const Banner = () => {
               layout="responsive"
             />
           </VerticleEl>
-          <p className="text-[#E6E0D2] md:text-[28px] lg:text-[34px] font-extrabold sm:!leading-[40px] text-right">
+          <p className="text-[#E6E0D2] md:text-[28px] lg:text-[34px] font-bold sm:!leading-[40px] text-right">
             We leverage our expertise in ideation,
             <br /> content creation, video production, and
             <br /> communication solutions to consistently
@@ -67,7 +67,7 @@ const Banner = () => {
         </div>
 
         <div className="sm:mt-[200px] mt-24">
-          <p className="text-[#E6E0D2] md:text-[28px] lg:text-[34px] font-extrabold sm:!leading-[40px] text-center">
+          <p className="text-[#E6E0D2] md:text-[28px] lg:text-[34px] font-bold sm:!leading-[40px] text-center">
             We do this by transforming
             <br /> the seemingly ‘STUPID'
             <br />

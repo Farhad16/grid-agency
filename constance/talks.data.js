@@ -40,7 +40,7 @@ export const talkData = [
         i % 2 === 0 ? "items-start" : "items-end"
       }`}
     >
-      <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end text-[#F9BC32]">
+      <span className="font-bold text-lg sm:text-[40px] text-left flex items-end justify-end text-[#F9BC32]">
         {talk.serial}
       </span>
       <div>

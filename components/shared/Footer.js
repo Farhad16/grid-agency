@@ -4,14 +4,13 @@ import Wrapper from "./Wrapper";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Image from "next/image";
 
 const Footer = () => {
   return (
     <div
       className="min-h-[800px] sm:mt-[200px] py-16"
       style={{
-        backgroundImage: "url('/assets/main_page/footer-bg.png')",
+        backgroundImage: "url('/assets/footer/footer-bg.png')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -21,22 +20,22 @@ const Footer = () => {
       <Wrapper className="w-full flex flex-col mt-[150px]">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <img
-            src="/assets/main_page/footer.gif"
+            src="/assets/footer/footer.gif"
             layout="responsive"
             className="w-[308px]"
             alt="footergif"
           />
           <div className="flex flex-col sm:gap-12">
             <div>
-              <p className="bg-[#F9BC32] rotate-[2deg] inline-block text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 mb-2 font-extrabold">
+              <p className="bg-[#F9BC32] rotate-[2deg] inline-block text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 mb-2 font-bold">
                 new business
               </p>
-              <p className="text-[#E6E0D2] md:text-[70px] lg:text-[100px] text-4xl font-extrabold ">
+              <p className="text-[#E6E0D2] md:text-[70px] lg:text-[100px] text-4xl font-bold ">
                 have a stupid
               </p>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8">
-              <p className="text-[#E6E0D2] md:text-[70px] lg:text-[100px] text-4xl font-extrabold">
+              <p className="text-[#E6E0D2] md:text-[70px] lg:text-[100px] text-4xl font-bold">
                 idea?
               </p>
               <button className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-[#F9BC32] transition duration-300 sm:w-[380px] w-full h-[50px]">

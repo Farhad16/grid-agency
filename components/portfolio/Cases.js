@@ -16,10 +16,10 @@ const Cases = () => {
                 className="w-full h-full min-h-[560px]"
               />
               <div className="flex gap-4 items-center text-[15px]">
-                <p className="text-[#F9BC32] font-extrabold uppercase">
+                <p className="text-[#F9BC32] font-bold uppercase">
                   {port.name}
                 </p>
-                <p className="text-[#E6E0D2] font-extrabold">{port.des}</p>
+                <p className="text-[#E6E0D2] font-bold">{port.des}</p>
               </div>
             </div>
           </Link>
@@ -39,10 +39,10 @@ const Cases = () => {
                 className="w-full h-full min-h-[560px]"
               />
               <div className="flex gap-4 items-center text-[15px]">
-                <p className="text-[#F9BC32] font-extrabold uppercase">
+                <p className="text-[#F9BC32] font-bold uppercase">
                   {port.name}
                 </p>
-                <p className="text-[#E6E0D2] font-extrabold">{port.des}</p>
+                <p className="text-[#E6E0D2] font-bold">{port.des}</p>
               </div>
             </div>
           </Link>

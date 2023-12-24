@@ -19,10 +19,10 @@ const SelectedWork = () => {
             className="sm:w-[130px] sm:h-[130px] w-[70px] h-[70px]"
           />
         </div>
-        <p className="text-[40px] sm:text-[53px] text-[#E6E0D2] tracking-[10.5px] absolute top-[42%] font-extrabold">
+        <p className="text-[40px] sm:text-[53px] text-[#E6E0D2] tracking-[10.5px] absolute top-[42%] font-bold">
           SELECTED
         </p>
-        <p className="text-[40px] sm:text-[53px] text-[#E6E0D2] tracking-[10.5px] font-extrabold">
+        <p className="text-[40px] sm:text-[53px] text-[#E6E0D2] tracking-[10.5px] font-bold">
           WORKS
         </p>
       </div>
@@ -31,8 +31,8 @@ const SelectedWork = () => {
           SELECTED WORKS
         </VerticleEl>
       </div>
-      <p className="text-[#F9BC32] text-xl font-extrabold mt-20">OSMOW’S</p>
-      <p className="text-[#E6E0D2] text-[50px] md:text-[90px] font-extrabold tracking-[-4.5px]">
+      <p className="text-[#F9BC32] text-xl font-bold mt-20">OSMOW’S</p>
+      <p className="text-[#E6E0D2] text-[50px] md:text-[90px] font-bold tracking-[-4.5px]">
         Super Bowl Special
       </p>
       <div className="w-full group relative">

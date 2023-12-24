@@ -39,7 +39,7 @@ const Footer = () => {
               <p className="text-[#E6E0D2] md:text-[70px] lg:text-[100px] text-4xl font-extrabold">
                 idea?
               </p>
-              <button className="group flex items-center border border-2 rounded-full border-[#F9BC32] transition duration-300 sm:w-[380px] w-full h-[50px]">
+              <button className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-[#F9BC32] transition duration-300 sm:w-[380px] w-full h-[50px]">
                 <p className="w-full flex items-center group-hover:justify-center font-light">
                   <span className="mr-4 uppercase opacity-0 group-hover:opacity-100 transition-opacity transition-transform transform -translate-x-full group-hover:translate-x-0">
                     Contact Us

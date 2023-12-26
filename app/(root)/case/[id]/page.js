@@ -5,6 +5,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import { Divider } from "@mui/material";
+import DividerElement from "@/components/shared/DividerElement";
 
 const Page = ({ params }) => {
   const id = params.id;
@@ -42,14 +43,10 @@ const Page = ({ params }) => {
         </Wrapper>
       </div>
       <Wrapper className="sm:mt-[150px] mt-24 flex flex-col gap-2">
-        <p className="text-2xl sm:text-3xl text-yellow-550">Task</p>
-        <div className="flex flex-col justify-between grid sm:grid-cols-4 grid-col-1 gap-6">
-          <Divider className="w-[2px] h-16 bg-[#E6E0D2] col-span-1 ml-2" />
-          <p className="text-base sm:text-[26px] text-light-50 sm:col-span-3 col-span-1 font-light">
-            Produce a video for that showcases their core menu item, chicken on
-            the rocks at their special promotional price of $7.99.
-          </p>
-        </div>
+        <DividerElement tag="Task">
+          Produce a video for that showcases their core menu item, chicken on
+          the rocks at their special promotional price of $7.99.
+        </DividerElement>
       </Wrapper>
       <div className="sm:mt-[150px] mt-24 flex flex-col gap-2">
         <Image

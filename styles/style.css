@@ -55,3 +55,18 @@
   white-space: nowrap;
   font-weight: 800;
 }
+
+.contact-bg {
+  background: url("/assets/contact/bg.jpg") center/cover;
+}
+
+.border-top {
+  border-top: 8px solid #303030;
+}
+
+.border-bottom {
+  border-bottom: 8px solid #303030;
+}
+.text-shadow {
+  text-shadow: 4px 2px 3.6px rgba(0, 0, 0, 0.58);
+}

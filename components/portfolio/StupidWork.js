@@ -15,7 +15,7 @@ const StupidWork = () => {
           alt="stupid"
           className="sm:w-[130px] sm:h-[130px] w-[70px] h-[70px]"
         />
-        <p className="absolute top-[35%] text-[120px] sm:text-[150px] text-[#E6E0D2] tracking-[10.5px] font-extrabold">
+        <p className="absolute top-[35%] text-[120px] sm:text-[150px] text-light-50 tracking-[10.5px] font-bold">
           Works
         </p>
       </div>

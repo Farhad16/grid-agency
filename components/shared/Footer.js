@@ -8,7 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const Footer = () => {
   return (
     <div
-      className="min-h-[800px] sm:mt-[200px] py-16"
+      className="min-h-[800px] py-16"
       style={{
         backgroundImage: "url('/assets/footer/footer-bg.png')",
         backgroundSize: "cover",
@@ -17,7 +17,7 @@ const Footer = () => {
         width: "100%",
       }}
     >
-      <Wrapper className="w-full flex flex-col mt-[150px]">
+      <Wrapper className="w-full flex flex-col sm:mt-[100px] mt-24">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <img
             src="/assets/footer/footer.gif"
@@ -27,18 +27,18 @@ const Footer = () => {
           />
           <div className="flex flex-col sm:gap-12">
             <div>
-              <p className="bg-[#F9BC32] rotate-[2deg] inline-block text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 mb-2 font-bold">
+              <p className="bg-yellow-550 rotate-[2deg] inline-block text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 mb-2 font-bold">
                 new business
               </p>
-              <p className="text-[#E6E0D2] md:text-[70px] lg:text-[100px] text-4xl font-bold ">
+              <p className="text-light-50 md:text-[70px] lg:text-[100px] text-4xl font-bold ">
                 have a stupid
               </p>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8">
-              <p className="text-[#E6E0D2] md:text-[70px] lg:text-[100px] text-4xl font-bold">
+              <p className="text-light-50 md:text-[70px] lg:text-[100px] text-4xl font-bold">
                 idea?
               </p>
-              <button className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-[#F9BC32] transition duration-300 sm:w-[380px] w-full h-[50px]">
+              <button className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-yellow-550 transition duration-300 sm:w-[380px] w-full h-[50px]">
                 <p className="w-full flex items-center group-hover:justify-center font-light">
                   <span className="mr-4 uppercase opacity-0 group-hover:opacity-100 transition-opacity transition-transform transform -translate-x-full group-hover:translate-x-0">
                     Contact Us
@@ -55,16 +55,16 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center sm:mt-[200px] mt-[100px] text-xs sm:text-[15px] gap-4">
-          <div className="uppercase flex flex-col text-[#E6E0D2]">
+          <div className="uppercase flex flex-col text-light-50">
             <p>DO YOU LIKE STUPID IDEAS?</p>
             <p>jointheteam@gridagenyinc.ca</p>
           </div>
-          <div className="uppercase flex flex-col text-[#E6E0D2]">
+          <div className="uppercase flex flex-col text-light-50">
             <p>242 Applewood Cres</p>
             <p>Concord, ON L4K 4E5</p>
           </div>
           <div className="flex flex-row gap-4">
-            <div className="uppercase flex flex-col text-[#E6E0D2] sm:items-end">
+            <div className="uppercase flex flex-col text-light-50 sm:items-end">
               <p className="text-left">info@gridagenyinc.ca</p>
               <p className="text-left">(416) 557-4773</p>
             </div>
@@ -74,11 +74,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col sm:flex-row justify-between pt-10 border-t border-1 border-[#E6E0D2] border-dotted mt-[80px]">
-          <p className="text-[#E6E0D2] font-light text-[10px]">
+        <div className="w-full flex flex-col sm:flex-row justify-between pt-10 border-t border-1 border-light-50 border-dotted mt-[80px]">
+          <p className="text-light-50 font-light text-[10px]">
             © 2023, Grid Creative Advertising Inc.
           </p>
-          <p className="text-[#E6E0D2] font-light text-[10px]">
+          <p className="text-light-50 font-light text-[10px]">
             privacy and cookie policy
           </p>
         </div>

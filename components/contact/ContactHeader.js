@@ -16,10 +16,10 @@ const ContactHeader = () => {
         <div className="flex flex-col">
           <div className="flex items-center">
             <div className="flex flex-col inline-block ">
-              <div className="bg-[#F9BC32] rotate-[2deg] inline-block w-fit text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 font-bold">
+              <div className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 font-bold">
                 talk to us
               </div>
-              <p className="text-[#E6E0D2] md:text-[100px] lg:text-[130px] text-6xl font-bold">
+              <p className="text-light-50 md:text-[100px] lg:text-[130px] text-6xl font-bold">
                 have a
               </p>
             </div>
@@ -31,7 +31,7 @@ const ContactHeader = () => {
               className="sm:max-w-[150px] max-w-[100px]"
             />
           </div>
-          <div className="text-[#E6E0D2] md:text-[100px] lg:text-[130px] text-6xl font-bold relative">
+          <div className="text-light-50 md:text-[100px] lg:text-[130px] text-6xl font-bold relative">
             project in
             <img
               src="/assets/contact/lines.png"
@@ -45,25 +45,25 @@ const ContactHeader = () => {
       <div className="grid sm:grid-cols-3 grid-cols-1 gap-16 mt-[100px]">
         <div className="flex flex-col gap-16 col-span-1">
           <div className="flex flex-col">
-            <p className="bg-[#F9BC32] rotate-[2deg] inline-block w-fit text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 font-bold">
+            <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 font-bold">
               prefer email?
             </p>
-            <p className="text-[#E6E0D2] text-base md:text-[20px] lg:text-[30px] font-bold sm:!leading-[40px]">
+            <p className="text-light-50 text-base md:text-[20px] lg:text-[30px] font-bold sm:!leading-[40px]">
               You can reach us at
               <br />
-              <span className="text-[#F9BC32] underline break-words">
+              <span className="text-yellow-550 underline break-words">
                 info@gridagencyinc.ca
               </span>
             </p>
           </div>
           <div className="flex flex-col">
-            <p className="bg-[#F9BC32] -rotate-[2deg] inline-block w-fit text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 font-bold">
+            <p className="bg-yellow-550 -rotate-[2deg] inline-block w-fit text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 font-bold">
               prefer docs?
             </p>
-            <p className="text-[#E6E0D2] md:text-[26px] lg:text-[30px] font-bold sm:!leading-[40px]">
+            <p className="text-light-50 md:text-[26px] lg:text-[30px] font-bold sm:!leading-[40px]">
               check out our
               <br />
-              <span className="text-[#F9BC32] underline">pricing slide</span>
+              <span className="text-yellow-550 underline">pricing slide</span>
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@ const ContactHeader = () => {
             <FormInput label="How can we help?" />
           </div>
           <FormInput label="Project details" textarea={true} />
-          <button className="text-[#F9BC32] hover:bg-[#F9BC32] hover:bg-opacity-20 focus:outline-none outline-none group flex items-center border border-2 rounded-full border-[#F9BC32] transition duration-300 py-[10px] px-[32px] w-fit">
+          <button className="text-yellow-550 hover:bg-yellow-550 hover:bg-opacity-20 focus:outline-none outline-none group flex items-center border border-2 rounded-full border-yellow-550 transition duration-300 py-[10px] px-[32px] w-fit">
             GET A QUOTE
           </button>
         </div>

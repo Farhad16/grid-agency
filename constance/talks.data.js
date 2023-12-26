@@ -40,7 +40,7 @@ export const talkData = [
         i % 2 === 0 ? "items-start" : "items-end"
       }`}
     >
-      <span className="font-bold text-lg sm:text-[40px] text-left flex items-end justify-end text-[#F9BC32]">
+      <span className="font-bold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">
         {talk.serial}
       </span>
       <div>
@@ -49,7 +49,7 @@ export const talkData = [
           src={talk.img}
           alt="img"
         />
-        <h1 className="absolute text-[70px] text-[#E6E0D2] top-[50%]">
+        <h1 className="absolute text-[70px] text-light-50 top-[50%]">
           {talk.about}
         </h1>
       </div>

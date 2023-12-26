@@ -7,7 +7,7 @@ import Wrapper from "../shared/Wrapper";
 const Talks = () => {
   return (
     <div className="relative w-full h-full flex items-center justify-center bg-[#241F20] sm:mt-[200px] mt-24 overflow-hidden overflow-x-auto py-[100px]">
-      <VerticleEl className="left-0 !text-[#E6E0D2] z-10">
+      <VerticleEl className="left-0 !text-light-50 z-10">
         STUPID TALKS
       </VerticleEl>
       <div class="background-text"></div>
@@ -19,7 +19,7 @@ const Talks = () => {
             }`}
           >
             <div className="flex gap-6 items-start">
-              <span className="font-bold text-lg sm:text-[40px] text-left flex items-end justify-end text-[#F9BC32]">
+              <span className="font-bold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">
                 {talk.serial}
               </span>
               <div className="relative">
@@ -28,7 +28,7 @@ const Talks = () => {
                   src={talk.img}
                   alt="img"
                 />
-                <h1 className="font-bold absolute text-[70px] text-[#E6E0D2] top-[40%] -right-[200px] leading-[70px] tracking-[-3.5px]">
+                <h1 className="font-bold absolute text-[70px] text-light-50 top-[40%] -right-[200px] leading-[70px] tracking-[-3.5px]">
                   {talk.about}
                 </h1>
               </div>
@@ -39,7 +39,7 @@ const Talks = () => {
           </div>
         ))}
       </Wrapper>
-      <VerticleEl className="sm:-right-[0px] -right-4 !text-[#F9BC32] z-10">
+      <VerticleEl className="sm:-right-[0px] -right-4 !text-yellow-550 z-10">
         READ MORE
       </VerticleEl>
     </div>

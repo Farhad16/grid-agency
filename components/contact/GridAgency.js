@@ -105,7 +105,7 @@ const GridAgency = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center text-[#E6E0D2] mb-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+        <div className="flex flex-col items-center text-light-50 mb-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
           <div className="md:text-[26px] lg:text-[30px] font-medium sm:!leading-[40px] uppercase tracking-[4.5px] flex items-center sm:ml-16 ml-10">
             Follow Us
             <img

@@ -10,13 +10,13 @@ const FormInput = ({ label, value, textarea }) => {
         {textarea ? (
           <textarea
             type="text"
-            className="border-t focus:outline-none boder-2 border-[#E6E0D2] bg-[#0E0E0E]"
+            className="border-t focus:outline-none boder-2 border-light-50 bg-[#0E0E0E]"
             rows="10"
           />
         ) : (
           <input
             type="text"
-            className="border-t focus:outline-none boder-2 border-[#E6E0D2] bg-transparent"
+            className="border-t focus:outline-none boder-2 border-light-50 bg-transparent"
             multiple
           />
         )}

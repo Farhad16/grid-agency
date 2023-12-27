@@ -4,7 +4,6 @@ import Wrapper from "@/components/shared/Wrapper";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { Divider } from "@mui/material";
 import DividerElement from "@/components/shared/DividerElement";
 
 const Page = ({ params }) => {
@@ -35,6 +34,7 @@ const Page = ({ params }) => {
           layout="responsive"
           width={100}
           height={100}
+          objectFit="cover"
         />
         <Wrapper>
           <p className="text-[15px] font-bold text-light-50 tracking-[3.75px]">
@@ -55,6 +55,7 @@ const Page = ({ params }) => {
           layout="responsive"
           width={100}
           height={100}
+          objectFit="cover"
         />
       </div>
       <Wrapper className="flex flex-col mt-[100px]">
@@ -85,6 +86,7 @@ const Page = ({ params }) => {
           width={100}
           height={100}
           className="rounded-xl"
+          objectFit="cover"
         />
       </Wrapper>
       <Footer />

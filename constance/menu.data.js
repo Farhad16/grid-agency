@@ -1,14 +1,14 @@
 export const menuItem = [
   {
     name: "homepage",
-    route: "/home",
+    route: "/main",
   },
   {
     name: "works",
-    route: "/works",
+    route: "/portfolio",
   },
   {
     name: "talks",
-    route: "/talks",
+    route: "/contact",
   },
 ];

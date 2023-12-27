@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { useSpring, animated } from "react-spring";
 
-const AnimatedMenu = ({ open }) => {
+const AnimatedMenu = ({ open, setOpen }) => {
   const menuAnimation1 = useSpring({
     transform: open ? "translateX(0%)" : "translateX(50%)",
     opacity: open ? 1 : 0,
@@ -52,7 +52,7 @@ const AnimatedMenu = ({ open }) => {
   return (
     <>
       <animated.div
-        className={`fixed top-[15%] bg-[#2B2B2B] w-1/3 h-screen  z-20`}
+        className={`fixed top-[15%] bg-[#2B2B2B] w-1/3 h-screen z-20`}
         style={{ ...menuAnimation1 }}
       ></animated.div>
       <animated.div
@@ -79,6 +79,7 @@ const AnimatedMenu = ({ open }) => {
               href={item.route}
               key={item.name}
               className="text-light-50 md:text-[80px] lg:text-[100px] text-4xl font-bold"
+              onClick={() => setOpen(false)}
             >
               {item.name}
             </Link>

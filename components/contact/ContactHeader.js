@@ -29,6 +29,7 @@ const ContactHeader = () => {
               width={150}
               height={150}
               className="sm:max-w-[150px] max-w-[100px]"
+              objectFit="cover"
             />
           </div>
           <div className="text-light-50 md:text-[100px] lg:text-[130px] text-6xl font-bold relative">

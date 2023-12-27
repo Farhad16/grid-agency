@@ -49,7 +49,7 @@ const SelectedWork = () => {
           alt="stupid"
           className="absolute right-20 md:right-40 sm:w-[84px] sm:h-[61px] w-[40px] h-[20px] clip-path-triangle"
         />
-        <div class="absolute top-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-black bg-opacity-50 group-hover:h-full group-hover:opacity-100 duration-500" />
+        <div className="absolute top-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-black bg-opacity-50 group-hover:h-full group-hover:opacity-100 duration-500" />
       </div>
     </Wrapper>
   );

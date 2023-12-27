@@ -5,7 +5,7 @@ import Wrapper from "./Wrapper";
 import AnimatedMenu from "./AnimatedMenu";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const toggleMenu = () => {
     setOpen(!open);
@@ -31,8 +31,11 @@ const Navbar = () => {
       </Wrapper>
 
       {/* Menu Content */}
-      <div onMouseLeave={() => setOpen(false)}>
-        <AnimatedMenu open={open} />
+      <div
+        onMouseLeave={() => setOpen(false)}
+        // className={`${open ? "block" : "hidden"}`}
+      >
+        <AnimatedMenu open={open} setOpen={setOpen} />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import VerticleEl from "../shared/VerticleEl";
 import { talkData } from "@/constance/talks.data";
 import Wrapper from "../shared/Wrapper";
@@ -10,13 +10,14 @@ const Talks = () => {
       <VerticleEl className="left-0 !text-light-50 z-10">
         STUPID TALKS
       </VerticleEl>
-      <div class="background-text"></div>
+      <div className="background-text"></div>
       <Wrapper className="flex flex-row w-full h-full z-10 sm:min-h-[700px] min-h-[500px]">
         {talkData.map((talk, i) => (
           <div
             className={`flex flex-row min-w-[900px] ${
               i % 2 === 0 ? "items-start" : "items-end"
             }`}
+            key={i}
           >
             <div className="flex gap-6 items-start">
               <span className="font-bold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">

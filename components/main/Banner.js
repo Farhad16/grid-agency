@@ -37,11 +37,11 @@ const Banner = () => {
           <VerticleEl className="sm:-left-[180px] sm:top-14 -left-12 top-8">
             OUR STUPID
           </VerticleEl>
-          <p className="text-light-50 md:text-[28px] lg:text-[34px] font-bold sm:!leading-[40px]">
+          <p className="text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium tracking-[-1.7px]">
             We are the catalyst for
             <br />
             turning{" "}
-            <span className="text-yellow-550">
+            <span className="text-yellow-550 font-bold">
               unconventional <br /> ideas into realities.
             </span>
           </p>
@@ -57,21 +57,23 @@ const Banner = () => {
               layout="responsive"
             />
           </VerticleEl>
-          <p className="text-light-50 md:text-[28px] lg:text-[34px] font-bold sm:!leading-[40px] text-right">
+          <p className="text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium text-right tracking-[-1.7px]">
             We leverage our expertise in ideation,
             <br /> content creation, video production, and
             <br /> communication solutions to consistently
             <br />
-            <span className="text-yellow-550">redefine what's attainable</span>
+            <span className="text-yellow-550 font-bold">
+              redefine what's attainable
+            </span>
           </p>
         </div>
 
         <div className="sm:mt-[200px] mt-24">
-          <p className="text-light-50 md:text-[28px] lg:text-[34px] font-bold sm:!leading-[40px] text-center">
+          <p className="text-light-50 text-[28px] md:text-[40px] lg:text-[54px] font-medium text-center tracking-[-2.7px]">
             We do this by transforming
             <br /> the seemingly ‘STUPID'
             <br />
-            <span className="bg-yellow-550 rotate-[2deg] inline-block text-[#231F20] mt-2">
+            <span className="bg-yellow-550 rotate-[2deg] inline-block text-[#231F20] mt-2 font-bold px-3">
               into brilliant innovative outcomes.
             </span>
           </p>

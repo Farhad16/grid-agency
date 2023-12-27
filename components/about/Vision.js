@@ -13,6 +13,7 @@ const Vision = () => {
             width={100}
             height={100}
             src="/assets/about/mix.gif"
+            objectFit="cover"
           />
         </div>
       </div>

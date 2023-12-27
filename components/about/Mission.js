@@ -13,6 +13,7 @@ const Mission = () => {
             width={100}
             height={100}
             src="/assets/about/man.gif"
+            objectFit="cover"
           />
         </div>
         <div className="flex flex-col gap-2">

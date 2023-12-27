@@ -7,7 +7,7 @@ const MarqueeText = () => {
     <div className="flex flex-col w-full sm:mt-[200px] mt-24 relative">
       <div className="rotate-[4.2deg] absolute top-1/2 right-0 transform -translate-y-1/2 bg-black">
         <Marquee
-          className="flex items-center gap-2 sm:text-[30px] text-sm text-[#E6E0D2] tracking-[10.5px]"
+          className="flex items-center gap-2 sm:text-[30px] text-sm text-light-50 tracking-[10.5px] p-3 border border-[#E6E0D2]"
           speed={200}
         >
           <Image
@@ -22,7 +22,7 @@ const MarqueeText = () => {
       </div>
       <div className="-rotate-[4.2deg] relative bg-black">
         <Marquee
-          className="flex items-center sm:text-[30px] text-sm text-[#E6E0D2] tracking-[10.5px]"
+          className="flex items-center sm:text-[30px] text-sm text-light-50 tracking-[10.5px] p-3 border border-[#E6E0D2]"
           speed={200}
         >
           <Image

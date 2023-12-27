@@ -35,6 +35,7 @@ const Page = ({ params }) => {
           layout="responsive"
           width={100}
           height={100}
+          objectFit="cover"
         />
         <Wrapper>
           <p className="text-[15px] font-bold text-light-50 tracking-[3.75px]">
@@ -55,6 +56,7 @@ const Page = ({ params }) => {
           layout="responsive"
           width={100}
           height={100}
+          objectFit="cover"
         />
       </div>
       <Wrapper className="flex flex-col mt-[100px]">
@@ -85,6 +87,7 @@ const Page = ({ params }) => {
           width={100}
           height={100}
           className="rounded-xl"
+          objectFit="cover"
         />
       </Wrapper>
       <Footer />

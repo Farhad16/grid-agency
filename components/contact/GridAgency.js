@@ -155,7 +155,7 @@ const GridAgency = () => {
           </div>
         </div>
 
-        <div className="flex w-full justify-between gap-12 sm:hidden">
+        {/* <div className="flex w-full justify-between gap-12 sm:hidden">
           <div className="h-[380px]">
             <motion.img
               src="/assets/contact/shoes.png"
@@ -184,7 +184,8 @@ const GridAgency = () => {
               transition={{ duration: 0.3 }}
             />
           </div>
-        </div>
+        </div> */}
+
         <div className="flex items-center justify-end sm:mt-0 mt-10">
           <InstagramIcon sx={{ fontSize: "50px" }} />
           <LinkedInIcon sx={{ fontSize: "50px" }} />

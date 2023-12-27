@@ -5,10 +5,10 @@ export const menuItem = [
   },
   {
     name: "works",
-    route: "/works",
+    route: "/portfolio",
   },
   {
     name: "talks",
-    route: "/talks",
+    route: "/contact",
   },
 ];

@@ -4,7 +4,6 @@ import Wrapper from "@/components/shared/Wrapper";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { Divider } from "@mui/material";
 import DividerElement from "@/components/shared/DividerElement";
 
 const Page = ({ params }) => {

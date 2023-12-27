@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Autoplay, Pagination } from "swiper";
+import { A11y, Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -39,7 +39,7 @@ const Services = () => {
         <VerticleEl className="sm:left-12 left-0 !text-[#231F20]">
           SERVICES
         </VerticleEl>
-        <div className="w-full pt-6">
+        <>
           {loading ? (
             <CircularProgress
               className="text-yellow-550 absolute top-[100%] left-[48%] -translateX-1/2 -translateY-1/2"
@@ -47,16 +47,17 @@ const Services = () => {
               size={60}
             />
           ) : (
-            <>
+            <div className="w-full absolute top-0 left-0">
               <Swiper
                 autoHeight={true}
-                modules={[Pagination, Autoplay]}
+                modules={[Pagination, A11y]}
                 slidesPerView={1}
-                navigation
+                scrollbar={{ draggable: true }}
+                spaceBetween="30"
                 autoplay={{
                   delay: 2000,
                 }}
-                spaceBetween="10"
+                loop
                 pagination={{ clickable: true, el: ".slider-pagination" }}
                 className={tw(
                   css({
@@ -65,7 +66,6 @@ const Services = () => {
                     },
                   })
                 )}
-                loop
               >
                 {serviceData &&
                   serviceData.map((service, i) => (
@@ -73,13 +73,13 @@ const Services = () => {
                       key={service.id}
                       className="w-full flex items-center justify-center"
                     >
-                      <div className="relative sm:w-[690px] sm:h-[700px] w-full h-[550px] sm:p-0 p-4">
+                      <div className="relative sm:w-[690px] sm:h-[700px] w-full h-[550px] p-4">
                         <img
                           className="w-full h-full object-cover"
-                          src={service.bg_image}
+                          src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${service.bg_image}`}
                           alt="img"
                         />
-                        <div className="absolute flex flex-col text-black top-0 left-0 w-full h-full sm:py-12 sm:pl-16 sm:pr-6 p-8">
+                        <div className="absolute top-10 left-0 flex flex-col text-black w-full h-full sm:py-12 sm:pl-16 sm:pr-6">
                           <span className="font-bold text-lg sm:text-[40px] text-left flex items-end justify-end">
                             {i + 1 > 10 ? ++i : `0${++i}`}
                           </span>
@@ -87,10 +87,10 @@ const Services = () => {
                             <h1 className="text-3xl sm:text-[70px] font-bold text-[#231F20] sm:leading-[80px]">
                               {service.name}
                             </h1>
-                            <p className="text-base sm:text-[26px] font-light mt-4">
+                            <p className="text-base sm:text-[26px] font-light mt-4 leading-[30px]">
                               <HTMLParser content={service.about} />
                             </p>
-                            <p className="text-base sm:text-[26px] font-medium">
+                            <p className="text-base sm:text-[26px] font-medium leading-[30px]">
                               <HTMLParser content={service.description} />
                             </p>
                           </div>
@@ -105,9 +105,9 @@ const Services = () => {
                   "slider-pagination text-center mt-4 space-x-2 flex flex-row items-center justify-center"
                 )}
               />
-            </>
+            </div>
           )}
-        </div>
+        </>
 
         <VerticleEl className="sm:-right-[0px] -right-4 !text-[#231F20]">
           STUPID SERVICES

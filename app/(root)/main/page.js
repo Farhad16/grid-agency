@@ -9,7 +9,7 @@ import Wrapper from "@/components/shared/Wrapper";
 
 const Page = () => {
   return (
-    <div className="flex flex-col text-white bg-[#0A0808] pt-20 sm:pt-[200px] min-h-screen relative">
+    <div className="flex flex-col text-white bg-[#0A0808] pt-[150px] sm:pt-[250px] min-h-screen relative">
       <Banner />
       <MarqueeText />
       <Services />

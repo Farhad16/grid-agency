@@ -7,7 +7,7 @@ import ScrollTalks from "./ScrollTalks";
 
 const Talks = () => {
   return (
-    <div className="relative w-full h-full flex items-center justify-center bg-[#241F20] sm:mt-[200px] mt-24 py-[100px]">
+    <div className="relative w-full h-full flex items-center justify-center bg-[#241F20] sm:mt-[200px] mt-24 py-[100px] border-top border-bottom">
       <VerticleEl className="left-0 top-[10%] !text-light-50 z-10">
         STUPID TALKS
       </VerticleEl>

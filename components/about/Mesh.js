@@ -7,7 +7,7 @@ const Mesh = () => {
       <img
         src="/assets/about/aline.png"
         alt="aline"
-        className="sm:w-[800px] sm:h-[700px] w-[500px] h-[450px]"
+        className="sm:w-[800px] sm:h-[700px] xl:w-[1000px] w-[500px] h-[450px] 2xl:w-[1300px]"
       />
       <div className="flex flex-col absolute top-[5%] left-[30%]">
         <p className="lg:text-[54px] md:text-[40px] text-[30px] text-light-50 font-extralight tracking-[-2.7px]">
@@ -17,10 +17,10 @@ const Mesh = () => {
           OUR PROCESS
         </p>
       </div>
-      <Circle className="lg:-top-[5%] top-0 lg:right-[15%] md:right-[5%] right-0">
+      <Circle className="lg:-top-[5%] lg:right-[15%] top-0 md:right-[5%] right-0">
         Curiosity & Explorationt
       </Circle>
-      <Circle className="left-[45%]">Driven Creative</Circle>
+      <Circle className="left-[45%] lg:left-[50%] lg:top-[35%]">Driven Creative</Circle>
       <Circle className="lg:left-[5%] -left-[8%] lg:top-[20%] top-[28%]">
         Innovative Concept Development
       </Circle>

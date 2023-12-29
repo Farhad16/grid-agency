@@ -1,10 +1,20 @@
+"use client"
 import Loading from "@/components/intro/Loading";
 import ReusableImageAnimation from "@/components/intro/ReusableImageAnimation";
+import { useRouter } from 'next/navigation'
 
 const Page = () => {
+  const router = useRouter()
+  const handleMainPageClick = (e) => {
+    router.push('/main', { scroll: true });
+  };
+
   return (
     <div className="flex flex-col text-white bg-[#0A0808]">
       <Loading />
+      <button onClick={handleMainPageClick} className="absolute top-4 right-4 z-10 border border-amber-400 hover:border-white text-white hover:text-amber-400 px-4 py-2 rounded-full bg-transparent" >
+        Skip Intro
+      </button>
       <div
         style={{
           backgroundImage: "url('/assets/intro/text-bg.png')",

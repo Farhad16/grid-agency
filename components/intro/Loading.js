@@ -9,11 +9,18 @@ const Loading = () => {
     const timeout = setTimeout(() => {
       setStep((prevStep) => prevStep + 1);
     }, 200);
-
+    if (step === 0) {
+      // Disable scrolling when case 0 is active
+      document.body.style.overflow = "hidden";
+    }
     return () => clearTimeout(timeout);
   }, []);
-
+  
   const handleButtonClick = () => {
+    if (step !== 0) {
+      // Disable scrolling when case 0 is active
+      document.body.style.overflow = "visible";
+    }
     setStep((prevStep) => prevStep + 1);
   };
 

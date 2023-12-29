@@ -3,7 +3,7 @@ import ReusableImageAnimation from "@/components/intro/ReusableImageAnimation";
 
 const Page = () => {
   return (
-    <div className="flex flex-col text-white bg-[#0A0808] min-h-screen relative">
+    <div className="flex flex-col text-white bg-[#0A0808]">
       <Loading />
       <div
         style={{
@@ -12,7 +12,7 @@ const Page = () => {
           backgroundSize: "cover",
           backgroundPosition: "top",
         }}
-        className="flex flex-col"
+        className="flex flex-col scroll-section-outer z-0"
       >
         <ReusableImageAnimation
           imageSrc="text1.png"
@@ -42,7 +42,7 @@ const Page = () => {
         <ReusableImageAnimation
           imageSrc="text6.png"
           imageAlt="text6"
-          scale={2}
+          scale={1}
         />
       </div>
     </div>

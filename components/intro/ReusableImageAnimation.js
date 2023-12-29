@@ -44,7 +44,7 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
       scrollTrigger: {
         trigger: trigger,
         start: "center center",
-        end: "5000 top",
+        end: "2000 top",
         scrub: 0.6,
       },
     });
@@ -56,7 +56,7 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
   }, []);
 
   return (
-    <section className="scroll-section-outer z-0">
+    <section>
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner">
           <div className="scroll-section">
@@ -64,7 +64,7 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
               src={`/assets/intro/${imageSrc}`}
               alt={imageAlt}
               id="img1"
-              className="scale-[0.03]"
+              className="scale-[0.01]"
             />
           </div>
         </div>

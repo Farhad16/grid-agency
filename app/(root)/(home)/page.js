@@ -15,44 +15,51 @@ const Page = () => {
       <button onClick={handleMainPageClick} className="absolute top-4 right-4 z-10 border border-amber-400 hover:border-white text-white hover:text-amber-400 px-4 py-2 rounded-full bg-transparent" >
         Skip Intro
       </button>
-      <div
-        style={{
-          backgroundImage: "url('/assets/intro/text-bg.png')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "top",
-        }}
-        className="flex flex-col scroll-section-outer z-0"
-      >
+      <div className="flex flex-col scroll-section-outer" 
+          style={{
+            backgroundImage: "url('/assets/intro/text-bg.png')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "130% auto",
+            backgroundPosition: "top",
+            marginTop : "-100px",
+            zIndex: 9999999999,
+          }}
+        >
         <ReusableImageAnimation
           imageSrc="text1.png"
           imageAlt="text1"
-          scale={5}
+          scale={2}
+          main={false}
         />
         <ReusableImageAnimation
           imageSrc="text2.png"
           imageAlt="text2"
-          scale={5}
+          scale={2}
+          main={false}
         />
         <ReusableImageAnimation
           imageSrc="text3.png"
           imageAlt="text3"
-          scale={5}
+          scale={2}
+          main={false}
         />
         <ReusableImageAnimation
           imageSrc="text4.png"
           imageAlt="text4"
-          scale={5}
+          scale={2}
+          main={false}
         />
         <ReusableImageAnimation
           imageSrc="text5.png"
           imageAlt="text5"
-          scale={5}
+          scale={2}
+          main={false}
         />
         <ReusableImageAnimation
           imageSrc="text6.png"
           imageAlt="text6"
-          scale={1}
+          scale={0.5}
+          main={true}
         />
       </div>
     </div>

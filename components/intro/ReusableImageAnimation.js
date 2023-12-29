@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import '@/components/intro/button.css';
 
 
-function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
+function ReusableImageAnimation({ imageSrc, imageAlt, scale, main }) {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
   const router = useRouter()
@@ -30,9 +30,9 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
         duration: 1,
         scrollTrigger: {
           trigger: trigger,
-          start: "center center",
-          end: "2000 top",
-          scrub: 0.6,
+          start: "top top",
+          end: "3000 top",
+          scrub: 1,
           pin: true,
         },
       }
@@ -41,14 +41,14 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
     // Add text growth animation
     const textGrow = gsap.to(section.querySelector("img"), {
       scale: scale,
-      opacity: 1,
+      opacity: 0,
       transition: "opacity 0.5s",
       ease: "none",
       duration: 1,
       scrollTrigger: {
         trigger: trigger,
-        start: "center center",
-        end: "2000 top",
+        start: "top top",
+        end: "3500 top",
         scrub: 0.6,
       },
     });
@@ -76,7 +76,7 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
               className="scale-[0.01]"
             />
           </div>
-          {scale === 2 && 
+          {scale === 0.5 && 
             <div className="flex justify-center">
                 <div className="content" onClick={handleMainPageClick}>
                   <svg id="more-arrows">

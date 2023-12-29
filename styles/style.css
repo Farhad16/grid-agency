@@ -94,3 +94,9 @@
   display: none;
 }
 
+.bg-image-container {
+  background-image: url('/assets/intro/text-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

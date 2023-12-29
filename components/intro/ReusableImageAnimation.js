@@ -16,12 +16,12 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
     const pin = gsap.fromTo(
       section,
       {
-        // translateX: 0,
+        translateX: 0,
         opacity: 1,
       },
       {
         opacity: 1,
-        transition: "opacity .5s",
+        transition: "opacity 0.5s",
         ease: "none",
         duration: 1,
         scrollTrigger: {

@@ -1,5 +1,6 @@
 import Loading from "@/components/intro/Loading";
 import ReusableImageAnimation from "@/components/intro/ReusableImageAnimation";
+import '@/components/intro/intro.css';
 
 const Page = () => {
   return (

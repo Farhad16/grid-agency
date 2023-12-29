@@ -21,7 +21,7 @@ const Loading = () => {
     switch (step) {
       case 0:
         return (
-          <div className="flex flex-col items-center justify-center relative">
+          <div className="flex flex-col items-center justify-center relative overflow-hidden">
             <Image
               src="/assets/intro/loading.jpg"
               alt="Loading"
@@ -43,7 +43,7 @@ const Loading = () => {
         );
       case 1:
         return (
-          <div className="flex flex-col items-center justify-center relative">
+          <div className="flex flex-col items-center justify-center relative overflow-hidden">
             <Image
               src="/assets/intro/loading-g.gif"
               alt="Loading"
@@ -71,7 +71,7 @@ const Loading = () => {
         );
       case 2:
         return (
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-full overflow-hidden">
             <video
               src="/assets/intro/intro-v.mp4"
               width="100%"

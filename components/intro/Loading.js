@@ -28,7 +28,7 @@ const Loading = () => {
     switch (step) {
       case 0:
         return (
-          <div className="flex flex-col items-center justify-center relative overflow-hidden z-10">
+          <>
             <Image
               src="/assets/intro/loading.jpg"
               alt="Loading"
@@ -46,11 +46,11 @@ const Loading = () => {
                 or common sense.
               </p>
             </div>
-          </div>
+          </>
         );
       case 1:
         return (
-          <div className="flex flex-col items-center justify-center relative overflow-hidden z-10">
+          <>
             <Image
               src="/assets/intro/loading-g.gif"
               alt="Loading"
@@ -74,11 +74,11 @@ const Loading = () => {
                 <img src="/assets/intro/arrow.png" alt="arrow" />
               </button>
             </div>
-          </div>
+          </>
         );
       case 2:
         return (
-          <div className="relative w-full h-full overflow-hidden z-10">
+          <>
             <video
               src="/assets/intro/intro-v.mp4"
               width="100%"
@@ -87,14 +87,18 @@ const Loading = () => {
               loop
               muted
             ></video>
-          </div>
+          </>
         );
       default:
         return null;
     }
   };
 
-  return <>{renderContent()}</>;
+  return (
+    <div className="flex flex-col items-center justify-center relative overflow-hidden z-10 min-h-screen">
+      {renderContent()}
+    </div>
+  );
 };
 
 export default Loading;

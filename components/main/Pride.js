@@ -1,6 +1,5 @@
-import React from "react";
+import Link from "next/link";
 import Wrapper from "../shared/Wrapper";
-import Image from "next/image";
 
 const Pride = () => {
   return (
@@ -9,23 +8,38 @@ const Pride = () => {
       <p className="text-light-50 text-[50px] md:text-[90px] font-bold sm:tracking-[-4.5px]">
         PrideMeister
       </p>
-      <div className="w-full">
-        <Image
+
+      <div className="w-full group relative ">
+        <img
           src="/assets/main_page/pride.gif"
-          alt="dish"
-          layout="responsive"
-          width={100}
-          height={100}
-          className="rounded-xl"
+          alt="pride"
+          className="rounded-xl w-full h-full"
         />
+        <img
+          src="/assets/main_page/pride.gif"
+          alt="stupid"
+          className="absolute right-20 md:right-40 sm:w-[84px] sm:h-[61px] w-[40px] h-[15px] clip-path-triangle"
+        />
+        <Link href="/case/2">
+          <img
+            src="/assets/main_page/hover.png"
+            alt="hover"
+            className="rounded-xl opacity-10 w-full h-full absolute top-0 flex items-center justify-center group-hover:h-full group-hover:opacity-90 duration-500 group-hover:visible"
+          />
+          <div className="absolute right-20 md:right-40 sm:w-[84px] sm:h-[61px] w-[40px] h-[15px] clip-path-triangle bg-[#282425] bg-opacity-0 group-hover:bg-opacity-90 duration-500" />
+        </Link>
       </div>
+
       <div className="sm:mt-[150px] mt-16 flex items-center justify-center flex-col sm:gap-8 gap-4 py-4 min-h-[200px]">
         <p className="text-light-50 md:text-[70px] lg:text-[100px] text-4xl">
           <span className="font-bold">Stupid</span> enough?
         </p>
-        <p className="bg-yellow-550 rotate-[2deg] inline-block text-xl sm:text-[29px] text-[#231F20] px-4 sm:py-2">
+        <Link
+          href="/case/2"
+          className="bg-yellow-550 rotate-[2deg] inline-block text-xl sm:text-[29px] text-[#231F20] px-4 sm:py-2"
+        >
           Boy, we got more
-        </p>
+        </Link>
       </div>
     </Wrapper>
   );

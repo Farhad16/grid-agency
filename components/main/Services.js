@@ -34,7 +34,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="bg-paper pb-12 pt-16 w-full min-h-[900px] relative">
+    <div className="bg-paper pb-12 pt-16 w-full min-h-[950px] relative">
       <Wrapper className="w-full h-full flex items-center justify-center">
         <VerticleEl className="sm:left-12 left-0 top-[350px] !text-[#231F20]">
           SERVICES

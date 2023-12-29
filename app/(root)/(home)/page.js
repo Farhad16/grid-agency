@@ -10,7 +10,7 @@ const Page = () => {
   };
 
   return (
-    <div className="flex flex-col text-white bg-[#0A0808] min-h-screen relative">
+    <div className="flex flex-col text-white bg-[#0A0808]">
       <Loading />
       <button onClick={handleMainPageClick} className="absolute top-4 right-4 z-10 border border-amber-400 hover:border-white text-white hover:text-amber-400 px-4 py-2 rounded-full bg-transparent" >
         Skip Intro
@@ -22,7 +22,7 @@ const Page = () => {
           backgroundSize: "cover",
           backgroundPosition: "top",
         }}
-        className="flex flex-col"
+        className="flex flex-col scroll-section-outer z-0"
       >
         <ReusableImageAnimation
           imageSrc="text1.png"
@@ -52,7 +52,7 @@ const Page = () => {
         <ReusableImageAnimation
           imageSrc="text6.png"
           imageAlt="text6"
-          scale={2}
+          scale={1}
         />
       </div>
     </div>

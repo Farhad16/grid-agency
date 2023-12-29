@@ -2,6 +2,7 @@ import React from "react";
 import Wrapper from "../shared/Wrapper";
 import Image from "next/image";
 import VerticleEl from "../shared/VerticleEl";
+import TextSlider from "./TextSlider";
 
 const Banner = () => {
   return (
@@ -10,27 +11,32 @@ const Banner = () => {
         <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-bold">
           We make
         </p>
-        <div className="text-light-50 text-[80px] sm:text-[150px] md:text-[220px] lg:text-[280px] font-bold leading-[100px] sm:leading-[200px] tracking-wide flex relative">
-          <h1>stup</h1>
-          <div className="relative">
-            <h1>i</h1>
+        <div className="flex flex-col">
+          <div className="text-light-50 text-[80px] sm:text-[180px] md:text-[220px] lg:text-[280px] font-bold leading-[100px] sm:leading-[200px] tracking-wide flex relative">
+            <h1>stup</h1>
+            <div className="relative">
+              <h1>i</h1>
+              <Image
+                src="/assets/main_page/Cat.gif"
+                alt="cat"
+                width={220}
+                height={220}
+                className="absolute -top-[30px] sm:-top-[150px] -left-10 sm:-left-20 sm:max-w-[220px] max-w-[100px]"
+              />
+            </div>
+            d
             <Image
-              src="/assets/main_page/Cat.gif"
-              alt="cat"
-              width={220}
-              height={220}
-              className="absolute -top-[30px] sm:-top-[150px] -left-10 sm:-left-20 sm:max-w-[220px] max-w-[100px]"
+              src="/assets/main_page/line.png"
+              alt="line"
+              width={515}
+              height={515}
+              layout="responsive"
+              className="absolute -bottom-[10px] sm:-bottom-[90px] left-0 sm:max-w-[515px] max-w-[150px]"
             />
           </div>
-          d
-          <Image
-            src="/assets/main_page/line.png"
-            alt="line"
-            width={515}
-            height={515}
-            layout="responsive"
-            className="absolute -bottom-[10px] sm:-bottom-[90px] left-0 sm:max-w-[515px] max-w-[150px]"
-          />
+          <div className="flex flex-row items-center justify-end sm:mt-0 -mt-6">
+            <TextSlider />
+          </div>
         </div>
 
         <div className="relative sm:mt-[200px] mt-24 flex items-center">

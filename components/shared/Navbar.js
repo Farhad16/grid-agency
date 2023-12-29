@@ -33,7 +33,7 @@ const Navbar = () => {
       {/* Menu Content */}
       <div
         onMouseLeave={() => setOpen(false)}
-        // className={`${open ? "block" : "hidden"}`}
+        className={`${open ? "block" : "hidden"}`}
       >
         <AnimatedMenu open={open} setOpen={setOpen} />
       </div>

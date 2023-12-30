@@ -18,14 +18,14 @@ const Footer = () => {
       }}
     >
       <Wrapper className="w-full flex flex-col sm:mt-[100px] mt-24">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-12">
           <img
             src="/assets/footer/footer.gif"
             layout="responsive"
             className="w-[308px]"
             alt="footergif"
           />
-          <div className="flex flex-col sm:gap-12">
+          <div className="flex flex-col sm:gap-12 w-full">
             <div>
               <p className="bg-yellow-550 rotate-[2deg] inline-block text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 mb-2 font-bold">
                 new business
@@ -34,7 +34,7 @@ const Footer = () => {
                 have a stupid
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8 gap-6">
               <p className="text-light-50 md:text-[70px] lg:text-[100px] text-4xl font-bold">
                 idea?
               </p>

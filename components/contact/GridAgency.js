@@ -186,7 +186,7 @@ const GridAgency = () => {
           </div>
         </div> */}
 
-        <div className="flex items-center justify-end sm:mt-0 mt-10">
+        <div className="flex items-center justify-end sm:mt-0 mt-10 text-light-50">
           <InstagramIcon sx={{ fontSize: "50px" }} />
           <LinkedInIcon sx={{ fontSize: "50px" }} />
         </div>

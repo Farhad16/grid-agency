@@ -5,7 +5,6 @@ import Pride from "@/components/main/Pride";
 import SelectedWork from "@/components/main/SelectedWork";
 import Services from "@/components/main/Services";
 import Talks from "@/components/main/Talks";
-import Wrapper from "@/components/shared/Wrapper";
 
 const Page = () => {
   return (

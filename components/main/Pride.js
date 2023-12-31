@@ -4,7 +4,7 @@ import Wrapper from "../shared/Wrapper";
 const Pride = () => {
   return (
     <Wrapper className="flex flex-col w-full sm:mt-[200px] overflow-hidden">
-      <p className="text-yellow-550 text-xl font-bold mt-20">JAGERMEISTER</p>
+      <p className="text-yellow-550 text-xl font-bold">JAGERMEISTER</p>
       <p className="text-light-50 text-[50px] md:text-[90px] font-bold sm:tracking-[-4.5px]">
         PrideMeister
       </p>

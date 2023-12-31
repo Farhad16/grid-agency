@@ -10,7 +10,7 @@ const Page = ({ params }) => {
   const id = params.id;
 
   return (
-    <div className="flex flex-col text-white bg-[#0A0808] pt-20 sm:pt-[200px] min-h-screen relative">
+    <div className="flex flex-col text-white bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen relative">
       <div className="flex flex-col w-full gap-6">
         <Wrapper className="w-full">
           <motion.div

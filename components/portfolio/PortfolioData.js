@@ -1,21 +1,21 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { getPortfolio } from "@/apis/portfolio.api";
 import Wrapper from "../shared/Wrapper";
-import { getCases } from "@/apis/case.api";
 import { CircularProgress } from "@mui/material";
 import NoDataFound from "../shared/NoDataFound";
 
-const Cases = () => {
-  const [caseData, setCaseData] = useState([]);
+const PortfolioData = () => {
+  const [portfolioData, setPortfolioData] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const data = await getCases();
-        setCaseData(data.data);
+        const data = await getPortfolio();
+        setPortfolioData(data.data);
       } catch (error) {
         console.error("Error fetching service data:", error);
       } finally {
@@ -27,7 +27,7 @@ const Cases = () => {
   }, []);
 
   return (
-    <Wrapper className="flex flex-col border-bottom sm:pb-[200px] pb-[150px] items-center justify-center">
+    <Wrapper className="flex flex-col mt-24 sm:pb-[150px] pb-24 sm:mt-[200px] overflow-hidden items-center justify-center">
       {loading ? (
         <CircularProgress
           className="text-white"
@@ -36,18 +36,14 @@ const Cases = () => {
         />
       ) : (
         <>
-          {caseData.length < 0 ? (
-            <NoDataFound data="case" />
+          {portfolioData.length < 0 ? (
+            <NoDataFound data="portfolio" />
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 md:gap-12 gap-16 lg:gap-6">
-              {caseData.map((port, i) => (
-                <Link
-                  href=""
-                  key={port.serial}
-                  className="md:first:col-span-2 first:col-span-1 flex flex-col gap-4"
-                >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-16 lg:gap-6">
+              {portfolioData.map((port) => (
+                <Link href="" key={port.serial} className="flex flex-col gap-4">
                   <img
-                    src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.feature_image}`}
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}
                     alt="portimg"
                     className="min-h-[300px] sm:h-[560px] h-[300px] object-cover"
                   />
@@ -67,4 +63,4 @@ const Cases = () => {
   );
 };
 
-export default Cases;
+export default PortfolioData;

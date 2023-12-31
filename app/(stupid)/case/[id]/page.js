@@ -55,27 +55,24 @@ const Page = async ({ params }) => {
           instagram reel video to promote their SuperBowl special.
         </p>
         <p className="text-base sm:text-[26px] text-light-50 font-bold mt-10 leading-[30px]">
-          Good food and <span className="underline">restaurant videos</span>
+          Good food and <span className="underline">restaurant videos</span>{" "}
           make you want to buy a specific food or prepare a specific dish.
           Creating these videos at the right angle with the right lighting
           settings will make your customers’ mouth water, and the transitions
           will keep your customers watching until the end.
         </p>
       </Wrapper>
-      <Wrapper className="flex flex-col sm:mt-[150px] my-24 gap-4 max-h-[486px] overflow-hidden mb-[100px]">
+      <Wrapper className="flex flex-col sm:mt-[250px] mt-[100px] gap-4 overflow-hidden border-bottom">
         <p className="text-base sm:text-[26px] text-light-50 font-light leading-[30px]">
           next <span className="font-bold">project</span>
         </p>
-        <div className="max-h"></div>
-        <Image
-          src="/assets/case/pride.gif"
-          alt="pride"
-          layout="responsive"
-          width={100}
-          height={100}
-          className="rounded-xl"
-          objectFit="cover"
-        />
+        <div className="max-h-[350px]">
+          <img
+            src="/assets/case/pride.gif"
+            alt="pride"
+            className="rounded-t-xl w-full h-full"
+          />
+        </div>
       </Wrapper>
       <Footer />
     </div>

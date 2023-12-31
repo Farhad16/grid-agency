@@ -8,7 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const Footer = () => {
   return (
     <div
-      className="min-h-[800px] py-16"
+      className="sm:min-h-[800px] sm:py-16 py-8"
       style={{
         backgroundImage: "url('/assets/footer/footer-bg.png')",
         backgroundSize: "cover",

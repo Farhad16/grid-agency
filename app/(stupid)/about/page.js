@@ -13,7 +13,7 @@ const Page = () => {
     <div className="bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen">
       <Wrapper className="flex flex-col relative pb-20">
         <div className="relative">
-          <p className="text-[80px] md:text-[120px] lg:text-[150px] text-light-50 tracking-[10.5px] font-bold">
+          <p className="text-[100px] md:text-[120px] lg:text-[150px] text-light-50 tracking-[10.5px] font-bold">
             Our
           </p>
           <img

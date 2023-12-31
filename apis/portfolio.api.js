@@ -1,9 +1,11 @@
-import axiosInstance from "../utils/axiosInstance";
-
+"use server";
 export const getPortfolio = async () => {
   try {
-    const response = await axiosInstance.get("/portfolios");
-    return response.data;
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/portfolios`
+    );
+    const data = await res.json();
+    return data.data;
   } catch (error) {
     throw error;
   }

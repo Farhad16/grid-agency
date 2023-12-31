@@ -37,15 +37,15 @@ const Footer = () => {
                 idea?
               </p>
               <button className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-yellow-550 transition duration-300 md:w-[350px] w-full h-[50px]">
-                <p className="w-full flex items-center group-hover:justify-center font-light">
-                  <span className="mr-4 uppercase opacity-0 group-hover:opacity-100 transition-opacity transition-transform transform -translate-x-full group-hover:translate-x-0">
+                <p className="w-full flex items-center group-hover:justify-center">
+                  <span className="mr-4 uppercase opacity-0 group-hover:opacity-100 transition-opacity transition-transform transform -translate-x-full group-hover:translate-x-0 text-light-50">
                     Contact Us
                   </span>
                   <ArrowForwardIcon
                     sx={{
                       fontSize: "30px",
                     }}
-                    className="-ml-10 group-hover:ml-0 transition-transform transform -translate-x-full group-hover:translate-x-0"
+                    className="-ml-10 group-hover:ml-0 transition-transform transform -translate-x-full group-hover:translate-x-0 text-light-50"
                   />
                 </p>
               </button>
@@ -66,7 +66,7 @@ const Footer = () => {
               <p className="text-left">info@gridagenyinc.ca</p>
               <p className="text-left">(416) 557-4773</p>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-light-50">
               <InstagramIcon />
               <LinkedInIcon />
             </div>

@@ -1,32 +1,20 @@
-"use client";
 import Footer from "@/components/shared/Footer";
 import Wrapper from "@/components/shared/Wrapper";
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
 import DividerElement from "@/components/shared/DividerElement";
+import { getCaseById } from "@/apis/case.api";
+import AnimateTitle from "@/components/case/AnimateTitle";
 
-const Page = ({ params }) => {
+const Page = async ({ params }) => {
   const id = params.id;
+  const caseDetails = getCaseById(id);
+  console.log(caseDetails);
 
   return (
     <div className="flex flex-col text-white bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen relative">
       <div className="flex flex-col w-full gap-6">
-        <Wrapper className="w-full">
-          <motion.div
-            className="flex flex-row justify-between mb-6 w-full"
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7, easing: "easeOut", delay: 0.25 }}
-          >
-            <p className="text-light-50 md:text-[60px] lg:text-[80px] text-4xl font-bold">
-              Super Bowl Special
-            </p>
-            <p className="text-yellow-550 tracking-[3.75px] flex items-end font-bold">
-              OSMOW'S
-            </p>
-          </motion.div>
-        </Wrapper>
+        <AnimateTitle />
 
         <Image
           src="/assets/case/case.gif"

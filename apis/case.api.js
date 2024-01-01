@@ -11,13 +11,11 @@ export const getCases = async () => {
 };
 
 export const getCaseById = async (id) => {
-  console.log(id);
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/case-studies/${id}`
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/case-study/${id}`
     );
     const data = await response.json();
-    console.log(data.data);
     return data.data;
   } catch (error) {
     throw error;

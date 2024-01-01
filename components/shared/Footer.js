@@ -36,7 +36,7 @@ const Footer = () => {
               <p className="text-light-50 md:text-[70px] lg:text-[100px] text-4xl font-bold">
                 idea?
               </p>
-              <button className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-yellow-550 transition duration-300 md:w-[350px] w-full h-[50px]">
+              <button className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-yellow-550 transition duration-300 lg:w-[350px] w-full h-[50px]">
                 <p className="w-full flex items-center group-hover:justify-center">
                   <span className="mr-4 uppercase opacity-0 group-hover:opacity-100 transition-opacity transition-transform transform -translate-x-full group-hover:translate-x-0 text-light-50">
                     Contact Us
@@ -73,10 +73,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full flex flex-col sm:flex-row justify-between pt-10 border-t border-1 border-light-50 border-dotted mt-[80px]">
-          <p className="text-light-50 font-light text-[10px]">
+          <p className="text-light-50 text-light-50 text-[10px]">
             © 2023, Grid Creative Advertising Inc.
           </p>
-          <p className="text-light-50 font-light text-[10px]">
+          <p className="text-light-50 text-light-50 text-[10px]">
             privacy and cookie policy
           </p>
         </div>

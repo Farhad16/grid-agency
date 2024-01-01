@@ -63,7 +63,7 @@ const ContactHeader = () => {
   };
 
   return (
-    <Wrapper className="w-full flex flex-col py-20 sm:py-[150px] relative contact-bg">
+    <Wrapper className="w-full flex flex-col relative contact-bg pb-6">
       <div className="flex flex-col md:flex-row gap-24 items-center">
         <img
           src="/assets/footer/footer.gif"
@@ -104,10 +104,10 @@ const ContactHeader = () => {
       <div className="grid sm:grid-cols-3 grid-cols-1 gap-16 mt-[100px]">
         <div className="flex flex-col gap-16 col-span-1">
           <div className="flex flex-col">
-            <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 font-bold">
+            <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-sm text-xl md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-2 font-bold">
               prefer email?
             </p>
-            <p className="text-light-50 text-base md:text-[20px] lg:text-[30px] font-bold sm:!leading-[40px]">
+            <p className="text-light-50 text-xl md:text-[24px] lg:text-[30px] font-bold sm:!leading-[40px]">
               You can reach us at
               <br />
               <span className="text-yellow-550 underline break-words">
@@ -116,10 +116,10 @@ const ContactHeader = () => {
             </p>
           </div>
           <div className="flex flex-col">
-            <p className="bg-yellow-550 -rotate-[2deg] inline-block w-fit text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 font-bold">
+            <p className="bg-yellow-550 -rotate-[2deg] inline-block w-fit text-xl md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-2 font-bold">
               prefer docs?
             </p>
-            <p className="text-light-50 md:text-[26px] lg:text-[30px] font-bold sm:!leading-[40px]">
+            <p className="text-light-50 text-xl md:text-[24px] lg:text-[30px] font-bold sm:!leading-[40px]">
               check out our
               <br />
               <span className="text-yellow-550 underline">pricing slide</span>

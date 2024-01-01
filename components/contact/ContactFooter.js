@@ -5,8 +5,8 @@ import Wrapper from "../shared/Wrapper";
 
 const ContactFooter = () => {
   return (
-    <Wrapper className="w-full flex flex-col">
-      <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center sm:mt-[200px] mt-[100px] text-xs sm:text-[15px] gap-4">
+    <Wrapper className="w-full flex flex-col bg-black pt-[80px] sm:pt-[100px]">
+      <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center text-xs sm:text-[15px] gap-4">
         <div className="uppercase flex flex-col text-light-50">
           <p>DO YOU LIKE STUPID IDEAS?</p>
           <p>jointheteam@gridagenyinc.ca</p>
@@ -27,10 +27,10 @@ const ContactFooter = () => {
         </div>
       </div>
       <div className="w-full flex flex-col sm:flex-row justify-between py-10 border-t border-1 border-light-50 border-dotted mt-[80px]">
-        <p className="text-light-50 font-light text-[10px]">
+        <p className="text-light-50 text-light-50 text-[10px]">
           © 2023, Grid Creative Advertising Inc.
         </p>
-        <p className="text-light-50 font-light text-[10px]">
+        <p className="text-light-50 text-light-50 text-[10px]">
           privacy and cookie policy
         </p>
       </div>

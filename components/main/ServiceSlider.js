@@ -52,7 +52,7 @@ const ServiceSlider = ({ serviceData }) => {
                     <h1 className="text-3xl md:text-[70px] lg:text-[80px] font-bold text-[#231F20] sm:leading-[80px]">
                       {service.name}
                     </h1>
-                    <p className="text-base sm:text-[26px] font-light mt-4 leading-[30px] tracking-[-1.3px]">
+                    <p className="text-base sm:text-[26px] text-light-50 mt-4 leading-[30px] tracking-[-1.3px]">
                       <HTMLParser content={service.about} />
                     </p>
                     <p className="text-base sm:text-[26px] leading-[30px] tracking-[-1.3px]">

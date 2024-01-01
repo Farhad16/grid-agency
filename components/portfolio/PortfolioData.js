@@ -29,7 +29,7 @@ const PortfolioData = async () => {
                   <p className="text-yellow-550 font-bold uppercase">
                     {port.name}
                   </p>
-                  <p className="text-light-50 font-bold">{port.des}</p>
+                  <p className="text-light-50 font-bold">{port.desc}</p>
                 </div>
                 <img
                   src="/assets/case/view.svg"

@@ -63,7 +63,7 @@ const ContactHeader = () => {
   };
 
   return (
-    <Wrapper className="w-full flex flex-col relative contact-bg pb-6">
+    <Wrapper className="w-full flex flex-col relative contact-bg pb-6 pt-[150px] sm:pt-[200px]">
       <div className="flex flex-col md:flex-row gap-24 items-center">
         <img
           src="/assets/footer/footer.gif"

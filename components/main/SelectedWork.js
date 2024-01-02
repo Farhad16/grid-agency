@@ -55,6 +55,9 @@ const SelectedWork = () => {
           <div className="absolute right-20 md:right-40 sm:w-[84px] sm:h-[61px] w-[40px] h-[15px] clip-path-triangle bg-[#282425] bg-opacity-0 group-hover:bg-opacity-90 duration-500" />
         </Link>
       </div>
+      <p className="text-[15px] text-light-50 tracking-[3.75px] uppercase mt-4">
+        Design / digital / experiential
+      </p>
     </Wrapper>
   );
 };

@@ -12,7 +12,7 @@ const Banner = () => {
           We make
         </p>
         <div className="flex flex-col">
-          <div className="text-light-50 text-[80px] sm:text-[180px] md:text-[220px] lg:text-[280px] font-bold leading-[100px] sm:leading-[200px] tracking-wide flex relative">
+          <div className="text-light-50 text-[100px] sm:text-[180px] md:text-[220px] lg:text-[280px] font-bold leading-[100px] sm:leading-[200px] tracking-wide flex relative">
             <h1>stup</h1>
             <div className="relative">
               <h1>i</h1>

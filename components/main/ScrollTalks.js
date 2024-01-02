@@ -1,59 +1,57 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { talkData } from "@/constance/talks.data";
 
-const useWindowSize = () => {
-  const [windowSize, setWindowSize] = React.useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  const handleResize = () => {
-    setWindowSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
-  };
-
-  React.useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  return windowSize;
-};
-
 function ScrollTalks() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
-  const windowSize = useWindowSize();
-  const { width } = windowSize;
 
-  let deviceWidth = 0;
-  if (width < 412) {
-    deviceWidth = width * 2;
-  } else if (width < 750) {
-    deviceWidth = 300;
-  } else deviceWidth = 220;
+  const [width, setWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
 
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+    const dimention = {
+      windowWidth: 0,
+      windowMargin: 0,
+    };
+
+    if (width < 475) {
+      dimention.windowWidth = width * 1.5;
+      dimention.windowMargin = 150;
+    } else if (width > 412 && width < 750) {
+      dimention.windowWidth = 300;
+      dimention.windowMargin = 100;
+    } else {
+      dimention.windowWidth = 220;
+      dimention.windowMargin = 50;
+    }
+
     const pin = gsap.fromTo(
       sectionRef.current,
       {
         translateX: 0,
       },
       {
-        translateX: `-${deviceWidth}vw`,
+        translateX: `-${dimention.windowWidth}vw`,
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
-          start: "top top",
+          start: `top-=${dimention.windowMargin} top"`,
           end: "2000 top",
           scrub: 1,
           pin: true,

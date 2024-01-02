@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Wrapper from "./Wrapper";
 import AnimatedMenu from "./AnimatedMenu";
+import Link from "next/link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -14,12 +15,15 @@ const Navbar = () => {
   return (
     <div className="relative flex flex-col">
       <Wrapper className="flex items-center justify-between bg-black py-[28px] nav-boxShadow !fixed w-full z-20 h-[15%] overflow-hidden">
-        <Image
-          src="/assets/main_page/grid.svg"
-          alt="Grid"
-          width={40}
-          height={32}
-        />
+        <Link href="/">
+          <Image
+            src="/assets/main_page/grid.svg"
+            alt="Grid"
+            width={40}
+            height={32}
+          />
+        </Link>
+
         <Image
           src="/assets/main_page/menu.svg"
           alt="Grid"
@@ -31,10 +35,7 @@ const Navbar = () => {
       </Wrapper>
 
       {/* Menu Content */}
-      <div
-        onMouseLeave={() => setOpen(false)}
-        className={`${open ? "block" : "hidden"}`}
-      >
+      <div className={`${open ? "block" : "hidden"}`}>
         <AnimatedMenu open={open} setOpen={setOpen} />
       </div>
     </div>

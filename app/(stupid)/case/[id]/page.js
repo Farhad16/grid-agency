@@ -7,11 +7,11 @@ import { getCaseById } from "@/apis/case.api";
 import AnimateTitle from "@/components/case/AnimateTitle";
 import HTMLParser from "@/components/shared/HTMLParser";
 import NoDataFound from "@/components/shared/NoDataFound";
+import { Link } from "@mui/icons-material";
 
 const Page = async ({ params }) => {
   const id = params.id;
   const caseDetails = await getCaseById(id);
-  console.log(caseDetails);
   const { casestudy, services, related_case_study } = caseDetails;
 
   return (
@@ -54,11 +54,13 @@ const Page = async ({ params }) => {
               next <span className="font-bold">project</span>
             </p>
             <div className="max-h-[350px]">
-              <img
-                src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${related_case_study.feature_image}`}
-                alt="pride"
-                className="rounded-t-xl w-full h-full"
-              />
+              <a href={`/case/${related_case_study.id}`}>
+                <img
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${related_case_study.feature_image}`}
+                  alt="pride"
+                  className="rounded-t-xl w-full h-full"
+                />
+              </a>
             </div>
           </Wrapper>
         </>

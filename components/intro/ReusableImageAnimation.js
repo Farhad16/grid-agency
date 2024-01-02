@@ -59,7 +59,7 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale, main }) {
   }, []);
 
   const handleMainPageClick = (e) => {
-    router.push("/main", { scroll: true });
+    router.push("/home", { scroll: true });
   };
 
   return (

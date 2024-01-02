@@ -97,7 +97,7 @@ const ContactHeader = () => {
               alt="lines"
               className="absolute w-[60%] top-20 -left-4"
             />
-            mind?
+            {` `}mind?
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 const Page = () => {
   const router = useRouter();
   const handleMainPageClick = (e) => {
-    router.push("/main", { scroll: true });
+    router.push("/home", { scroll: true });
     document.body.style.overflow = "visible";
   };
 

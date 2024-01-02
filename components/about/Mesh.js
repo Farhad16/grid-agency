@@ -72,19 +72,16 @@ const Mesh = () => {
           ),
           text2: (
             <span>
-              Our teams go through a <br />
-              concept development <br />
-              process where we gather
+              Our teams go through a concept development process where we gather
               <br />
-              diverse perspectives for <br />
-              brainstorming, shaping <br />
-              innovative concepts.
+              diverse perspectives for brainstorming, shaping innovative
+              concepts.
             </span>
           ),
         }}
       />
       <Circle
-        className="xl:right-0 md:right-0 -right-[10%] bottom-[32%]"
+        className="xl:right-0 md:right-[2%] -right-[10%] bottom-[32%]"
         data={{
           text1: <span>Transformation</span>,
           text2: (

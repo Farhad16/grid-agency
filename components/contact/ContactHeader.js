@@ -74,7 +74,7 @@ const ContactHeader = () => {
         <div className="flex flex-col">
           <div className="flex items-center">
             <div className="flex flex-col inline-block ">
-              <div className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 font-bold">
+              <div className="w-[213px] text-center bg-yellow-550 rotate-[2deg] text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-1 font-bold ml-2">
                 talk to us
               </div>
               <p className="text-light-50 md:text-[100px] lg:text-[130px] text-6xl font-bold">
@@ -165,10 +165,10 @@ const ContactHeader = () => {
             />
           </div>
           <FormInput
-            name="details"
+            name="project_details"
             label="Project details"
             textarea={true}
-            register={{ ...register("details") }}
+            register={{ ...register("project_details") }}
             errors={errors}
           />
 

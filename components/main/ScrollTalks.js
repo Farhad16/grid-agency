@@ -26,8 +26,8 @@ function ScrollTalks() {
 
   useEffect(() => {
     const dimention = {
-      windowWidth: 0,
-      windowMargin: 0,
+      windowWidth: 220,
+      windowMargin: 50,
     };
 
     if (width < 475) {

@@ -73,7 +73,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
         style={{ ...menuAnimation5 }}
       >
         <p className="text-3xl font-bold relative text-yellow-550">menu</p>
-        <div className="flex flex-col gap-16 mt-6">
+        <div className="flex flex-col sm:gap-16 gap-8 mt-6">
           {menuItem.map((item) => (
             <Link
               href={item.route}

@@ -10,10 +10,10 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className="bg-[#0A0808] pt-20 sm:pt-[200px] min-h-screen">
+    <div className="bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen">
       <Wrapper className="flex flex-col relative pb-20">
         <div className="relative">
-          <p className="text-[80px] md:text-[120px] lg:text-[150px] text-light-50 tracking-[10.5px] font-bold">
+          <p className="text-[100px] md:text-[120px] lg:text-[150px] text-light-50 tracking-[10.5px] font-bold">
             Our
           </p>
           <img
@@ -28,10 +28,10 @@ const Page = () => {
         <Mission />
         <Mesh />
 
-        <div className="lg:text-[54px] md:text-[40px] text-[26px] text-light-50 font-medium tracking-[-2.7px] flex items-center flex-col lg:py-16 md:py-12 py-8">
+        <div className="lg:text-[54px] md:text-[40px] text-[24px] text-light-50 font-medium sm:tracking-[-2.7px] flex items-center flex-col lg:py-16 md:py-12 py-8">
           <p>We believe that within</p>
           <div className="flex items-center">
-            <p>these seemingly</p>
+            <span>these seemingly </span>
             <img
               layout="responsive"
               alt="stupid"

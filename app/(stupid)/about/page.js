@@ -28,10 +28,10 @@ const Page = () => {
         <Mission />
         <Mesh />
 
-        <div className="lg:text-[54px] md:text-[40px] text-[26px] text-light-50 font-medium tracking-[-2.7px] flex items-center flex-col lg:py-16 md:py-12 py-8">
+        <div className="lg:text-[54px] md:text-[40px] text-[24px] text-light-50 font-medium sm:tracking-[-2.7px] flex items-center flex-col lg:py-16 md:py-12 py-8">
           <p>We believe that within</p>
           <div className="flex items-center">
-            <p>these seemingly</p>
+            <span>these seemingly </span>
             <img
               layout="responsive"
               alt="stupid"

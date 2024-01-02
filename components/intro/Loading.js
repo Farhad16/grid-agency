@@ -8,14 +8,16 @@ const Loading = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setStep((prevStep) => prevStep + 1);
+      window.scrollTo(0, 0);
     }, 200);
     if (step === 0) {
       // Disable scrolling when case 0 is active
       document.body.style.overflow = "hidden";
+      window.scrollTo(0, 0);
     }
     return () => clearTimeout(timeout);
   }, []);
-  
+
   const handleButtonClick = () => {
     if (step !== 0) {
       // Disable scrolling when case 0 is active
@@ -35,6 +37,7 @@ const Loading = () => {
               layout="responsive"
               width={100}
               height={100}
+              className="sm:min-h-screen min-h-[300px]"
             />
             <div className="w-[412px] h-[127px] text-center flex items-center justify-center flex-col absolute -mt-10">
               <h1 className="sm:text-3xl text-xl font-medium">STU.PID</h1>
@@ -57,6 +60,7 @@ const Loading = () => {
               layout="responsive"
               width={100}
               height={100}
+              className="sm:min-h-screen min-h-[300px]"
             />
             <div className="w-[412px] h-[127px] text-center flex items-center justify-center flex-col absolute">
               <h1 className="sm:text-3xl text-xl font-medium">STU.PID</h1>
@@ -69,7 +73,7 @@ const Loading = () => {
               </p>
               <button
                 onClick={handleButtonClick}
-                className="flex items-center justify-center px-[27px] py-[10px] sm:mt-24 mt-10 border border-[#E6E0D2] hover:bg-yellow-550 hover:bg-opacity-20 w-fit bg-[#231F20] rounded-[30px]"
+                className="flex items-center justify-center px-[27px] py-[10px] sm:mt-24 mt-4 border border-[#E6E0D2] hover:bg-yellow-550 hover:bg-opacity-20 w-fit bg-[#231F20] rounded-[30px]"
               >
                 <img src="/assets/intro/arrow.png" alt="arrow" />
               </button>
@@ -95,7 +99,7 @@ const Loading = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center relative overflow-hidden z-10 min-h-screen">
+    <div className="flex flex-col items-center justify-center relative z-10 sm:min-h-screen sm:pb-[40px] pb-[70px]">
       {renderContent()}
     </div>
   );

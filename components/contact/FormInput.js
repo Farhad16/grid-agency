@@ -21,7 +21,7 @@ const FormInput = ({
           <div className="flex flex-col">
             <textarea
               defaultValue={defaultValue}
-              className={`border-t focus:outline-none boder-2 border-light-50 bg-[#0E0E0E] ${
+              className={`border rounded-sm focus:outline-none border-1.5 border-light-50 bg-[#0E0E0E] ${
                 error ? "border-[#FDA29B]" : "border-light-50"
               }`}
               rows="10"

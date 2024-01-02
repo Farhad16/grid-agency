@@ -35,7 +35,7 @@ const Pride = () => {
           <span className="font-bold">Stupid</span> enough?
         </p>
         <Link
-          href="/case/2"
+          href="/portfolio"
           className="bg-yellow-550 rotate-[2deg] inline-block text-xl sm:text-[29px] text-[#231F20] px-4 sm:py-2"
         >
           Boy, we got more

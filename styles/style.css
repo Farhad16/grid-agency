@@ -136,3 +136,7 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+.caseDes {
+  padding: 0 100px;
+}

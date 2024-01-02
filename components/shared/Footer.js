@@ -19,7 +19,7 @@ const Footer = () => {
       }}
     >
       <Wrapper className="w-full flex flex-col sm:mt-[80px] mt-24">
-        <div className="flex flex-col md:flex-row items-center sm:gap-20 gap-12 py-10">
+        <div className="flex flex-col md:flex-row items-center lg:justify-between sm:gap-20 gap-12 py-10">
           <img
             src="/assets/footer/footer.gif"
             layout="responsive"
@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="font-semibold sm:tracking-[3px] flex sm:flex-row flex-col sm:justify-between sm:items-center sm:mt-[200px] mt-[100px] text-xs sm:text-[15px] gap-4">
+        <div className="sm:tracking-[3px] flex sm:flex-row flex-col sm:flex-wrap sm:justify-between sm:items-center sm:mt-[200px] mt-[100px] text-xs sm:text-[15px] gap-4">
           <div className="uppercase flex flex-col text-light-50 gap-1">
             <p>DO YOU LIKE STUPID IDEAS?</p>
             <p className="underline">jointheteam@gridagenyinc.ca</p>

@@ -6,7 +6,6 @@ import NoDataFound from "../shared/NoDataFound";
 
 const PortfolioData = async () => {
   const portfolioData = await getPortfolio();
-
   const colThree = Math.floor(portfolioData.length / 3);
   const colDynamic = portfolioData.length % 3;
 
@@ -20,7 +19,7 @@ const PortfolioData = async () => {
             {colThree > 0 &&
               portfolioData.slice(0, colThree * 3).map((port) => (
                 <Link
-                  href={`case/${port.id}`}
+                  href={`case/${port.casestudy.id}`}
                   key={port.id}
                   className="flex flex-col gap-4 relative group"
                 >

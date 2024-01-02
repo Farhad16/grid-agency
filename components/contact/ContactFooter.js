@@ -6,7 +6,7 @@ import Wrapper from "../shared/Wrapper";
 const ContactFooter = () => {
   return (
     <Wrapper className="w-full flex flex-col bg-black pt-[80px] sm:pt-[100px]">
-      <div className="font-semibold sm:tracking-[3px] flex sm:flex-row flex-col sm:justify-between sm:items-center text-xs sm:text-[15px] gap-4">
+      <div className="sm:tracking-[3px] flex sm:flex-row flex-col sm:justify-between sm:items-center text-xs sm:text-[15px] gap-4">
         <div className="uppercase flex flex-col text-light-50 gap-1">
           <p>DO YOU LIKE STUPID IDEAS?</p>
           <p className="underline">jointheteam@gridagenyinc.ca</p>

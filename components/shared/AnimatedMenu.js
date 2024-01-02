@@ -69,7 +69,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
         style={{ ...menuAnimation4 }}
       ></animated.div>
       <animated.div
-        className={`overflow-auto fixed top-[10%] right-0 bg-black sm:w-1/2 w-2/3 h-screen flex flex-col items-start justify-center sm:pl-16 pl-6 gap-4 z-20`}
+        className={`overflow-auto fixed top-[10%] right-0 bg-black sm:w-1/2 w-2/3 h-screen flex flex-col items-start justify-center sm:pl-24 pl-12 gap-4 z-20`}
         style={{ ...menuAnimation5 }}
       >
         <p className="lg:text-3xl text-xl font-bold relative text-yellow-550">

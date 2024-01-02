@@ -17,13 +17,13 @@ const Mesh = () => {
           OUR PROCESS
         </p>
       </div>
-      <Circle className="xl:-top-[5%] xl:right-[10%] lg:right-[10%] lg:-top-[7%] top-0 md:right-[5%] right-0">
+      <Circle className="xl:-top-[5%] xl:right-[10%] lg:right-[8%] lg:-top-[7%] top-0 md:right-[5%] right-0">
         Curiosity & Explorationt
       </Circle>
       <Circle className="left-[45%] xl:left-[50%] xl:top-[35%]">
         Driven Creative
       </Circle>
-      <Circle className="xl:left-0  lg:left-[3%] -left-[8%] xl:top-[20%] lg:top-[20%] top-[28%]">
+      <Circle className="xl:left-0 xl:top-[20%] lg:-left-[3%] lg:top-[20%] -left-[8%] top-[28%]">
         Innovative Concept Development
       </Circle>
       <Circle className="xl:right-0 md:right-0 -right-[10%] bottom-[32%]">

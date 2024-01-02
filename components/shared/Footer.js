@@ -4,6 +4,7 @@ import Wrapper from "./Wrapper";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -36,7 +37,10 @@ const Footer = () => {
               <p className="text-light-50 md:text-[70px] lg:text-[100px] text-4xl font-bold">
                 idea?
               </p>
-              <button className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-yellow-550 transition duration-300 lg:w-[350px] w-full h-[50px]">
+              <Link
+                href="/contact"
+                className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-yellow-550 transition duration-300 lg:w-[350px] w-full h-[50px]"
+              >
                 <p className="w-full flex items-center group-hover:justify-center">
                   <span className="mr-4 uppercase opacity-0 group-hover:opacity-100 transition-opacity transition-transform transform -translate-x-full group-hover:translate-x-0 text-light-50">
                     Contact Us
@@ -48,7 +52,7 @@ const Footer = () => {
                     className="-ml-10 group-hover:ml-0 transition-transform transform -translate-x-full group-hover:translate-x-0 text-light-50"
                   />
                 </p>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

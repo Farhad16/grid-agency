@@ -11,4 +11,8 @@ export const menuItem = [
     name: "talks",
     route: "/contact",
   },
+  {
+    name: "about us",
+    route: "/about",
+  },
 ];

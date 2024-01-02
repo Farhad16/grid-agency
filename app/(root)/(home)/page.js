@@ -7,6 +7,7 @@ const Page = () => {
   const router = useRouter();
   const handleMainPageClick = (e) => {
     router.push("/main", { scroll: true });
+    document.body.style.overflow = "visible";
   };
 
   return (

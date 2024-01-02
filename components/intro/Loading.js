@@ -8,6 +8,7 @@ const Loading = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setStep((prevStep) => prevStep + 1);
+      window.scrollTo(0, 0);
     }, 200);
     if (step === 0) {
       // Disable scrolling when case 0 is active

@@ -4,6 +4,7 @@ import Wrapper from "./Wrapper";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
       }}
     >
       <Wrapper className="w-full flex flex-col sm:mt-[80px] mt-24">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-12 py-10">
+        <div className="flex flex-col md:flex-row items-center lg:justify-between sm:gap-20 gap-12 py-10">
           <img
             src="/assets/footer/footer.gif"
             layout="responsive"
@@ -36,7 +37,10 @@ const Footer = () => {
               <p className="text-light-50 md:text-[70px] lg:text-[100px] text-4xl font-bold">
                 idea?
               </p>
-              <button className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-yellow-550 transition duration-300 lg:w-[350px] w-full h-[50px]">
+              <Link
+                href="/contact"
+                className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-yellow-550 transition duration-300 lg:w-[350px] w-full h-[50px]"
+              >
                 <p className="w-full flex items-center group-hover:justify-center">
                   <span className="mr-4 uppercase opacity-0 group-hover:opacity-100 transition-opacity transition-transform transform -translate-x-full group-hover:translate-x-0 text-light-50">
                     Contact Us
@@ -48,23 +52,23 @@ const Footer = () => {
                     className="-ml-10 group-hover:ml-0 transition-transform transform -translate-x-full group-hover:translate-x-0 text-light-50"
                   />
                 </p>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center sm:mt-[200px] mt-[100px] text-xs sm:text-[15px] gap-4">
-          <div className="uppercase flex flex-col text-light-50">
+        <div className="sm:tracking-[3px] flex sm:flex-row flex-col sm:flex-wrap sm:justify-between sm:items-center sm:mt-[200px] mt-[100px] text-xs sm:text-[15px] gap-4">
+          <div className="uppercase flex flex-col text-light-50 gap-1">
             <p>DO YOU LIKE STUPID IDEAS?</p>
-            <p>jointheteam@gridagenyinc.ca</p>
+            <p className="underline">jointheteam@gridagenyinc.ca</p>
           </div>
-          <div className="uppercase flex flex-col text-light-50">
+          <div className="uppercase flex flex-col text-light-50 gap-1">
             <p>242 Applewood Cres</p>
             <p>Concord, ON L4K 4E5</p>
           </div>
           <div className="flex flex-row gap-4 justify-between sm:justify-start">
-            <div className="uppercase flex flex-col text-light-50 sm:items-end">
-              <p className="text-left">info@gridagenyinc.ca</p>
-              <p className="text-left">(416) 557-4773</p>
+            <div className="uppercase flex flex-col text-light-50 sm:items-end gap-1">
+              <p className="text-left underline">info@gridagenyinc.ca</p>
+              <p className="text-left underline">(416) 557-4773</p>
             </div>
             <div className="flex items-center gap-2 text-light-50">
               <InstagramIcon />
@@ -72,7 +76,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col sm:flex-row justify-between pt-10 border-t border-1 border-light-50 border-dotted mt-[80px]">
+        <div className="w-full flex flex-col sm:flex-row justify-between pt-10 border-t border-1 border-light-50 border-dotted mt-[80px] gap-1">
           <p className="text-light-50 text-light-50 text-[10px]">
             © 2023, Grid Creative Advertising Inc.
           </p>

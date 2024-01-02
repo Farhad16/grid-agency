@@ -1,5 +1,5 @@
 import React from "react";
-import Circle from "../shared/Circle";
+import Circle from "./Circle";
 
 const Mesh = () => {
   return (
@@ -17,21 +17,105 @@ const Mesh = () => {
           OUR PROCESS
         </p>
       </div>
-      <Circle className="xl:-top-[5%] xl:right-[10%] lg:right-[10%] lg:-top-[7%] top-0 md:right-[5%] right-0">
-        Curiosity & Explorationt
-      </Circle>
-      <Circle className="left-[45%] xl:left-[50%] xl:top-[35%]">
-        Driven Creative
-      </Circle>
-      <Circle className="xl:left-0  lg:left-[3%] -left-[8%] xl:top-[20%] lg:top-[20%] top-[28%]">
-        Innovative Concept Development
-      </Circle>
-      <Circle className="xl:right-0 md:right-0 -right-[10%] bottom-[32%]">
-        Transformation
-      </Circle>
-      <Circle className="xl:bottom-0 bottom-20 xl:left-[30%] left-[20%]">
-        Technology Consideration
-      </Circle>
+      <Circle
+        className="xl:-top-[5%] xl:right-[10%] lg:right-[8%] lg:-top-[7%] top-0 md:right-[5%] right-0"
+        data={{
+          text1: (
+            <span>
+              Curiosity & <br />
+              Exploration
+            </span>
+          ),
+          text2: (
+            <span>
+              We encourage
+              <br /> curiosity and
+              <br /> exploration to initiate
+              <br /> our process and unveil
+              <br /> innovative possibilities
+            </span>
+          ),
+        }}
+      />
+      <Circle
+        className="left-[45%] xl:left-[50%] xl:top-[35%]"
+        data={{
+          text1: (
+            <span>
+              Driven <br />
+              Creative
+            </span>
+          ),
+          text2: (
+            <span>
+              We take a deep <br /> understanding of our <br />
+              audience's emotions and
+              <br />
+              experiences and evaluate what <br />
+              creative will work
+              <br /> based on data and
+              <br />
+              insights.
+            </span>
+          ),
+        }}
+      />
+      <Circle
+        className="xl:left-0 xl:top-[20%] lg:-left-[3%] lg:top-[20%] -left-[8%] top-[28%]"
+        data={{
+          text1: (
+            <span>
+              Innovative
+              <br /> Concept
+              <br /> Development
+            </span>
+          ),
+          text2: (
+            <span>
+              Our teams go through a concept development process where we gather
+              <br />
+              diverse perspectives for brainstorming, shaping innovative
+              concepts.
+            </span>
+          ),
+        }}
+      />
+      <Circle
+        className="xl:right-0 md:right-[2%] -right-[10%] bottom-[32%]"
+        data={{
+          text1: <span>Transformation</span>,
+          text2: (
+            <span>
+              We explore technology <br />
+              solutions and seamlessly
+              <br /> integrate them across <br />
+              various channels, amplifying
+              <br /> the impact for our partners.
+            </span>
+          ),
+        }}
+      />
+      <Circle
+        className="xl:bottom-0 bottom-20 xl:left-[30%] left-[20%]"
+        data={{
+          text1: (
+            <span>
+              Technology <br />
+              Consideration
+            </span>
+          ),
+          text2: (
+            <span>
+              A continuous journey
+              <br /> of improvement where
+              <br /> we monitor results and
+              <br />
+              re-invent solutions to
+              <br /> be better optimized.
+            </span>
+          ),
+        }}
+      />
     </div>
   );
 };

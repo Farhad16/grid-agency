@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <div className="relative flex flex-col">
       <Wrapper className="flex items-center justify-between bg-black py-[28px] nav-boxShadow !fixed w-full z-20 h-[15%] overflow-hidden">
-        <Link href="/">
+        <Link href="/home">
           <Image
             src="/assets/main_page/grid.svg"
             alt="Grid"

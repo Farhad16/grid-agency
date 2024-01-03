@@ -19,7 +19,7 @@ const PortfolioData = async () => {
             {colThree > 0 &&
               portfolioData.slice(0, colThree * 3).map((port) => (
                 <Link
-                  href={`case/${port.casestudy.id}`}
+                  href={`/case/${port.casestudy.id}`}
                   key={port.id}
                   className="flex flex-col gap-4 relative group"
                 >
@@ -47,7 +47,7 @@ const PortfolioData = async () => {
             {colDynamic > 0 &&
               portfolioData.slice(-colDynamic).map((port, i) => (
                 <Link
-                  href={`case/${port.casestudy.id}`}
+                  href={`/case/${port.casestudy.id}`}
                   key={port.id}
                   className={`${
                     colDynamic === 2

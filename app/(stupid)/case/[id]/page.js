@@ -22,7 +22,6 @@ const Page = async ({ params }) => {
         <>
           <div className="flex flex-col w-full gap-6">
             <AnimateTitle title={casestudy.title} />
-
             <img
               src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${casestudy.feature_image}`}
               layout="responsive"

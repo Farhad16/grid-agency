@@ -6,7 +6,7 @@ import TextSlider from "./TextSlider";
 
 const Banner = () => {
   return (
-    <Wrapper className="flex items-center justify-center">
+    <Wrapper className="flex items-center justify-center px-16">
       <div className="flex flex-col">
         <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-bold">
           We make
@@ -39,11 +39,11 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="relative sm:mt-[200px] mt-24 flex items-center">
+        <div className="relative sm:mt-[200px] mt-24 flex items-center sm:!justify-start justify-center">
           <VerticleEl className="sm:-left-[180px] sm:top-14 -left-12 top-8">
             OUR STUPID
           </VerticleEl>
-          <p className="text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium tracking-[-1.7px]">
+          <p className="text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium tracking-[-1.7px] sm:!text-left text-center">
             We are the catalyst for
             <br />
             turning{" "}
@@ -53,7 +53,7 @@ const Banner = () => {
           </p>
         </div>
 
-        <div className="relative sm:mt-[200px] mt-24 flex items-center sm:justify-end">
+        <div className="relative sm:mt-[200px] mt-24 flex items-center sm:!justify-end justify-center">
           <VerticleEl className="sm:-right-[120px] sm:top-14 -right-4 top-8 rotate-[0deg]">
             <Image
               src="/assets/main_page/line-v.png"
@@ -63,10 +63,12 @@ const Banner = () => {
               layout="responsive"
             />
           </VerticleEl>
-          <p className="text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium text-right tracking-[-1.7px]">
+          <p className="text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium text-right tracking-[-1.7px] sm:!text-right text-center">
             We leverage our expertise in ideation,
-            <br /> content creation, video production, and
-            <br /> communication solutions to consistently
+            <br className="md:block hidden" />
+            content creation, video production, and
+            <br className="md:block hidden" /> communication solutions to
+            consistently
             <br />
             <span className="text-yellow-550 font-bold">
               redefine what's attainable
@@ -79,7 +81,7 @@ const Banner = () => {
             We do this by transforming
             <br /> the seemingly ‘STUPID'
             <br />
-            <span className="bg-yellow-550 rotate-[2deg] inline-block text-[#231F20] mt-2 font-bold px-3">
+            <span className="bg-yellow-550 rotate-[2deg] inline-block text-[#231F20] mt-2 font-bold py-2 sm:px-4 sm:leading-[40px] leading-[25px]">
               into brilliant innovative outcomes.
             </span>
           </p>

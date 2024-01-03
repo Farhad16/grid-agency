@@ -1,7 +1,7 @@
 export const menuItem = [
   {
     name: "homepage",
-    route: "/main",
+    route: "/home",
   },
   {
     name: "works",
@@ -10,5 +10,9 @@ export const menuItem = [
   {
     name: "talks",
     route: "/contact",
+  },
+  {
+    name: "about us",
+    route: "/about",
   },
 ];

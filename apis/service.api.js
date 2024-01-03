@@ -1,9 +1,9 @@
-import axiosInstance from "../utils/axiosInstance";
-
+"use server";
 export const getServices = async () => {
   try {
-    const response = await axiosInstance.get("/services");
-    return response.data;
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/services`);
+    const data = await res.json();
+    return data.data;
   } catch (error) {
     throw error;
   }

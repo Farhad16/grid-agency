@@ -1,7 +1,7 @@
-import Image from "next/image";
 import React from "react";
 import Wrapper from "../shared/Wrapper";
 import VerticleEl from "../shared/VerticleEl";
+import Link from "next/link";
 
 const SelectedWork = () => {
   return (
@@ -35,22 +35,29 @@ const SelectedWork = () => {
       <p className="text-light-50 text-[50px] md:text-[90px] font-bold tracking-[-4.5px]">
         Super Bowl Special
       </p>
-      <div className="w-full group relative">
-        <Image
+      <div className="w-full group relative ">
+        <img
           src="/assets/main_page/dish.png"
           alt="dish"
-          layout="responsive"
-          width={100}
-          height={100}
-          className="rounded-xl"
+          className="rounded-xl w-full h-full"
         />
         <img
           src="/assets/main_page/poly.png"
           alt="stupid"
-          className="absolute right-20 md:right-40 sm:w-[84px] sm:h-[61px] w-[40px] h-[20px] clip-path-triangle"
+          className="absolute right-20 md:right-40 sm:w-[84px] sm:h-[61px] w-[40px] h-[15px] clip-path-triangle"
         />
-        <div className="absolute top-0 left-0 w-full h-0 flex flex-col justify-center items-center bg-black bg-opacity-50 group-hover:h-full group-hover:opacity-100 duration-500" />
+        <Link href="/case/1">
+          <img
+            src="/assets/main_page/hover.png"
+            alt="hover"
+            className="rounded-xl opacity-10 w-full h-full absolute top-0 flex items-center justify-center group-hover:h-full group-hover:opacity-90 duration-500 group-hover:visible"
+          />
+          <div className="absolute right-20 md:right-40 sm:w-[84px] sm:h-[61px] w-[40px] h-[15px] clip-path-triangle bg-[#282425] bg-opacity-0 group-hover:bg-opacity-90 duration-500" />
+        </Link>
       </div>
+      <p className="text-[15px] text-light-50 tracking-[3.75px] uppercase mt-4">
+        Design / digital / experiential
+      </p>
     </Wrapper>
   );
 };

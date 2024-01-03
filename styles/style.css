@@ -26,34 +26,78 @@
   display: flex;
 }
 
+/* Talk slider section's css here */
+
 .background-text {
   position: relative;
   height: 100%;
   content: "";
 }
 
+.background-text::before,
+.background-text::after {
+  font-weight: 800;
+  color: black;
+  white-space: nowrap;
+}
+
 .background-text::before {
   content: "stupid";
   position: absolute;
-  top: -200px;
-  left: -100px;
+  top: 30%;
+  left: 0;
   transform: translate(0%, -50%);
   font-size: 690px;
-  color: black;
-  white-space: nowrap;
-  font-weight: 800;
+  width: fit-content;
 }
 
 .background-text::after {
   content: "talks";
   position: absolute;
-  top: -100px;
+  top: -150px;
   left: 0px;
-  transform: translate(120%, -20%);
-  font-size: 694px;
-  color: black;
-  white-space: nowrap;
-  font-weight: 800;
+  transform: translate(120%, 0%);
+  font-size: 690px;
+  width: fit-content;
+}
+
+.talk-section-outer {
+  overflow: hidden;
+}
+
+.talk-section-inner {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .background-text::before,
+  .background-text::after {
+    font-size: 400px;
+  }
+  .background-text::after {
+    top: 70px;
+    left: 0px;
+    transform: translate(130%, 10%);
+  }
+
+  .talk-section-inner {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-text::before,
+  .background-text::after {
+    font-size: 300px;
+  }
+  .background-text::after {
+    top: 70px;
+    left: 0px;
+    transform: translate(130%, 0%);
+  }
 }
 
 .contact-bg {
@@ -75,9 +119,8 @@
   overflow: hidden;
 }
 
-/* .scroll-section-inner {
+.scroll-section-inner {
   height: 100vh;
-  width: 500vw;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -85,8 +128,15 @@
 
 .scroll-section {
   height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.caseDes {
+  padding: 0 100px;
+}

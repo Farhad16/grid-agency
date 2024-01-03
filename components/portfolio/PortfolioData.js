@@ -25,8 +25,8 @@ const PortfolioData = async () => {
                 >
                   <img
                     src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}
-                  alt="portimg"
-                    className="min-h-[300px] sm:h-[560px] h-[300px] object-cover w-full"
+                    alt="portimg"
+                    className="min-h-[450px] sm:h-[560px] h-[450px] object-cover w-full"
                   />
                   <div className="flex gap-4 items-center text-[15px]">
                     <p className="text-yellow-550 font-bold uppercase">
@@ -58,7 +58,7 @@ const PortfolioData = async () => {
                   <img
                     src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}
                     alt="portimg"
-                    className="min-h-[300px] sm:h-[560px] h-[300px] object-cover w-full"
+                    className="min-h-[450px] sm:h-[560px] h-[450px] object-cover w-full"
                   />
                   <div className="flex gap-4 items-center text-[15px]">
                     <p className="text-yellow-550 font-bold uppercase">

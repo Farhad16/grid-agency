@@ -11,9 +11,9 @@ import React from "react";
 const Page = () => {
   return (
     <div className="bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen">
-      <Wrapper className="flex flex-col relative pb-20">
-        <div className="relative">
-          <p className="text-[100px] md:text-[120px] lg:text-[150px] text-light-50 tracking-[10.5px] font-bold">
+      <div className="flex flex-col relative pb-20">
+        <Wrapper className="relative px-14">
+          <p className="text-[100px] md:text-[120px] lg:text-[150px] text-light-50 tracking-[10.5px] font-extrabold">
             Our
           </p>
           <img
@@ -22,7 +22,7 @@ const Page = () => {
             src="/assets/about/stupid.png"
             className="sm:w-[384px] w-[200px] sm:h-[129px] absolute sm:-bottom-12 sm:left-[150px] left-[80px] -bottom-6"
           />
-        </div>
+        </Wrapper>
 
         <Vision />
         <Mission />
@@ -41,7 +41,7 @@ const Page = () => {
             <p> ideas,</p>
           </div>
         </div>
-      </Wrapper>
+      </div>
       <Achieve />
       <Footer />
     </div>

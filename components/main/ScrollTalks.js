@@ -76,7 +76,7 @@ function ScrollTalks() {
               key={i}
             >
               <div className="flex gap-6 items-start">
-                <span className="font-bold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">
+                <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">
                   {talk.serial}
                 </span>
                 <div className="relative">
@@ -85,7 +85,7 @@ function ScrollTalks() {
                     src={talk.img}
                     alt="img"
                   />
-                  <h1 className="font-bold absolute text-4xl sm:text-[70px] text-light-50 top-[40%] sm:-right-[200px] -right-[100px] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8">
+                  <h1 className="font-extrabold absolute text-4xl sm:text-[70px] text-light-50 top-[40%] sm:-right-[200px] -right-[100px] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8">
                     {talk.about}
                   </h1>
                 </div>

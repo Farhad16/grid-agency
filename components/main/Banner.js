@@ -6,13 +6,13 @@ import TextSlider from "./TextSlider";
 
 const Banner = () => {
   return (
-    <Wrapper className="flex items-center justify-center px-16">
+    <Wrapper className="flex items-center justify-center px-14">
       <div className="flex flex-col">
-        <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-bold">
+        <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-extrabold">
           We make
         </p>
         <div className="flex flex-col">
-          <div className="text-light-50 text-[100px] sm:text-[180px] md:text-[220px] lg:text-[280px] font-bold leading-[100px] sm:leading-[200px] tracking-wide flex relative">
+          <div className="text-light-50 text-[100px] sm:text-[180px] md:text-[220px] lg:text-[280px] font-extrabold leading-[100px] sm:leading-[200px] tracking-wide flex relative">
             <h1>stup</h1>
             <div className="relative">
               <h1>i</h1>
@@ -43,11 +43,11 @@ const Banner = () => {
           <VerticleEl className="sm:-left-[180px] sm:top-14 -left-12 top-8">
             OUR STUPID
           </VerticleEl>
-          <p className="text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium tracking-[-1.7px] sm:!text-left text-center">
+          <p className="sm:leading-normal leading-[34px] text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium sm:tracking-[-1.7px] tracking-[-1.25px] sm:!text-left text-center">
             We are the catalyst for
             <br />
             turning{" "}
-            <span className="text-yellow-550 font-bold">
+            <span className="text-yellow-550 font-extrabold">
               unconventional <br /> ideas into realities.
             </span>
           </p>
@@ -63,25 +63,25 @@ const Banner = () => {
               layout="responsive"
             />
           </VerticleEl>
-          <p className="text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium text-right tracking-[-1.7px] sm:!text-right text-center">
+          <p className="sm:leading-normal leading-[34px] text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium text-right sm:tracking-[-1.7px] tracking-[-1.25px] sm:!text-right text-center">
             We leverage our expertise in ideation,
             <br className="md:block hidden" />
             content creation, video production, and
             <br className="md:block hidden" /> communication solutions to
             consistently
             <br />
-            <span className="text-yellow-550 font-bold">
+            <span className="text-yellow-550 font-extrabold">
               redefine what's attainable
             </span>
           </p>
         </div>
 
         <div className="sm:mt-[200px] mt-24">
-          <p className="text-light-50 text-[28px] md:text-[40px] lg:text-[54px] font-medium text-center tracking-[-2.7px]">
+          <p className="text-light-50 text-[28px] md:text-[40px] lg:text-[54px] font-medium text-center sm:tracking-[-2.7px] tracking-[-1.05px] sm:leading-normal leading-[34px]">
             We do this by transforming
             <br /> the seemingly ‘STUPID'
             <br />
-            <span className="bg-yellow-550 rotate-[2deg] inline-block text-[#231F20] mt-2 font-bold py-2 sm:px-4 sm:leading-[40px] leading-[25px]">
+            <span className="bg-yellow-550 rotate-[2deg] inline-block text-[#231F20] mt-2 font-extrabold py-3 sm:px-4 sm:leading-[40px] leading-[19px]">
               into brilliant innovative outcomes.
             </span>
           </p>

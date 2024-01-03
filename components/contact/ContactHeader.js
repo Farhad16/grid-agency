@@ -73,11 +73,11 @@ const ContactHeader = () => {
         />
         <div className="flex flex-col">
           <div className="flex flex-col">
-            <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 font-bold w-fit -mb-3 font-bold">
+            <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 font-extrabold w-fit -mb-3 font-extrabold">
               talk to us
             </div>
             <div className="flex inline-block">
-              <p className="text-light-50 md:text-[90px] lg:text-[130px] text-[80px] font-bold sm:tracking-[-6.5px] tracking-[-4.5px] md:leading-[130px] leading-[90px]">
+              <p className="text-light-50 md:text-[90px] lg:text-[130px] text-[80px] font-extrabold sm:tracking-[-6.5px] tracking-[-4.5px] md:leading-[130px] leading-[90px]">
                 have a
               </p>
               <Image
@@ -90,7 +90,7 @@ const ContactHeader = () => {
               />
             </div>
           </div>
-          <div className="text-light-50 md:text-[90px] lg:text-[130px] text-[80px] font-bold relative sm:tracking-[-6.5px] tracking-[-4.5px] md:leading-[130px] leading-[90px] md:-mt-4 -mt-8">
+          <div className="text-light-50 md:text-[90px] lg:text-[130px] text-[80px] font-extrabold relative sm:tracking-[-6.5px] tracking-[-4.5px] md:leading-[130px] leading-[90px] md:-mt-4 -mt-8">
             project in
             <img
               src="/assets/contact/lines.png"
@@ -104,7 +104,7 @@ const ContactHeader = () => {
       <div className="sm:grid sm:grid-cols-3 gap-16 mt-[100px] flex flex-col-reverse">
         <div className="flex flex-col gap-16 sm:col-span-1 py-10 sm:py-0">
           <div className="flex flex-col sm:items-start items-center">
-            <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-sm text-xl md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-2 font-bold">
+            <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-sm text-xl md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-2 font-extrabold">
               prefer email?
             </p>
             <p className="text-light-50 text-xl md:text-[24px] lg:text-[30px] sm:!leading-[40px] sm:text-left text-center ">
@@ -116,7 +116,7 @@ const ContactHeader = () => {
             </p>
           </div>
           <div className="flex flex-col sm:items-start items-center ">
-            <p className="bg-yellow-550 -rotate-[2deg] inline-block w-fit text-xl md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-2 font-bold">
+            <p className="bg-yellow-550 -rotate-[2deg] inline-block w-fit text-xl md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-2 font-extrabold">
               prefer docs?
             </p>
             <p className="text-light-50 text-xl md:text-[24px] lg:text-[30px] sm:!leading-[40px] sm:text-left text-center ">

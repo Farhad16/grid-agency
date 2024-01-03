@@ -5,7 +5,7 @@ import DividerElement from "../shared/DividerElement";
 const Mission = () => {
   return (
     <>
-      <div className="sm:mt-[150px] mt-24 flex flex-col sm:flex-row items-center gap-8">
+      <div className="sm:mt-[150px] mt-24 flex sm:flex-row items-center gap-8">
         <div>
           <Image
             layout="responsive"

@@ -3,7 +3,7 @@ import React from "react";
 
 const Layout = ({ children }) => {
   return (
-    <main className="flex flex-col overflow-y-auto">
+    <main className="flex flex-col overflow-y-auto font-manrope">
       <Navbar />
       {children}
     </main>

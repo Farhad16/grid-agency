@@ -29,10 +29,10 @@ const PortfolioData = async () => {
                     className="min-h-[450px] sm:h-[560px] h-[450px] object-cover w-full"
                   />
                   <div className="flex gap-4 items-center text-[15px]">
-                    <p className="text-yellow-550 font-bold uppercase">
+                    <p className="text-yellow-550 font-extrabold uppercase">
                       {port.name}
                     </p>
-                    <p className="text-light-50 font-bold">{port.desc}</p>
+                    <p className="text-light-50 font-extrabold">{port.desc}</p>
                   </div>
                   <img
                     src="/assets/case/view.svg"
@@ -61,10 +61,10 @@ const PortfolioData = async () => {
                     className="min-h-[450px] sm:h-[560px] h-[450px] object-cover w-full"
                   />
                   <div className="flex gap-4 items-center text-[15px]">
-                    <p className="text-yellow-550 font-bold uppercase">
+                    <p className="text-yellow-550 font-extrabold uppercase">
                       {port.name}
                     </p>
-                    <p className="text-light-50 font-bold">{port.desc}</p>
+                    <p className="text-light-50 font-extrabold">{port.desc}</p>
                   </div>
                   <img
                     src="/assets/case/view.svg"

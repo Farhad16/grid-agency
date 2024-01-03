@@ -19,7 +19,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: crimson;
+  background-color: #231f20;
   height: 12px;
   width: 12px;
   border-radius: 50%;

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import DividerElement from "../shared/DividerElement";
+import Wrapper from "../shared/Wrapper";
 
 const Vision = () => {
   return (
@@ -17,10 +18,10 @@ const Vision = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-2 sm:w-1/2 w-full">
+      <div className="flex flex-col gap-2 sm:w-2/3 w-full px-14 sm:px-[100px]">
         <DividerElement tag="VISION">
-          To fearlessly pioneer
-          <br /> unconventional thinking in our
+          To fearlessly pioneer <br />
+          unconventional thinking in our
           <br />
           <span className="text-yellow-550 font-semibold">
             pursuit of the extraordinary.

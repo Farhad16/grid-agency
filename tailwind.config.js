@@ -25,6 +25,12 @@ module.exports = {
       borderColor: {
         "yellow-550": "#F9BC32",
       },
+      letterSpacing: {
+        "5px": "-5px",
+      },
+      fontFamily: {
+        manrope: ["Manrope"],
+      },
     },
   },
   plugins: [],

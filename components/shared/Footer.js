@@ -28,16 +28,16 @@ const Footer = () => {
           />
           <div className="flex flex-col w-full md:w-fit">
             <div className="flex flex-col">
-              <p className="bg-yellow-550 rotate-[2deg] w-fit inline-block text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 -mb-2 font-bold">
+              <p className="bg-yellow-550 rotate-[2deg] w-fit inline-block text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 -mb-2 font-extrabold">
                 new business
               </p>
-              <h1 className="text-light-50 md:text-[60px] lg:text-[80px] xl:text-[100px] text-5xl font-bold lg:leading-[90px]">
+              <h1 className="text-light-50 md:text-[60px] lg:text-[80px] xl:text-[100px] text-5xl font-extrabold lg:leading-[90px]">
                 <span>have a</span> <span>stupid</span>
               </h1>
             </div>
 
             <div className="flex flex-row items-center sm:gap-8 gap-6 mt-2">
-              <p className="text-light-50 md:text-[60px] lg:text-[80px] xl:text-[100px] text-5xl font-bold">
+              <p className="text-light-50 md:text-[60px] lg:text-[80px] xl:text-[100px] text-5xl font-extrabold">
                 idea?
               </p>
               <Link

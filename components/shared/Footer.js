@@ -18,7 +18,7 @@ const Footer = () => {
         width: "100%",
       }}
     >
-      <Wrapper className="w-full flex flex-col sm:mt-[80px] mt-24">
+      <Wrapper className="w-full flex flex-col sm:mt-[80px] mt-24 xs:!px-14 px-8">
         <div className="flex flex-col-reverse md:flex-row items-center lg:justify-between lg:gap-20 gap-12 py-10">
           <img
             src="/assets/footer/footer.gif"

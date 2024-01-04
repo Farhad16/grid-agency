@@ -5,6 +5,7 @@ import Pride from "@/components/main/Pride";
 import SelectedWork from "@/components/main/SelectedWork";
 import Services from "@/components/main/Services";
 import Talks from "@/components/main/Talks";
+import StupidEnough from "@/components/main/StupidEnough";
 
 const Page = () => {
   return (
@@ -14,6 +15,7 @@ const Page = () => {
       <Services />
       <SelectedWork />
       <Pride />
+      <StupidEnough />
       <Talks />
       <Footer />
     </div>

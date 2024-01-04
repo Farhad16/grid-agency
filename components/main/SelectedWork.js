@@ -23,8 +23,8 @@ const SelectedWork = () => {
           SELECTED <br /> WORKS
         </p>
       </div>
-      <Wrapper className="flex items-end justify-end relative px-14">
-        <VerticleEl className="sm:-right-[80px] sm:top-14 sm:block hidden">
+      <Wrapper className="flex items-end justify-end relative sm:!px-[100px] !px-14">
+        <VerticleEl className="sm:right-0 sm:top-14 sm:block hidden">
           SELECTED WORKS
         </VerticleEl>
       </Wrapper>
@@ -37,7 +37,7 @@ const SelectedWork = () => {
         </p>
       </Wrapper>
 
-      <Wrapper className="sm:!px-[100px] !px-0">
+      <Wrapper className="sm:px-[100px] px-0">
         <div className="w-full group relative">
           <img
             src="/assets/main_page/dish.png"
@@ -60,11 +60,11 @@ const SelectedWork = () => {
         </div>
       </Wrapper>
 
-      <Wrapper className="sm:!px-[100px] !px-0">
+      <div className="sm:px-[100px] px-14">
         <p className="md:text-[15px] text-[10px] text-light-50 md:tracking-[3.75px] uppercase mt-4">
           Design / digital / experiential
         </p>
-      </Wrapper>
+      </div>
     </div>
   );
 };

@@ -3,17 +3,17 @@ import Wrapper from "../shared/Wrapper";
 
 const Pride = () => {
   return (
-    <div className="flex flex-col w-full sm:mt-[200px] overflow-hidden">
-      <Wrapper className="flex flex-col sm:!px-[100px] !px-0">
+    <div className="flex flex-col w-full overflow-hidden py-16">
+      <Wrapper className="mt-32 flex flex-col mb-4 sm:!px-[100px] !px-14">
         <p className="text-yellow-550 md:text-xl uppercase text-[15px] tracking-[4.5px] font-extrabold">
           JAGERMEISTER
         </p>
-        <p className="text-light-50 text-[30px] md:text-[40px] lg:text-[90px] font-extrabold sm:tracking-[-4.5px]">
+        <p className="text-light-50 text-[30px] md:text-[40px] lg:text-[90px] font-extrabold sm:tracking-[-4.5px] tracking-[-1.5px] sm:leading-[78.682px] leading-[26.227px]">
           PrideMeister
         </p>
       </Wrapper>
 
-      <Wrapper className="sm:!px-[100px] !px-0">
+      <Wrapper className="sm:px-[100px] px-0">
         <div className="w-full group relative">
           <img
             src="/assets/main_page/pride.gif"
@@ -35,21 +35,11 @@ const Pride = () => {
           </Link>
         </div>
       </Wrapper>
-      <Wrapper className="sm:!px-[100px] !px-0">
+
+      <div className="sm:px-[100px] px-14">
         <p className="md:text-[15px] text-[10px] text-light-50 md:tracking-[3.75px] uppercase mt-4">
           Design / digital / experiential
         </p>
-      </Wrapper>
-      <div className="sm:mt-[150px] mt-16 flex items-center justify-center flex-col sm:gap-8 gap-4 py-4 min-h-[200px]">
-        <p className="text-light-50 md:text-[70px] lg:text-[100px] text-5xl">
-          <span className="font-extrabold">Stupid</span> enough?
-        </p>
-        <Link
-          href="/portfolio"
-          className="bg-yellow-550 rotate-[2deg] inline-block text-xl sm:text-[29px] text-[#231F20] px-4 sm:py-2 font-extrabold"
-        >
-          Boy, we got more
-        </Link>
       </div>
     </div>
   );

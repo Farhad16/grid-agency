@@ -73,11 +73,11 @@ const ContactHeader = () => {
         />
         <div className="flex flex-col">
           <div className="flex flex-col">
-            <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 font-extrabold w-fit -mb-3 font-extrabold">
+            <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 font-extrabold w-fit xs:-mb-3 -mb-1.5 font-extrabold">
               talk to us
             </div>
             <div className="flex inline-block">
-              <p className="text-light-50 md:text-[90px] lg:text-[130px] text-[80px] font-extrabold sm:tracking-[-6.5px] tracking-[-4.5px] md:leading-[130px] leading-[90px]">
+              <p className="text-light-50 md:text-[90px] lg:text-[130px] xs:text-[80px] text-[65px] font-extrabold sm:tracking-[-6.5px] tracking-[-4.5px] leading-[87.424%]">
                 have a
               </p>
               <Image
@@ -85,17 +85,17 @@ const ContactHeader = () => {
                 alt="cat"
                 width={150}
                 height={150}
-                className="w-[120px] h-[120px]"
+                className="w-[120px] h-[120px] -mt-6"
                 objectFit="cover"
               />
             </div>
           </div>
-          <div className="text-light-50 md:text-[90px] lg:text-[130px] text-[80px] font-extrabold relative sm:tracking-[-6.5px] tracking-[-4.5px] md:leading-[130px] leading-[90px] md:-mt-4 -mt-8">
+          <div className="text-light-50 md:text-[90px] lg:text-[130px] xs:text-[80px] text-[65px] font-extrabold relative sm:tracking-[-6.5px] tracking-[-4.5px] md:leading-[130px] leading-[90px] -mt-8">
             project in
             <img
               src="/assets/contact/lines.png"
               alt="lines"
-              className="absolute w-[60%] top-20 -left-4"
+              className="absolute w-[60%] sm:top-24 top-16 left-0"
             />{" "}
             mind?
           </div>

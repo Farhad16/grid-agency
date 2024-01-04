@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const SelectedWork = () => {
   return (
-    <div className="flex flex-col w-full sm:mt-[200px] py-16 overflow-hidden">
+    <div className="flex flex-col w-full sm:mt-[200px] pt-16">
       <div className="flex flex-col relative sm:px-[100px] px-14">
         <div className="flex gap-6">
           <img
@@ -28,7 +28,7 @@ const SelectedWork = () => {
           SELECTED WORKS
         </VerticleEl>
       </Wrapper>
-      <Wrapper className="mt-32 flex flex-col mb-4 sm:!px-[100px] !px-14">
+      <Wrapper className="sm:mt-36 mt-20 flex flex-col mb-4 sm:!px-[100px] !px-14 pt-16">
         <p className="text-yellow-550 md:text-xl uppercase text-[15px] tracking-[4.5px] font-extrabold">
           OSMOW’S
         </p>
@@ -37,7 +37,7 @@ const SelectedWork = () => {
         </p>
       </Wrapper>
 
-      <Wrapper className="sm:px-[100px] px-0">
+      <Wrapper className="sm:!px-[100px] !px-0">
         <div className="w-full group relative">
           <img
             src="/assets/main_page/dish.png"

@@ -12,7 +12,7 @@ const Page = () => {
   return (
     <div className="bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen">
       <div className="flex flex-col relative">
-        <Wrapper className="relative">
+        <Wrapper className="relative sm:!px-[100px] !px-10">
           <p className="text-[46px] md:text-[120px] lg:text-[150px] text-light-50 tracking-[10.5px] tracking-[-2.324px] leading-[68.983%] font-extrabold">
             Our
           </p>
@@ -28,7 +28,7 @@ const Page = () => {
         <Mission />
         <Mesh />
 
-        <div className="lg:text-[54px] md:text-[40px] text-[24px] text-light-50 font-medium sm:tracking-[-2.7px] flex items-center flex-col lg:pt-16 md:pt-12 pt-8">
+        <div className="lg:text-[54px] md:text-[40px] text-base text-light-50 font-medium sm:tracking-[-2.7px] tracking-[-0.837px] flex items-center flex-col lg:pt-16 md:pt-12 pt-0">
           <p>We believe that within</p>
           <div className="flex items-center">
             <span>these seemingly </span>
@@ -36,7 +36,7 @@ const Page = () => {
               layout="responsive"
               alt="stupid"
               src="/assets/about/stupid.png"
-              className="lg:w-[200px] md:w-[160px] w-[100px]"
+              className="lg:w-[200px] md:w-[160px] w-[100px] rotate-[-8deg]"
             />
             <p> ideas,</p>
           </div>

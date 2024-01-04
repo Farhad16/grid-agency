@@ -43,7 +43,7 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="relative sm:mt-[200px] mt-24 flex items-center sm:!justify-start justify-center">
+        <div className="relative mt-[200px] flex items-center sm:!justify-start justify-center">
           <VerticleEl className="sm:-left-[180px] sm:top-14 -left-12 top-8">
             OUR STUPID
           </VerticleEl>
@@ -57,7 +57,7 @@ const Banner = () => {
           </p>
         </div>
 
-        <div className="relative sm:mt-[200px] mt-24 flex items-center sm:!justify-end justify-center">
+        <div className="relative mt-[200px] flex items-center sm:!justify-end justify-center">
           <VerticleEl className="sm:-right-[120px] sm:top-14 -right-4 top-8 rotate-[0deg]">
             <Image
               src="/assets/main_page/line-v.png"
@@ -80,7 +80,7 @@ const Banner = () => {
           </p>
         </div>
 
-        <div className="sm:mt-[200px] mt-24">
+        <div className="mt-[200px]">
           <p className="text-light-50 text-[28px] md:text-[40px] lg:text-[54px] font-medium text-center sm:tracking-[-2.7px] tracking-[-1.05px] sm:leading-normal leading-[34px]">
             We do this by transforming
             <br /> the seemingly ‘STUPID'

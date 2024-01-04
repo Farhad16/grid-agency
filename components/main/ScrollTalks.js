@@ -3,55 +3,26 @@ import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { talkData } from "@/constance/talks.data";
+import Link from "next/link";
 
 function ScrollTalks() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
-  const [width, setWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0
-  );
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    const dimention = {
-      windowWidth: 220,
-      windowMargin: 50,
-    };
-
-    if (width < 475) {
-      dimention.windowWidth = width * 1.5;
-      dimention.windowMargin = 150;
-    } else if (width > 412 && width < 750) {
-      dimention.windowWidth = 300;
-      dimention.windowMargin = 100;
-    } else {
-      dimention.windowWidth = 220;
-      dimention.windowMargin = 50;
-    }
-
     const pin = gsap.fromTo(
       sectionRef.current,
       {
         translateX: 0,
       },
       {
-        translateX: `-${dimention.windowWidth}vw`,
+        translateX: `-250vw`,
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
-          start: `top-=${dimention.windowMargin} top"`,
+          start: `top-=50 top"`,
           end: "2000 top",
           scrub: 1,
           pin: true,
@@ -61,12 +32,12 @@ function ScrollTalks() {
     return () => {
       pin.kill();
     };
-  }, [width]);
+  }, []);
 
   return (
     <section className="talk-section-outer">
       <div ref={triggerRef}>
-        <div ref={sectionRef} className="talk-section-inner">
+        <div ref={sectionRef} className="talk-section-inner relative">
           <div className="background-text"></div>
           {talkData.map((talk, i) => (
             <div
@@ -95,6 +66,16 @@ function ScrollTalks() {
               </div>
             </div>
           ))}
+          <Link href="/works" className="ml-[250px]">
+            <>
+              <p className="-rotate-90 absolute bottom-[40%] text-center text-extralight !text-yellow-550 z-10 tracking-[3.96px] text-[21px]">
+                READ
+              </p>
+            </>
+            <p className="-rotate-90 absolute bottom-[53%] text-center text-extralight !text-yellow-550 z-10 tracking-[3.96px] text-[21px] -ml-[2.8px]">
+              MORE
+            </p>
+          </Link>
         </div>
       </div>
     </section>

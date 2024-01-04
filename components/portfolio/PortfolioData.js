@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import { getPortfolio } from "@/apis/portfolio.api";
-import Wrapper from "../shared/Wrapper";
 import NoDataFound from "../shared/NoDataFound";
 
 const PortfolioData = async () => {
@@ -10,7 +9,7 @@ const PortfolioData = async () => {
   const colDynamic = portfolioData.length % 3;
 
   return (
-    <Wrapper className="flex flex-col mt-24 sm:pb-[150px] pb-24 sm:mt-[200px] overflow-hidden items-center justify-center">
+    <div className="flex flex-col mt-24 sm:pb-[150px] pb-24 sm:mt-[200px] overflow-hidden items-center justify-center sm:px-[100px] px-4">
       {portfolioData.length < 0 ? (
         <NoDataFound data="portfolio" />
       ) : (
@@ -76,7 +75,7 @@ const PortfolioData = async () => {
           </div>
         </>
       )}
-    </Wrapper>
+    </div>
   );
 };
 

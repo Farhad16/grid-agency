@@ -6,7 +6,7 @@ import Wrapper from "../shared/Wrapper";
 const Vision = () => {
   return (
     <>
-      <div className="w-full flex items-end justify-end mt-16">
+      <div className="w-full flex items-end justify-end sm:mt-20 mt-16">
         <div className="w-2/3">
           <Image
             layout="responsive"
@@ -18,12 +18,12 @@ const Vision = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-2 sm:w-2/3 w-full px-14 sm:px-[100px]">
+      <div className="flex flex-col gap-2 w-full px-12 sm:px-[100px]">
         <DividerElement tag="VISION">
           To fearlessly pioneer <br />
           unconventional thinking in our
           <br />
-          <span className="text-yellow-550 font-semibold">
+          <span className="text-yellow-550 font-extrabold">
             pursuit of the extraordinary.
           </span>
         </DividerElement>

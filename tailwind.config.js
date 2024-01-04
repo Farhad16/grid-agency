@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       screens: {
         xl: "1280px",
+        xs: "380px",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -24,6 +25,12 @@ module.exports = {
       },
       borderColor: {
         "yellow-550": "#F9BC32",
+      },
+      letterSpacing: {
+        "5px": "-5px",
+      },
+      fontFamily: {
+        manrope: ["Manrope"],
       },
     },
   },

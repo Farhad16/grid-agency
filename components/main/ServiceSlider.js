@@ -44,17 +44,17 @@ const ServiceSlider = ({ serviceData }) => {
               }}
             >
               <div className="flex flex-col text-black w-full h-full sm:py-16 sm:pl-16 sm:pr-8 px-6 py-8">
-                <span className="font-bold text-lg sm:text-[40px] text-left flex items-end justify-end">
+                <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end">
                   {i + 1 > 10 ? ++i : `0${++i}`}
                 </span>
-                <div className="flex flex-col sm:gap-6 sm:mt-10 mt-4 gap-3">
-                  <h1 className="text-3xl md:text-[70px] lg:text-[80px] font-bold text-[#231F20] sm:leading-[80px]">
+                <div className="flex flex-col sm:gap-6 sm:mt-10 mt-4 gap-3 text-[#231F20]">
+                  <h1 className="text-[42px] md:text-[70px] lg:text-[80px] font-extrabold tracking-[-2.107px] sm:tracking-[-4.5px] sm:leading-normal leading-[34px]">
                     {service.name}
                   </h1>
-                  <div className="text-base sm:text-[26px] mt-4 leading-[30px] tracking-[-1.3px]">
+                  <div className="text-[12px] sm:text-[26px] mt-4 sm:tracking-[-1.3px] tracking-[-0.609px] sm:leading-normal leading-[20px]">
                     <HTMLParser content={service.about} />
                   </div>
-                  <div className="text-base sm:text-[26px] leading-[30px] tracking-[-1.3px]">
+                  <div className="text-sm sm:text-[26px] sm:tracking-[-1.5px] tracking-[-0.702px] font-medium sm:leading-normal leading-[20px]">
                     <HTMLParser content={service.description} />
                   </div>
                 </div>

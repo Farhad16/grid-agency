@@ -2,7 +2,7 @@ import React from "react";
 
 const Wrapper = ({ children, className }) => {
   return (
-    <div className={`flex sm:px-[100px] px-8 relative ${className}`}>
+    <div className={`flex sm:px-[100px] px-6 relative ${className}`}>
       {children}
     </div>
   );

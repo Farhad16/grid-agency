@@ -5,7 +5,7 @@ import ContactHeader from "@/components/contact/ContactHeader";
 
 const Page = () => {
   return (
-    <div className="flex flex-col text-white bg-[#0A0808]">
+    <div className="flex flex-col text-light-50 bg-[#0A0808]">
       <ContactHeader />
       <GridAgency />
       <ContactFooter />

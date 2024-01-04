@@ -20,7 +20,7 @@ const Services = async () => {
         ) : (
           <NoDataFound data="service" className="!text-black" />
         )}
-        <VerticleEl className="sm:-right-[0px] -right-4 top-[350px] !text-[#231F20]">
+        <VerticleEl className="sm:block hidden sm:-right-[0px] -right-4 top-[350px] !text-[#231F20]">
           STUPID SERVICES
         </VerticleEl>
       </Wrapper>

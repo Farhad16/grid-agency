@@ -4,10 +4,12 @@ import React from "react";
 const DividerElement = ({ tag, children }) => {
   return (
     <>
-      <p className="text-2xl sm:text-3xl text-yellow-550">{tag}</p>
-      <div className="grid sm:grid-cols-4 grid-col-1 gap-6">
-        <Divider className="w-[2px] h-16 bg-[#E6E0D2] col-span-1 ml-2" />
-        <div className="text-base sm:text-[26px] text-light-50 sm:col-span-3 col-span-1 text-light-50 leading-[30px]">
+      <p className="text-[10px] sm:text-[30px] text-yellow-550 leading-[89.473%] sm:tracking-[7.5px] tracking-[2.324px] font-extrabold">
+        {tag}
+      </p>
+      <div className="flex flex-row sm:gap-12 gap-8  w-full">
+        <Divider className="sm:w-[2px] w-[1px] sm:h-16 h-10 bg-[#E6E0D2] col-span-1 ml-2 mt-2" />
+        <div className="text-[15px] sm:text-[34px] text-light-50 col-span-3 text-light-50 sm:leading-normal font-normal">
           {children}
         </div>
       </div>

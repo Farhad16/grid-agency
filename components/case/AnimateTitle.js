@@ -12,10 +12,10 @@ const AnimateTitle = ({ title }) => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, easing: "easeOut", delay: 0.25 }}
       >
-        <p className="text-light-50 md:text-[60px] lg:text-[80px] text-[40px] font-bold sm:leading-[70px] leading-[50px]">
+        <p className="text-light-50 md:text-[60px] lg:text-[80px] text-[40px] font-extrabold sm:leading-[70px] leading-[50px]">
           {title}
         </p>
-        <p className="text-yellow-550 tracking-[3.75px] flex items-end font-bold">
+        <p className="text-yellow-550 tracking-[3.75px] flex items-end font-extrabold">
           OSMOW'S
         </p>
       </motion.div>

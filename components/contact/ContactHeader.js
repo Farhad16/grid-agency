@@ -63,51 +63,51 @@ const ContactHeader = () => {
   };
 
   return (
-    <Wrapper className="w-full flex flex-col relative contact-bg pb-6 pt-[150px] sm:pt-[200px]">
-      <div className="flex flex-col md:flex-row gap-24 items-center">
+    <Wrapper className="border-bottom w-full flex flex-col relative contact-bg sm:pb-[100px] pb-[50px] pt-[150px] sm:pt-[200px]">
+      <div className="flex flex-col md:flex-row sm:gap-24 gap-16 items-center">
         <img
           src="/assets/footer/footer.gif"
           layout="responsive"
-          className="w-[308px]"
+          className="lg:w-[308px] md:w-[214px] w-[175px]"
           alt="footergif"
         />
         <div className="flex flex-col">
-          <div className="flex items-center">
-            <div className="flex flex-col inline-block ">
-              <div className="w-[213px] text-center bg-yellow-550 rotate-[2deg] text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-1 font-bold ml-2">
-                talk to us
-              </div>
-              <p className="text-light-50 md:text-[100px] lg:text-[130px] text-6xl font-bold">
+          <div className="flex flex-col">
+            <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 font-extrabold w-fit xs:-mb-3 -mb-1.5 font-extrabold">
+              talk to us
+            </div>
+            <div className="flex inline-block">
+              <p className="text-light-50 md:text-[90px] lg:text-[130px] xs:text-[80px] text-[65px] font-extrabold sm:tracking-[-6.5px] tracking-[-4.5px] leading-[87.424%]">
                 have a
               </p>
+              <Image
+                src="/assets/main_page/Cat.gif"
+                alt="cat"
+                width={150}
+                height={150}
+                className="w-[120px] h-[120px] -mt-6"
+                objectFit="cover"
+              />
             </div>
-            <Image
-              src="/assets/main_page/Cat.gif"
-              alt="cat"
-              width={150}
-              height={150}
-              className="sm:max-w-[150px] max-w-[100px]"
-              objectFit="cover"
-            />
           </div>
-          <div className="text-light-50 md:text-[100px] lg:text-[130px] text-6xl font-bold relative">
+          <div className="text-light-50 md:text-[90px] lg:text-[130px] xs:text-[80px] text-[65px] font-extrabold relative sm:tracking-[-6.5px] tracking-[-4.5px] md:leading-[130px] leading-[90px] -mt-8">
             project in
             <img
               src="/assets/contact/lines.png"
               alt="lines"
-              className="absolute w-[60%] top-20 -left-4"
-            />
-            {` `}mind?
+              className="absolute w-[60%] sm:top-24 top-16 left-0"
+            />{" "}
+            mind?
           </div>
         </div>
       </div>
-      <div className="grid sm:grid-cols-3 grid-cols-1 gap-16 mt-[100px]">
-        <div className="flex flex-col gap-16 col-span-1">
-          <div className="flex flex-col">
-            <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-sm text-xl md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-2 font-bold">
+      <div className="sm:grid sm:grid-cols-3 gap-16 mt-[100px] flex flex-col-reverse">
+        <div className="flex flex-col gap-16 sm:col-span-1 py-10 sm:py-0">
+          <div className="flex flex-col sm:items-start items-center">
+            <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
               prefer email?
             </p>
-            <p className="text-light-50 text-xl md:text-[24px] lg:text-[30px] font-bold sm:!leading-[40px]">
+            <p className="text-light-50 text-[30px] sm:text-left text-center tracking-[-1.5px] sm:leading-normal">
               You can reach us at
               <br />
               <span className="text-yellow-550 underline break-words">
@@ -115,22 +115,24 @@ const ContactHeader = () => {
               </span>
             </p>
           </div>
-          <div className="flex flex-col">
-            <p className="bg-yellow-550 -rotate-[2deg] inline-block w-fit text-xl md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-2 font-bold">
+          <div className="flex flex-col sm:items-start items-center mt-4">
+            <p className="bg-yellow-550 -rotate-[2deg] inline-block w-fit text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
               prefer docs?
             </p>
-            <p className="text-light-50 text-xl md:text-[24px] lg:text-[30px] font-bold sm:!leading-[40px]">
+            <p className="text-light-50 text-[30px] sm:text-left text-center tracking-[-1.5px] sm:leading-normal">
               check out our
               <br />
-              <span className="text-yellow-550 underline">pricing slide</span>
+              <span className="text-yellow-550 underline break-words">
+                pricing slide
+              </span>
             </p>
           </div>
         </div>
         <form
-          className="md:col-span-2 col-span-1 flex flex-col gap-8"
+          className="md:col-span-2 flex flex-col gap-8"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex sm:flex-row flex-col gap-4 w-full">
+          <div className="flex flex-row gap-4 w-full">
             <FormInput
               name="name"
               placeholder="Name*"
@@ -174,7 +176,7 @@ const ContactHeader = () => {
 
           <button
             type="submit"
-            className="text-yellow-550 hover:bg-yellow-550 hover:bg-opacity-20 focus:outline-none outline-none group flex items-center border border-2 rounded-full border-yellow-550 transition duration-300 py-[10px] px-[32px] w-fit"
+            className="font-extrabold text-yellow-550 hover:bg-yellow-550 hover:bg-opacity-20 focus:outline-none outline-none group flex items-center border border-1.5 justify-center rounded-full border-yellow-550 transition duration-300 py-[10px] px-[32px] sm:w-fit w-full"
           >
             GET A QUOTE
           </button>

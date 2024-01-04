@@ -15,21 +15,25 @@ const Circle = ({ className, data }) => {
 
   return (
     <div
-      className={`overflow-hidden absolute w-[110px] h-[110px] md:w-[180px] md:h-[180px] lg:w-[230px] lg:h-[230px] rounded-full border border-[#E6E0D2] text-light-50 flex items-center justify-center text-center z-5 bg-[#0A0808] transition duration-300 ease hover:text-yellow-500 hover:border-yellow-550 md:text-[20px] text-sm font-extralight sm:p-4 p-3 lg:leading-[30px] ${className}`}
-      style={{
-        transform: isClicked ? "scale(1.4)" : "scale(1)",
-        border: isClicked && "1px solid #E6E0D2",
-      }}
+      className={`${
+        isClicked
+          ? "transform scale-[1.8] md:scale-[1.7] lg:scale-[1.4] !border-[#E6E0D2] !text-light-50"
+          : "transform scale-1 md:scale-1 lg:scale-1"
+      } leading-normal font-extralight lg:text-[25px] md:text-base text-[8px] w-[91px] h-[91px] md:w-[180px] md:h-[180px] lg:w-[230px] lg:h-[230px] overflow-hidden absolute rounded-full border border-[#E6E0D2] text-light-50 flex items-center justify-center text-center z-5 bg-[#0A0808] transition-all duration-300 ease hover:text-yellow-500 hover:border-yellow-550 ${className}`}
       onClick={handleOpen}
       onMouseLeave={handleClose}
     >
-      {isClicked ? (
-        <span className="md:!text-[15px] !text-[8px] sm:!leading-[20px] !leading-[10px] !text-light-50">
-          {text2}
-        </span>
-      ) : (
-        text1
-      )}
+      <span
+        className={`
+          ${
+            isClicked
+              ? "md:text-[14px] lg:text-[18px] text-[6px] lg:leading-[18px] md:leading-[16px]"
+              : "scale-1"
+          }
+        `}
+      >
+        {isClicked ? text2 : text1}
+      </span>
     </div>
   );
 };

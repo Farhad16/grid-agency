@@ -3,22 +3,22 @@ import Circle from "./Circle";
 
 const Mesh = () => {
   return (
-    <div className="relative flex items-center justify-center w-full pb-[150px] pt-16 mt-10">
+    <div className="relative flex items-center justify-center w-full pb-[150px] pt-16 mt-10 sm:px-[100px] px-8">
       <img
         src="/assets/about/aline.png"
         alt="aline"
-        className="sm:w-[800px] sm:h-[700px] xl:w-[1000px] w-[500px] h-[450px] 2xl:w-[1300px]"
+        className="sm:w-[800px] sm:h-[700px] md:h-[913px] xl:w-[1000px] w-[275px] h-[282px] 2xl:w-[1300px]"
       />
-      <div className="flex flex-col absolute top-[5%] sm:left-[30%] left-[20%]">
-        <p className="lg:text-[54px] md:text-[40px] text-[30px] text-light-50 font-extralight tracking-[-2.7px]">
+      <div className="flex flex-col absolute top-[5%] sm:left-[30%] left-[10%]">
+        <p className="lg:text-[54px] md:text-[40px] text-[30px] text-light-50 font-extralight tracking-[-2.7px] sm:tracking-[-1px]">
           Mesh
         </p>
-        <p className="text-yellow-550 font-semibold text-base sm:text-xl lg:text-[26px] tracking-[5.4px]">
+        <p className="text-yellow-550 font-extrabold text-base sm:text-xl lg:text-[26px] tracking-[5.4px] tracking-[2.4px] sm:tracking-[5.4px]">
           OUR PROCESS
         </p>
       </div>
       <Circle
-        className="xl:-top-[5%] xl:right-[10%] lg:right-[8%] lg:-top-[7%] top-0 md:right-[5%] right-0"
+        className="xl:top-0 xl:right-[15%] lg:right-[8%] lg:-top-[7%] md:right-[15%] md:top-[5%] top-8 right-10"
         data={{
           text1: (
             <span>
@@ -38,7 +38,7 @@ const Mesh = () => {
         }}
       />
       <Circle
-        className="left-[45%] xl:left-[50%] xl:top-[35%]"
+        className="xl:left-[46%] xl:top-[35%] md:left-[48%] left-[42%]"
         data={{
           text1: (
             <span>
@@ -61,7 +61,7 @@ const Mesh = () => {
         }}
       />
       <Circle
-        className="xl:left-0 xl:top-[20%] lg:-left-[3%] lg:top-[20%] -left-[8%] top-[28%]"
+        className="xl:left-24 xl:top-[28%] lg:-left-[3%] lg:top-[20%] md:left-[8%] md:top-[30%] left-5 top-[26%]"
         data={{
           text1: (
             <span>
@@ -72,31 +72,16 @@ const Mesh = () => {
           ),
           text2: (
             <span>
-              Our teams go through a concept development process where we gather
-              <br />
-              diverse perspectives for brainstorming, shaping innovative
-              concepts.
+              Our teams go through a <br /> concept development <br />
+              process where we gather <br />
+              diverse perspectives for <br />
+              brainstorming, shaping <br /> innovative concepts.
             </span>
           ),
         }}
       />
       <Circle
-        className="xl:right-0 md:right-[2%] -right-[10%] bottom-[32%]"
-        data={{
-          text1: <span>Transformation</span>,
-          text2: (
-            <span>
-              We explore technology <br />
-              solutions and seamlessly
-              <br /> integrate them across <br />
-              various channels, amplifying
-              <br /> the impact for our partners.
-            </span>
-          ),
-        }}
-      />
-      <Circle
-        className="xl:bottom-0 bottom-20 xl:left-[30%] left-[20%]"
+        className="xl:bottom-16 xl:left-[30%] md:left-[30%] md:bottom-32 left-[25%] bottom-28"
         data={{
           text1: (
             <span>
@@ -112,6 +97,22 @@ const Mesh = () => {
               <br />
               re-invent solutions to
               <br /> be better optimized.
+            </span>
+          ),
+        }}
+      />
+
+      <Circle
+        className="xl:right-24 md:right-[8%] md:bottom-[30%] right-[5%] bottom-[40%]"
+        data={{
+          text1: <span>Transformation</span>,
+          text2: (
+            <span>
+              We explore technology <br />
+              solutions and seamlessly
+              <br /> integrate them across <br />
+              various channels, amplifying
+              <br /> the impact for our partners.
             </span>
           ),
         }}

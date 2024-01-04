@@ -15,14 +15,13 @@ const Page = async ({ params }) => {
   const { casestudy, services, related_case_study } = caseDetails;
 
   return (
-    <div className="flex flex-col text-white bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen relative">
+    <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen relative">
       {!casestudy.title ? (
         <NoDataFound data="case details" className="pb-20" />
       ) : (
         <>
           <div className="flex flex-col w-full gap-6">
             <AnimateTitle title={casestudy.title} />
-
             <img
               src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${casestudy.feature_image}`}
               layout="responsive"
@@ -51,7 +50,7 @@ const Page = async ({ params }) => {
           </Wrapper>
           <Wrapper className="flex flex-col sm:mt-[250px] mt-[100px] gap-4 overflow-hidden border-bottom">
             <p className="text-base sm:text-[26px] text-light-50 text-light-50 leading-[30px]">
-              next <span className="font-bold">project</span>
+              next <span className="font-extrabold">project</span>
             </p>
             <div className="max-h-[350px]">
               <a href={`/case/${related_case_study.id}`}>

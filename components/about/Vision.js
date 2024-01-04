@@ -18,7 +18,7 @@ const Vision = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-2 w-full px-12 sm:px-[100px]">
+      <div className="flex flex-col w-full px-12 sm:px-[100px]">
         <DividerElement tag="VISION">
           To fearlessly pioneer <br />
           unconventional thinking in our

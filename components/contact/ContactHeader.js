@@ -176,7 +176,7 @@ const ContactHeader = () => {
 
           <button
             type="submit"
-            className="text-yellow-550 hover:bg-yellow-550 hover:bg-opacity-20 focus:outline-none outline-none group flex items-center border border-1.5 justify-center rounded-full border-yellow-550 transition duration-300 py-[10px] px-[32px] sm:w-fit w-full"
+            className="font-extrabold text-yellow-550 hover:bg-yellow-550 hover:bg-opacity-20 focus:outline-none outline-none group flex items-center border border-1.5 justify-center rounded-full border-yellow-550 transition duration-300 py-[10px] px-[32px] sm:w-fit w-full"
           >
             GET A QUOTE
           </button>

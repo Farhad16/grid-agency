@@ -34,8 +34,12 @@ const Banner = () => {
               className="absolute -bottom-[10px] sm:-bottom-[90px] left-0 sm:max-w-[515px] max-w-[150px]"
             />
           </div>
-          <div className="flex flex-row items-center justify-end sm:mt-0 -mt-6">
-            <TextSlider />
+          <div className="flex flex-row items-center justify-end lg:mt-2 sm:-mt-8 mt-0">
+            <img
+              src="/assets/main_page/text-ani.gif"
+              alt="animated"
+              className="w-[200px] sm:w-[250px] lg:w-[350px] lg:h-[80px]"
+            />
           </div>
         </div>
 

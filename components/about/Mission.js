@@ -14,7 +14,7 @@ const Mission = () => {
             objectFit="cover md:w-[738px] w-[228px] "
           />
         </div>
-        <div className="flex flex-col pr-8 gap-2">
+        <div className="flex flex-col pr-8">
           <DividerElement tag="MISSION">
             To empower businesses to{" "}
             <span className="text-yellow-550 font-extrabold">

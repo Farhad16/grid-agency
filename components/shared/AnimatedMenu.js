@@ -80,16 +80,16 @@ const AnimatedMenu = ({ open, setOpen }) => {
             <Link
               href={item.route}
               key={item.name}
-              className="text-light-50 md:text-[80px] lg:text-[90px] text-4xl font-extrabold lg:tracking-[-5px]"
+              className="text-light-50 md:text-[80px] lg:text-[90px] text-4xl font-extrabold lg:tracking-[-5px] leading-[34px]"
               onClick={() => setOpen(false)}
             >
               {item.name}
             </Link>
           ))}
         </div>
-        <div className="flex flex-col lg:text-3xl text-xl font-extrabold relative text-light-50 gap-2 mt-10">
+        <div className="flex flex-col lg:text-3xl text-xl font-extrabold relative text-light-50 mt-10 leading-[34px] tracking-[-1.5px]">
           <Link href="/contact">contact us</Link>
-          <Link href="/">back to into</Link>
+          <Link href="/">Back to INTRO</Link>
         </div>
       </animated.div>
     </>

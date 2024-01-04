@@ -5,8 +5,11 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+  const [hovered, setHovered] = React.useState(false);
+
   return (
     <div
       className="sm:min-h-[800px] sm:py-16 py-8"
@@ -18,7 +21,7 @@ const Footer = () => {
         width: "100%",
       }}
     >
-      <Wrapper className="w-full flex flex-col sm:mt-[80px] mt-24 xs:!px-14 px-8">
+      <Wrapper className="w-full flex flex-col sm:mt-[80px] mt-24 xs:!px-12 px-8">
         <div className="flex flex-col-reverse md:flex-row items-center lg:justify-between lg:gap-20 gap-12 py-10">
           <img
             src="/assets/footer/footer.gif"
@@ -31,31 +34,52 @@ const Footer = () => {
               <p className="bg-yellow-550 rotate-[2deg] w-fit inline-block text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 -mb-2 font-extrabold">
                 new business
               </p>
-              <h1 className="text-light-50 md:text-[60px] lg:text-[80px] xl:text-[100px] text-5xl font-extrabold lg:leading-[90px]">
+              <h1 className="text-light-50 sm:text-[80px] xl:text-[100px] text-[50px] font-extrabold leading-[87.424%] tracking-[-2.5px] sm:tracking-[-6px]">
                 <span>have a</span> <span>stupid</span>
               </h1>
             </div>
 
             <div className="flex flex-row items-center sm:gap-8 gap-6 mt-2">
-              <p className="text-light-50 md:text-[60px] lg:text-[80px] xl:text-[100px] text-5xl font-extrabold">
+              <p className="text-light-50 sm:text-[80px] xl:text-[100px] text-[50px] font-extrabold leading-[87.424%] tracking-[-2.5px] sm:tracking-[-6px]">
                 idea?
               </p>
-              <Link
-                href="/contact"
-                className="focus:outline-none outline-none group flex items-center border border-2 rounded-full border-yellow-550 transition duration-300 md:w-[240px] lg:w-[300px] xl:w-[350px] w-full lg:h-[50px] lg:h-[45px] h-[40px]"
+              <div
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+                // href="/contact"
+                className="focus:outline-none outline-none border border-2 rounded-full border-yellow-550 md:w-[240px] lg:w-[300px] xl:w-[350px] w-full lg:h-[50px] lg:h-[45px] h-[40px] flex items-center justify-center text-center sm:text-sm text-xs tracking-[1.727px]"
               >
-                <p className="w-full flex items-center group-hover:justify-center">
-                  <span className="mr-4 uppercase opacity-0 group-hover:opacity-100 transition-opacity transition-transform transform -translate-x-full group-hover:translate-x-0 text-light-50">
-                    Contact Us
+                <motion.p
+                  className="sm:min-w-[150px] flex flex-row items-center justify-center text-center"
+                  animate={{
+                    x: hovered ? 100 : 0,
+                    opacity: hovered ? 0 : 1,
+                  }}
+                >
+                  <span className="uppercase text-light-50 text-center ">
+                    say hello
                   </span>
+
                   <ArrowForwardIcon
                     sx={{
-                      fontSize: "30px",
+                      fontSize: "20px",
+                      marginLeft: "10px",
                     }}
-                    className="-ml-10 group-hover:ml-0 transition-transform transform -translate-x-full group-hover:translate-x-0 text-light-50"
+                    className="text-light-50"
                   />
-                </p>
-              </Link>
+                </motion.p>
+                <motion.span
+                  className={`${
+                    hovered ? "sm:-ml-44 -ml-28" : "sm:-ml-36 -ml-32"
+                  }  sm:min-w-[150px] min-w-[100px] uppercase text-light-50"`}
+                  animate={{
+                    x: hovered ? 0 : -100,
+                    opacity: hovered ? 1 : 0,
+                  }}
+                >
+                  Contact Us
+                </motion.span>
+              </div>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ const PortfolioData = async () => {
                   <img
                     src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}
                     alt="portimg"
-                    className="min-h-[450px] sm:h-[560px] h-[450px] object-cover w-full"
+                    className="min-h-[560px] sm:h-[560px] object-cover w-full"
                   />
                   <div className="flex gap-4 items-center text-[15px]">
                     <p className="text-yellow-550 font-extrabold uppercase">
@@ -51,14 +51,14 @@ const PortfolioData = async () => {
                   key={port.id}
                   className={`${
                     colDynamic === 2
-                      ? "sm:first:col-span-2 space-y-10"
+                      ? "sm:first:col-span-2 sm:mb-0 mb-10"
                       : "col-span-3"
                   } flex flex-col gap-4 relative group`}
                 >
                   <img
                     src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}
                     alt="portimg"
-                    className="min-h-[450px] sm:h-[560px] h-[450px] object-cover w-full"
+                    className="min-h-[560px] sm:h-[560px] object-cover w-full"
                   />
                   <div className="flex gap-4 items-center text-[15px]">
                     <p className="text-yellow-550 font-extrabold uppercase">

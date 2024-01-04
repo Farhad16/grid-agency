@@ -104,10 +104,10 @@ const ContactHeader = () => {
       <div className="sm:grid sm:grid-cols-3 gap-16 mt-[100px] flex flex-col-reverse">
         <div className="flex flex-col gap-16 sm:col-span-1 py-10 sm:py-0">
           <div className="flex flex-col sm:items-start items-center">
-            <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-sm text-xl md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-2 font-extrabold">
+            <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
               prefer email?
             </p>
-            <p className="text-light-50 text-xl md:text-[24px] lg:text-[30px] sm:!leading-[40px] sm:text-left text-center ">
+            <p className="text-light-50 text-[30px] sm:text-left text-center tracking-[-1.5px] sm:leading-normal">
               You can reach us at
               <br />
               <span className="text-yellow-550 underline break-words">
@@ -115,14 +115,16 @@ const ContactHeader = () => {
               </span>
             </p>
           </div>
-          <div className="flex flex-col sm:items-start items-center ">
-            <p className="bg-yellow-550 -rotate-[2deg] inline-block w-fit text-xl md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-2 font-extrabold">
+          <div className="flex flex-col sm:items-start items-center mt-4">
+            <p className="bg-yellow-550 -rotate-[2deg] inline-block w-fit text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
               prefer docs?
             </p>
-            <p className="text-light-50 text-xl md:text-[24px] lg:text-[30px] sm:!leading-[40px] sm:text-left text-center ">
+            <p className="text-light-50 text-[30px] sm:text-left text-center tracking-[-1.5px] sm:leading-normal">
               check out our
               <br />
-              <span className="text-yellow-550 underline">pricing slide</span>
+              <span className="text-yellow-550 underline break-words">
+                pricing slide
+              </span>
             </p>
           </div>
         </div>

@@ -16,12 +16,12 @@ const TextSlider = () => {
   }, []);
 
   return (
-    <div className="text-[30px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-right h-[100px]">
+    <div className="text-[40px] md:text-[50px] lg:text-[60px] text-right h-[100px] font-extrabold tracking-[-2px]">
       <AnimatePresence>
         <motion.div
           key={`${words[index]}-${index}`}
           initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 20 }}
           exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >

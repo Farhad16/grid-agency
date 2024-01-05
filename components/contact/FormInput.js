@@ -21,8 +21,8 @@ const FormInput = ({
           <div className="flex flex-col">
             <textarea
               defaultValue={defaultValue}
-              className={`border rounded-sm focus:outline-none border-1.5 border-light-50 bg-[#0E0E0E] ${
-                error ? "border-[#FDA29B]" : "border-light-50"
+              className={`border rounded-sm focus:outline-none border-1.5 bg-[#0E0E0E] ${
+                error ? "border-[#FDA29B]" : "border-white"
               }`}
               rows="10"
               {...register}
@@ -37,7 +37,7 @@ const FormInput = ({
           <input
             type="text"
             className={`w-full font-semibold border-b focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase pb-3 placeholder:text-[#e6e0d299] ${
-              error ? "border-[#FDA29B]" : "border-light-50"
+              error ? "border-[#FDA29B]" : "border-white"
             }`}
             placeholder={placeholder}
             {...register}

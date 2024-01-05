@@ -52,27 +52,27 @@ const AnimatedMenu = ({ open, setOpen }) => {
   return (
     <>
       <animated.div
-        className={`fixed top-[15%] bg-[#2B2B2B] w-1/3 h-screen z-20`}
+        className={`fixed sm:top-[12%] top-[8%] bg-[#2B2B2B] w-1/3 h-screen z-20`}
         style={{ ...menuAnimation1 }}
       ></animated.div>
       <animated.div
-        className={`fixed top-[15%] bg-[#231F20] w-1/3 h-screen z-20`}
+        className={`fixed sm:top-[12%] top-[8%] bg-[#231F20] w-1/3 h-screen z-20`}
         style={{ ...menuAnimation2 }}
       ></animated.div>
       <animated.div
-        className={`fixed top-[15%] bg-[#E6E0D2] w-1/3 h-screen z-20`}
+        className={`fixed sm:top-[12%] top-[8%] bg-[#E6E0D2] w-1/3 h-screen z-20`}
         style={{ ...menuAnimation3 }}
       ></animated.div>
 
       <animated.div
-        className={`fixed top-[15%] left-0 bg-yellow-550 sm:w-1/2 w-1/3 h-screen z-20`}
+        className={`fixed sm:top-[12%] top-[8%] left-0 bg-yellow-550 sm:w-1/2 w-1/3 h-screen z-20`}
         style={{ ...menuAnimation4 }}
       ></animated.div>
       <animated.div
-        className={`overflow-auto fixed top-[10%] right-0 bg-black sm:w-1/2 w-2/3 h-screen flex flex-col items-start justify-center sm:pl-24 pl-12 gap-4 z-20`}
+        className={`overflow-auto fixed sm:top-[12%] top-[8%] right-0 bg-black sm:w-1/2 w-full h-screen flex flex-col items-start justify-center sm:pl-24 pl-12 gap-4 z-20`}
         style={{ ...menuAnimation5 }}
       >
-        <p className="lg:text-3xl text-xl font-bold relative text-yellow-550">
+        <p className="text-[30px] font-extrabold relative text-yellow-550 tracking-[-1.5px]">
           menu
         </p>
         <div className="flex flex-col xl:gap-12 md:gap-10 mt-6">
@@ -80,16 +80,20 @@ const AnimatedMenu = ({ open, setOpen }) => {
             <Link
               href={item.route}
               key={item.name}
-              className="text-light-50 md:text-[80px] lg:text-[90px] text-4xl font-bold lg:tracking-[-5px]"
+              className="text-light-50 md:text-[80px] lg:text-[90px] text-[60px] font-extrabold lg:tracking-[-5px] sm:leading-[34px] leading-normal tracking-[-3px]"
               onClick={() => setOpen(false)}
             >
               {item.name}
             </Link>
           ))}
         </div>
-        <div className="flex flex-col lg:text-3xl text-xl font-bold relative text-light-50 gap-2 mt-10">
-          <Link href="/contact">contact us</Link>
-          <Link href="/">back to into</Link>
+        <div className="flex flex-col lg:text-3xl text-[30px] font-extrabold relative text-light-50 sm:mt-10 mt-28 leading-[34px] tracking-[-1.5px]">
+          <Link href="/contact" onClick={() => setOpen(false)}>
+            contact us
+          </Link>
+          <Link href="/" onClick={() => setOpen(false)}>
+            Back to INTRO
+          </Link>
         </div>
       </animated.div>
     </>

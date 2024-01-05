@@ -1,9 +1,51 @@
 "use client";
+import ImageAnimationMobile from "@/components/intro/ImageAnimationMobile";
 import Loading from "@/components/intro/Loading";
+import MobileLoading from "@/components/intro/MobileLoading";
 import ReusableImageAnimation from "@/components/intro/ReusableImageAnimation";
+import { textSlider } from "@/constance/text.data";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+
+const TextSliderLargeScreen = () => {
+  return (
+    <>
+      {textSlider.map((t, i) => (
+        <ReusableImageAnimation
+          key={i}
+          imageSrc={t.imageSrc}
+          imageAlt={t.imageAlt}
+          scale={t.scale}
+        />
+      ))}
+    </>
+  );
+};
 
 const Page = () => {
+  const [step, setStep] = useState(0);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setStep((prevStep) => prevStep + 1);
+      window.scrollTo(0, 0);
+    }, 200);
+    if (step === 0) {
+      // Disable scrolling when case 0 is active
+      document.body.style.overflow = "hidden";
+      window.scrollTo(0, 0);
+    }
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleButtonClick = () => {
+    if (step !== 0) {
+      // Disable scrolling when case 0 is active
+      document.body.style.overflow = "visible";
+    }
+    setStep((prevStep) => prevStep + 1);
+  };
+
   const router = useRouter();
   const handleMainPageClick = (e) => {
     router.push("/home", { scroll: true });
@@ -11,16 +53,18 @@ const Page = () => {
   };
 
   return (
-    <div className="flex flex-col text-white bg-[#0A0808]">
-      <Loading />
+    <div className="flex flex-col text-light-50 bg-[#241F20]">
+      <Loading step={step} handleButtonClick={handleButtonClick} />
+      <MobileLoading step={step} handleButtonClick={handleButtonClick} />
       <button
         onClick={handleMainPageClick}
-        className="absolute top-4 right-4 z-10 border border-amber-400 hover:border-white text-white hover:text-amber-400 px-4 py-2 rounded-full bg-transparent"
+        className="absolute top-4 right-4 z-10 border border-amber-400 hover:border-white text-light-50 hover:text-amber-400 px-4 py-2 rounded-full bg-transparent"
       >
         Skip Intro
       </button>
+
       <div
-        className="flex flex-col scroll-section-outer items-center justify-center"
+        className="sm:flex hidden flex-col scroll-section-outer items-center justify-center"
         style={{
           backgroundImage: "url('/assets/intro/text-bg.png')",
           backgroundRepeat: "no-repeat",
@@ -30,42 +74,23 @@ const Page = () => {
           zIndex: 9999999999,
         }}
       >
-        <ReusableImageAnimation
-          imageSrc="text1.png"
-          imageAlt="text1"
-          scale={2}
-          main={false}
-        />
-        <ReusableImageAnimation
-          imageSrc="text2.png"
-          imageAlt="text2"
-          scale={2}
-          main={false}
-        />
-        <ReusableImageAnimation
-          imageSrc="text3.png"
-          imageAlt="text3"
-          scale={2}
-          main={false}
-        />
-        <ReusableImageAnimation
-          imageSrc="text4.png"
-          imageAlt="text4"
-          scale={2}
-          main={false}
-        />
-        <ReusableImageAnimation
-          imageSrc="text5.png"
-          imageAlt="text5"
-          scale={2}
-          main={false}
-        />
-        <ReusableImageAnimation
-          imageSrc="text6.png"
-          imageAlt="text6"
-          scale={0.5}
-          main={true}
-        />
+        <TextSliderLargeScreen />
+      </div>
+      <div className="w-full h-full sm:hidden block">
+        <div
+          className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]"
+          style={{
+            backgroundImage: "url('/assets/intro/text-bg.png')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "130% auto",
+            backgroundPosition: "top",
+          }}
+        >
+          <ImageAnimationMobile
+            step={step}
+            handleButtonClick={handleButtonClick}
+          />
+        </div>
       </div>
     </div>
   );

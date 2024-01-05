@@ -11,7 +11,7 @@ const GridAgency = () => {
 
   return (
     <div
-      className="border-top py-20 group flex flex-col items-center bg-[#0A0808]"
+      className="py-20 group sm:flex flex-col items-center bg-[#0A0808] hidden"
       onMouseEnter={() => setIsTextHovered(true)}
       onMouseLeave={() => setIsTextHovered(false)}
     >
@@ -27,7 +27,7 @@ const GridAgency = () => {
               className="sm:w-[100px] sm:h-[100px] w-[60px] h-[60px]"
             />
           </div>
-          <h1 className="lg:text-[110px] text-4xl md:text-[90px] font-bold relative">
+          <h1 className="lg:text-[110px] text-4xl md:text-[90px] font-extrabold relative">
             @gridagencyinc
             <img
               src="/assets/contact/lines.png"

@@ -5,21 +5,21 @@ import DividerElement from "../shared/DividerElement";
 const Mission = () => {
   return (
     <>
-      <div className="sm:mt-[150px] mt-24 flex flex-col sm:flex-row items-center gap-8">
-        <div>
+      <div className="sm:mt-0 mt-12 flex flex-row items-center w-full">
+        <div className="md:w-[738px] w-[200px] h-fit sm:h-[795px] h-[220px] sm:ml-0 -ml-6 flex items-center justify-center">
           <Image
+            src="/assets/about/man.gif"
             layout="responsive"
             alt="man"
             width={100}
             height={100}
-            src="/assets/about/man.gif"
-            objectFit="cover"
+            className="min-h-[220px] min-w-[200px] h-fit"
           />
         </div>
-        <div className="flex flex-col gap-2">
-          <DividerElement tag="MISSION">
+        <div className="flex flex-col pr-4 sm:ml-0 -ml-4">
+          <DividerElement tag="MISSION" dividerClassName="gap-6">
             To empower businesses to{" "}
-            <span className="text-yellow-550 font-semibold">
+            <span className="text-yellow-550 font-extrabold">
               embrace bold and unconventional ideas.
             </span>
           </DividerElement>

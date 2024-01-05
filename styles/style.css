@@ -19,7 +19,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: crimson;
+  background-color: #231f20;
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -59,6 +59,43 @@
   transform: translate(120%, 0%);
   font-size: 690px;
   width: fit-content;
+}
+
+.background-text-verticle::before {
+  content: "stupid";
+  position: absolute;
+  top: 30%;
+  right: -25%;
+  color: #161515;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -10px;
+  width: 878px;
+  height: 256px;
+  transform: rotate(-90deg);
+}
+
+.background-text-verticle::after {
+  content: "talks";
+  position: absolute;
+  bottom: 17%;
+  left: 18%;
+  color: #161515;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -10px;
+  width: 448px;
+  height: 186px;
+  transform: rotate(-90deg);
+  z-index: 0;
 }
 
 .talk-section-outer {
@@ -139,4 +176,12 @@
 
 .caseDes {
   padding: 0 100px;
+}
+
+.cursor-none {
+  cursor: none;
+}
+
+.cursor-view {
+  cursor: url("/assets/case/view.svg"), auto;
 }

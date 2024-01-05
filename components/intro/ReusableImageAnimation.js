@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRouter } from "next/navigation";
 import "@/components/intro/button.css";
 
-function ReusableImageAnimation({ imageSrc, imageAlt, scale, main }) {
+function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
   const router = useRouter();
@@ -74,26 +74,6 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale, main }) {
               className="scale-[0.01]"
             />
           </div>
-          {scale === 0.5 && (
-            <div className="flex justify-center">
-              <div className="content" onClick={handleMainPageClick}>
-                <svg id="more-arrows">
-                  <polygon
-                    className="arrow-top"
-                    points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "
-                  />
-                  <polygon
-                    className="arrow-middle"
-                    points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "
-                  />
-                  <polygon
-                    className="arrow-bottom"
-                    points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "
-                  />
-                </svg>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </section>

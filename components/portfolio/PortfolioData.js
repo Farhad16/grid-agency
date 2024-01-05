@@ -14,13 +14,13 @@ const PortfolioData = async () => {
         <NoDataFound data="portfolio" />
       ) : (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-10 lg:gap-6 w-full mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-12 gap-10 lg:gap-6 w-full mb-12 cursor-none">
             {colThree > 0 &&
               portfolioData.slice(0, colThree * 3).map((port) => (
                 <Link
                   href={`/case/${port.casestudy.id}`}
                   key={port.id}
-                  className="flex flex-col gap-4 relative group"
+                  className="flex flex-col gap-4 relative cursor-view"
                 >
                   <img
                     src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}

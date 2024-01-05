@@ -18,7 +18,7 @@ const Mesh = () => {
         </p>
       </div>
       <Circle
-        className="xl:top-0 xl:right-[15%] lg:right-[8%] lg:-top-[7%] md:right-[15%] md:top-[5%] top-8 right-14"
+        className="xl:top-0 xl:right-[17%] lg:right-[8%] lg:-top-[7%] md:right-[15%] md:top-[5%] top-8 right-14"
         data={{
           text1: (
             <span>
@@ -38,7 +38,7 @@ const Mesh = () => {
         }}
       />
       <Circle
-        className="xl:left-[46%] xl:top-[35%] md:left-[48%] left-[42%]"
+        className="xl:left-[48%] xl:top-[35%] md:left-[48%] left-[42%]"
         data={{
           text1: (
             <span>
@@ -61,7 +61,7 @@ const Mesh = () => {
         }}
       />
       <Circle
-        className="xl:left-24 xl:top-[28%] lg:-left-[3%] lg:top-[20%] md:left-[8%] md:top-[30%] left-5 top-[24%]"
+        className="2xl:top-[20%] xl:left-[10%] xl:top-[28%] lg:left-[0%] lg:top-[20%] md:left-[8%] md:top-[30%] left-5 top-[24%]"
         data={{
           text1: (
             <span>
@@ -81,7 +81,7 @@ const Mesh = () => {
         }}
       />
       <Circle
-        className="xl:bottom-16 xl:left-[30%] md:left-[30%] md:bottom-32 left-[30%] bottom-16"
+        className="xl:bottom-[4%] xl:left-[32%] lg:left-[33%] lg:bottom-[4%] md:left-[30%] md:bottom-[6%] left-[30%] bottom-16"
         data={{
           text1: (
             <span>
@@ -103,7 +103,7 @@ const Mesh = () => {
       />
 
       <Circle
-        className="xl:right-24 md:right-[8%] md:bottom-[30%] right-[5%] bottom-[30%]"
+        className="xl:right-[12%] md:right-[8%] md:bottom-[30%] right-[5%] bottom-[30%]"
         data={{
           text1: <span>Transformation</span>,
           text2: (

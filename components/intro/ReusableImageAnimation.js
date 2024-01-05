@@ -47,7 +47,7 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
       scrollTrigger: {
         trigger: trigger,
         start: "center center",
-        end: "3500 center",
+        end: "3500 top",
         scrub: 0.6,
       },
     });
@@ -74,6 +74,13 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
               className="scale-[0.01]"
             />
           </div>
+          {scale === 0.5 && (
+            <div className="flex justify-center">
+              <div className="content" onClick={handleMainPageClick}>
+                <img src="/assets/intro/skip.svg" alt="arrow" />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

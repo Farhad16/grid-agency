@@ -43,10 +43,10 @@ const Footer = () => {
               <p className="text-light-50 sm:text-[80px] xl:text-[100px] text-[50px] font-extrabold leading-[87.424%] tracking-[-2.5px] sm:tracking-[-6px]">
                 idea?
               </p>
-              <div
+              <Link
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
-                // href="/contact"
+                href="/contact"
                 className="focus:outline-none outline-none border border-2 rounded-full border-yellow-550 md:w-[240px] lg:w-[300px] xl:w-[350px] w-full lg:h-[50px] lg:h-[45px] h-[40px] flex items-center justify-center text-center sm:text-sm text-xs tracking-[1.727px]"
               >
                 <motion.p
@@ -71,7 +71,7 @@ const Footer = () => {
                 <motion.span
                   className={`${
                     hovered ? "sm:-ml-44 -ml-28" : "sm:-ml-36 -ml-32"
-                  }  sm:min-w-[150px] min-w-[100px] uppercase text-light-50"`}
+                  }  sm:min-w-[150px] min-w-[100px] uppercase !text-light-50`}
                   animate={{
                     x: hovered ? 0 : -100,
                     opacity: hovered ? 1 : 0,
@@ -79,7 +79,7 @@ const Footer = () => {
                 >
                   Contact Us
                 </motion.span>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

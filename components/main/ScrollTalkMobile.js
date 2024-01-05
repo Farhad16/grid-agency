@@ -11,7 +11,10 @@ const ScrollTalkMobile = () => {
         STUPID TALKS
       </VerticleEl>
       {talkData.slice(0, 2).map((talk, i) => (
-        <div className="flex flex-col pt-2 items-center justify-center gap-12">
+        <div
+          className="flex flex-col pt-2 items-center justify-center gap-12"
+          key={i}
+        >
           <div className="flex flex-col gap-6">
             <p className="text-sm font-normal tracking-[3.171px] z-10 text-right text-[#e6e0d22e]">
               {talk.date}

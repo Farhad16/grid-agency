@@ -35,7 +35,7 @@ function ScrollTalks() {
   }, []);
 
   return (
-    <section className="talk-section-outer">
+    <section className="talk-section-outer sm:block hidden ">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="talk-section-inner relative">
           <div className="background-text"></div>

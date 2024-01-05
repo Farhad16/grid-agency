@@ -8,10 +8,10 @@ const DividerElement = ({ tag, children, dividerClassName }) => {
         {tag}
       </p>
       <div
-        className={`flex flex-row sm:gap-12 gap-10 w-full ${dividerClassName}`}
+        className={`flex flex-row sm:gap-14 gap-10 w-full ${dividerClassName}`}
       >
-        <Divider className="sm:w-[2px] w-[1px] sm:h-16 h-10 bg-[#E6E0D2] col-span-1 ml-2 mt-3" />
-        <p className="text-[15px] sm:text-[34px] text-light-50 text-light-50 leading-normal font-normal mt-2">
+        <Divider className="sm:w-[2px] w-[1px] sm:h-16 h-10 bg-[#E6E0D2] col-span-1 ml-2" />
+        <p className="text-[15px] sm:text-[34px] text-light-50 text-light-50 leading-normal font-normal">
           {children}
         </p>
       </div>

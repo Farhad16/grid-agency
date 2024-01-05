@@ -5,8 +5,8 @@ import DividerElement from "../shared/DividerElement";
 const Mission = () => {
   return (
     <>
-      <div className="sm:mt-0 mt-12 flex flex-row items-center w-full">
-        <div className="md:w-[738px] w-[200px] h-fit sm:h-[795px] h-[220px] sm:ml-0 -ml-6 flex items-center justify-center">
+      <div className="lg:mt-[5%] xl:mt-[15%] mt-10 flex flex-row items-center w-full">
+        <div className="md:w-[738px] w-[200px] sm:h-[795px] h-[220px] sm:ml-0 -ml-6 flex items-center justify-center">
           <Image
             src="/assets/about/man.gif"
             layout="responsive"
@@ -16,7 +16,7 @@ const Mission = () => {
             className="min-h-[220px] min-w-[200px] h-fit"
           />
         </div>
-        <div className="flex flex-col pr-4 sm:ml-0 -ml-4">
+        <div className="flex flex-col pr-4 sm:ml-0 -ml-4 sm:gap-6 gap-3">
           <DividerElement tag="MISSION" dividerClassName="gap-6">
             To empower businesses to{" "}
             <span className="text-yellow-550 font-extrabold">

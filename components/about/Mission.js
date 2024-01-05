@@ -5,13 +5,13 @@ import DividerElement from "../shared/DividerElement";
 const Mission = () => {
   return (
     <>
-      <div className="sm:mt-[150px] mt-24 flex sm:flex-row items-center sm:gap-8">
-        <div>
+      <div className="sm:mt-[100px] mt-12 flex sm:flex-row items-center gap-8">
+        <div className="md:w-[738px] w-[228px]">
           <img
             layout="responsive"
             alt="man"
             src="/assets/about/man.gif"
-            objectFit="cover md:w-[738px] w-[228px] "
+            objectFit="cover w-full h-full"
           />
         </div>
         <div className="flex flex-col pr-8">

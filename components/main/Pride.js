@@ -3,8 +3,8 @@ import Wrapper from "../shared/Wrapper";
 
 const Pride = () => {
   return (
-    <div className="flex flex-col w-full overflow-hidden py-16">
-      <Wrapper className="mt-32 flex flex-col mb-4 sm:!px-[100px] !px-14">
+    <div className="flex flex-col w-full pb-16">
+      <Wrapper className="sm:mt-36 mt-20 flex flex-col mb-4 sm:!px-[100px] !px-14">
         <p className="text-yellow-550 md:text-xl uppercase text-[15px] tracking-[4.5px] font-extrabold">
           JAGERMEISTER
         </p>
@@ -13,7 +13,7 @@ const Pride = () => {
         </p>
       </Wrapper>
 
-      <Wrapper className="sm:px-[100px] px-0">
+      <Wrapper className="sm:!px-[100px] !px-0">
         <div className="w-full group relative">
           <img
             src="/assets/main_page/pride.gif"

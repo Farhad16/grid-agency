@@ -3,7 +3,7 @@ import Circle from "./Circle";
 
 const Mesh = () => {
   return (
-    <div className="relative flex items-center justify-center w-full pb-[150px] pt-16 mt-10 sm:px-[100px] px-8">
+    <div className="relative flex items-center justify-center w-full pb-[80px] pt-16 mt-10 sm:px-[100px] px-8">
       <img
         src="/assets/about/aline.png"
         alt="aline"
@@ -18,7 +18,7 @@ const Mesh = () => {
         </p>
       </div>
       <Circle
-        className="xl:top-0 xl:right-[15%] lg:right-[8%] lg:-top-[7%] md:right-[15%] md:top-[5%] top-8 right-10"
+        className="xl:top-0 xl:right-[15%] lg:right-[8%] lg:-top-[7%] md:right-[15%] md:top-[5%] top-8 right-14"
         data={{
           text1: (
             <span>
@@ -61,7 +61,7 @@ const Mesh = () => {
         }}
       />
       <Circle
-        className="xl:left-24 xl:top-[28%] lg:-left-[3%] lg:top-[20%] md:left-[8%] md:top-[30%] left-5 top-[26%]"
+        className="xl:left-24 xl:top-[28%] lg:-left-[3%] lg:top-[20%] md:left-[8%] md:top-[30%] left-5 top-[24%]"
         data={{
           text1: (
             <span>
@@ -81,7 +81,7 @@ const Mesh = () => {
         }}
       />
       <Circle
-        className="xl:bottom-16 xl:left-[30%] md:left-[30%] md:bottom-32 left-[25%] bottom-28"
+        className="xl:bottom-16 xl:left-[30%] md:left-[30%] md:bottom-32 left-[30%] bottom-16"
         data={{
           text1: (
             <span>
@@ -103,7 +103,7 @@ const Mesh = () => {
       />
 
       <Circle
-        className="xl:right-24 md:right-[8%] md:bottom-[30%] right-[5%] bottom-[40%]"
+        className="xl:right-24 md:right-[8%] md:bottom-[30%] right-[5%] bottom-[30%]"
         data={{
           text1: <span>Transformation</span>,
           text2: (

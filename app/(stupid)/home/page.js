@@ -9,7 +9,7 @@ import StupidEnough from "@/components/main/StupidEnough";
 
 const Page = () => {
   return (
-    <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[150px] sm:pt-[250px] min-h-screen relative">
+    <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[250px] min-h-screen relative">
       <Banner />
       <MarqueeText />
       <Services />

@@ -1,22 +1,16 @@
 "use client";
+import ImageAnimationMobile from "@/components/intro/ImageAnimationMobile";
 import Loading from "@/components/intro/Loading";
 import MobileLoading from "@/components/intro/MobileLoading";
 import ReusableImageAnimation from "@/components/intro/ReusableImageAnimation";
+import { textSlider } from "@/constance/text.data";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const TextLoader = () => {
-  const text = [
-    { imageSrc: "text1.png", imageAlt: "text1", scale: 2 },
-    { imageSrc: "text2.png", imageAlt: "text2", scale: 2 },
-    { imageSrc: "text3.png", imageAlt: "text3", scale: 2 },
-    { imageSrc: "text4.png", imageAlt: "text4", scale: 2 },
-    { imageSrc: "text5.png", imageAlt: "text5", scale: 2 },
-    { imageSrc: "text6.png", imageAlt: "text6", scale: 0.5 },
-  ];
+const TextSliderLargeScreen = () => {
   return (
     <>
-      {text.map((t, i) => (
+      {textSlider.map((t, i) => (
         <ReusableImageAnimation
           key={i}
           imageSrc={t.imageSrc}
@@ -52,24 +46,6 @@ const Page = () => {
     setStep((prevStep) => prevStep + 1);
   };
 
-  const [showSkipSection, setShowSkipSection] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 100) {
-        setShowSkipSection(true);
-      } else {
-        setShowSkipSection(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const router = useRouter();
   const handleMainPageClick = (e) => {
     router.push("/home", { scroll: true });
@@ -77,7 +53,7 @@ const Page = () => {
   };
 
   return (
-    <div className="flex flex-col text-light-50 bg-[#0A0808]">
+    <div className="flex flex-col text-light-50 bg-[#241F20]">
       <Loading step={step} handleButtonClick={handleButtonClick} />
       <MobileLoading step={step} handleButtonClick={handleButtonClick} />
       <button
@@ -88,26 +64,33 @@ const Page = () => {
       </button>
 
       <div
-        className="flex flex-col scroll-section-outer items-center justify-center sm:mt-[-100px] mt-[-70px] bg-[#241F20]"
+        className="sm:flex hidden flex-col scroll-section-outer items-center justify-center"
         style={{
           backgroundImage: "url('/assets/intro/text-bg.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "130% auto",
           backgroundPosition: "top",
+          marginTop: "-100px",
           zIndex: 9999999999,
         }}
       >
-        <TextLoader />
-        {step === 2 && (
-          <div
-            onClick={handleMainPageClick}
-            className={`${
-              showSkipSection ? "sm:!block" : "sm:!hidden block"
-            } "cursor-pointer z-10 fixed sm:bottom-0 bottom-5 left-[50%] -translate-x-1/2 -translate-y-1/2 transform flex flex-col items-center`}
-          >
-            <img src="/assets/intro/skip.svg" alt="arrow" />
-          </div>
-        )}
+        <TextSliderLargeScreen />
+      </div>
+      <div className="w-full h-full sm:hidden block">
+        <div
+          className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]"
+          style={{
+            backgroundImage: "url('/assets/intro/text-bg.png')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "130% auto",
+            backgroundPosition: "top",
+          }}
+        >
+          <ImageAnimationMobile
+            step={step}
+            handleButtonClick={handleButtonClick}
+          />
+        </div>
       </div>
     </div>
   );

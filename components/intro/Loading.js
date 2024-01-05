@@ -44,7 +44,7 @@ const Loading = ({ step, handleButtonClick }) => {
               />
               <button
                 onClick={handleButtonClick}
-                className="flex items-center justify-center px-[27px] py-[10px] border border-[#E6E0D2] hover:bg-yellow-550 hover:bg-opacity-20 w-fit bg-[#231F20] rounded-[30px]"
+                className="z-[100] flex items-center justify-center px-[27px] py-[10px] border border-[#E6E0D2] hover:bg-yellow-550 hover:bg-opacity-20 w-fit bg-[#231F20] rounded-[30px]"
               >
                 <img src="/assets/intro/arrow.png" alt="arrow" />
               </button>

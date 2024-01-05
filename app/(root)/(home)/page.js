@@ -88,7 +88,7 @@ const Page = () => {
       </button>
 
       <div
-        className="flex flex-col scroll-section-outer items-center justify-center sm:mt-[-100px] mt-[-70px]"
+        className="flex flex-col scroll-section-outer items-center justify-center sm:mt-[-100px] mt-[-70px] bg-[#241F20]"
         style={{
           backgroundImage: "url('/assets/intro/text-bg.png')",
           backgroundRepeat: "no-repeat",

@@ -38,7 +38,7 @@ const MobileLoading = ({ step, handleButtonClick }) => {
                 />
               </div>
 
-              <div className="absolute bottom-[10%] left-[50%] -translate-x-1/2 -translate-y-1/2 transform flex flex-col items-center">
+              <div className="!z-10 absolute bottom-[10%] left-[50%] -translate-x-1/2 -translate-y-1/2 transform flex flex-col items-center">
                 <button
                   onClick={handleButtonClick}
                   className="flex items-center justify-center px-[27px] py-[10px]  border border-[#E6E0D2] hover:bg-yellow-550 hover:bg-opacity-20 w-fit bg-[#231F20] rounded-[30px]"

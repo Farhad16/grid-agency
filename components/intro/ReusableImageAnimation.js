@@ -41,13 +41,13 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
     const textGrow = gsap.to(section.querySelector("img"), {
       scale: scale,
       opacity: 0,
-      transition: "opacity 0.5s",
+      transition: "opacity 0.7s",
       ease: "none",
       duration: 1,
       scrollTrigger: {
         trigger: trigger,
         start: "center center",
-        end: "3500 top",
+        end: "3500 center",
         scrub: 0.6,
       },
     });

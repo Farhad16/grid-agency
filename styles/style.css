@@ -7,7 +7,15 @@
 }
 
 .clip-path-triangle {
-  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 94%,
+    92.8% 94%,
+    90.4% 100%,
+    87.5% 94%,
+    0% 94%
+  );
 }
 
 .swiper-pagination-bullet {
@@ -183,5 +191,16 @@
 }
 
 .cursor-view {
-  cursor: url("/assets/case/view.svg"), auto;
+  cursor: "Play video";
+}
+
+.cursor-style {
+  background-color: rgba(0, 255, 255, 0.7);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  transform-origin: 100% 100%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  pointer-events: none;
 }

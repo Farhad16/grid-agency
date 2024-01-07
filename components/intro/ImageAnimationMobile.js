@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
-export default function Page({ step, handleButtonClick }) {
+export default function Page({ step }) {
   const sections = [
     {
       el: (
@@ -79,7 +79,7 @@ export default function Page({ step, handleButtonClick }) {
     },
   ];
 
-  if (step !== 2) {
+  if (step > 3) {
     return null;
   }
   const router = useRouter();

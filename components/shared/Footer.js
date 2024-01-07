@@ -22,25 +22,25 @@ const Footer = () => {
       }}
     >
       <Wrapper className="w-full flex flex-col sm:mt-[80px] mt-24 xs:!px-12 px-8">
-        <div className="flex flex-col-reverse md:flex-row items-center lg:justify-between lg:gap-20 gap-12 py-10">
+        <div className="flex flex-col-reverse md:flex-row items-center lg:gap-16 gap-12 py-10 lg:px-10 justify-center">
           <img
             src="/assets/footer/footer.gif"
             layout="responsive"
             className="lg:w-[308px] md:w-[250px] w-[175px]"
             alt="footergif"
           />
-          <div className="flex flex-col w-full md:w-fit">
+          <div className="flex flex-col w-fit">
             <div className="flex flex-col">
               <p className="bg-yellow-550 rotate-[2deg] w-fit inline-block text-sm sm:text-[29px] text-[#231F20] px-4 sm:py-2 -mb-2 font-extrabold tracking-[-0.648px] sm:tracking-[-1.5px]">
                 new business
               </p>
-              <h1 className="text-light-50 sm:text-[80px] xl:text-[100px] text-[50px] font-extrabold leading-[87.424%] tracking-[-2.5px] sm:tracking-[-6px]">
+              <h1 className="text-light-50 md:text-[80px] lg:text-[100px] xl:text-[120px] text-[51px] font-extrabold leading-[87.424%] tracking-[-2.5px] md:tracking-[-6px]">
                 <span>have a</span> <span>stupid</span>
               </h1>
             </div>
 
-            <div className="flex flex-row items-center sm:gap-8 gap-6 mt-2">
-              <p className="text-light-50 sm:text-[80px] xl:text-[100px] text-[50px] font-extrabold leading-[87.424%] tracking-[-2.5px] sm:tracking-[-6px]">
+            <div className="flex flex-row items-center sm:gap-8 gap-6 mt-2 justify-between">
+              <p className="text-light-50 md:text-[80px] lg:text-[100px] xl:text-[120px] text-[51px] font-extrabold leading-[87.424%] tracking-[-2.5px] sm:tracking-[-6px]">
                 idea?
               </p>
               <Link

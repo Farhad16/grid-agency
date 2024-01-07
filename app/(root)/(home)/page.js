@@ -26,20 +26,22 @@ const Page = () => {
   const [step, setStep] = useState(0);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setStep((prevStep) => prevStep + 1);
-      window.scrollTo(0, 0);
-    }, 200);
-    if (step === 0) {
-      // Disable scrolling when case 0 is active
-      document.body.style.overflow = "hidden";
-      window.scrollTo(0, 0);
+    if (step < 2) {
+      const timeout = setTimeout(() => {
+        setStep((prevStep) => prevStep + 1);
+        window.scrollTo(0, 0);
+      }, 300);
+      if (step === 0) {
+        // Disable scrolling when case 0 is active
+        document.body.style.overflow = "hidden";
+        window.scrollTo(0, 0);
+      }
+      return () => clearTimeout(timeout);
     }
-    return () => clearTimeout(timeout);
-  }, []);
+  }, [step]);
 
   const handleButtonClick = () => {
-    if (step !== 0) {
+    if (step !== 0 && step !== 1) {
       // Disable scrolling when case 0 is active
       document.body.style.overflow = "visible";
     }
@@ -56,12 +58,14 @@ const Page = () => {
     <div className="flex flex-col text-light-50 bg-[#241F20]">
       <Loading step={step} handleButtonClick={handleButtonClick} />
       <MobileLoading step={step} handleButtonClick={handleButtonClick} />
-      <button
-        onClick={handleMainPageClick}
-        className="absolute top-4 right-4 z-10 border border-amber-400 hover:border-white text-light-50 hover:text-amber-400 px-4 py-2 rounded-full bg-transparent"
-      >
-        Skip Intro
-      </button>
+      {step !== 3 && (
+        <button
+          onClick={handleMainPageClick}
+          className="absolute top-4 right-4 z-10 border border-amber-400 hover:border-white text-light-50 hover:text-amber-400 px-4 py-2 rounded-full bg-transparent"
+        >
+          Skip Intro
+        </button>
+      )}
 
       <div
         className="sm:flex hidden flex-col scroll-section-outer items-center justify-center"

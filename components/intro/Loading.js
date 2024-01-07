@@ -1,8 +1,47 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef, useState } from "react";
+
+import CursorView from "./CursorView";
 
 const Loading = ({ step, handleButtonClick }) => {
+  const [play, setPlay] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [cursorPosition1, setCursorPosition1] = useState({ x: 0, y: 0 });
+  const videoRef = useRef(null);
+
+  const handlePlay = () => {
+    const video = videoRef.current;
+
+    if (video) {
+      if (play) {
+        video.pause();
+      } else {
+        video.play();
+      }
+
+      setPlay(!play);
+    }
+  };
+
+  const handleCursorEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleCursorMove = (e) => {
+    setCursorPosition1({ x: e.clientX, y: e.clientY });
+  };
+
+  const handleMouseMove = (e) => {
+    setCursorPosition({ x: e.clientX, y: e.clientY });
+  };
+
+  const handleStep2 = () => {
+    handleButtonClick();
+    handlePlay();
+  };
+
   const renderContent = () => {
     switch (step) {
       case 0:
@@ -53,7 +92,7 @@ const Loading = ({ step, handleButtonClick }) => {
         );
       case 2:
         return (
-          <div className="min-h-screen w-full">
+          <div className="min-h-screen w-full" onClick={handleStep2}>
             <video
               src="/assets/intro/intro-v.mp4"
               width="100%"
@@ -61,15 +100,41 @@ const Loading = ({ step, handleButtonClick }) => {
               autoPlay
               loop
               muted
-              className="xl:block hidden w-full h-full cover"
+              style={{ cursor: isHovered ? "none" : "auto" }}
+              onMouseMove={handleCursorMove}
+              onMouseEnter={handleCursorEnter}
+              className="w-full h-full cover"
             ></video>
 
-            <Image
-              src="/assets/intro/video.gif"
-              layout="responsive"
-              width={100}
-              height={100}
-              className="min-h-screen xl:hidden block cover"
+            <CursorView
+              cursorPosition={cursorPosition1}
+              handlePlay={handlePlay}
+              play={play}
+              step={step}
+            />
+          </div>
+        );
+
+      case 3:
+        return (
+          <div className="min-h-screen w-full" onClick={handlePlay}>
+            <video
+              ref={videoRef}
+              src="/assets/intro/intro-video.mp4"
+              width="100%"
+              height="100%"
+              autoPlay={play}
+              loop
+              muted
+              onMouseMove={handleMouseMove}
+              style={{ cursor: isHovered ? "none" : "auto" }}
+              className="xl:block hidden w-full h-full cover"
+            ></video>
+            <CursorView
+              cursorPosition={cursorPosition}
+              handlePlay={handlePlay}
+              play={play}
+              step={step}
             />
           </div>
         );

@@ -22,6 +22,7 @@ module.exports = {
       },
       backgroundColor: {
         "yellow-550": "#F9BC32",
+        "light-50": "#E6E0D2",
       },
       borderColor: {
         "yellow-550": "#F9BC32",

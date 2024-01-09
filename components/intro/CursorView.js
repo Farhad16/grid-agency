@@ -2,7 +2,11 @@ import React from "react";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 
-const CursorView = ({ cursorPosition, handlePlay, play, step }) => {
+const CursorView = ({ cursorPosition, handlePlay, play, step, isHovered }) => {
+  if (!isHovered) {
+    return null;
+  }
+
   return (
     <div
       style={{
@@ -16,7 +20,7 @@ const CursorView = ({ cursorPosition, handlePlay, play, step }) => {
       }}
       onClick={handlePlay}
     >
-      {step === 2 ? (
+      {step === 1 ? (
         play && (
           <div className="flex flex-row items-center gap-2">
             <span>Play</span> <PlayArrowIcon />

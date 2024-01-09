@@ -6,7 +6,7 @@ import TextSlider from "./TextSlider";
 
 const Banner = () => {
   return (
-    <Wrapper className="flex items-center justify-center sm:!px-[100px] !px-14">
+    <Wrapper className="flex items-center justify-center sm:!px-[100px] !px-14 pt-[250px]">
       <div className="flex flex-col">
         <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-extrabold">
           We make

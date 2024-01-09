@@ -9,16 +9,20 @@ const ImageFive = () => {
   });
 
   const opacity = useTransform(scrollYProgress, [0, 0.01, 1], [0, 1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.8], [0.1, 4]);
+  const scale = useTransform(scrollYProgress, [0, 0.8], [0.1, 2.5]);
   const translate = useTransform(scrollYProgress, [0, 0.5], [-150, -100]);
 
   return (
     <motion.img
       src={`/assets/intro/text5.png`}
       alt="text5"
-      style={{ opacity, scale, translateY: translate }}
+      style={{
+        opacity,
+        scale,
+        translateY: translate,
+        transition: "transform .9s ease-in-out",
+      }}
       ref={targetRef}
-      transition={{ duration: 0.5, easing: "easeOut" }}
     />
   );
 };

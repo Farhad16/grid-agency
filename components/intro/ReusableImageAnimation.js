@@ -74,13 +74,6 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
               className="scale-[0.01]"
             />
           </div>
-          {scale === 0.5 && (
-            <div className="flex justify-center">
-              <div className="content" onClick={handleMainPageClick}>
-                <img src="/assets/intro/skip.svg" alt="arrow" />
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </section>

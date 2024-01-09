@@ -6,7 +6,7 @@ import TextSlider from "./TextSlider";
 
 const Banner = () => {
   return (
-    <Wrapper className="flex items-center justify-center sm:!px-[100px] !px-14">
+    <Wrapper className="flex items-center justify-center sm:!px-[100px] !px-14 pt-[150px]">
       <div className="flex flex-col">
         <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-extrabold">
           We make
@@ -68,7 +68,7 @@ const Banner = () => {
               className="!h-[277px] !w-[2px]"
             />
           </VerticleEl>
-          <p className="sm:leading-normal leading-[34px] text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium text-right sm:tracking-[-1.7px] tracking-[-1.25px] sm:!text-right text-center">
+          <p className="sm:leading-normal leading-[34px] text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium sm:tracking-[-1.7px] tracking-[-1.25px] sm:!text-right text-center">
             We leverage our expertise in ideation,
             <br className="md:block hidden" />
             content creation, video production, and

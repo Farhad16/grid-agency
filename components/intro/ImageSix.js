@@ -5,19 +5,20 @@ const ImageSix = () => {
   const targetRef = useRef();
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["end end", "end start"],
+    offset: ["end end", "end center"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.8], [0.2, 3]);
+  const opacity = useTransform(scrollYProgress, [0, 0.01, 0.8], [0, 1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.8], [0.1, 4]);
+  const translate = useTransform(scrollYProgress, [0, 0.5], [-150, 0]);
 
   return (
     <motion.img
       ref={targetRef}
       src={`/assets/intro/text6.png`}
       alt="text6"
-      style={{ opacity, scale }}
-      transition={{ duration: 0.3, easing: "easeOut" }}
+      style={{ opacity, scale, translateY: translate }}
+      transition={{ duration: 0.5, easing: "easeOut" }}
     />
   );
 };

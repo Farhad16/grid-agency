@@ -5,18 +5,20 @@ const ImageFive = () => {
   const targetRef = useRef();
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["end end", "end start"],
+    offset: ["end end", "end center"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.8], [0.2, 3]);
+  const opacity = useTransform(scrollYProgress, [0, 0.01, 1], [0, 1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.8], [0.1, 4]);
+  const translate = useTransform(scrollYProgress, [0, 0.5], [-150, -100]);
+
   return (
     <motion.img
       src={`/assets/intro/text5.png`}
       alt="text5"
-      style={{ opacity, scale }}
+      style={{ opacity, scale, translateY: translate }}
       ref={targetRef}
-      transition={{ duration: 0.1, easing: "easeOut" }}
+      transition={{ duration: 0.5, easing: "easeOut" }}
     />
   );
 };

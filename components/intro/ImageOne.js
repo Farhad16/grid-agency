@@ -8,8 +8,8 @@ const ImageOne = () => {
     offset: ["end end", "end start"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.8], [0.2, 3]);
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.8], [0.03, 4]);
 
   return (
     <motion.img
@@ -17,7 +17,7 @@ const ImageOne = () => {
       src={`/assets/intro/text1.png`}
       alt="text1"
       style={{ opacity, scale }}
-      transition={{ duration: 0.3, easing: "easeOut" }}
+      transition={{ duration: 0.5, easing: "easeOut" }}
     />
   );
 };

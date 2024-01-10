@@ -8,7 +8,7 @@ const ContactFooter = () => {
     <Wrapper className="w-full flex flex-col bg-black sm:pb-16 pb-8 sm:!px-[100px] xs:!px-14 px-8">
       <div className="sm:tracking-[3px] flex flex-row justify-between items-center sm:mt-[150px] mt-[50px] text-[10px] md:text-[15px] gap-4">
         <div className="uppercase sm:flex flex-col text-light-50 gap-1 hidden">
-          <p>DO YOU LIKE STUPID IDEAS?</p>
+          <p>MIAMI, OPENING SOON</p>
           <p className="underline">jointheteam@gridagenyinc.ca</p>
         </div>
         <div className="uppercase flex flex-col text-light-50 gap-1">

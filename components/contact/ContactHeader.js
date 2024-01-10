@@ -73,10 +73,10 @@ const ContactHeader = () => {
         />
         <div className="flex flex-col">
           <div className="flex flex-col">
-            <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 font-extrabold w-fit xs:-mb-3 -mb-1.5 font-extrabold">
+            <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 w-fit xs:-mb-3 -mb-1.5 font-extrabold">
               talk to us
             </div>
-            <div className="flex inline-block">
+            <div className="inline-block">
               <p className="text-light-50 md:text-[90px] lg:text-[130px] xs:text-[80px] text-[65px] font-extrabold sm:tracking-[-6.5px] tracking-[-4.5px] leading-[87.424%]">
                 have a
               </p>

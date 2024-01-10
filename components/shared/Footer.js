@@ -47,7 +47,7 @@ const Footer = () => {
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
                 href="/contact"
-                className="focus:outline-none outline-none border border-2 rounded-full border-yellow-550 md:w-[240px] lg:w-[300px] xl:w-[350px] w-full lg:h-[50px] lg:h-[45px] h-[40px] flex items-center justify-center text-center sm:text-sm text-xs tracking-[1.727px]"
+                className="focus:outline-none outline-none border-2 rounded-full border-yellow-550 md:w-[240px] lg:w-[300px] xl:w-[350px] w-full lg:h-[56px] h-[40px] flex items-center justify-center text-center sm:text-sm text-xs tracking-[1.727px]"
               >
                 <motion.p
                   className="sm:min-w-[150px] flex flex-row items-center justify-center text-center"
@@ -108,10 +108,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="uppercase w-full flex flex-col sm:flex-row justify-between sm:pt-10 pt-6 border-t border-1 border-light-50 border-dotted sm:mt-[80px] mt-[40px] gap-1">
-          <p className="text-light-50 text-light-50 text-[10px] sm:text-left text-center">
+          <p className="text-light-50 text-[10px] sm:text-left text-center">
             © 2023, Grid Creative Advertising Inc.
           </p>
-          <p className="text-light-50 text-light-50 text-[10px] sm:text-left text-center">
+          <p className="text-light-50 text-[10px] sm:text-left text-center">
             privacy and cookie policy
           </p>
         </div>

@@ -13,7 +13,7 @@ const Mesh = () => {
         <p className="lg:text-[54px] md:text-[40px] text-[30px] text-light-50 font-extralight tracking-[-2.7px] sm:tracking-[-1px]">
           Mesh
         </p>
-        <p className="text-yellow-550 font-extrabold text-base sm:text-xl lg:text-[26px] tracking-[5.4px] tracking-[2.4px] sm:tracking-[5.4px]">
+        <p className="text-yellow-550 font-extrabold text-base sm:text-xl lg:text-[26px] sm:tracking-[5.4px] tracking-[2.4px]">
           OUR PROCESS
         </p>
       </div>

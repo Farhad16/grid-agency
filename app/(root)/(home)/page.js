@@ -9,6 +9,7 @@ import Pride from "@/components/main/Pride";
 import SelectedWork from "@/components/main/SelectedWork";
 import StupidEnough from "@/components/main/StupidEnough";
 import Footer from "@/components/shared/Footer";
+import Navbar from "@/components/shared/Navbar";
 import { useState } from "react";
 
 const Page = () => {
@@ -20,6 +21,7 @@ const Page = () => {
 
   return (
     <div className="flex flex-col text-light-50 bg-[#241F20]">
+      <Navbar />
       {step === 0 && (
         <>
           <GlobalLoading setStep={setStep} />

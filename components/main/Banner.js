@@ -34,7 +34,7 @@ const Banner = () => {
               className="absolute -bottom-[10px] sm:-bottom-[90px] left-0 sm:max-w-[515px] max-w-[150px]"
             />
           </div>
-          <div className="flex flex-row items-center justify-end lg:mt-2 sm:-mt-8 mt-0">
+          <div className="flex flex-row items-center justify-end lg:mt-4 sm:-mt-8 mt-0">
             <img
               src="/assets/main_page/text-ani.gif"
               alt="animated"

@@ -189,18 +189,18 @@
 .cursor-none {
   cursor: none;
 }
-
-.cursor-view {
-  cursor: "Play video";
+input::placeholder {
+  color: rgba(230, 224, 210, 0.6) !important;
 }
 
-.cursor-style {
-  background-color: rgba(0, 255, 255, 0.7);
-  height: 2rem;
-  width: 2rem;
-  border-radius: 100%;
-  transform-origin: 100% 100%;
-  transform: translate(-50%, -50%);
-  position: fixed;
-  pointer-events: none;
+select option {
+  background: #2a2a2a;
+  border-radius: 5px;
+}
+
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  opacity: 0.5;
 }

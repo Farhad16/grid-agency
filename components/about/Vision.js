@@ -4,8 +4,8 @@ import DividerElement from "../shared/DividerElement";
 
 const Vision = () => {
   return (
-    <>
-      <div className="w-full flex items-end justify-end sm:mt-20 mt-16">
+    <div className="flex flex-col">
+      <div className="w-full flex items-end justify-end sm:mt-0 mt-16">
         <div className="sm:w-2/3 w-full sm:pl-0 pl-14">
           <Image
             layout="responsive"
@@ -17,8 +17,8 @@ const Vision = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col w-full px-12 sm:px-[100px] mt-6 sm:gap-6 gap-3">
-        <DividerElement tag="VISION">
+      <div className="flex flex-col w-full px-12 sm:px-[100px] lg:-mt-24 sm:gap-6 gap-3 md:ml-[0%] xl:ml-[16%]">
+        <DividerElement tag="VISION" dividerClassName="xl:!gap-32">
           To fearlessly pioneer <br />
           unconventional thinking in our
           <br />
@@ -27,7 +27,7 @@ const Vision = () => {
           </span>
         </DividerElement>
       </div>
-    </>
+    </div>
   );
 };
 

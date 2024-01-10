@@ -5,7 +5,10 @@ import Loading from "@/components/intro/Loading";
 import MobileLoading from "@/components/intro/MobileLoading";
 import Banner from "@/components/main/Banner";
 import MarqueeText from "@/components/main/MarqueeText";
+import Pride from "@/components/main/Pride";
 import SelectedWork from "@/components/main/SelectedWork";
+import StupidEnough from "@/components/main/StupidEnough";
+import Footer from "@/components/shared/Footer";
 import { useState } from "react";
 
 const Page = () => {
@@ -48,10 +51,10 @@ const Page = () => {
             <MarqueeText />
             {/* <Services /> */}
             <SelectedWork />
-            {/* <Pride /> */}
-            {/* <StupidEnough /> */}
+            <Pride />
+            <StupidEnough />
             {/* <Talks /> */}
-            {/* <Footer />  */}
+            <Footer />
           </>
         </>
       )}

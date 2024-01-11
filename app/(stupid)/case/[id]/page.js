@@ -68,7 +68,7 @@ const Page = ({ params }) => {
           </Wrapper>
           <div className="flex flex-col sm:mt-[250px] mt-[100px] gap-4 overflow-hidden border-bottom">
             <Wrapper className="sm:!px-[100px]">
-              <p className="text-base sm:text-[26px] text-light-50 text-light-50 leading-[30px]">
+              <p className="text-base sm:text-[26px] text-light-50 leading-[30px]">
                 next <span className="font-extrabold">project</span>
               </p>
             </Wrapper>

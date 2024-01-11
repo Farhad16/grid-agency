@@ -47,6 +47,7 @@
   font-weight: 800;
   color: black;
   white-space: nowrap;
+  font-size: 600px;
 }
 
 .background-text::before {
@@ -55,18 +56,18 @@
   top: 30%;
   left: 0;
   transform: translate(0%, -50%);
-  font-size: 690px;
   width: fit-content;
+  letter-spacing: -50px;
 }
 
 .background-text::after {
   content: "talks";
   position: absolute;
-  top: -150px;
+  top: -100px;
   left: 0px;
-  transform: translate(120%, 0%);
-  font-size: 690px;
+  transform: translate(132%, 15%);
   width: fit-content;
+  letter-spacing: -50px;
 }
 
 .background-text-verticle::before {
@@ -85,6 +86,7 @@
   width: 878px;
   height: 256px;
   transform: rotate(-90deg);
+  z-index: 0;
 }
 
 .background-text-verticle::after {
@@ -117,10 +119,19 @@
   position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .background-text::before,
   .background-text::after {
     font-size: 400px;
+    letter-spacing: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .background-text::before,
+  .background-text::after {
+    font-size: 300px;
+    letter-spacing: 10px;
   }
   .background-text::after {
     top: 70px;
@@ -136,7 +147,8 @@
 @media (max-width: 480px) {
   .background-text::before,
   .background-text::after {
-    font-size: 300px;
+    font-size: 200px;
+    letter-spacing: 10px;
   }
   .background-text::after {
     top: 70px;
@@ -171,13 +183,6 @@
   position: relative;
 }
 
-.scroll-section {
-  /* height: 100vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
@@ -189,18 +194,26 @@
 .cursor-none {
   cursor: none;
 }
-
-.cursor-view {
-  cursor: "Play video";
+input::placeholder {
+  color: rgba(230, 224, 210, 0.6) !important;
 }
 
-.cursor-style {
-  background-color: rgba(0, 255, 255, 0.7);
-  height: 2rem;
-  width: 2rem;
-  border-radius: 100%;
-  transform-origin: 100% 100%;
-  transform: translate(-50%, -50%);
-  position: fixed;
-  pointer-events: none;
+select option {
+  background: #2a2a2a;
+  border-radius: 5px;
+}
+
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  opacity: 0.5;
+}
+
+.rs-drawer-backdrop.rs-anim-in {
+  top: 12% !important;
+}
+
+.rs-drawer-content {
+  background: #2b2b2b !important;
 }

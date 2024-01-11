@@ -1,7 +1,7 @@
 export const menuItem = [
   {
     name: "homepage",
-    route: "/home",
+    route: "/",
   },
   {
     name: "works",

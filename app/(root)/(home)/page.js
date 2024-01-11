@@ -8,12 +8,14 @@ import Banner from "@/components/main/Banner";
 import MarqueeText from "@/components/main/MarqueeText";
 import Pride from "@/components/main/Pride";
 import SelectedWork from "@/components/main/SelectedWork";
+import Services from "@/components/main/Services";
 import StupidEnough from "@/components/main/StupidEnough";
 import Talks from "@/components/main/Talks";
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 import { textSlider } from "@/constance/text.data";
 import { useEffect, useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 const Page = () => {
   const [step, setStep] = useState(0);
@@ -24,7 +26,12 @@ const Page = () => {
 
   return (
     <div className="flex flex-col text-light-50 bg-[#241F20] font-manrope">
-      {step === 0 && (
+      <CSSTransition
+        in={step === 0}
+        timeout={1000}
+        classNames="fade"
+        unmountOnExit
+      >
         <>
           <GlobalLoading setStep={setStep} />
           <div className="w-full h-full sm:hidden block">
@@ -44,13 +51,18 @@ const Page = () => {
             </div>
           </div>
         </>
-      )}
-      {step > 0 && (
+      </CSSTransition>
+      <CSSTransition
+        in={step === 1}
+        timeout={1000}
+        classNames="fade"
+        unmountOnExit
+      >
         <>
-          {/* <Navbar />
+          {/* <Navbar /> */}
           <Loading step={step} handleButtonClick={handleButtonClick} />
           <MobileLoading step={step} handleButtonClick={handleButtonClick} />
-
+          {/*
           <div className="w-full h-full sm:block hidden">
             <div
               className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]"
@@ -82,7 +94,7 @@ const Page = () => {
             <Footer />
           </div>
         </>
-      )}
+      </CSSTransition>
     </div>
   );
 };

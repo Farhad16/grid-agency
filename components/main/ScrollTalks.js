@@ -4,14 +4,17 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { talkData } from "@/constance/talks.data";
 import Link from "next/link";
+import VerticleEl from "../shared/VerticleEl";
 
 function ScrollTalks({ screenWidth }) {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
   function getScreenWidth() {
-    if (screenWidth >= 1600 && screenWidth <= 2000) {
-      return "-55vw";
+    if (screenWidth > 2000) {
+      return "-60vw";
+    } else if (screenWidth >= 1600 && screenWidth <= 2000) {
+      return "-65vw";
     } else if (screenWidth >= 1400 && screenWidth < 1600) {
       return "-105vw";
     } else if (screenWidth >= 1300 && screenWidth < 1400) {
@@ -58,6 +61,9 @@ function ScrollTalks({ screenWidth }) {
           ref={sectionRef}
           className="flex relative flex-row background-text pl-24"
         >
+          <VerticleEl className="left-0 top-[40%] !text-light-50 z-10 sm:block hidden">
+            STUPID TALKS
+          </VerticleEl>
           {talkData.map((talk, i) => (
             <div
               className={`flex flex-row lg:min-w-[900px] sm:min-w-[750px] min-w-[600px] z-10 pt-2 h-[100vh] ${

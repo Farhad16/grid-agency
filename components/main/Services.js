@@ -1,5 +1,4 @@
 import React from "react";
-
 import VerticleEl from "../shared/VerticleEl";
 import Wrapper from "../shared/Wrapper";
 import { getServices } from "@/apis/service.api";

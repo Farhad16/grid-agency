@@ -7,7 +7,15 @@
 }
 
 .clip-path-triangle {
-  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 94%,
+    92.8% 94%,
+    90.4% 100%,
+    87.5% 94%,
+    0% 94%
+  );
 }
 
 .swiper-pagination-bullet {
@@ -157,14 +165,14 @@
 }
 
 .scroll-section-inner {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: row;
   position: relative;
 }
 
 .scroll-section {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +189,18 @@
 .cursor-none {
   cursor: none;
 }
+input::placeholder {
+  color: rgba(230, 224, 210, 0.6) !important;
+}
 
-.cursor-view {
-  cursor: url("/assets/case/view.svg"), auto;
+select option {
+  background: #2a2a2a;
+  border-radius: 5px;
+}
+
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  opacity: 0.5;
 }

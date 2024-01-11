@@ -11,7 +11,7 @@ const SelectedWork = () => {
           <img
             src="/assets/main_page/stupid.png"
             alt="stupid"
-            className="md:w-[325px] md:h-[174px] w-[200px] h-[100px]"
+            className="md:w-[325px] md:h-[174px] w-[200px] h-[100px] z-10"
           />
           <img
             src="/assets/main_page/Sparkle.gif"
@@ -19,13 +19,13 @@ const SelectedWork = () => {
             className="sm:w-[130px] sm:h-[130px] w-[70px] h-[70px]"
           />
         </div>
-        <p className="uppercase text-[30px] md:text-[53px] text-light-50 sm:tracking-[10.5px] tracking-[6px] absolute top-[70%] font-extrabold leading-[107.231%]">
-          SELECTED <br /> WORKS
+        <p className="z-0 uppercase text-[30px] md:text-[53px] text-light-50 sm:tracking-[10.5px] tracking-[6px] absolute top-[70%] font-extrabold leading-[107.231%]">
+          SELECTED <br /> WORK
         </p>
       </div>
       <Wrapper className="flex items-end justify-end relative sm:!px-[100px] !px-14">
         <VerticleEl className="sm:right-0 sm:top-14 sm:block hidden">
-          SELECTED WORKS
+          OUR WORK
         </VerticleEl>
       </Wrapper>
       <Wrapper className="sm:mt-36 mt-20 flex flex-col mb-4 sm:!px-[100px] !px-14 pt-16">
@@ -42,26 +42,23 @@ const SelectedWork = () => {
           <img
             src="/assets/main_page/dish.png"
             alt="dish"
-            className="sm:rounded-xl w-full h-full"
+            className="sm:rounded-xl w-full h-full clip-path-triangle"
           />
-          <img
-            src="/assets/main_page/poly.png"
-            alt="stupid"
-            className="absolute right-20 md:right-40 sm:w-[84px] sm:h-[61px] w-[40px] h-[15px] clip-path-triangle"
-          />
-          <Link href="/case/1">
+
+          <Link
+            href="/case/1"
+            className="bg-[#000000] bg-opacity-[.8] bg-multiply flex-shrink-0 sm:rounded-xl clip-path-triangle opacity-0 w-full h-full absolute top-0 flex items-center justify-center group-hover:h-full group-hover:opacity-100 duration-500 group-hover:visible"
+          >
             <img
-              src="/assets/main_page/hover.png"
+              src="/assets/main_page/view.png"
               alt="hover"
-              className="sm:rounded-xl opacity-10 w-full h-full absolute top-0 flex items-center justify-center group-hover:h-full group-hover:opacity-90 duration-500 group-hover:visible"
+              className="group-hover:opacity-100 opacity-0 sm:w-[421px] w-[200px]"
             />
-            <div className="absolute right-20 md:right-40 sm:w-[84px] sm:h-[61px] w-[40px] h-[15px] clip-path-triangle bg-[#282425] bg-opacity-0 group-hover:bg-opacity-90 duration-500" />
           </Link>
         </div>
       </Wrapper>
-
       <div className="sm:px-[100px] px-14">
-        <p className="md:text-[15px] text-[10px] text-light-50 md:tracking-[3.75px] uppercase mt-4">
+        <p className="md:text-[15px] text-[10px] text-light-50 md:tracking-[3.75px] uppercase">
           Design / digital / experiential
         </p>
       </div>

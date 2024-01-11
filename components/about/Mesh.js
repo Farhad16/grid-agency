@@ -10,10 +10,7 @@ const Mesh = () => {
         className="sm:w-[800px] sm:h-[700px] md:h-[913px] xl:w-[1000px] w-[275px] h-[282px] 2xl:w-[1300px]"
       />
       <div className="flex flex-col absolute top-[5%] sm:left-[30%] left-[10%]">
-        <p className="lg:text-[54px] md:text-[40px] text-[30px] text-light-50 font-extralight tracking-[-2.7px] sm:tracking-[-1px]">
-          Mesh
-        </p>
-        <p className="text-yellow-550 font-extrabold text-base sm:text-xl lg:text-[26px] tracking-[5.4px] tracking-[2.4px] sm:tracking-[5.4px]">
+        <p className="text-yellow-550 font-extrabold text-base sm:text-xl lg:text-[26px] sm:tracking-[5.4px] tracking-[2.4px]">
           OUR PROCESS
         </p>
       </div>
@@ -103,7 +100,7 @@ const Mesh = () => {
       />
 
       <Circle
-        className="xl:right-[12%] md:right-[8%] md:bottom-[30%] right-[5%] bottom-[30%]"
+        className="xl:right-[10%] lg:bottom-[25%] md:right-[8%] md:bottom-[30%] right-[5%] bottom-[30%]"
         data={{
           text1: <span>Transformation</span>,
           text2: (

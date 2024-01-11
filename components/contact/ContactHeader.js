@@ -6,6 +6,7 @@ import FormInput from "./FormInput";
 import { useForm } from "react-hook-form";
 import { postContact } from "@/apis/contact.api";
 import { toast } from "react-toastify";
+import FormSelect from "./FormSelect";
 
 const ContactHeader = () => {
   const {
@@ -73,10 +74,10 @@ const ContactHeader = () => {
         />
         <div className="flex flex-col">
           <div className="flex flex-col">
-            <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 font-extrabold w-fit xs:-mb-3 -mb-1.5 font-extrabold">
+            <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 w-fit xs:-mb-3 -mb-1.5 font-extrabold">
               talk to us
             </div>
-            <div className="flex inline-block">
+            <div className="inline-block">
               <p className="text-light-50 md:text-[90px] lg:text-[130px] xs:text-[80px] text-[65px] font-extrabold sm:tracking-[-6.5px] tracking-[-4.5px] leading-[87.424%]">
                 have a
               </p>
@@ -102,34 +103,20 @@ const ContactHeader = () => {
         </div>
       </div>
       <div className="sm:grid sm:grid-cols-3 gap-16 mt-[100px] flex flex-col-reverse">
-        <div className="flex flex-col gap-16 sm:col-span-1 py-10 sm:py-0">
-          <div className="flex flex-col sm:items-start items-center">
-            <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
-              prefer email?
-            </p>
-            <p className="text-light-50 text-[30px] sm:text-left text-center tracking-[-1.5px] sm:leading-normal">
-              You can reach us at
-              <br />
-              <span className="text-yellow-550 underline break-words">
-                info@gridagencyinc.ca
-              </span>
-            </p>
-          </div>
-          <div className="flex flex-col sm:items-start items-center mt-4">
-            <p className="bg-yellow-550 -rotate-[2deg] inline-block w-fit text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
-              prefer docs?
-            </p>
-            <p className="text-light-50 text-[30px] sm:text-left text-center tracking-[-1.5px] sm:leading-normal">
-              check out our
-              <br />
-              <span className="text-yellow-550 underline break-words">
-                pricing slide
-              </span>
-            </p>
-          </div>
+        <div className="flex flex-col sm:items-start items-center">
+          <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
+            prefer email?
+          </p>
+          <p className="text-light-50 text-[30px] sm:text-left text-center tracking-[-1.5px] sm:leading-normal">
+            You can reach us at
+            <br />
+            <span className="text-yellow-550 underline break-words">
+              info@gridagencyinc.ca
+            </span>
+          </p>
         </div>
         <form
-          className="md:col-span-2 flex flex-col gap-8"
+          className="sm:col-span-2 flex flex-col gap-8"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="flex flex-row gap-4 w-full">
@@ -155,13 +142,12 @@ const ContactHeader = () => {
           <div className="flex sm:flex-row flex-col gap-4 w-full">
             <FormInput
               name="subject"
-              placeholder="Subject"
+              placeholder="How can we help"
               register={{ ...register("subject") }}
               errors={errors}
             />
-            <FormInput
+            <FormSelect
               name="help"
-              placeholder="How can we help?"
               register={{ ...register("help") }}
               errors={errors}
             />

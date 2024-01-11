@@ -38,7 +38,7 @@ const ScrollTalkMobile = () => {
         </div>
       ))}
       <Link href="/works">
-        <p className="text-center !text-yellow-550 z-10 tracking-[3.96px] pt-16">
+        <p className="text-center !text-yellow-550 z-[9999] tracking-[3.96px] pt-16">
           READ MORE
         </p>
       </Link>

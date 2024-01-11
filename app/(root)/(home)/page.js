@@ -3,13 +3,13 @@ import GlobalLoading from "@/components/intro/GlobalLoading";
 import ImageAnimationMobile from "@/components/intro/ImageAnimationMobile";
 import Loading from "@/components/intro/Loading";
 import MobileLoading from "@/components/intro/MobileLoading";
-import Banner from "@/components/main/Banner";
-import MarqueeText from "@/components/main/MarqueeText";
+import ReusableImageAnimation from "@/components/intro/ReusableImageAnimation";
 import Pride from "@/components/main/Pride";
 import SelectedWork from "@/components/main/SelectedWork";
 import StupidEnough from "@/components/main/StupidEnough";
+import Talks from "@/components/main/Talks";
 import Footer from "@/components/shared/Footer";
-import Navbar from "@/components/shared/Navbar";
+import { textSlider } from "@/constance/text.data";
 import { useState } from "react";
 
 const Page = () => {
@@ -20,8 +20,7 @@ const Page = () => {
   };
 
   return (
-    <div className="flex flex-col text-light-50 bg-[#241F20]">
-      <Navbar />
+    <div className="flex flex-col text-light-50 bg-[#0A0808] font-manrope">
       {step === 0 && (
         <>
           <GlobalLoading setStep={setStep} />
@@ -43,21 +42,33 @@ const Page = () => {
           </div>
         </>
       )}
-      {step > 0 && (
+
+      {step === 1 && (
         <>
+          {/* <Navbar /> */}
           <Loading step={step} handleButtonClick={handleButtonClick} />
           <MobileLoading step={step} handleButtonClick={handleButtonClick} />
 
-          <>
-            <Banner />
-            <MarqueeText />
+          <div className="w-full h-full sm:block hidden overflow-hidden">
+            {textSlider.map((item, index) => (
+              <ReusableImageAnimation
+                key={index}
+                imageSrc={item.imageSrc}
+                imageAlt={item.imageAlt}
+                scale={item.scale}
+              />
+            ))}
+          </div>
+          <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[250px] min-h-screen relative">
+            {/* <Banner />
+            <MarqueeText /> */}
             {/* <Services /> */}
             <SelectedWork />
             <Pride />
             <StupidEnough />
-            {/* <Talks /> */}
+            <Talks />
             <Footer />
-          </>
+          </div>
         </>
       )}
     </div>

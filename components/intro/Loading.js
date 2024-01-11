@@ -84,7 +84,7 @@ const Loading = ({ step, handleButtonClick }) => {
               height="100%"
               autoPlay={play}
               loop
-              muted
+              // muted
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
               style={{ cursor: isHovered ? "none" : "auto" }}
@@ -105,7 +105,11 @@ const Loading = ({ step, handleButtonClick }) => {
   };
 
   return (
-    <div className="sm:!flex !hidden flex-col items-center justify-center relative z-10 min-h-screen sm:pb-[40px] pb-[70px]">
+    <div
+      className="sm:!flex !hidden flex-col items-center justify-center relative z-10 min-h-screen sm:pb-[40px] pb-[70px]"
+      onMouseOut={handleMouseLeave}
+      onMouseLeave={handleMouseLeave}
+    >
       {renderContent()}
     </div>
   );

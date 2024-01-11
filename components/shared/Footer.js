@@ -19,6 +19,7 @@ const Footer = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         width: "100%",
+        zIndex: 9999,
       }}
     >
       <Wrapper className="w-full flex flex-col sm:mt-[80px] mt-24 xs:!px-12 px-8">
@@ -47,7 +48,7 @@ const Footer = () => {
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
                 href="/contact"
-                className="focus:outline-none outline-none border-2 rounded-full border-yellow-550 md:w-[280px] lg:w-[300px] xl:w-[350px] w-[168.37px] lg:h-[56px] sm:h-[50px] h-[40px] flex items-center justify-center text-center sm:text-sm text-xs tracking-[1.727px]"
+                className="!no-underline focus:outline-none outline-none border-2 rounded-full border-yellow-550 md:w-[280px] lg:w-[300px] xl:w-[350px] w-[168.37px] lg:h-[56px] sm:h-[50px] h-[40px] flex items-center justify-center text-center sm:text-sm text-xs tracking-[1.727px]"
               >
                 <motion.p
                   className="sm:min-w-[150px] text-left sm:block hidden"
@@ -96,7 +97,7 @@ const Footer = () => {
             <InstagramIcon />
             <LinkedInIcon />
           </div>
-          <div className="flex flex-row gap-4 justify-between sm:justify-start">
+          <div className="flex flex-row gap-4">
             <div className="uppercase flex flex-col text-light-50 sm:items-end gap-1">
               <p className="text-left underline">info@gridagenyinc.ca</p>
               <p className="text-left underline">(416) 557-4773</p>

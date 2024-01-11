@@ -11,9 +11,7 @@ const Talks = () => {
         STUPID TALKS
       </VerticleEl>
 
-      <Wrapper className="sm:!flex flex-row w-full h-full !hidden">
-        <ScrollTalks />
-      </Wrapper>
+      <ScrollTalks />
 
       <Wrapper className="sm:!hidden flex-row w-full h-full !flex overflow-hidden sm:!px-[100px] !px-12">
         <ScrollTalkMobile />

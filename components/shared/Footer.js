@@ -19,6 +19,7 @@ const Footer = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         width: "100%",
+        zIndex: 9999,
       }}
     >
       <Wrapper className="w-full flex flex-col sm:mt-[80px] mt-24 xs:!px-12 px-8">
@@ -96,7 +97,7 @@ const Footer = () => {
             <InstagramIcon />
             <LinkedInIcon />
           </div>
-          <div className="flex flex-row gap-4 justify-between sm:justify-start">
+          <div className="flex flex-row gap-4">
             <div className="uppercase flex flex-col text-light-50 sm:items-end gap-1">
               <p className="text-left underline">info@gridagenyinc.ca</p>
               <p className="text-left underline">(416) 557-4773</p>

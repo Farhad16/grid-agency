@@ -44,7 +44,7 @@
 
 .background-text::before,
 .background-text::after {
-  font-weight: 800;
+  font-weight: 900;
   color: black;
   white-space: nowrap;
 }
@@ -55,18 +55,20 @@
   top: 30%;
   left: 0;
   transform: translate(0%, -50%);
-  font-size: 690px;
+  font-size: 600px;
   width: fit-content;
+  letter-spacing: -50px;
 }
 
 .background-text::after {
   content: "talks";
   position: absolute;
-  top: -150px;
+  top: -100px;
   left: 0px;
-  transform: translate(120%, 0%);
-  font-size: 690px;
+  transform: translate(132%, 22%);
+  font-size: 600px;
   width: fit-content;
+  letter-spacing: -50px;
 }
 
 .background-text-verticle::before {
@@ -169,13 +171,6 @@
   display: flex;
   flex-direction: row;
   position: relative;
-}
-
-.scroll-section {
-  /* height: 100vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 ::-webkit-scrollbar {

@@ -22,7 +22,6 @@ const Page = () => {
 
   return (
     <div className="flex flex-col text-light-50 bg-[#241F20] font-manrope">
-      <Navbar />
       {step === 0 && (
         <>
           <GlobalLoading setStep={setStep} />
@@ -46,12 +45,13 @@ const Page = () => {
       )}
       {step > 0 && (
         <>
-          <Loading step={step} handleButtonClick={handleButtonClick} />
-          <MobileLoading step={step} handleButtonClick={handleButtonClick} />
+          <Navbar />
+          {/* <Loading step={step} handleButtonClick={handleButtonClick} />
+          <MobileLoading step={step} handleButtonClick={handleButtonClick} /> */}
 
           <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[250px] min-h-screen relative">
-            <Banner />
-            <MarqueeText />
+            {/* <Banner />
+            <MarqueeText /> */}
             {/* <Services /> */}
             <SelectedWork />
             <Pride />

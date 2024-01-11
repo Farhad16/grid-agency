@@ -1,9 +1,8 @@
 "use client";
-import { talkData } from "@/constance/talks.data";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { talkData } from "@/constance/talks.data";
 
 function ScrollTalks() {
   const sectionRef = useRef(null);
@@ -18,30 +17,36 @@ function ScrollTalks() {
         translateX: 0,
       },
       {
-        translateX: `-250vw`,
+        translateX: "-100vw",
+        ease: "none",
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
-          start: `top-=50 top"`,
+          start: "top top+=80",
           end: "2000 top",
-          scrub: 1,
+          scrub: 0.6,
           pin: true,
         },
       }
     );
     return () => {
+      {
+        /* A return function for killing the animation on component unmount */
+      }
       pin.kill();
     };
   }, []);
 
   return (
-    <section className="talk-section-outer sm:block hidden">
+    <section className="scroll-section-outer">
       <div ref={triggerRef}>
-        <div ref={sectionRef} className="talk-section-inner relative">
-          <div className="background-text"></div>
+        <div
+          ref={sectionRef}
+          className="scroll-section-inner background-text pl-24"
+        >
           {talkData.map((talk, i) => (
             <div
-              className={`flex flex-row sm:min-w-[900px] min-w-[700px] z-10 pt-2 ${
+              className={`flex flex-row sm:min-w-[900px] min-w-[700px] z-10 pt-2 h-[100vh] ${
                 i % 2 === 0 ? "items-start" : "items-end"
               }`}
               key={i}
@@ -66,16 +71,6 @@ function ScrollTalks() {
               </div>
             </div>
           ))}
-          <Link href="/works" className="ml-[250px]">
-            <>
-              <p className="-rotate-90 absolute bottom-[40%] text-center text-extralight !text-yellow-550 z-10 tracking-[3.96px] text-[21px]">
-                READ
-              </p>
-            </>
-            <p className="-rotate-90 absolute bottom-[53%] text-center text-extralight !text-yellow-550 z-10 tracking-[3.96px] text-[21px] -ml-[2.8px]">
-              MORE
-            </p>
-          </Link>
         </div>
       </div>
     </section>
@@ -83,3 +78,55 @@ function ScrollTalks() {
 }
 
 export default ScrollTalks;
+
+{
+  /* <section
+className="talk-section-outer sm:block hidden relative "
+ref={sectionRef}
+>
+<div className="sticky top-0 h-screen flex items-center overflow-hidden">
+  <div className="background-text"></div>
+
+  <motion.div style={{ x }} className="flex">
+    {talkData.map((talk, i) => (
+      <div
+        className={`flex flex-row sm:min-w-[900px] min-w-[700px] z-10 pt-2 ${
+          i % 2 === 0 ? "items-start" : "items-end"
+        }`}
+        key={i}
+      >
+        <div className="flex gap-6 items-start">
+          <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">
+            {talk.serial}
+          </span>
+          <div className="relative">
+            <img
+              className="sm:max-w-[600px] max-w-[400px] sm:h-[385px] h-[250px] rounded-xl"
+              src={talk.img}
+              alt="img"
+            />
+            <h1 className="font-extrabold absolute text-4xl sm:text-[70px] text-light-50 top-[40%] sm:-right-[200px] -right-[100px] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8">
+              {talk.about}
+            </h1>
+          </div>
+          <p className="sm:text-lg text-sm font-normal tracking-widest ml-8">
+            {talk.date}
+          </p>
+        </div>
+      </div>
+    ))}
+  </motion.div>
+</div>
+
+<Link href="/works" className="ml-[250px]">
+  <>
+    <p className="-rotate-90 absolute bottom-[40%] text-center text-extralight !text-yellow-550 z-10 tracking-[3.96px] text-[21px]">
+      READ
+    </p>
+  </>
+  <p className="-rotate-90 absolute bottom-[53%] text-center text-extralight !text-yellow-550 z-10 tracking-[3.96px] text-[21px] -ml-[2.8px]">
+    MORE
+  </p>
+</Link>
+</section> */
+}

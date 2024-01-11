@@ -20,7 +20,7 @@ const Page = () => {
   };
 
   return (
-    <div className="flex flex-col text-light-50 bg-[#241F20] font-manrope">
+    <div className="flex flex-col text-light-50 bg-[#0A0808] font-manrope">
       {step === 0 && (
         <>
           <GlobalLoading setStep={setStep} />
@@ -49,25 +49,15 @@ const Page = () => {
           <Loading step={step} handleButtonClick={handleButtonClick} />
           <MobileLoading step={step} handleButtonClick={handleButtonClick} />
 
-          <div className="w-full h-full sm:block hidden">
-            <div
-              className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]"
-              style={{
-                backgroundImage: "url('/assets/intro/text-bg.png')",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "130% auto",
-                backgroundPosition: "top",
-              }}
-            >
-              {textSlider.map((item, index) => (
-                <ReusableImageAnimation
-                  key={index}
-                  imageSrc={item.imageSrc}
-                  imageAlt={item.imageAlt}
-                  scale={item.scale}
-                />
-              ))}
-            </div>
+          <div className="w-full h-full sm:block hidden overflow-hidden">
+            {textSlider.map((item, index) => (
+              <ReusableImageAnimation
+                key={index}
+                imageSrc={item.imageSrc}
+                imageAlt={item.imageAlt}
+                scale={item.scale}
+              />
+            ))}
           </div>
           <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[250px] min-h-screen relative">
             {/* <Banner />

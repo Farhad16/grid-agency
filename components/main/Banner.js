@@ -2,26 +2,25 @@ import React from "react";
 import Wrapper from "../shared/Wrapper";
 import Image from "next/image";
 import VerticleEl from "../shared/VerticleEl";
-import TextSlider from "./TextSlider";
 
 const Banner = () => {
   return (
     <Wrapper className="flex items-center justify-center sm:!px-[100px] !px-14 pt-[150px]">
       <div className="flex flex-col">
-        <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-extrabold mb-3">
+        <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-black mb-3">
           We make
         </p>
         <div className="flex flex-col">
-          <div className="text-light-50 text-[100px] sm:text-[180px] md:text-[280px] lg:text-[312px] font-extrabold leading-[100px] sm:leading-[200px] md:tracking-[-15.6px] tracking-[-5.px] flex relative">
-            <h1>stup</h1>
+          <div className="flex items-center relative text-light-50 text-[100px] sm:text-[180px] md:text-[280px] lg:text-[312px] font-black leading-[100px] sm:leading-[200px] md:tracking-[-15.6px] tracking-[-5.px] ">
+            stup
             <div className="relative">
-              <h1>i</h1>
+              i
               <Image
                 src="/assets/main_page/Cat.gif"
                 alt="cat"
                 width={220}
                 height={220}
-                className="absolute -top-[30px] sm:-top-[150px] -left-10 sm:-left-20 sm:max-w-[220px] max-w-[100px]"
+                className="absolute -top-[30px] sm:-top-[140px] -left-10 sm:-left-20 sm:max-w-[220px] max-w-[100px]"
               />
             </div>
             d
@@ -34,7 +33,7 @@ const Banner = () => {
               className="absolute -bottom-[10px] sm:-bottom-[90px] left-0 sm:max-w-[515px] max-w-[150px]"
             />
           </div>
-          <div className="flex flex-row items-center justify-end lg:mt-4 sm:-mt-8 mt-0">
+          <div className="flex flex-row items-center justify-end lg:mt-6 sm:-mt-8 mt-0">
             <img
               src="/assets/main_page/text-ani.gif"
               alt="animated"
@@ -51,7 +50,7 @@ const Banner = () => {
             We are the catalyst for
             <br />
             turning{" "}
-            <span className="text-yellow-550 font-extrabold">
+            <span className="text-yellow-550 font-black">
               unconventional <br /> ideas into realities.
             </span>
           </p>
@@ -75,7 +74,7 @@ const Banner = () => {
             <br className="md:block hidden" /> communication solutions to
             consistently
             <br />
-            <span className="text-yellow-550 font-extrabold">
+            <span className="text-yellow-550 font-black">
               redefine what's attainable
             </span>
           </p>
@@ -86,7 +85,7 @@ const Banner = () => {
             We transform the <br />
             seemingly ‘stupid’
             <br />
-            <span className="bg-yellow-550 rotate-[2deg] inline-block text-[#231F20] mt-2 font-extrabold py-3 sm:px-4 sm:leading-[40px] leading-[19px]">
+            <span className="bg-yellow-550 rotate-[2deg] inline-block text-[#231F20] mt-2 font-black py-3 sm:px-4 sm:leading-[40px] leading-[19px]">
               into innovative outcomes.
             </span>
           </p>

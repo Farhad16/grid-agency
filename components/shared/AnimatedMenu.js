@@ -47,7 +47,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
             animate={{ opacity: 1, x: open ? "0%" : "50%" }}
             transition={{ duration: 0.6, easing: "easeInOut", delay: 0.25 }}
           >
-            <p className="text-[30px] font-extrabold relative text-yellow-550 tracking-[-1.5px]">
+            <p className="text-[30px] font-extrabold relative text-yellow-550 tracking-[-1.5px] !font-manrope">
               menu
             </p>
             <div className="flex flex-col xl:gap-12 md:gap-10 mt-6">
@@ -55,7 +55,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
                 <Link
                   href={item.route}
                   key={item.name}
-                  className="text-light-50 hover:text-light-50 hover:no-underline md:text-[80px] lg:text-[90px] text-[60px] font-extrabold lg:tracking-[-5px] sm:leading-[34px] leading-normal tracking-[-3px]"
+                  className="text-light-50 hover:text-light-50 hover:no-underline md:text-[80px] lg:text-[90px] text-[60px] font-extrabold lg:tracking-[-5px] sm:leading-[34px] leading-normal tracking-[-3px] !font-manrope"
                   onClick={() => setOpen(false)}
                 >
                   {item.name}
@@ -66,7 +66,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="text-light-50 hover:text-light-50 hover:no-underline"
+                className="text-light-50 hover:text-light-50 hover:no-underline !font-manrope"
               >
                 say hello
               </Link>

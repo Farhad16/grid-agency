@@ -2,11 +2,8 @@ import Achieve from "@/components/about/Achieve";
 import Mesh from "@/components/about/Mesh";
 import Mission from "@/components/about/Mission";
 import Vision from "@/components/about/Vision";
-import DividerElement from "@/components/shared/DividerElement";
 import Footer from "@/components/shared/Footer";
 import Wrapper from "@/components/shared/Wrapper";
-import { Divider } from "@mui/material";
-import React from "react";
 
 const Page = () => {
   return (

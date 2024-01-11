@@ -16,6 +16,7 @@ const Page = () => {
   const [step, setStep] = useState(0);
 
   const handleButtonClick = () => {
+    console.log("calling");
     setStep((prevStep) => prevStep + 1);
   };
 
@@ -43,7 +44,7 @@ const Page = () => {
         </>
       )}
 
-      {step === 1 && (
+      {step > 0 && (
         <>
           {/* <Navbar /> */}
           <Loading step={step} handleButtonClick={handleButtonClick} />

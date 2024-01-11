@@ -11,10 +11,8 @@ function ScrollTalks({ screenWidth }) {
   const triggerRef = useRef(null);
 
   function getScreenWidth() {
-    if (screenWidth > 2000) {
+    if (screenWidth >= 1600 && screenWidth <= 2000) {
       return "-55vw";
-    } else if (screenWidth >= 1600 && screenWidth <= 2000) {
-      return "-60vw";
     } else if (screenWidth >= 1400 && screenWidth < 1600) {
       return "-105vw";
     } else if (screenWidth >= 1300 && screenWidth < 1400) {

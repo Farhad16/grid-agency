@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useRef, useState } from "react";
 
 import CursorView from "./CursorView";
@@ -9,12 +8,11 @@ const Loading = ({ step, handleButtonClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 300, y: 300 });
   const [cursorPosition1, setCursorPosition1] = useState({ x: 300, y: 300 });
-  const videoRef = useRef(null);
+  const videoRef = useRef();
 
   const handlePlay = () => {
     const video = videoRef.current;
-
-    if (video) {
+    if (video && video.readyState >= 2) {
       if (play) {
         video.pause();
       } else {
@@ -58,7 +56,6 @@ const Loading = ({ step, handleButtonClick }) => {
               autoPlay
               loop
               muted
-              style={{ cursor: "auto" }}
               onMouseMove={handleCursorMove}
               onMouseEnter={handleCursorEnter}
               className="w-full h-full cover"
@@ -84,11 +81,11 @@ const Loading = ({ step, handleButtonClick }) => {
               height="100%"
               autoPlay={play}
               loop
-              // muted
+              muted
               onMouseMove={handleMouseMove}
+              onMouseOver={handleCursorEnter}
               onMouseLeave={handleMouseLeave}
-              style={{ cursor: isHovered ? "none" : "auto" }}
-              className="xl:block hidden w-full h-full cover"
+              className="w-full h-full cover"
             ></video>
             <CursorView
               cursorPosition={cursorPosition}
@@ -107,7 +104,6 @@ const Loading = ({ step, handleButtonClick }) => {
   return (
     <div
       className="sm:!flex !hidden flex-col items-center justify-center relative z-10 min-h-screen sm:pb-[40px] pb-[70px]"
-      onMouseOut={handleMouseLeave}
       onMouseLeave={handleMouseLeave}
     >
       {renderContent()}

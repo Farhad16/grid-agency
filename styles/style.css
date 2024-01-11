@@ -86,6 +86,7 @@
   width: 878px;
   height: 256px;
   transform: rotate(-90deg);
+  z-index: 0;
 }
 
 .background-text-verticle::after {

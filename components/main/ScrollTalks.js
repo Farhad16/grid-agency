@@ -5,25 +5,9 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { talkData } from "@/constance/talks.data";
 import Link from "next/link";
 
-function ScrollTalks() {
+function ScrollTalks({ screenWidth }) {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
-
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  const updateScreenWidth = () => {
-    setScreenWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    updateScreenWidth();
-
-    window.addEventListener("resize", updateScreenWidth);
-
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth);
-    };
-  }, []);
 
   function getScreenWidth() {
     if (screenWidth >= 1600 && screenWidth <= 2000) {
@@ -43,7 +27,6 @@ function ScrollTalks() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  console.log(getScreenWidth());
   useEffect(() => {
     const pin = gsap.fromTo(
       sectionRef.current,
@@ -69,7 +52,7 @@ function ScrollTalks() {
   }, []);
 
   return (
-    <section className="scroll-section-outer">
+    <section className="scroll-section-outer sm:block hidden">
       <div ref={triggerRef}>
         <div
           ref={sectionRef}

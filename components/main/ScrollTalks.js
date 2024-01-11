@@ -1,9 +1,9 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import { talkData } from "@/constance/talks.data";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { talkData } from "@/constance/talks.data";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 function ScrollTalks() {
   const sectionRef = useRef(null);
@@ -35,7 +35,7 @@ function ScrollTalks() {
   }, []);
 
   return (
-    <section className="talk-section-outer sm:block hidden ">
+    <section className="talk-section-outer sm:block hidden">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="talk-section-inner relative">
           <div className="background-text"></div>

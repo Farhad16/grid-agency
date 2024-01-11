@@ -47,7 +47,7 @@ const Footer = () => {
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
                 href="/contact"
-                className="focus:outline-none outline-none border-2 rounded-full border-yellow-550 md:w-[280px] lg:w-[300px] xl:w-[350px] w-[168.37px] lg:h-[56px] sm:h-[50px] h-[40px] flex items-center justify-center text-center sm:text-sm text-xs tracking-[1.727px]"
+                className="!no-underline focus:outline-none outline-none border-2 rounded-full border-yellow-550 md:w-[280px] lg:w-[300px] xl:w-[350px] w-[168.37px] lg:h-[56px] sm:h-[50px] h-[40px] flex items-center justify-center text-center sm:text-sm text-xs tracking-[1.727px]"
               >
                 <motion.p
                   className="sm:min-w-[150px] text-left sm:block hidden"

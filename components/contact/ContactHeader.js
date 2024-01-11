@@ -64,29 +64,27 @@ const ContactHeader = () => {
   };
 
   return (
-    <Wrapper className="border-bottom w-full flex flex-col relative contact-bg sm:pb-[100px] pb-[50px] pt-[150px] sm:pt-[200px]">
-      <div className="flex flex-col md:flex-row sm:gap-24 gap-16 items-center">
+    <Wrapper className="border-bottom w-full flex flex-col relative contact-bg md:!px-[80px] lg:!px-[100px] sm:pb-[100px] pb-[50px] pt-[150px] sm:pt-[200px]">
+      <div className="flex flex-col md:flex-row items-center lg:gap-16 gap-12 py-10 lg:px-10 justify-center">
         <img
           src="/assets/footer/footer.gif"
           layout="responsive"
-          className="lg:w-[308px] md:w-[214px] w-[175px]"
+          className="lg:w-[308px] md:w-[250px] w-[224px]"
           alt="footergif"
         />
-        <div className="flex flex-col">
+        <div className="flex flex-col sm:ml-0 ml-20">
           <div className="flex flex-col">
             <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 w-fit xs:-mb-3 -mb-1.5 font-extrabold">
               talk to us
             </div>
-            <div className="inline-block">
-              <p className="text-light-50 md:text-[90px] lg:text-[130px] xs:text-[80px] text-[65px] font-extrabold sm:tracking-[-6.5px] tracking-[-4.5px] leading-[87.424%]">
-                have a
-              </p>
+            <div className="flex text-light-50 md:text-[90px] lg:text-[130px] xs:text-[80px] text-[65px] font-extrabold sm:tracking-[-6.5px] tracking-[-4.5px] leading-[87.424%]">
+              have a
               <Image
                 src="/assets/main_page/Cat.gif"
                 alt="cat"
-                width={150}
-                height={150}
-                className="w-[120px] h-[120px] -mt-6"
+                width={160}
+                height={160}
+                className="w-[120px] h-[120px] sm:mt-0 -mt-6"
                 objectFit="cover"
               />
             </div>
@@ -102,15 +100,16 @@ const ContactHeader = () => {
           </div>
         </div>
       </div>
-      <div className="sm:!grid sm:!grid-cols-3 gap-16 mt-[100px] flex flex-col-reverse">
+
+      <div className="sm:!grid sm:!grid-cols-3 gap-16 sm:mt-[100px] flex flex-col-reverse">
         <div className="flex flex-col sm:items-start items-center col-span-1">
-          <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
+          <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-[30px] md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
             prefer email?
           </p>
-          <p className="text-light-50 text-[30px] sm:text-left text-center tracking-[-1.5px] sm:leading-normal">
+          <p className="text-light-50 text-[30px] md:text-[24px] lg:text-[30px] sm:text-left text-center tracking-[-1.5px] sm:leading-normal">
             You can reach us at
             <br />
-            <span className="text-yellow-550 underline break-words">
+            <span className="text-yellow-550 underline truncate">
               info@gridagencyinc.ca
             </span>
           </p>
@@ -141,14 +140,14 @@ const ContactHeader = () => {
           />
           <div className="flex sm:flex-row flex-col gap-4 w-full">
             <FormInput
-              name="subject"
+              name="help"
               placeholder="How can we help"
-              register={{ ...register("subject") }}
+              register={{ ...register("help") }}
               errors={errors}
             />
             <FormSelect
-              name="help"
-              register={{ ...register("help") }}
+              name="subject"
+              register={{ ...register("subject") }}
               errors={errors}
             />
           </div>

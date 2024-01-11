@@ -11,7 +11,7 @@ import StupidEnough from "@/components/main/StupidEnough";
 import Talks from "@/components/main/Talks";
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Page = () => {
   const [step, setStep] = useState(0);

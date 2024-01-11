@@ -44,9 +44,10 @@
 
 .background-text::before,
 .background-text::after {
-  font-weight: 900;
+  font-weight: 800;
   color: black;
   white-space: nowrap;
+  font-size: 600px;
 }
 
 .background-text::before {
@@ -55,7 +56,6 @@
   top: 30%;
   left: 0;
   transform: translate(0%, -50%);
-  font-size: 600px;
   width: fit-content;
   letter-spacing: -50px;
 }
@@ -65,8 +65,7 @@
   position: absolute;
   top: -100px;
   left: 0px;
-  transform: translate(132%, 22%);
-  font-size: 600px;
+  transform: translate(132%, 15%);
   width: fit-content;
   letter-spacing: -50px;
 }
@@ -119,10 +118,19 @@
   position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .background-text::before,
   .background-text::after {
     font-size: 400px;
+    letter-spacing: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .background-text::before,
+  .background-text::after {
+    font-size: 300px;
+    letter-spacing: 10px;
   }
   .background-text::after {
     top: 70px;
@@ -138,7 +146,8 @@
 @media (max-width: 480px) {
   .background-text::before,
   .background-text::after {
-    font-size: 300px;
+    font-size: 200px;
+    letter-spacing: 10px;
   }
   .background-text::after {
     top: 70px;

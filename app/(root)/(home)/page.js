@@ -47,7 +47,7 @@ const Page = () => {
       )}
       {step > 0 && (
         <>
-          <Navbar />
+          {/* <Navbar />
           <Loading step={step} handleButtonClick={handleButtonClick} />
           <MobileLoading step={step} handleButtonClick={handleButtonClick} />
 
@@ -70,7 +70,7 @@ const Page = () => {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
           <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[250px] min-h-screen relative">
             {/* <Banner />
             <MarqueeText /> */}

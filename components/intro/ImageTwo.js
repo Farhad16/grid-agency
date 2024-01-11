@@ -13,17 +13,19 @@ const ImageTwo = () => {
   const translate = useTransform(scrollYProgress, [0, 0.5], [-150, 0]);
 
   return (
-    <motion.img
-      src={`/assets/intro/text2.png`}
-      alt="text2"
-      style={{
-        opacity,
-        scale,
-        translateY: translate,
-        transition: "transform .9s ease-in-out",
-      }}
-      ref={targetRef}
-    />
+    <div className="min-h-screen">
+      <motion.img
+        src={`/assets/intro/text2.png`}
+        alt="text2"
+        style={{
+          opacity,
+          scale,
+          translateY: translate,
+          transition: "transform .9s ease-in-out",
+        }}
+        ref={targetRef}
+      />
+    </div>
   );
 };
 

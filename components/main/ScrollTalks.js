@@ -12,9 +12,9 @@ function ScrollTalks({ screenWidth }) {
 
   function getScreenWidth() {
     if (screenWidth > 2000) {
-      return "-60vw";
+      return "-55vw";
     } else if (screenWidth >= 1600 && screenWidth <= 2000) {
-      return "-65vw";
+      return "-60vw";
     } else if (screenWidth >= 1400 && screenWidth < 1600) {
       return "-105vw";
     } else if (screenWidth >= 1300 && screenWidth < 1400) {

@@ -3,6 +3,7 @@ import GlobalLoading from "@/components/intro/GlobalLoading";
 import ImageAnimationMobile from "@/components/intro/ImageAnimationMobile";
 import Loading from "@/components/intro/Loading";
 import MobileLoading from "@/components/intro/MobileLoading";
+import ReusableImageAnimation from "@/components/intro/ReusableImageAnimation";
 import Banner from "@/components/main/Banner";
 import MarqueeText from "@/components/main/MarqueeText";
 import Pride from "@/components/main/Pride";
@@ -11,6 +12,7 @@ import StupidEnough from "@/components/main/StupidEnough";
 import Talks from "@/components/main/Talks";
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
+import { textSlider } from "@/constance/text.data";
 import { useEffect, useState } from "react";
 
 const Page = () => {
@@ -46,9 +48,29 @@ const Page = () => {
       {step > 0 && (
         <>
           <Navbar />
-          {/* <Loading step={step} handleButtonClick={handleButtonClick} />
-          <MobileLoading step={step} handleButtonClick={handleButtonClick} /> */}
+          <Loading step={step} handleButtonClick={handleButtonClick} />
+          <MobileLoading step={step} handleButtonClick={handleButtonClick} />
 
+          <div className="w-full h-full sm:block hidden">
+            <div
+              className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]"
+              style={{
+                backgroundImage: "url('/assets/intro/text-bg.png')",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "130% auto",
+                backgroundPosition: "top",
+              }}
+            >
+              {textSlider.map((item, i) => (
+                <ReusableImageAnimation
+                  key={i}
+                  imageSrc={item.imageSrc}
+                  imageAlt={item.imageAlt}
+                  scale={item.scale}
+                />
+              ))}
+            </div>
+          </div>
           <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[250px] min-h-screen relative">
             {/* <Banner />
             <MarqueeText /> */}

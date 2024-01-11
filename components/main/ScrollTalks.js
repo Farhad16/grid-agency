@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { talkData } from "@/constance/talks.data";
@@ -8,8 +8,35 @@ function ScrollTalks() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const updateScreenWidth = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    updateScreenWidth();
+
+    window.addEventListener("resize", updateScreenWidth);
+
+    return () => {
+      window.removeEventListener("resize", updateScreenWidth);
+    };
+  }, []);
+
+  function getScreenWidth() {
+    if (screenWidth >= 1600 && screenWidth <= 2000) {
+      return "-50vw";
+    } else if (screenWidth >= 1400 && screenWidth < 1600) {
+      return "-100vw";
+    } else if (screenWidth >= 1200 && screenWidth < 1400) {
+      return "-150vw";
+    }
+  }
+
   gsap.registerPlugin(ScrollTrigger);
 
+  console.log(getScreenWidth());
   useEffect(() => {
     const pin = gsap.fromTo(
       sectionRef.current,
@@ -17,7 +44,7 @@ function ScrollTalks() {
         translateX: 0,
       },
       {
-        translateX: "-100vw",
+        translateX: `${getScreenWidth()}`,
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -30,9 +57,6 @@ function ScrollTalks() {
       }
     );
     return () => {
-      {
-        /* A return function for killing the animation on component unmount */
-      }
       pin.kill();
     };
   }, []);
@@ -42,11 +66,11 @@ function ScrollTalks() {
       <div ref={triggerRef}>
         <div
           ref={sectionRef}
-          className="scroll-section-inner background-text pl-24"
+          className="flex relative flex-row background-text pl-24"
         >
           {talkData.map((talk, i) => (
             <div
-              className={`flex flex-row sm:min-w-[900px] min-w-[700px] z-10 pt-2 h-[100vh] ${
+              className={`flex flex-row sm:min-w-[900px] min-w-[700px] z-10 pt-2 h-[80vh] sm:h-[100vh] ${
                 i % 2 === 0 ? "items-start" : "items-end"
               }`}
               key={i}

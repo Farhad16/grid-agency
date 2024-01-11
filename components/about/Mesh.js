@@ -9,7 +9,7 @@ const Mesh = () => {
         alt="aline"
         className="sm:w-[800px] sm:h-[700px] md:h-[913px] xl:w-[1000px] w-[275px] h-[282px] 2xl:w-[1300px]"
       />
-      <div className="flex flex-col absolute top-[5%] sm:left-[30%] left-[10%]">
+      <div className="flex flex-col absolute top-[10%] left-[10%] md:left-[30%] lg:left-[40%] ">
         <p className="text-yellow-550 font-extrabold text-base sm:text-xl lg:text-[26px] sm:tracking-[5.4px] tracking-[2.4px]">
           OUR PROCESS
         </p>
@@ -17,19 +17,11 @@ const Mesh = () => {
       <Circle
         className="xl:top-0 xl:right-[17%] lg:right-[8%] lg:-top-[7%] md:right-[15%] md:top-[5%] top-8 right-14"
         data={{
-          text1: (
-            <span>
-              Curiosity & <br />
-              Exploration
-            </span>
-          ),
+          text1: <span>Curiosity</span>,
           text2: (
             <span>
-              We encourage
-              <br /> curiosity and
-              <br /> exploration to initiate
-              <br /> our process and unveil
-              <br /> innovative possibilities
+              It’s about asking <br /> the right questions <br /> and being open{" "}
+              <br /> to where they <br /> lead us.
             </span>
           ),
         }}
@@ -39,20 +31,14 @@ const Mesh = () => {
         data={{
           text1: (
             <span>
-              Driven <br />
-              Creative
+              Exploration <br />&<br /> Brainstorming
             </span>
           ),
           text2: (
             <span>
-              We take a deep <br /> understanding of our <br />
-              audience's emotions and
-              <br />
-              experiences and evaluate what <br />
-              creative will work
-              <br /> based on data and
-              <br />
-              insights.
+              We dig into
+              <br /> what really matters <br /> to your audience. <br /> No
+              guesswork, <br /> just understanding.
             </span>
           ),
         }}
@@ -62,17 +48,15 @@ const Mesh = () => {
         data={{
           text1: (
             <span>
-              Innovative
-              <br /> Concept
+              Concept
               <br /> Development
             </span>
           ),
           text2: (
             <span>
-              Our teams go through a <br /> concept development <br />
-              process where we gather <br />
-              diverse perspectives for <br />
-              brainstorming, shaping <br /> innovative concepts.
+              Our team develops <br /> ideas, while considering <br /> diverse
+              perspectives,
+              <br /> to increase <br /> brand affinity.
             </span>
           ),
         }}
@@ -82,18 +66,16 @@ const Mesh = () => {
         data={{
           text1: (
             <span>
-              Technology <br />
+              Digital <br />
               Consideration
             </span>
           ),
           text2: (
             <span>
-              A continuous journey
-              <br /> of improvement where
-              <br /> we monitor results and
-              <br />
-              re-invent solutions to
-              <br /> be better optimized.
+              We navigate digital <br /> trends with a <br />
+              practical approach , <br />
+              finding where you
+              <br /> best fit.
             </span>
           ),
         }}
@@ -102,14 +84,20 @@ const Mesh = () => {
       <Circle
         className="xl:right-[10%] lg:bottom-[25%] md:right-[8%] md:bottom-[30%] right-[5%] bottom-[30%]"
         data={{
-          text1: <span>Transformation</span>,
+          text1: (
+            <span>
+              Make
+              <br />
+              Stupid
+              <br />
+              Happen
+            </span>
+          ),
           text2: (
             <span>
-              We explore technology <br />
-              solutions and seamlessly
-              <br /> integrate them across <br />
-              various channels, amplifying
-              <br /> the impact for our partners.
+              We bring ideas to <br />
+              life, straightforward <br />
+              and impactful.
             </span>
           ),
         }}

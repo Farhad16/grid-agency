@@ -204,3 +204,11 @@ select:required:invalid {
 option[value=""][disabled] {
   opacity: 0.5;
 }
+
+.rs-drawer-backdrop.rs-anim-in {
+  top: 12% !important;
+}
+
+.rs-drawer-content {
+  background: #2b2b2b !important;
+}

@@ -14,7 +14,10 @@ const Navbar = () => {
 
   return (
     <div className="relative flex flex-col">
-      <Wrapper className="flex items-center justify-between bg-black nav-boxShadow !fixed w-full z-20 sm:h-[12%] h-[8%] overflow-hidden">
+      <Wrapper
+        className="flex items-center justify-between bg-black nav-boxShadow !fixed w-full z-20 h-[12%] !overflow-hidden !pointer-events-auto"
+        style={{ zIndex: 999999 }}
+      >
         <Link href="/home">
           <Image
             src="/assets/main_page/grid.svg"
@@ -34,10 +37,7 @@ const Navbar = () => {
         />
       </Wrapper>
 
-      {/* Menu Content */}
-      <div className={`${open ? "block" : "hidden"}`}>
-        <AnimatedMenu open={open} setOpen={setOpen} />
-      </div>
+      <AnimatedMenu open={open} setOpen={setOpen} />
     </div>
   );
 };

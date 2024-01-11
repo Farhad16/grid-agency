@@ -3,7 +3,7 @@ import React from "react";
 
 const Achieve = () => {
   return (
-    <div className="relative border-bottom py-12">
+    <div className="relative border-bottom pb-12">
       <Image
         src="/assets/about/achieve.gif"
         alt="case"

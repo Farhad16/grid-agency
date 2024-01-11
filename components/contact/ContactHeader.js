@@ -102,8 +102,8 @@ const ContactHeader = () => {
           </div>
         </div>
       </div>
-      <div className="sm:grid sm:grid-cols-3 gap-16 mt-[100px] flex flex-col-reverse">
-        <div className="flex flex-col sm:items-start items-center">
+      <div className="sm:!grid sm:!grid-cols-3 gap-16 mt-[100px] flex flex-col-reverse">
+        <div className="flex flex-col sm:items-start items-center col-span-1">
           <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
             prefer email?
           </p>
@@ -116,7 +116,7 @@ const ContactHeader = () => {
           </p>
         </div>
         <form
-          className="sm:col-span-2 flex flex-col gap-8"
+          className="sm:col-span-2 col-span-1 flex flex-col gap-8"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="flex flex-row gap-4 w-full">

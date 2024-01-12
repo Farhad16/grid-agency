@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef, useState } from "react";
-
 import CursorView from "./CursorView";
 
 const Loading = ({ step, handleButtonClick }) => {
@@ -58,6 +57,7 @@ const Loading = ({ step, handleButtonClick }) => {
               muted
               onMouseMove={handleCursorMove}
               onMouseEnter={handleCursorEnter}
+              style={{ cursor: "none !important" }}
               className="w-full h-full cover"
             ></video>
 
@@ -79,6 +79,9 @@ const Loading = ({ step, handleButtonClick }) => {
               src="/assets/intro/intro-video.mp4"
               width="100%"
               height="100%"
+              style={{
+                cursor: "none !important",
+              }}
               autoPlay={play}
               loop
               muted

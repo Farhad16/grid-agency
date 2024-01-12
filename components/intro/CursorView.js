@@ -17,6 +17,7 @@ const CursorView = ({ cursorPosition, handlePlay, play, step, isHovered }) => {
         cursor: "pointer",
         color: "white",
         fontSize: "24px",
+        zIndex: 9999,
       }}
       onClick={handlePlay}
     >

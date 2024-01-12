@@ -43,7 +43,7 @@ const Banner = () => {
         </div>
 
         <div className="relative mt-[220px] flex items-center sm:!justify-start justify-center">
-          <VerticleEl className="sm:-left-[180px] sm:top-14 -left-12 top-8">
+          <VerticleEl className="sm:-left-[180px] sm:top-14 -left-20 -top-8">
             WHO WE ARE
           </VerticleEl>
           <p className="sm:leading-normal leading-[34px] text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium sm:tracking-[-1.7px] tracking-[-1.25px] sm:!text-left text-center">

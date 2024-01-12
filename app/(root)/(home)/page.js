@@ -13,8 +13,9 @@ import Banner from "@/components/main/Banner";
 import MarqueeText from "@/components/main/MarqueeText";
 import Footer from "@/components/shared/Footer";
 import { textSlider } from "@/constance/text.data";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/shared/Navbar";
+import { motion } from "framer-motion";
 
 const Page = () => {
   const [step, setStep] = useState(0);
@@ -24,36 +25,41 @@ const Page = () => {
     setStep((prevStep) => prevStep + 1);
   };
 
+  useEffect(() => {
+    const delay = 2000;
+
+    const timeoutId = setTimeout(() => {
+      setStep(1);
+    }, delay);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   return (
     <div className="flex flex-col text-light-50 bg-[#0A0808] font-manrope">
       {step === 0 && (
-        <>
-          <GlobalLoading setStep={setStep} />
+        <div className="fade-container">
+          <GlobalLoading />
+        </div>
+      )}
+
+      {step > 0 && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, easing: "easeInOut", delay: 0.25 }}
+        >
+          <Navbar />
+          <Loading step={step} handleButtonClick={handleButtonClick} />
+          <MobileLoading step={step} handleButtonClick={handleButtonClick} />
           <div className="w-full h-full sm:hidden block">
-            <div
-              className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]"
-              style={{
-                backgroundImage: "url('/assets/intro/text-bg.png')",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "130% auto",
-                backgroundPosition: "top",
-              }}
-            >
+            <div className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]">
               <ImageAnimationMobile
                 step={step}
                 handleButtonClick={handleButtonClick}
               />
             </div>
           </div>
-        </>
-      )}
-
-      {step > 0 && (
-        <>
-          <Navbar />
-          <Loading step={step} handleButtonClick={handleButtonClick} />
-          <MobileLoading step={step} handleButtonClick={handleButtonClick} />
-
           <div className="w-full h-full sm:block hidden overflow-hidden">
             {textSlider.map((item, index) => (
               <ReusableImageAnimation
@@ -74,7 +80,7 @@ const Page = () => {
             <Talks />
             <Footer />
           </div>
-        </>
+        </motion.div>
       )}
     </div>
   );

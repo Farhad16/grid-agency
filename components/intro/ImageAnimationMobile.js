@@ -1,9 +1,8 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 
-export default function ImageAnimationMobile({ step }) {
+export default function ImageAnimationMobile() {
   const sections = [
     {
       el: (
@@ -41,48 +40,8 @@ export default function ImageAnimationMobile({ step }) {
         />
       ),
     },
-    {
-      el: (
-        <motion.img
-          src={`/assets/intro/text4.png`}
-          alt="text4"
-          id="img1"
-          initial={{ scale: 0.1, y: -100 }}
-          whileInView={{ scale: 0.9, y: 0 }}
-          transition={{ duration: 0.7, easing: "easeOut", delay: 0.25 }}
-        />
-      ),
-    },
-    {
-      el: (
-        <motion.img
-          src={`/assets/intro/text5.png`}
-          alt="text5"
-          id="img1"
-          initial={{ scale: 0.1, y: -100 }}
-          whileInView={{ scale: 0.9, y: 0 }}
-          transition={{ duration: 0.7, easing: "easeOut", delay: 0.25 }}
-        />
-      ),
-    },
-    {
-      el: (
-        <motion.img
-          src={`/assets/intro/text6.png`}
-          alt="text6"
-          id="img1"
-          initial={{ scale: 0.1, y: -100 }}
-          whileInView={{ scale: 0.9, y: 0 }}
-          transition={{ duration: 0.7, easing: "easeOut", delay: 0.25 }}
-        />
-      ),
-    },
   ];
 
-  if (step > 3) {
-    return null;
-  }
-  const router = useRouter();
   const [currentSection, setCurrentSection] = useState(0);
   const [firstClick, setFirstClick] = useState(true);
 
@@ -93,7 +52,6 @@ export default function ImageAnimationMobile({ step }) {
 
   const handleClick = () => {
     if (currentSection === 5) {
-      router.push("/home", { scroll: true });
       document.body.style.overflow = "visible";
       return;
     }
@@ -112,19 +70,21 @@ export default function ImageAnimationMobile({ step }) {
   };
 
   return (
-    <div className="relative pt-[200px]">
-      <div
-        onClick={handleClick}
-        className="cursor-pointer z-[100] fixed sm:bottom-0 bottom-5 left-[50%] -translate-x-1/2 -translate-y-1/2 transform flex flex-col items-center"
-      >
-        <img src="/assets/intro/skip.svg" alt="arrow" />
-      </div>
+    <div className="relative pt-[200px] flex items-center justify-center flex-col">
+      {currentSection !== 2 && (
+        <div
+          onClick={handleClick}
+          className="cursor-pointer z-[100] fixed sm:bottom-0 bottom-5 left-[50%] -translate-x-1/2 -translate-y-1/2 transform flex flex-col items-center"
+        >
+          <img src="/assets/intro/skip.svg" alt="arrow" />
+        </div>
+      )}
 
       {sections.map((section, i) => (
         <div
           key={i}
           ref={refs[`section${i}`]}
-          className="min-h-screen flex items-center justify-center"
+          className="h-screen flex items-center justify-center"
         >
           {section.el}
         </div>

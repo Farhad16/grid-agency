@@ -2,9 +2,9 @@
 import { talkData } from "@/constance/talks.data";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import VerticleEl from "../shared/VerticleEl";
+import { useRouter } from "next/navigation";
 
 function ScrollTalks() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -44,6 +44,11 @@ function ScrollTalks() {
 
   gsap.registerPlugin(ScrollTrigger);
 
+  let topGap = 90;
+  if (screenWidth > 1800) {
+    topGap = 150;
+  }
+
   useEffect(() => {
     const pin = gsap.fromTo(
       sectionRef.current,
@@ -56,7 +61,7 @@ function ScrollTalks() {
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
-          start: "top top+=80",
+          start: `top top+=${topGap}`,
           end: "2000 top",
           scrub: 0.6,
           pin: true,
@@ -68,12 +73,17 @@ function ScrollTalks() {
     };
   }, []);
 
+  const router = useRouter();
+  const workRoute = () => {
+    router.push("/portfolio");
+  };
+
   return (
-    <section className="scroll-section-outer sm:block hidden relative">
+    <section className="scroll-section-outer sm:block hidden relative  bg-talk">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row">
           <div className="flex px-20">
-            <VerticleEl className="-left-10 top-[50%] !text-[#231F20] z-10 sm:block hidden">
+            <VerticleEl className="-left-10 top-[50%] !text-[#E6E0D2] z-10 sm:block hidden">
               STUPID TALKS
             </VerticleEl>
             {talkData.map((talk, i) => (
@@ -101,13 +111,13 @@ function ScrollTalks() {
                     {talk.date}
                   </p>
                 </div>
-                {i === talkData.length && (
-                  <Link
-                    link="/works"
-                    className="absolute -right-[40%] top-[40%] gap-4 -rotate-90 font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
+                {i === talkData.length - 1 && (
+                  <p
+                    onClick={workRoute}
+                    className="mt-80 ml-16 cursor-pointer gap-4 -rotate-90 font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
                   >
                     <span>READ </span> <span>MORE</span>
-                  </Link>
+                  </p>
                 )}
               </div>
             ))}

@@ -63,7 +63,6 @@ const Loading = ({ step, handleButtonClick }) => {
 
             <CursorView
               cursorPosition={cursorPosition1}
-              handlePlay={handlePlay}
               play={play}
               step={step}
               isHovered={isHovered}
@@ -84,7 +83,7 @@ const Loading = ({ step, handleButtonClick }) => {
               }}
               autoPlay={play}
               loop
-              muted
+              onClick={handlePlay}
               onMouseMove={handleMouseMove}
               onMouseOver={handleCursorEnter}
               onMouseLeave={handleMouseLeave}
@@ -92,7 +91,6 @@ const Loading = ({ step, handleButtonClick }) => {
             ></video>
             <CursorView
               cursorPosition={cursorPosition}
-              handlePlay={handlePlay}
               play={play}
               step={step}
               isHovered={isHovered}
@@ -107,6 +105,7 @@ const Loading = ({ step, handleButtonClick }) => {
   return (
     <div
       className="sm:!flex !hidden flex-col items-center justify-center relative z-10 min-h-screen sm:pb-[40px] pb-[70px]"
+      style={{ cursor: "none" }}
       onMouseLeave={handleMouseLeave}
     >
       {renderContent()}

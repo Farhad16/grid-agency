@@ -20,7 +20,7 @@ const Banner = () => {
                 alt="cat"
                 width={220}
                 height={220}
-                className="absolute -top-[30px] sm:-top-[140px] -left-10 sm:-left-20 sm:max-w-[220px] max-w-[100px]"
+                className="absolute -top-[30px] sm:-top-[140px] -left-10 sm:-left-20 sm:max-w-[220px] max-w-[100px]  custom-cursor"
               />
             </div>
             d

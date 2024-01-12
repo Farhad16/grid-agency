@@ -39,7 +39,7 @@ const ScrollSliderDesktop = ({ serviceData }) => {
       return "-280vw";
     }
   }
-  console.log(getScreenWidth());
+
   useEffect(() => {
     const pin = gsap.fromTo(
       sectionRef.current,

@@ -28,11 +28,11 @@ function ScrollTalks() {
 
   function getScreenWidth() {
     if (screenWidth > 2000) {
-      return "-55vw";
+      return "-70vw";
     } else if (screenWidth >= 1600 && screenWidth <= 2000) {
-      return "-60vw";
+      return "-110vw";
     } else if (screenWidth >= 1400 && screenWidth < 1600) {
-      return "-120vw";
+      return "-140vw";
     } else if (screenWidth >= 1300 && screenWidth < 1400) {
       return "-160vw";
     } else if (screenWidth >= 1100 && screenWidth < 1300) {
@@ -67,7 +67,6 @@ function ScrollTalks() {
           end: "2000 top",
           scrub: 0.6,
           pin: true,
-          markers: true,
         },
       }
     );
@@ -82,7 +81,7 @@ function ScrollTalks() {
   };
 
   return (
-    <section className="scroll-section-outer sm:block hidden relative">
+    <section className="scroll-section-outer sm:block hidden relative bg-talk">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row">
           <div className="flex px-20">
@@ -110,7 +109,7 @@ function ScrollTalks() {
                       {talk.about}
                     </h1>
                   </div>
-                  <p className="lg:text-lg md:text-base text-sm font-normal tracking-widest ml-8">
+                  <p className="lg:text-lg md:text-base text-sm font-normal tracking-widest ml-8 w-[140px]">
                     {talk.date}
                   </p>
                 </div>

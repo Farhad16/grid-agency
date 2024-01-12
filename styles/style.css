@@ -4,10 +4,13 @@
 
 .bg-paper {
   background: url("/assets/main_page/paper.jpg") center/cover;
+  background-position: top;
+  background-size: 300%;
+  background-repeat: repeat;
 }
 
 .bg-talk {
-  background: url("/assets/main_page/talks.png") center/cover;
+  background: url("/assets/main_page/stupid-s.jpg") center/cover;
   background-position: top;
   background-size: 100%;
   background-repeat: no-repeat;

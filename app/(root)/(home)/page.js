@@ -6,6 +6,7 @@ import MobileLoading from "@/components/intro/MobileLoading";
 import ReusableImageAnimation from "@/components/intro/ReusableImageAnimation";
 import Pride from "@/components/main/Pride";
 import SelectedWork from "@/components/main/SelectedWork";
+import Services from "@/components/main/Services";
 import StupidEnough from "@/components/main/StupidEnough";
 import Talks from "@/components/main/Talks";
 import Footer from "@/components/shared/Footer";
@@ -47,7 +48,7 @@ const Page = () => {
       {step > 0 && (
         <>
           {/* <Navbar /> */}
-          <Loading step={step} handleButtonClick={handleButtonClick} />
+          {/* <Loading step={step} handleButtonClick={handleButtonClick} />
           <MobileLoading step={step} handleButtonClick={handleButtonClick} />
 
           <div className="w-full h-full sm:block hidden overflow-hidden">
@@ -59,11 +60,11 @@ const Page = () => {
                 scale={item.scale}
               />
             ))}
-          </div>
+          </div> */}
           <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[250px] min-h-screen relative">
             {/* <Banner />
             <MarqueeText /> */}
-            {/* <Services /> */}
+            <Services />
             <SelectedWork />
             <Pride />
             <StupidEnough />

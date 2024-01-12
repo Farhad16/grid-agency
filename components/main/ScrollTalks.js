@@ -1,9 +1,9 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import { talkData } from "@/constance/talks.data";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { talkData } from "@/constance/talks.data";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import VerticleEl from "../shared/VerticleEl";
 
 function ScrollTalks({ screenWidth }) {

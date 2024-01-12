@@ -10,11 +10,10 @@
 }
 
 .bg-talk {
-  background: url("/assets/main_page/stupid-s.jpg") center/cover;
+  background: url("/assets/main_page/talk-bg.jpg") center/cover;
   background-position: top;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 1000px;
+  background-size: 200%;
+  background-repeat: repeat;
 }
 
 .clip-path-triangle {

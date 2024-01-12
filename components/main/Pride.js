@@ -3,7 +3,7 @@ import Wrapper from "../shared/Wrapper";
 
 const Pride = () => {
   return (
-    <div className="flex flex-col w-full pb-16 z-[9999]">
+    <div className="flex flex-col w-full pb-16">
       <Wrapper className="sm:mt-36 mt-20 flex flex-col mb-4 sm:!px-[100px] !px-14">
         <p className="text-yellow-550 md:text-xl uppercase text-[15px] tracking-[4.5px] font-extrabold">
           JäGERMEISTER

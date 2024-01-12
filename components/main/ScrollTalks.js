@@ -3,10 +3,26 @@ import { talkData } from "@/constance/talks.data";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import VerticleEl from "../shared/VerticleEl";
 
-function ScrollTalks({ screenWidth }) {
+function ScrollTalks() {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const updateScreenWidth = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    updateScreenWidth();
+
+    window.addEventListener("resize", updateScreenWidth);
+
+    return () => {
+      window.removeEventListener("resize", updateScreenWidth);
+    };
+  }, [screenWidth]);
+
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
@@ -53,51 +69,49 @@ function ScrollTalks({ screenWidth }) {
   }, []);
 
   return (
-    <section className="scroll-section-outer sm:block hidden">
+    <section className="scroll-section-outer sm:block hidden relative">
       <div ref={triggerRef}>
-        <div
-          ref={sectionRef}
-          className="flex relative flex-row background-text pl-24"
-        >
-          <VerticleEl className="left-0 top-[40%] !text-light-50 z-10 sm:block hidden">
-            STUPID TALKS
-          </VerticleEl>
-          {talkData.map((talk, i) => (
-            <div
-              className={`flex flex-row lg:min-w-[900px] sm:min-w-[750px] min-w-[600px] z-10 pt-2 h-[100vh] ${
-                i % 2 === 0 ? "items-start" : "items-end"
-              }`}
-              key={i}
-            >
-              <div className="flex gap-6 items-start">
-                <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">
-                  {talk.serial}
-                </span>
-                <div className="relative">
-                  <img
-                    className="lg:max-w-[600px] sm:max-w-[450px] sm:h-[280px] max-w-[400px] lg:h-[385px] h-[250px] rounded-xl"
-                    src={talk.img}
-                    alt="img"
-                  />
-                  <h1 className="font-extrabold absolute text-4xl lg:text-[70px] sm:text-[60px] text-light-50 top-[40%] sm:-right-[200px] -right-[100px] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8">
-                    {talk.about}
-                  </h1>
+        <div ref={sectionRef} className="flex relative flex-row">
+          <div className="flex px-20">
+            <VerticleEl className="-left-10 top-[50%] !text-[#231F20] z-10 sm:block hidden">
+              STUPID TALKS
+            </VerticleEl>
+            {talkData.map((talk, i) => (
+              <div
+                className={`flex flex-row lg:min-w-[900px] sm:min-w-[750px] min-w-[600px] z-10 pt-2 h-[100vh] ${
+                  i % 2 === 0 ? "items-start" : "items-end"
+                }`}
+                key={i}
+              >
+                <div className="flex gap-6 items-start">
+                  <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">
+                    {talk.serial}
+                  </span>
+                  <div className="relative">
+                    <img
+                      className="lg:max-w-[600px] sm:max-w-[450px] sm:h-[280px] max-w-[400px] lg:h-[385px] h-[250px] rounded-xl"
+                      src={talk.img}
+                      alt="img"
+                    />
+                    <h1 className="font-extrabold absolute text-4xl lg:text-[70px] sm:text-[60px] text-light-50 top-[40%] sm:-right-[200px] -right-[100px] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8">
+                      {talk.about}
+                    </h1>
+                  </div>
+                  <p className="lg:text-lg md:text-base text-sm font-normal tracking-widest ml-8">
+                    {talk.date}
+                  </p>
                 </div>
-                <p className="lg:text-lg md:text-base text-sm font-normal tracking-widest ml-8">
-                  {talk.date}
-                </p>
+                {i === talkData.length && (
+                  <Link
+                    link="/works"
+                    className="absolute -right-[40%] top-[40%] gap-4 -rotate-90 font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
+                  >
+                    <span>READ </span> <span>MORE</span>
+                  </Link>
+                )}
               </div>
-            </div>
-          ))}
-
-          <Link href="/works" className="">
-            <p className="-rotate-90 absolute bottom-[40%] text-center text-extralight !text-yellow-550 z-10 tracking-[3.96px] text-[21px]">
-              READ
-            </p>
-            <p className="-rotate-90 absolute bottom-[53%] text-center text-extralight !text-yellow-550 z-10 tracking-[3.96px] text-[21px] -ml-[2.8px]">
-              MORE
-            </p>
-          </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -15,6 +15,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
         style={{
           top: "12%",
           height: "88%",
+          zIndex: "99",
         }}
       >
         <motion.div

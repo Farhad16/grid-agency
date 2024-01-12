@@ -27,17 +27,24 @@ const ScrollSliderDesktop = ({ serviceData }) => {
   }, [screenWidth]);
 
   function getScreenWidth() {
-    if (screenWidth >= 1600 && screenWidth <= 2000) {
-      return "-85vw";
+    if (screenWidth > 1800) {
+      return "-130vw";
+    } else if (screenWidth >= 1600 && screenWidth <= 1800) {
+      return "-185vw";
     } else if (screenWidth > 1400 && screenWidth < 1600) {
-      return "-150vw";
+      return "-210vw";
     } else if (screenWidth > 1300 && screenWidth <= 1400) {
-      return "-180vw";
+      return "-250vw";
     } else if (screenWidth >= 900 && screenWidth <= 1300) {
-      return "-180vw";
-    } else if (screenWidth >= 700 && screenWidth < 900) {
       return "-280vw";
+    } else if (screenWidth >= 700 && screenWidth < 900) {
+      return "-310vw";
     }
+  }
+
+  let topGap = 90;
+  if (screenWidth > 1800) {
+    topGap = 150;
   }
 
   useEffect(() => {
@@ -52,10 +59,11 @@ const ScrollSliderDesktop = ({ serviceData }) => {
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
-          start: "top top",
+          start: `top top+=${topGap}`,
           end: "2000 top",
           scrub: 0.6,
           pin: true,
+          markers: true,
         },
       }
     );
@@ -67,8 +75,8 @@ const ScrollSliderDesktop = ({ serviceData }) => {
   return (
     <section className="scroll-section-outer sm:block hidden relative">
       <div ref={triggerRef}>
-        <div ref={sectionRef} className="flex relative flex-row pl-24">
-          <div className="flex gap-20">
+        <div ref={sectionRef} className="flex relative flex-row lg:pl-24">
+          <div className="flex md:gap-80 gap-56 md:px-32 px-16">
             <VerticleEl className="-left-10 top-[50%] !text-[#231F20] z-10 sm:block hidden">
               SERVICES
             </VerticleEl>

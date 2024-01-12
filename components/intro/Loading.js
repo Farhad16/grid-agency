@@ -86,6 +86,7 @@ const Loading = ({ step, handleButtonClick }) => {
               onClick={handlePlay}
               onMouseMove={handleMouseMove}
               onMouseOver={handleCursorEnter}
+              onMouseOut={handleMouseLeave}
               onMouseLeave={handleMouseLeave}
               className="w-full h-full cover"
             ></video>

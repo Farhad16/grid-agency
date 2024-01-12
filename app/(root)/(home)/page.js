@@ -59,7 +59,7 @@ const Page = () => {
               />
             </div>
           </div>
-          <div className="w-full h-full sm:block hidden overflow-hidden items-center justify-center">
+          <div className="w-full h-full sm:block hidden overflow-hidden items-center justify-center scroll-section-outer">
             {textSlider.map((item, index) => (
               <ReusableImageAnimation
                 key={index}

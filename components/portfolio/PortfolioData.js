@@ -19,7 +19,7 @@ const PortfolioData = ({ portfolioData }) => {
                 <Link
                   href={`/case/${port.casestudy.id}`}
                   key={port.id}
-                  className="flex flex-col gap-4 group"
+                  className="flex flex-col gap-4 group relative hover:no-underline"
                 >
                   <img
                     src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}
@@ -31,7 +31,9 @@ const PortfolioData = ({ portfolioData }) => {
                     <p className="text-yellow-550 font-extrabold uppercase">
                       {port.name}
                     </p>
-                    <p className="text-light-50 font-extrabold">{port.desc}</p>
+                    <span className="text-light-50 font-extrabold">
+                      {port.desc}
+                    </span>
                   </div>
                   <img
                     src="/assets/case/view.svg"
@@ -52,17 +54,17 @@ const PortfolioData = ({ portfolioData }) => {
                     colDynamic === 2
                       ? "sm:first:col-span-2 sm:mb-0 mb-10"
                       : "col-span-3"
-                  } flex flex-col gap-4 group`}
+                  } flex flex-col gap-4 group relative hover:no-underline`}
                 >
                   <img
                     src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}
                     alt="portimg"
                     className="min-h-[560px] sm:h-[560px] object-cover w-full"
                   />
-                  <div className="flex gap-4 items-center text-[15px]">
-                    <p className="text-yellow-550 font-extrabold uppercase">
+                  <div className="flex flex-row gap-4 items-center text-[15px]">
+                    <span className="text-yellow-550 font-extrabold uppercase">
                       {port.name}
-                    </p>
+                    </span>
                     <p className="text-light-50 font-extrabold">{port.desc}</p>
                   </div>
                   <img

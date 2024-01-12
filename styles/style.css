@@ -224,6 +224,7 @@ option[value=""][disabled] {
   top: 12% !important;
 }
 .rs-drawer-backdrop {
+  z-index: 99 !important;
   background: transparent !important;
 }
 .rs-drawer-content {

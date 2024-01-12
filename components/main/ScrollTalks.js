@@ -23,16 +23,13 @@ function ScrollTalks() {
     };
   }, [screenWidth]);
 
-  const sectionRef = useRef(null);
-  const triggerRef = useRef(null);
-
   function getScreenWidth() {
     if (screenWidth > 2000) {
-      return "-55vw";
+      return "-70vw";
     } else if (screenWidth >= 1600 && screenWidth <= 2000) {
-      return "-60vw";
+      return "-110vw";
     } else if (screenWidth >= 1400 && screenWidth < 1600) {
-      return "-120vw";
+      return "-140vw";
     } else if (screenWidth >= 1300 && screenWidth < 1400) {
       return "-160vw";
     } else if (screenWidth >= 1100 && screenWidth < 1300) {
@@ -53,7 +50,7 @@ function ScrollTalks() {
 
   useEffect(() => {
     const pin = gsap.fromTo(
-      sectionRef.current,
+      "#stupid-inner",
       {
         translateX: 0,
       },
@@ -62,12 +59,11 @@ function ScrollTalks() {
         ease: "none",
         duration: 1,
         scrollTrigger: {
-          trigger: triggerRef.current,
+          trigger: "#stupid",
           start: `top top+=${topGap}`,
           end: "2000 top",
           scrub: 0.6,
           pin: true,
-          markers: true,
         },
       }
     );
@@ -82,9 +78,9 @@ function ScrollTalks() {
   };
 
   return (
-    <section className="scroll-section-outer sm:block hidden relative">
-      <div ref={triggerRef}>
-        <div ref={sectionRef} className="flex relative flex-row">
+    <section className="scroll-section-outer sm:block hidden relative bg-talk">
+      <div id="stupid">
+        <div className="flex relative flex-row" id="stupid-inner">
           <div className="flex px-20">
             <VerticleEl className="-left-10 top-[50%] !text-[#E6E0D2] z-10 sm:block hidden">
               STUPID TALKS
@@ -110,7 +106,7 @@ function ScrollTalks() {
                       {talk.about}
                     </h1>
                   </div>
-                  <p className="lg:text-lg md:text-base text-sm font-normal tracking-widest ml-8">
+                  <p className="lg:text-lg md:text-base text-sm font-normal tracking-widest ml-8 w-[140px]">
                     {talk.date}
                   </p>
                 </div>

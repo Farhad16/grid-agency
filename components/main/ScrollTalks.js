@@ -23,9 +23,6 @@ function ScrollTalks() {
     };
   }, [screenWidth]);
 
-  const sectionRef = useRef(null);
-  const triggerRef = useRef(null);
-
   function getScreenWidth() {
     if (screenWidth > 2000) {
       return "-70vw";
@@ -53,7 +50,7 @@ function ScrollTalks() {
 
   useEffect(() => {
     const pin = gsap.fromTo(
-      sectionRef.current,
+      "#stupid-inner",
       {
         translateX: 0,
       },
@@ -62,7 +59,7 @@ function ScrollTalks() {
         ease: "none",
         duration: 1,
         scrollTrigger: {
-          trigger: triggerRef.current,
+          trigger: "#stupid",
           start: `top top+=${topGap}`,
           end: "2000 top",
           scrub: 0.6,
@@ -82,8 +79,8 @@ function ScrollTalks() {
 
   return (
     <section className="scroll-section-outer sm:block hidden relative bg-talk">
-      <div ref={triggerRef}>
-        <div ref={sectionRef} className="flex relative flex-row">
+      <div id="stupid">
+        <div className="flex relative flex-row" id="stupid-inner">
           <div className="flex px-20">
             <VerticleEl className="-left-10 top-[50%] !text-[#E6E0D2] z-10 sm:block hidden">
               STUPID TALKS

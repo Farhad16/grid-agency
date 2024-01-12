@@ -67,6 +67,7 @@ function ScrollTalks() {
           end: "2000 top",
           scrub: 0.6,
           pin: true,
+          markers: true,
         },
       }
     );
@@ -81,7 +82,7 @@ function ScrollTalks() {
   };
 
   return (
-    <section className="scroll-section-outer sm:block hidden relative bg-talk">
+    <section className="scroll-section-outer sm:block hidden relative">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row">
           <div className="flex px-20">

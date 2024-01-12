@@ -58,15 +58,14 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
     };
   }, []);
 
-  const handleMainPageClick = (e) => {
-    router.push("/home", { scroll: true });
-  };
-
   return (
     <section>
-      <div ref={triggerRef}>
-        <div ref={sectionRef} className="scroll-section-inner">
-          <div className="scroll-section">
+      <div ref={triggerRef} className="flex items-center justify-center">
+        <div
+          ref={sectionRef}
+          className="scroll-section-inner flex items-center justify-center"
+        >
+          <div className="scroll-section flex items-center justify-center">
             <img
               src={`/assets/intro/${imageSrc}`}
               alt={imageAlt}

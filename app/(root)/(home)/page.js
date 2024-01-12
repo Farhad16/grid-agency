@@ -21,7 +21,6 @@ const Page = () => {
   const [step, setStep] = useState(0);
 
   const handleButtonClick = () => {
-    console.log("calling");
     setStep((prevStep) => prevStep + 1);
   };
 
@@ -60,7 +59,7 @@ const Page = () => {
               />
             </div>
           </div>
-          <div className="w-full h-full sm:block hidden overflow-hidden">
+          <div className="w-full h-full sm:block hidden overflow-hidden items-center justify-center">
             {textSlider.map((item, index) => (
               <ReusableImageAnimation
                 key={index}

@@ -19,7 +19,6 @@ const Footer = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         width: "100%",
-        zIndex: 9999,
       }}
     >
       <Wrapper className="w-full flex flex-col sm:mt-[80px] mt-24 xs:!px-12 px-8">

@@ -16,6 +16,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
           top: "12%",
           height: "88%",
           zIndex: "99",
+          background: "transparent !important",
         }}
       >
         <motion.div
@@ -43,7 +44,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
           ></motion.div>
 
           <motion.div
-            className={`overflow-auto fixed right-0 bg-black sm:w-1/2 w-full h-screen flex flex-col items-start justify-center sm:pl-24 pl-12 gap-4 z-20`}
+            className={`overflow-auto fixed right-0 !bg-black sm:w-1/2 w-full h-screen flex flex-col items-start justify-center sm:pl-24 pl-12 gap-4 z-100`}
             initial={{ opacity: 1, x: "50%" }}
             animate={{ opacity: 1, x: open ? "0%" : "50%" }}
             transition={{ duration: 0.6, easing: "easeInOut", delay: 0.25 }}
@@ -51,7 +52,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
             <p className="text-[30px] font-extrabold relative text-yellow-550 tracking-[-1.5px] !font-manrope">
               menu
             </p>
-            <div className="flex flex-col xl:gap-12 md:gap-10 mt-6">
+            <div className="flex flex-col xl:gap-16 md:gap-12 mt-6">
               {menuItem.map((item) => (
                 <Link
                   href={item.route}
@@ -63,7 +64,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
                 </Link>
               ))}
             </div>
-            <div className="flex flex-col lg:text-3xl text-[30px] font-extrabold relative text-light-50 sm:mt-10 mt-28 leading-[34px] tracking-[-1.5px]">
+            <div className="flex flex-col lg:text-3xl text-[30px] font-extrabold relative text-light-50 sm:mt-16 mt-28 leading-[34px] tracking-[-1.5px]">
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}

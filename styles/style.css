@@ -10,11 +10,10 @@
 }
 
 .bg-talk {
-  background: url("/assets/main_page/stupid-s.jpg") center/cover;
+  background: url("/assets/main_page/talks.png") center/cover;
   background-position: top;
-  background-size: 100%;
+  background-size: 120%;
   background-repeat: no-repeat;
-  height: 1000px;
 }
 
 .clip-path-triangle {
@@ -224,7 +223,9 @@ option[value=""][disabled] {
 .rs-drawer-backdrop.rs-anim-in {
   top: 12% !important;
 }
-
+.rs-drawer-backdrop {
+  background: transparent !important;
+}
 .rs-drawer-content {
   background: #2b2b2b !important;
 }

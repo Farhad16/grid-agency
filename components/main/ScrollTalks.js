@@ -27,18 +27,20 @@ function ScrollTalks() {
   const triggerRef = useRef(null);
 
   function getScreenWidth() {
-    if (screenWidth >= 1600 && screenWidth <= 2000) {
+    if (screenWidth > 2000) {
       return "-55vw";
+    } else if (screenWidth >= 1600 && screenWidth <= 2000) {
+      return "-60vw";
     } else if (screenWidth >= 1400 && screenWidth < 1600) {
-      return "-105vw";
+      return "-120vw";
     } else if (screenWidth >= 1300 && screenWidth < 1400) {
-      return "-140vw";
+      return "-160vw";
     } else if (screenWidth >= 1100 && screenWidth < 1300) {
-      return "-155vw";
+      return "-170vw";
     } else if (screenWidth >= 900 && screenWidth < 1100) {
-      return "-180vw";
+      return "-185vw";
     } else if (screenWidth >= 700 && screenWidth < 900) {
-      return "-230vw";
+      return "-235vw";
     }
   }
 
@@ -79,7 +81,7 @@ function ScrollTalks() {
   };
 
   return (
-    <section className="scroll-section-outer sm:block hidden relative  bg-talk">
+    <section className="scroll-section-outer sm:block hidden relative bg-talk">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row">
           <div className="flex px-20">
@@ -114,7 +116,7 @@ function ScrollTalks() {
                 {i === talkData.length - 1 && (
                   <p
                     onClick={workRoute}
-                    className="mt-80 ml-16 cursor-pointer gap-4 -rotate-90 font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
+                    className="mt-80 ml-10 cursor-pointer gap-4 -rotate-90 font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
                   >
                     <span>READ </span> <span>MORE</span>
                   </p>

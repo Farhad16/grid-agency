@@ -3,7 +3,7 @@ import React from "react";
 
 const StupidEnough = () => {
   return (
-    <div className="sm:mt-[100px] mt-10 flex items-center justify-center flex-col py-4 min-h-[200px] sm:px-14 px-8">
+    <div className="sm:mt-[100px] mt-10 flex items-center justify-center flex-col py-4 min-h-[200px] sm:px-14 px-8 sm:mb-[200px] mb-24">
       <p className="text-light-50 md:text-[70px] lg:text-[100px] text-[40px]">
         <span className="font-extrabold tracking-[-2px] sm:tracking-[-5px] leading-[87.424%]">
           Stupid

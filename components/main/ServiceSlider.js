@@ -7,9 +7,10 @@ import "swiper/css/autoplay";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { tw } from "twind";
 import { css } from "twind/css";
+
 const ServiceSlider = ({ serviceData }) => {
   return (
-    <div className="w-full h-full mt-10">
+    <div className="w-full h-full mt-10 sm:hidden block">
       <Swiper
         autoHeight={true}
         modules={[Pagination, A11y, Autoplay]}

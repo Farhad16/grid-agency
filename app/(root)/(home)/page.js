@@ -6,16 +6,21 @@ import MobileLoading from "@/components/intro/MobileLoading";
 import ReusableImageAnimation from "@/components/intro/ReusableImageAnimation";
 import Pride from "@/components/main/Pride";
 import SelectedWork from "@/components/main/SelectedWork";
+import Services from "@/components/main/Services";
 import StupidEnough from "@/components/main/StupidEnough";
 import Talks from "@/components/main/Talks";
+import Banner from "@/components/main/Banner";
+import MarqueeText from "@/components/main/MarqueeText";
 import Footer from "@/components/shared/Footer";
 import { textSlider } from "@/constance/text.data";
 import { useState } from "react";
+import Navbar from "@/components/shared/Navbar";
 
 const Page = () => {
   const [step, setStep] = useState(0);
 
   const handleButtonClick = () => {
+    console.log("calling");
     setStep((prevStep) => prevStep + 1);
   };
 
@@ -43,9 +48,9 @@ const Page = () => {
         </>
       )}
 
-      {step === 1 && (
+      {step > 0 && (
         <>
-          {/* <Navbar /> */}
+          <Navbar />
           <Loading step={step} handleButtonClick={handleButtonClick} />
           <MobileLoading step={step} handleButtonClick={handleButtonClick} />
 
@@ -60,9 +65,9 @@ const Page = () => {
             ))}
           </div>
           <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[250px] min-h-screen relative">
-            {/* <Banner />
-            <MarqueeText /> */}
-            {/* <Services /> */}
+            <Banner />
+            <MarqueeText />
+            <Services />
             <SelectedWork />
             <Pride />
             <StupidEnough />

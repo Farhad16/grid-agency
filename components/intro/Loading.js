@@ -17,16 +17,28 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
         video.pause();
       } else {
         video.play();
-        video.addEventListener("ended", () => {
-          setStep(1);
-          setPlay(true);
-          video.pause();
-        });
       }
 
       setPlay(!play);
     }
   };
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    const checkVideoEnd = () => {
+      if (video && video.currentTime === video.duration) {
+        setStep(1);
+        setPlay(false);
+      }
+    };
+
+    const intervalId = setInterval(checkVideoEnd, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [setStep, setPlay, videoRef.current]);
 
   const handleCursorEnter = () => {
     setIsHovered(true);

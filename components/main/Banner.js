@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Wrapper from "../shared/Wrapper";
 import Image from "next/image";
 import VerticleEl from "../shared/VerticleEl";
+import { useInView } from "react-intersection-observer";
 
 const Banner = () => {
   return (

@@ -1,9 +1,5 @@
 export const menuItem = [
   {
-    name: "homepage",
-    route: "/",
-  },
-  {
     name: "works",
     route: "/portfolio",
   },

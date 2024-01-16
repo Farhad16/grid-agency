@@ -88,27 +88,48 @@ const Footer = () => {
             <p>MIAMI, OPENING SOON</p>
           </div>
           <div className="uppercase flex flex-col text-light-50 gap-1">
-            <p>242 Applewood Cres</p>
-            <p>Concord, ON L4K 4E5</p>
+            <span className="sm:hidden">MIAMI, OPENING SOON</span>
+            <span>242 Applewood Cres</span>
+            <span>Concord, ON L4K 4E5</span>
           </div>
           <div className="items-center gap-2 text-light-50 sm:hidden">
-            <InstagramIcon />
-            <LinkedInIcon />
+            <Link
+              href="https://www.instagram.com/gridagencyinc/"
+              className="hover:text-yellow-550 transition duration-300 ease-in-out"
+            >
+              <InstagramIcon />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/gridcommunications"
+              className="hover:text-yellow-550 transition duration-300 ease-in-out"
+            >
+              <LinkedInIcon />
+            </Link>
           </div>
           <div className="flex flex-row gap-4">
             <div className="uppercase flex flex-col text-light-50 sm:items-end gap-1">
-              <p className="text-left underline">info@gridagenyinc.ca</p>
-              <p className="text-left underline">(416) 557-4773</p>
+              <span className="text-left underline">info@gridagenyinc.ca</span>
+              <span className="text-left underline">(416) 557-4773</span>
             </div>
             <div className="sm:flex items-center gap-2 text-light-50 hidden">
-              <InstagramIcon />
-              <LinkedInIcon />
+              <Link
+                href="https://www.instagram.com/gridagencyinc/"
+                className="hover:text-yellow-550 transition duration-300 ease-in-out"
+              >
+                <InstagramIcon />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/gridcommunications"
+                className="hover:text-yellow-550 transition duration-300 ease-in-out"
+              >
+                <LinkedInIcon />
+              </Link>
             </div>
           </div>
         </div>
         <div className="uppercase w-full flex flex-col sm:flex-row justify-between sm:pt-10 pt-6 border-t border-1 border-light-50 border-dotted sm:mt-[80px] mt-[40px] gap-1">
           <p className="text-light-50 text-[10px] sm:text-left text-center">
-            © 2023, Grid Creative Advertising Inc.
+            © {new Date().getFullYear()}, Grid Creative Advertising Inc.
           </p>
           <p className="text-light-50 text-[10px] sm:text-left text-center">
             privacy and cookie policy

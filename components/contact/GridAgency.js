@@ -5,6 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GridHoverTop from "./GridHoverTop";
 import GridHoverBottom from "./GridHoverBottom";
+import Link from "next/link";
 
 const GridAgency = () => {
   const [isTextHovered, setIsTextHovered] = useState(false);
@@ -40,8 +41,18 @@ const GridAgency = () => {
         <GridHoverBottom isTextHovered={isTextHovered} />
       </Wrapper>
       <Wrapper className="flex items-center justify-end sm:mt-0 mt-10 text-light-50">
-        <InstagramIcon sx={{ fontSize: "50px" }} />
-        <LinkedInIcon sx={{ fontSize: "50px" }} />
+        <Link
+          href="https://www.instagram.com/gridagencyinc/"
+          className="hover:text-yellow-550 transition duration-300 ease-in-out"
+        >
+          <InstagramIcon sx={{ fontSize: "50px" }} />
+        </Link>
+        <Link
+          href="https://www.linkedin.com/company/gridcommunications"
+          className="hover:text-yellow-550 transition duration-300 ease-in-out"
+        >
+          <LinkedInIcon sx={{ fontSize: "50px" }} />
+        </Link>
       </Wrapper>
     </div>
   );

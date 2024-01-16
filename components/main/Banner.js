@@ -33,7 +33,7 @@ const Banner = () => {
               className="absolute -bottom-[10px] sm:-bottom-[90px] left-0 sm:max-w-[515px] max-w-[150px]"
             />
           </div>
-          <div className="flex flex-row items-center justify-end lg:mt-6 sm:-mt-8 mt-0">
+          <div className="flex flex-row items-center justify-end lg:mt-6 md:mt-4 mt-0 md:mr-[-20px] mr-[-10px]">
             <img
               src="/assets/main_page/text-ani.gif"
               alt="animated"
@@ -75,15 +75,14 @@ const Banner = () => {
             consistently
             <br />
             <span className="text-yellow-550 font-extrabold">
-              redefine what's attainable
+              redefine what's attainable period
             </span>
           </p>
         </div>
 
         <div className="mt-[220px]">
           <p className="text-light-50 text-[28px] md:text-[40px] lg:text-[54px] font-medium text-center sm:tracking-[-2.7px] tracking-[-1.05px] sm:leading-normal leading-[34px]">
-            We transform the <br />
-            seemingly ‘stupid’
+            We transform the seemingly ‘stupid’
             <br />
             <span className="bg-yellow-550 rotate-[2deg] inline-block text-[#231F20] mt-2 font-extrabold py-3 sm:px-4 sm:leading-[40px] leading-[19px]">
               into innovative outcomes.

@@ -1,14 +1,44 @@
-"use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Wrapper from "../shared/Wrapper";
 import Image from "next/image";
 import VerticleEl from "../shared/VerticleEl";
-import { useInView } from "react-intersection-observer";
 
-const Banner = () => {
+function useOnScreen(ref) {
+  const [isIntersecting, setIntersecting] = useState(false);
+
+  const observer = useMemo(
+    () =>
+      new IntersectionObserver(([entry]) =>
+        setIntersecting(entry.isIntersecting)
+      ),
+    [ref]
+  );
+
+  useEffect(() => {
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return isIntersecting;
+}
+
+const Banner = ({ firstLoad }) => {
+  const ref = useRef(null);
+  const isVisible = useOnScreen(ref);
+
+  useEffect(() => {
+    if (isVisible) {
+      localStorage.setItem("firstLoad", "yes");
+    }
+  }, [isVisible]);
+
   return (
-    <Wrapper className="flex items-center justify-center sm:!px-[100px] !px-14 pt-[150px]">
-      <div className="flex flex-col">
+    <Wrapper
+      className={`"flex items-center justify-center sm:!px-[100px] !px-14 banner " ${
+        firstLoad ? "sm:pt-[150px]" : "sm:pt-[50px]"
+      }`}
+    >
+      <div className="flex flex-col" ref={ref}>
         <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-extrabold mb-3">
           We make
         </p>
@@ -22,7 +52,7 @@ const Banner = () => {
                 alt="cat"
                 width={220}
                 height={220}
-                className="absolute -top-[30px] sm:-top-[140px] -left-10 sm:-left-20 sm:max-w-[220px] max-w-[100px]  custom-cursor"
+                className="absolute -top-[30px] sm:-top-[140px] -left-14 sm:-left-20 sm:max-w-[220px] max-w-[60px]  custom-cursor"
               />
             </div>
             d
@@ -43,7 +73,6 @@ const Banner = () => {
             />
           </div>
         </div>
-
         <div className="relative mt-[220px] flex items-center sm:!justify-start justify-center">
           <VerticleEl className="sm:-left-[180px] sm:top-14 -left-20 -top-8">
             WHO WE ARE
@@ -57,7 +86,6 @@ const Banner = () => {
             </span>
           </p>
         </div>
-
         <div className="relative mt-[220px] flex items-center sm:!justify-end justify-center">
           <VerticleEl className="sm:-right-[120px] sm:top-14 -right-4 -top-48 rotate-[0deg]">
             <Image
@@ -81,7 +109,6 @@ const Banner = () => {
             </span>
           </p>
         </div>
-
         <div className="mt-[220px]">
           <p className="text-light-50 text-[28px] md:text-[40px] lg:text-[54px] font-medium text-center sm:tracking-[-2.7px] tracking-[-1.05px] sm:leading-normal leading-[34px]">
             We transform the seemingly ‘stupid’

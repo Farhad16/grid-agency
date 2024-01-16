@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function ImageAnimationMobile() {
+export default function ImageAnimationMobile({ setFirstLoad }) {
   const sections = [
     {
       el: (
@@ -69,8 +69,14 @@ export default function ImageAnimationMobile() {
     }
   };
 
+  useEffect(() => {
+    if (currentSection === sections.length) {
+      localStorage.setItem("firstLoad", "yes");
+    }
+  }, [currentSection]);
+
   return (
-    <div className="relative pt-[200px] flex items-center justify-center flex-col">
+    <div className="relative pt-[200px] flex items-center justify-center flex-col overflow-hidden">
       {currentSection !== 2 && (
         <div
           onClick={handleClick}

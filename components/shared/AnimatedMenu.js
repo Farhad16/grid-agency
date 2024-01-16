@@ -22,32 +22,32 @@ const AnimatedMenu = ({ open, setOpen }) => {
         <motion.div
           initial={{ opacity: 1, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.1, easing: "easeInOut", delay: 0.25 }}
+          transition={{ duration: 0.5, easing: "easeInOut", delay: 0.25 }}
         >
           <motion.div
             initial={{ opacity: 1, x: "15%" }}
             animate={{ opacity: 1, x: open ? "0%" : "15%" }}
-            transition={{ duration: 0.6, easing: "easeInOut", delay: 0.25 }}
+            transition={{ duration: 0.3, easing: "easeInOut", delay: 0.25 }}
             className={`fixed bg-[#231F20] w-full h-screen`}
           ></motion.div>
           <motion.div
-            initial={{ opacity: 1, x: "25%" }}
-            animate={{ opacity: 1, x: open ? "0%" : "25%" }}
-            transition={{ duration: 0.6, easing: "easeInOut", delay: 0.25 }}
+            initial={{ opacity: 1, x: "30%" }}
+            animate={{ opacity: 1, x: open ? "0%" : "30%" }}
+            transition={{ duration: 0.3, easing: "easeInOut", delay: 0.25 }}
             className={`fixed bg-[#E6E0D2] w-full h-screen`}
           ></motion.div>
           <motion.div
-            initial={{ opacity: 1, x: "40%" }}
-            animate={{ opacity: 1, x: open ? "0%" : "40%" }}
-            transition={{ duration: 0.6, easing: "easeInOut", delay: 0.25 }}
+            initial={{ opacity: 1, x: "50%" }}
+            animate={{ opacity: 1, x: open ? "0%" : "50%" }}
+            transition={{ duration: 0.4, easing: "easeInOut", delay: 0.25 }}
             className={`fixed bg-yellow-550 w-full h-screen`}
           ></motion.div>
 
           <motion.div
             className={`overflow-auto fixed right-0 !bg-black sm:w-1/2 w-full h-screen flex flex-col items-start justify-center sm:pl-24 pl-12 gap-4 z-100`}
-            initial={{ opacity: 1, x: "50%" }}
-            animate={{ opacity: 1, x: open ? "0%" : "50%" }}
-            transition={{ duration: 0.6, easing: "easeInOut", delay: 0.25 }}
+            initial={{ opacity: 1, x: "60%" }}
+            animate={{ opacity: 1, x: open ? "0%" : "60%" }}
+            transition={{ duration: 0.5, easing: "easeInOut", delay: 0.25 }}
           >
             <p className="text-[30px] font-extrabold relative text-yellow-550 tracking-[-1.5px] !font-manrope">
               menu

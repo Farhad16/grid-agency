@@ -32,11 +32,7 @@ const GlobalLoading = () => {
         />
         <>
           <div className="absolute top-[48%] left-[50%] -translate-x-1/2 -translate-y-1/2 transform flex flex-col items-center">
-            <img
-              src="/assets/intro/stupid.png"
-              className="w-[244px] h-[75px]"
-              alt="stupid"
-            />
+            <img src="/assets/intro/stupid.png" alt="stupid" />
           </div>
         </>
       </div>

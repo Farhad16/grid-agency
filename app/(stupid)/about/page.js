@@ -25,7 +25,7 @@ const Page = () => {
         <Mission />
         <Mesh />
 
-        <div className="lg:text-[54px] md:text-[40px] text-base text-light-50 font-medium sm:tracking-[-2.7px] tracking-[-0.837px] flex items-center flex-col lg:pt-16 md:pt-12 pt-0">
+        <div className="lg:text-[54px] md:text-[40px] text-base text-light-50 font-medium sm:tracking-[-2.7px] tracking-[-0.837px] flex items-center flex-col lg:pt-16 md:pt-12 pt-0 mb-[-50px]">
           <p>We believe that within</p>
           <div className="flex items-center">
             <span>these seemingly </span>

@@ -46,7 +46,10 @@ const Services = () => {
     <div className="bg-paper pb-12 pt-16 w-full relative">
       <Wrapper className="w-full h-full flex items-center justify-center min-h-[200px]">
         {loading ? (
-          <CircularProgress className="text-light-50 mb-[100px]" />
+          <CircularProgress
+            className="text-light-50 mb-[100px]"
+            style={{ color: "#E6E0D2" }}
+          />
         ) : serviceData.length > 0 ? (
           <>
             <ServiceSlider

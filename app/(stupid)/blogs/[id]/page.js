@@ -33,7 +33,10 @@ const Page = ({ params }) => {
   return (
     <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen relative items-center justify-center">
       {loading ? (
-        <CircularProgress className="text-light-50 mb-[100px]" />
+        <CircularProgress
+          className="text-light-50 mb-[100px]"
+          style={{ color: "#E6E0D2" }}
+        />
       ) : !blogDetails.blogstudy.title ? (
         <NoDataFound data="blog details" className="pb-20" />
       ) : (

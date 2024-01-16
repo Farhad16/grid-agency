@@ -95,21 +95,31 @@ const Footer = () => {
           <div className="items-center gap-2 text-light-50 sm:hidden">
             <Link
               href="https://www.instagram.com/gridagencyinc/"
-              className="hover:text-yellow-550 transition duration-300 ease-in-out"
+              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none"
             >
               <InstagramIcon />
             </Link>
             <Link
               href="https://www.linkedin.com/company/gridcommunications"
-              className="hover:text-yellow-550 transition duration-300 ease-in-out"
+              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none"
             >
               <LinkedInIcon />
             </Link>
           </div>
           <div className="flex flex-row gap-4">
             <div className="uppercase flex flex-col text-light-50 sm:items-end gap-1">
-              <span className="text-left underline">info@gridagenyinc.ca</span>
-              <span className="text-left underline">(416) 557-4773</span>
+              <Link
+                href="mailto:info@gridagenyinc.ca"
+                className="text-left underline hover:text-light-50 outline-none"
+              >
+                info@gridagenyinc.ca
+              </Link>
+              <Link
+                href="tel:416 557-4773"
+                className="text-left underline hover:text-light-50 outline-none"
+              >
+                (416) 557-4773
+              </Link>
             </div>
             <div className="sm:flex items-center gap-2 text-light-50 hidden">
               <Link

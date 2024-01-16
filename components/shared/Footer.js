@@ -47,7 +47,7 @@ const Footer = () => {
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
                 href="/contact"
-                className="!no-underline focus:outline-none outline-none border-2 rounded-full border-yellow-550 md:w-[280px] lg:w-[300px] xl:w-[350px] w-[168.37px] lg:h-[56px] sm:h-[50px] h-[40px] flex items-center justify-center text-center sm:text-sm text-xs tracking-[1.727px]"
+                className="!no-underline hover:no-underline focus:outline-none outline-none border-2 rounded-full border-yellow-550 md:w-[280px] lg:w-[300px] xl:w-[350px] w-[168.37px] lg:h-[56px] sm:h-[50px] h-[40px] flex items-center justify-center text-center sm:text-sm text-xs tracking-[1.727px]"
               >
                 <motion.p
                   className="sm:min-w-[150px] text-left sm:block hidden"
@@ -55,7 +55,7 @@ const Footer = () => {
                     x: hovered ? 190 : 0,
                   }}
                 >
-                  <ArrowForwardIcon className="text-light-50" />
+                  <ArrowForwardIcon className="text-light-50 hover:text-light-50" />
                 </motion.p>
                 <motion.p
                   className="sm:min-w-[150px] text-left sm:hidden block"
@@ -64,14 +64,14 @@ const Footer = () => {
                   }}
                 >
                   <ArrowForwardIcon
-                    className="text-light-50"
+                    className="text-light-50 hover:text-light-50"
                     style={{ fontSize: "20px", fontWeight: 200 }}
                   />
                 </motion.p>
                 <motion.span
                   className={`${
                     hovered ? "sm:-ml-44 -ml-10" : "sm:-ml-36 -ml-32"
-                  }  sm:min-w-[150px] min-w-[100px] uppercase !text-light-50 sm:text-[18px] sm:font-extrabold font-bold text-[9px]`}
+                  }  sm:min-w-[150px] min-w-[100px] uppercase !text-light-50 hover:text-light-50 sm:text-[18px] sm:font-extrabold font-bold text-[9px]`}
                   animate={{
                     x: hovered ? 0 : -100,
                     opacity: hovered ? 1 : 0,
@@ -86,7 +86,6 @@ const Footer = () => {
         <div className="sm:tracking-[3px] flex flex-row justify-between items-center sm:mt-[150px] mt-[50px] text-[10px] md:text-[15px] gap-4">
           <div className="uppercase sm:flex flex-col text-light-50 gap-1 hidden">
             <p>MIAMI, OPENING SOON</p>
-            <p className="underline">jointheteam@gridagenyinc.ca</p>
           </div>
           <div className="uppercase flex flex-col text-light-50 gap-1">
             <p>242 Applewood Cres</p>

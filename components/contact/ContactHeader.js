@@ -65,14 +65,14 @@ const ContactHeader = () => {
 
   return (
     <Wrapper className="border-bottom w-full flex flex-col relative contact-bg md:!px-[80px] lg:!px-[100px] sm:pb-[100px] pb-[50px] pt-[150px] sm:pt-[200px]">
-      <div className="flex flex-col md:flex-row items-center lg:gap-16 gap-12 py-10 lg:px-10 justify-center">
+      <div className="flex flex-col md:flex-row items-center lg:gap-16 gap-12 py-10 lg:px-10">
         <img
           src="/assets/footer/footer.gif"
           layout="responsive"
           className="lg:w-[308px] md:w-[250px] w-[224px]"
           alt="footergif"
         />
-        <div className="flex flex-col sm:ml-0 ml-20">
+        <div className="flex flex-col ml-0 md:ml-10">
           <div className="flex flex-col">
             <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 w-fit xs:-mb-3 -mb-1.5 font-extrabold">
               talk to us
@@ -101,12 +101,12 @@ const ContactHeader = () => {
         </div>
       </div>
 
-      <div className="sm:!grid sm:!grid-cols-3 gap-16 sm:mt-[100px] flex flex-col-reverse">
-        <div className="flex flex-col sm:items-start items-center col-span-1">
+      <div className="gap-16 sm:mt-[100px] flex sm:flex-row flex-col-reverse items-center">
+        <div className="flex flex-col lg:ml-16 items-center justify-center text-center">
           <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-[30px] md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
             prefer email?
           </p>
-          <p className="text-light-50 text-[30px] md:text-[24px] lg:text-[30px] sm:text-left text-center tracking-[-1.5px] sm:leading-normal">
+          <p className="text-light-50 text-[30px] md:text-[24px] lg:text-[30px] text-center tracking-[-1.5px] sm:leading-normal">
             You can reach us at
             <br />
             <span className="text-yellow-550 underline truncate">
@@ -115,7 +115,7 @@ const ContactHeader = () => {
           </p>
         </div>
         <form
-          className="sm:col-span-2 col-span-1 flex flex-col gap-8"
+          className="w-full flex flex-col gap-8 sm:ml-10 ml-0"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="flex flex-row gap-4 w-full">

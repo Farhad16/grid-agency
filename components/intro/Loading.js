@@ -1,13 +1,14 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CursorView from "./CursorView";
 
-const Loading = ({ step, handleButtonClick }) => {
+const Loading = ({ step, setStep, handleButtonClick }) => {
   const [play, setPlay] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 300, y: 300 });
   const [cursorPosition1, setCursorPosition1] = useState({ x: 300, y: 300 });
   const videoRef = useRef();
+  const videoSectionRef = useRef();
 
   const handlePlay = () => {
     const video = videoRef.current;
@@ -16,6 +17,11 @@ const Loading = ({ step, handleButtonClick }) => {
         video.pause();
       } else {
         video.play();
+        video.addEventListener("ended", () => {
+          setStep(1);
+          setPlay(true);
+          video.pause();
+        });
       }
 
       setPlay(!play);
@@ -42,6 +48,28 @@ const Loading = ({ step, handleButtonClick }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
+
+  const handleScroll = () => {
+    const section = videoSectionRef.current;
+    if (section) {
+      const rect = section.getBoundingClientRect();
+      const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+      if (isInViewport) {
+        handleCursorEnter();
+      } else {
+        handleMouseLeave();
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const renderContent = () => {
     switch (step) {
@@ -82,7 +110,7 @@ const Loading = ({ step, handleButtonClick }) => {
                 cursor: "none !important",
               }}
               autoPlay={play}
-              loop
+              loop={false}
               onClick={handlePlay}
               onMouseMove={handleMouseMove}
               onMouseOver={handleCursorEnter}
@@ -108,6 +136,7 @@ const Loading = ({ step, handleButtonClick }) => {
       className="sm:!flex !hidden flex-col items-center justify-center relative z-10 min-h-screen sm:pb-[40px] pb-[70px]"
       style={{ cursor: "none" }}
       onMouseLeave={handleMouseLeave}
+      ref={videoSectionRef}
     >
       {renderContent()}
     </div>

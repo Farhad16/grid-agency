@@ -17,24 +17,29 @@ const CursorView = React.memo(
           transform: "translate(-50%, -50%)",
           cursor: "none",
           color: "white",
-          fontSize: "24px",
           zIndex: 9999,
+          textTransform: "uppercase",
+          fontWeight: "bold",
+          letterSpacing: "2px",
         }}
         onClick={handlePlay}
       >
         {step === 1 ? (
           play && (
-            <div className="flex flex-row items-center gap-2">
-              <span>Play</span> <PlayArrowIcon />
+            <div className="flex flex-row items-center gap-1">
+              <span className="text-[28px]">Play</span>
+              <PlayArrowIcon sx={{ fontSize: "35px" }} />
             </div>
           )
         ) : play ? (
-          <div className="flex flex-row items-center gap-2">
-            <span>Pause</span> <PauseIcon />
+          <div className="flex flex-row items-center gap-1">
+            <span className="text-[28px]">Pause</span>
+            <PauseIcon sx={{ fontSize: "35px" }} />
           </div>
         ) : (
-          <div className="flex flex-row items-center gap-2">
-            <span>Play</span> <PlayArrowIcon />
+          <div className="flex flex-row items-center gap-1">
+            <span className="text-[28px]">Play</span>
+            <PlayArrowIcon sx={{ fontSize: "35px" }} />
           </div>
         )}
       </div>

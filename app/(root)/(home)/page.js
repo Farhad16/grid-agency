@@ -49,7 +49,11 @@ const Page = () => {
           transition={{ duration: 1, easing: "easeInOut", delay: 0.25 }}
         >
           <Navbar />
-          <Loading step={step} handleButtonClick={handleButtonClick} />
+          <Loading
+            step={step}
+            handleButtonClick={handleButtonClick}
+            setStep={setStep}
+          />
           <MobileLoading step={step} handleButtonClick={handleButtonClick} />
           <div className="w-full h-full sm:hidden block">
             <div className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]">

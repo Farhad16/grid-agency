@@ -47,10 +47,13 @@ const ContactHeader = () => {
       }
       const res = await postContact(values);
       if (res) {
-        toast.success("Sent successfully", {
-          position: "top-right",
-          autoClose: 3000,
-        });
+        toast.success(
+          "Thanks for your message, We will get back to you asap.",
+          {
+            position: "top-right",
+            autoClose: 3000,
+          }
+        );
       }
       reset();
     } catch (error) {

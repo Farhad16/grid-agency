@@ -2,6 +2,7 @@ import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Wrapper from "../shared/Wrapper";
+import Link from "next/link";
 
 const ContactFooter = () => {
   return (
@@ -16,8 +17,18 @@ const ContactFooter = () => {
           <p>Concord, ON L4K 4E5</p>
         </div>
         <div className="items-center gap-2 text-light-50 sm:hidden">
-          <InstagramIcon />
-          <LinkedInIcon />
+          <Link
+            href="https://www.instagram.com/gridagencyinc/"
+            className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
+          >
+            <InstagramIcon />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/company/gridcommunications"
+            className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
+          >
+            <LinkedInIcon />
+          </Link>
         </div>
         <div className="flex flex-row gap-4 justify-between sm:justify-start">
           <div className="uppercase flex flex-col text-light-50 sm:items-end gap-1">
@@ -25,8 +36,18 @@ const ContactFooter = () => {
             <p className="text-left underline">(416) 557-4773</p>
           </div>
           <div className="sm:flex items-center gap-2 text-light-50 hidden">
-            <InstagramIcon />
-            <LinkedInIcon />
+            <Link
+              href="https://www.instagram.com/gridagencyinc/"
+              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
+            >
+              <InstagramIcon />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/gridcommunications"
+              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
+            >
+              <LinkedInIcon />
+            </Link>
           </div>
         </div>
       </div>

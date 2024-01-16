@@ -43,13 +43,13 @@ const GridAgency = () => {
       <Wrapper className="flex items-center justify-end sm:mt-0 mt-10 text-light-50">
         <Link
           href="https://www.instagram.com/gridagencyinc/"
-          className="hover:text-yellow-550 transition duration-300 ease-in-out"
+          className="hover:text-yellow-550 transition duration-300 ease-in-out text-light-50"
         >
           <InstagramIcon sx={{ fontSize: "50px" }} />
         </Link>
         <Link
           href="https://www.linkedin.com/company/gridcommunications"
-          className="hover:text-yellow-550 transition duration-300 ease-in-out"
+          className="hover:text-yellow-550 transition duration-300 ease-in-out text-light-50"
         >
           <LinkedInIcon sx={{ fontSize: "50px" }} />
         </Link>

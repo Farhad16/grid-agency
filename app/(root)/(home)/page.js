@@ -19,7 +19,7 @@ import { motion } from "framer-motion";
 
 const Page = () => {
   const [step, setStep] = useState(0);
-  const firstLoad = localStorage.getItem("firstLoad") || "";
+  const firstLoad = "yes";
   const ref = useRef();
 
   console.log(firstLoad);
@@ -39,7 +39,7 @@ const Page = () => {
 
   useEffect(() => {
     if (firstLoad === "yes") {
-      const target = document.querySelector("banner");
+      const target = document.querySelector(".banner");
       console.log(target);
     } else {
       localStorage.setItem("firstLoad", "no");

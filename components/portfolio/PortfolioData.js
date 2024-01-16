@@ -8,7 +8,6 @@ const PortfolioData = ({ portfolioData }) => {
   const colThree = Math.floor(portfolioData.length / 3);
   const colDynamic = portfolioData.length % 3;
 
-  console.log(portfolioData);
   return (
     <>
       <StupidWork />

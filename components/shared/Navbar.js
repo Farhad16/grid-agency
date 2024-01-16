@@ -18,7 +18,7 @@ const Navbar = () => {
         className="flex items-center justify-between bg-black nav-boxShadow !fixed w-full z-20 h-[12%] !overflow-hidden !pointer-events-auto"
         style={{ zIndex: 999999 }}
       >
-        <Link href="/">
+        <Link href="/" className="no-underline hover:no-underline">
           <Image
             src="/assets/main_page/grid.svg"
             alt="Grid"

@@ -2,9 +2,10 @@
 import { talkData } from "@/constance/talks.data";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import VerticleEl from "../shared/VerticleEl";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 function ScrollTalks() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -102,9 +103,12 @@ function ScrollTalks() {
                       src={talk.img}
                       alt="img"
                     />
-                    <h1 className="font-extrabold absolute text-4xl lg:text-[70px] sm:text-[60px] text-light-50 top-[40%] sm:-right-[200px] -right-[100px] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8">
+                    <Link
+                      href={`/blogs/${talk.id}`}
+                      className="hover:no-underline no-underline hover:text-light-50 font-extrabold absolute text-4xl lg:text-[70px] sm:text-[60px] text-light-50 top-[40%] sm:-right-[200px] -right-[100px] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8"
+                    >
                       {talk.about}
-                    </h1>
+                    </Link>
                   </div>
                   <p className="lg:text-lg md:text-base text-sm font-normal tracking-widest ml-8 w-[140px]">
                     {talk.date}

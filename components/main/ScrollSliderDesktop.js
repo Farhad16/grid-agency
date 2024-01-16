@@ -3,6 +3,7 @@ import HTMLParser from "../shared/HTMLParser";
 import VerticleEl from "../shared/VerticleEl";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 

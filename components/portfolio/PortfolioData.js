@@ -19,7 +19,7 @@ const PortfolioData = ({ portfolioData }) => {
                 <Link
                   href={`/case/${port.casestudy.id}`}
                   key={port.id}
-                  className="flex flex-col gap-4 group relative hover:no-underline"
+                  className="flex flex-col gap-4 group relative hover:no-underline no-underline"
                 >
                   <img
                     src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}
@@ -28,10 +28,10 @@ const PortfolioData = ({ portfolioData }) => {
                   />
 
                   <div className="flex gap-4 items-center text-[15px]">
-                    <p className="text-yellow-550 font-extrabold uppercase">
+                    <p className="hover:text-yellow-550 text-yellow-550 font-extrabold uppercase">
                       {port.name}
                     </p>
-                    <span className="text-light-50 font-extrabold">
+                    <span className="hover:text-light-50 text-light-50 font-extrabold">
                       {port.desc}
                     </span>
                   </div>
@@ -62,10 +62,14 @@ const PortfolioData = ({ portfolioData }) => {
                     className="min-h-[560px] sm:h-[560px] object-cover w-full"
                   />
                   <div className="flex flex-row gap-4 items-center text-[15px]">
-                    <span className="text-yellow-550 font-extrabold uppercase">
-                      {port.name}
-                    </span>
-                    <p className="text-light-50 font-extrabold">{port.desc}</p>
+                    <div className="flex gap-4 items-center text-[15px]">
+                      <p className="hover:text-yellow-550 text-yellow-550 font-extrabold uppercase">
+                        {port.name}
+                      </p>
+                      <span className="hover:text-light-50 text-light-50 font-extrabold">
+                        {port.desc}
+                      </span>
+                    </div>
                   </div>
                   <img
                     src="/assets/case/view.svg"

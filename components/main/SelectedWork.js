@@ -47,7 +47,7 @@ const SelectedWork = () => {
 
           <Link
             href="/case/1"
-            className="bg-[#000000] bg-opacity-[.8] bg-multiply flex-shrink-0 sm:rounded-xl clip-path-triangle opacity-0 w-full h-full absolute top-0 flex items-center justify-center group-hover:h-full group-hover:opacity-100 duration-500 group-hover:visible"
+            className="bg-[#000000] bg-opacity-[.8] no-underline hover:no-underline hover:bg-black hover:bg-opacity-[.8] bg-multiply flex-shrink-0 sm:rounded-xl clip-path-triangle opacity-0 w-full h-full absolute top-0 flex items-center justify-center group-hover:h-full group-hover:opacity-100 duration-500 group-hover:visible"
           >
             <img
               src="/assets/main_page/view.png"

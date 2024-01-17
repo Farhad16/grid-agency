@@ -30,7 +30,7 @@ const Page = ({ params }) => {
     fetchData();
   }, [id]);
 
-  const caseDetailsExist = Boolean(
+  const noCaseDetailsExist = Boolean(
     !caseDetails ||
       caseDetails === null ||
       Object.keys(caseDetails).length === 0 ||
@@ -43,7 +43,7 @@ const Page = ({ params }) => {
           className="text-light-50 mb-[100px]"
           style={{ color: "#E6E0D2" }}
         />
-      ) : caseDetailsExist ? (
+      ) : noCaseDetailsExist ? (
         <NoDataFound data="case details" className="pb-20" />
       ) : (
         <>
@@ -87,7 +87,7 @@ const Page = ({ params }) => {
                 <img
                   src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.related_case_study?.feature_image}`}
                   alt="pride"
-                  className="sm:rounded-t-xl w-full h-full"
+                  className="sm:rounded-t-xl w-full h-full object-cover"
                 />
               </a>
             </Wrapper>

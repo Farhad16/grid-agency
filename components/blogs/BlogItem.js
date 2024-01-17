@@ -1,12 +1,15 @@
+"use client";
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import CursorView from "./CursorView";
+import HTMLParser from "../shared/HTMLParser";
 
-const PortfolioItem = ({ port, colDynamic, firstGrid }) => {
+const BlogItem = ({ blog, items }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 300, y: 300 });
   const [isHovered, setIsHovered] = useState(false);
   const itemRef = useRef();
 
+  console.log(items);
   const handleMouseMove = (e) => {
     setCursorPosition({ x: e.clientX, y: e.clientY });
   };
@@ -40,39 +43,34 @@ const PortfolioItem = ({ port, colDynamic, firstGrid }) => {
     };
   }, []);
 
-  const classNames = !firstGrid
-    ? `${
-        colDynamic === 2 ? "sm:first:col-span-2 sm:mb-0 mb-10" : "col-span-3"
-      } flex flex-col gap-4 group relative hover:no-underline no-underline`
-    : "flex flex-col gap-4 group relative hover:no-underline no-underline";
-
   return (
     <Link
-      href={`/case/${port.casestudy.id}`}
-      key={port.id}
-      className={classNames}
+      href={`/blogs/${blog.slug}`}
+      className={`flex flex-col gap-4 relative hover:no-underline no-underline ${
+        items === 1 ? "col-span-3" : items === 2 ? "col-span-2" : "col-span-1"
+      }`}
       onMouseOver={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseOut={handleMouseLeave}
       ref={itemRef}
     >
       <img
-        src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}
+        src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${blog.featured_image}`}
         alt="portimg"
         className="object-cover min-h-[560px] sm:h-[560px] w-full h-full"
       />
 
       <div className="flex gap-4 items-center text-[15px]">
         <p className="hover:text-yellow-550 text-yellow-550 font-extrabold uppercase">
-          {port.name}
+          {blog.title}
         </p>
-        <span className="hover:text-light-50 text-light-50 font-extrabold">
-          {port.desc}
-        </span>
+        <div className="hover:text-light-50 text-light-50 font-extrabold">
+          <HTMLParser content={blog.description} />
+        </div>
       </div>
       <CursorView cursorPosition={cursorPosition} isHovered={isHovered} />
     </Link>
   );
 };
 
-export default PortfolioItem;
+export default BlogItem;

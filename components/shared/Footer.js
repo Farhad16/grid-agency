@@ -85,7 +85,8 @@ const Footer = () => {
         </div>
         <div className="sm:tracking-[3px] flex flex-row justify-between items-center sm:mt-[150px] mt-[50px] text-[10px] md:text-[15px] gap-4">
           <div className="uppercase sm:flex flex-col text-light-50 gap-1 hidden">
-            <p>MIAMI, OPENING SOON</p>
+            <span>MIAMI</span>
+            <span>OPENING SOON</span>
           </div>
           <div className="uppercase flex flex-col text-light-50 gap-1">
             <span className="sm:hidden">MIAMI, OPENING SOON</span>
@@ -95,13 +96,13 @@ const Footer = () => {
           <div className="items-center gap-2 text-light-50 sm:hidden">
             <Link
               href="https://www.instagram.com/gridagencyinc/"
-              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none"
+              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
             >
               <InstagramIcon />
             </Link>
             <Link
               href="https://www.linkedin.com/company/gridcommunications"
-              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none"
+              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
             >
               <LinkedInIcon />
             </Link>
@@ -110,13 +111,13 @@ const Footer = () => {
             <div className="uppercase flex flex-col text-light-50 sm:items-end gap-1">
               <Link
                 href="mailto:info@gridagenyinc.ca"
-                className="text-left underline hover:text-light-50 outline-none"
+                className="text-left underline hover:text-light-50 outline-none text-light-50"
               >
                 info@gridagenyinc.ca
               </Link>
               <Link
                 href="tel:416 557-4773"
-                className="text-left underline hover:text-light-50 outline-none"
+                className="text-left underline hover:text-light-50 outline-none text-light-50"
               >
                 (416) 557-4773
               </Link>
@@ -124,13 +125,13 @@ const Footer = () => {
             <div className="sm:flex items-center gap-2 text-light-50 hidden">
               <Link
                 href="https://www.instagram.com/gridagencyinc/"
-                className="hover:text-yellow-550 transition duration-300 ease-in-out"
+                className="hover:text-yellow-550 transition duration-300 ease-in-out text-light-50"
               >
                 <InstagramIcon />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/gridcommunications"
-                className="hover:text-yellow-550 transition duration-300 ease-in-out"
+                className="hover:text-yellow-550 transition duration-300 ease-in-out text-light-50"
               >
                 <LinkedInIcon />
               </Link>

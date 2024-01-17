@@ -1,4 +1,3 @@
-"use server";
 export const getPortfolio = async () => {
   try {
     const res = await fetch(

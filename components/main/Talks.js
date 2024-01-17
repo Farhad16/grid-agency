@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Wrapper from "../shared/Wrapper";
 import ScrollTalks from "./ScrollTalks";

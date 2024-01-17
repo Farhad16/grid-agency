@@ -20,14 +20,23 @@ const PortfolioData = ({ portfolioData }) => {
               {colThree > 0 &&
                 portfolioData
                   .slice(0, colThree * 3)
-                  .map((port) => <PortfolioItem key={port.id} port={port} />)}
+                  .map((port) => (
+                    <PortfolioItem key={port.id} port={port} firstGrid={true} />
+                  ))}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-12 lg:gap-6 w-full">
               {colDynamic > 0 &&
                 portfolioData
                   .slice(-colDynamic)
-                  .map((port) => <PortfolioItem key={port.id} port={port} />)}
+                  .map((port) => (
+                    <PortfolioItem
+                      key={port.id}
+                      port={port}
+                      colDynamic={colDynamic}
+                      firstGrid={false}
+                    />
+                  ))}
             </div>
           </>
         )}

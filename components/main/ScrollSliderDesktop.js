@@ -40,12 +40,16 @@ const ScrollSliderDesktop = ({ serviceData }) => {
       return "-280vw";
     } else if (screenWidth >= 700 && screenWidth < 900) {
       return "-310vw";
+    } else if (screenWidth < 700) {
+      return "-400vw";
     }
   }
 
   let topGap = 90;
   if (screenWidth > 1800) {
-    topGap = 150;
+    topGap = 160;
+  } else if (screenWidth < 700) {
+    topGap = 300;
   }
 
   useEffect(() => {
@@ -76,14 +80,14 @@ const ScrollSliderDesktop = ({ serviceData }) => {
     <section className="scroll-section-outer relative">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row lg:pl-16">
-          <div className="flex lg:gap-80 gap-56 lg:px-32 px-16">
+          <div className="flex gap-32 md:gap-56 lg:gap-80 lg:px-32">
             <VerticleEl className="-left-10 top-[50%] !text-[#231F20] z-10">
               SERVICES
             </VerticleEl>
             {serviceData.map((service, i) => (
               <div
                 key={service.id}
-                className="relative w-[450px] h-[600px] md:h-[650px] lg:w-[710px] lg:h-[800px]"
+                className="relative w-[400px] h-[500px] md:h-[650px] lg:w-[710px] lg:h-[800px]"
                 style={{
                   backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${service.bg_image})`,
                   backgroundSize: "cover",

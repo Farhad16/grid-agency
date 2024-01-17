@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const ScrollTalkMobile = () => {
   return (
-    <div className="pb-6 w-full relative">
+    <div className="pb-6 w-full relative sm:!hidden block">
       <div className="background-text-verticle"></div>
-      <VerticleEl className="-left-14 top-[40%] !text-light-50 z-10 text-[#e6e0d22e] tracking-[3.96px]">
+      <VerticleEl className="-left-[10%] top-[30%] !text-light-50 z-10 text-[#e6e0d22e] tracking-[3.96px]">
         STUPID TALKS
       </VerticleEl>
       {talkData.slice(0, 2).map((talk, i) => (
@@ -37,7 +37,7 @@ const ScrollTalkMobile = () => {
           </div>
         </div>
       ))}
-      <Link href="/works">
+      <Link href="/blogs">
         <p className="no-underline hover:no-underline hover:!text-yellow-550 text-center !text-yellow-550 z-[9999] tracking-[3.96px] pt-16">
           READ MORE
         </p>

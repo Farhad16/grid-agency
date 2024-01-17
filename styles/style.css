@@ -83,8 +83,8 @@
 .background-text-verticle::before {
   content: "stupid";
   position: absolute;
-  top: 30%;
-  right: -25%;
+  top: 20%;
+  right: -10%;
   color: #161515;
   text-align: center;
   font-family: Manrope;
@@ -102,8 +102,8 @@
 .background-text-verticle::after {
   content: "talks";
   position: absolute;
-  bottom: 17%;
-  left: 18%;
+  bottom: 20%;
+  left: 20%;
   color: #161515;
   text-align: center;
   font-family: Manrope;

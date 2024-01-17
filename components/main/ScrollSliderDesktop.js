@@ -73,11 +73,11 @@ const ScrollSliderDesktop = ({ serviceData }) => {
   }, []);
 
   return (
-    <section className="scroll-section-outer sm:block hidden relative">
+    <section className="scroll-section-outer relative">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row lg:pl-16">
-          <div className="flex md:gap-80 gap-56 md:px-32 px-16">
-            <VerticleEl className="-left-10 top-[50%] !text-[#231F20] z-10 sm:block hidden">
+          <div className="flex lg:gap-80 gap-56 lg:px-32 px-16">
+            <VerticleEl className="-left-10 top-[50%] !text-[#231F20] z-10">
               SERVICES
             </VerticleEl>
             {serviceData.map((service, i) => (
@@ -97,7 +97,7 @@ const ScrollSliderDesktop = ({ serviceData }) => {
                     {i + 1 > 10 ? ++i : `0${++i}`}
                   </span>
                   <div className="flex flex-col sm:gap-6 lg:mt-10 mt-6 gap-3 text-[#231F20]">
-                    <h1 className="text-[35px] md:text-[50px] lg:text-[80px] font-extrabold tracking-[-2.107px] sm:tracking-[-2.5px] lg:leading-[60px] leading-[38px]">
+                    <h1 className="text-[35px] md:text-[50px] lg:text-[70px] font-extrabold tracking-[-2.107px] sm:tracking-[-2.5px] lg:leading-[60px] leading-[38px]">
                       {service.name}
                     </h1>
                     <div className="text-base md:text-[18px] lg:text-[26px] mt-4 sm:tracking-[-1.3px] tracking-[-0.609px] sm:leading-normal leading-[20px]">

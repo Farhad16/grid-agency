@@ -62,48 +62,50 @@ const Page = () => {
         >
           <Navbar />
 
-          <Loading
-            step={step}
-            handleButtonClick={handleButtonClick}
-            setStep={setStep}
-          />
-          <MobileLoading
-            step={step}
-            handleButtonClick={handleButtonClick}
-            setStep={setStep}
-          />
-          <div className="w-full h-full sm:hidden block">
-            <div className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]">
-              <ImageAnimationMobile
-                step={step}
-                handleButtonClick={handleButtonClick}
-              />
+          <div className="lg:mt-0 mt-[12%]">
+            <Loading
+              step={step}
+              handleButtonClick={handleButtonClick}
+              setStep={setStep}
+            />
+            <MobileLoading
+              step={step}
+              handleButtonClick={handleButtonClick}
+              setStep={setStep}
+            />
+            <div className="w-full h-full sm:hidden block">
+              <div className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]">
+                <ImageAnimationMobile
+                  step={step}
+                  handleButtonClick={handleButtonClick}
+                />
+              </div>
             </div>
-          </div>
-          <div className="w-full h-full sm:block hidden overflow-hidden items-center justify-center scroll-section-outer">
-            {textSlider.map((item, index) => (
-              <ReusableImageAnimation
-                key={index}
-                imageSrc={item.imageSrc}
-                imageAlt={item.imageAlt}
-                scale={item.scale}
-              />
-            ))}
-          </div>
+            <div className="w-full h-full sm:block hidden overflow-hidden items-center justify-center scroll-section-outer">
+              {textSlider.map((item, index) => (
+                <ReusableImageAnimation
+                  key={index}
+                  imageSrc={item.imageSrc}
+                  imageAlt={item.imageAlt}
+                  scale={item.scale}
+                />
+              ))}
+            </div>
 
-          <div
-            className="flex flex-col text-light-50 bg-[#0A0808] sm:pt-[250px] min-h-screen relative"
-            id="banner"
-            ref={ref}
-          >
-            <Banner />
-            <MarqueeText />
-            <Services />
-            <SelectedWork />
-            <Pride />
-            <StupidEnough />
-            <Talks />
-            <Footer />
+            <div
+              className="flex flex-col text-light-50 bg-[#0A0808] sm:pt-[250px] min-h-screen relative overflow-hidden"
+              id="banner"
+              ref={ref}
+            >
+              <Banner />
+              <MarqueeText />
+              <Services />
+              <SelectedWork />
+              <Pride />
+              <StupidEnough />
+              <Talks />
+              <Footer />
+            </div>
           </div>
         </motion.div>
       )}

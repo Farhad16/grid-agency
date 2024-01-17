@@ -4,7 +4,7 @@ import Image from "next/image";
 const GlobalLoading = () => {
   return (
     <>
-      <div className="relative min-h-screen sm:flex hidden items-center justify-center w-full">
+      <div className="relative min-h-screen lg:flex hidden items-center justify-center w-full">
         <Image
           src="/assets/intro/loading-g.gif"
           alt="in"
@@ -21,7 +21,7 @@ const GlobalLoading = () => {
           />
         </div>
       </div>
-      <div className="relative w-full sm:hidden block">
+      <div className="relative w-full lg:hidden block">
         <Image
           src="/assets/intro/intro-g.gif"
           alt="Loading"

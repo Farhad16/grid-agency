@@ -52,10 +52,6 @@ const Services = () => {
           />
         ) : serviceData.length > 0 ? (
           <>
-            <ServiceSlider
-              serviceData={serviceData}
-              screenWidth={screenWidth}
-            />
             <ScrollSliderDesktop
               serviceData={serviceData}
               screenWidth={screenWidth}

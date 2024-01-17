@@ -34,7 +34,7 @@ const Banner = ({ firstLoad }) => {
 
   return (
     <Wrapper
-      className={`"flex items-center justify-center sm:!px-[100px] !px-14 banner " ${
+      className={`"flex items-center justify-center sm:!px-[100px] !px-14 banner overflow-hidden " ${
         firstLoad ? "sm:pt-[150px]" : "sm:pt-[50px]"
       }`}
     >
@@ -43,7 +43,7 @@ const Banner = ({ firstLoad }) => {
           We make
         </p>
         <div className="flex flex-col">
-          <div className="flex items-center relative text-light-50 text-[100px] sm:text-[180px] md:text-[280px] lg:text-[312px] font-extrabold leading-[100px] sm:leading-[200px] md:tracking-[-15.6px] tracking-[-5.px] ">
+          <div className="flex items-center relative text-light-50 text-[100px] sm:text-[180px] md:text-[220px] lg:text-[312px] font-extrabold leading-[100px] sm:leading-[200px] md:tracking-[-15.6px] tracking-[-5.px] ">
             stup
             <div className="relative">
               i
@@ -74,7 +74,7 @@ const Banner = ({ firstLoad }) => {
           </div>
         </div>
         <div className="relative mt-[220px] flex items-center sm:!justify-start justify-center">
-          <VerticleEl className="sm:-left-[180px] sm:top-14 -left-20 -top-8">
+          <VerticleEl className="-left-20 -top-8 md:-left-[24%] md:top-[-20%] lg:-left-[180px] lg:top-14 ">
             WHO WE ARE
           </VerticleEl>
           <p className="sm:leading-normal leading-[34px] text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium sm:tracking-[-1.7px] tracking-[-1.25px] sm:!text-left text-center">
@@ -87,7 +87,7 @@ const Banner = ({ firstLoad }) => {
           </p>
         </div>
         <div className="relative mt-[220px] flex items-center sm:!justify-end justify-center">
-          <VerticleEl className="sm:-right-[120px] sm:top-14 -right-4 -top-48 rotate-[0deg]">
+          <VerticleEl className="-right-4 -top-48 md:right-[-5%] md:-top-[100%] lg:-right-[120px] lg:top-14  rotate-[0deg]">
             <Image
               src="/assets/main_page/line-v.png"
               alt="line"

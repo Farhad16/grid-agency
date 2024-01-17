@@ -16,7 +16,7 @@ const CursorDetails = ({ cursorPosition, isHovered }) => {
         top: cursorPosition.y,
         left: cursorPosition.x,
         transform: "translate(-50%, -50%)",
-        cursor: "pointer",
+        cursor: "none",
         color: "white",
       }}
     >

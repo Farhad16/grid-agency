@@ -1,12 +1,10 @@
 export const getAllBlogs = async () => {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs`
-    );
-    const data = await response.json();
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs`);
+    const data = await res.json();
     return data.data;
-  } catch (err) {
-    throw err;
+  } catch (error) {
+    throw error;
   }
 };
 

@@ -4,12 +4,11 @@ import Link from "next/link";
 import CursorView from "./CursorView";
 import HTMLParser from "../shared/HTMLParser";
 
-const BlogItem = ({ blog, items }) => {
+const BlogItem = ({ blog }) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 300, y: 300 });
   const [isHovered, setIsHovered] = useState(false);
   const itemRef = useRef();
 
-  console.log(items);
   const handleMouseMove = (e) => {
     setCursorPosition({ x: e.clientX, y: e.clientY });
   };
@@ -46,9 +45,7 @@ const BlogItem = ({ blog, items }) => {
   return (
     <Link
       href={`/blogs/${blog.slug}`}
-      className={`flex flex-col gap-4 relative hover:no-underline no-underline ${
-        items === 1 ? "col-span-3" : items === 2 ? "col-span-2" : "col-span-1"
-      }`}
+      className="flex flex-col gap-4 relative hover:no-underline no-underline"
       onMouseOver={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseOut={handleMouseLeave}

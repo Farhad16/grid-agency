@@ -20,7 +20,6 @@ import { useMediaQuery } from "react-responsive";
 
 const Page = () => {
   const [step, setStep] = useState(0);
-  const firstLoad = "yes";
   const ref = useRef();
 
   const handleButtonClick = () => {
@@ -38,15 +37,6 @@ const Page = () => {
   }, []);
 
   const isMobile = useMediaQuery({ maxWidth: 640 });
-
-  useEffect(() => {
-    if (firstLoad === "yes") {
-      const target = document.querySelector(".banner");
-      console.log(target);
-    } else {
-      localStorage.setItem("firstLoad", "no");
-    }
-  }, [firstLoad, ref.current]);
 
   return (
     <div className="flex flex-col text-light-50 bg-[#0A0808] font-manrope">

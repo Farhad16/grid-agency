@@ -38,7 +38,7 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
     // Add text growth animation
     const textGrow = gsap.to(section.querySelector("img"), {
       scale: scale,
-      opacity: 0,
+      opacity: 1,
       transition: "opacity 1s",
       ease: "none",
       duration: 1,

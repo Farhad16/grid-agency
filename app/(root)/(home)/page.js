@@ -16,13 +16,13 @@ import { textSlider } from "@/constance/text.data";
 import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/shared/Navbar";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 const Page = () => {
   const [step, setStep] = useState(0);
   const firstLoad = "yes";
   const ref = useRef();
 
-  console.log(firstLoad);
   const handleButtonClick = () => {
     setStep((prevStep) => prevStep + 1);
   };
@@ -36,6 +36,8 @@ const Page = () => {
 
     return () => clearTimeout(timeoutId);
   }, []);
+
+  const isMobile = useMediaQuery({ maxWidth: 640 });
 
   useEffect(() => {
     if (firstLoad === "yes") {
@@ -63,16 +65,20 @@ const Page = () => {
           <Navbar />
 
           <div className="lg:mt-0 mt-[12%]">
-            <Loading
-              step={step}
-              handleButtonClick={handleButtonClick}
-              setStep={setStep}
-            />
-            <MobileLoading
-              step={step}
-              handleButtonClick={handleButtonClick}
-              setStep={setStep}
-            />
+            {isMobile ? (
+              <MobileLoading
+                step={step}
+                handleButtonClick={handleButtonClick}
+                setStep={setStep}
+              />
+            ) : (
+              <Loading
+                step={step}
+                handleButtonClick={handleButtonClick}
+                setStep={setStep}
+              />
+            )}
+
             <div className="w-full h-full sm:hidden block">
               <div className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]">
                 <ImageAnimationMobile

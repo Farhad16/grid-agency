@@ -22,7 +22,7 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
       },
       {
         opacity: 1,
-        transition: "opacity 0.5s",
+        transition: "opacity 1s",
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -39,7 +39,7 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
     const textGrow = gsap.to(section.querySelector("img"), {
       scale: scale,
       opacity: 0,
-      transition: "opacity 0.7s",
+      transition: "opacity 1s",
       ease: "none",
       duration: 1,
       scrollTrigger: {

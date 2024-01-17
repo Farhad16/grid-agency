@@ -29,7 +29,6 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
     const checkVideoEnd = () => {
       if (video && video.currentTime === video.duration) {
         setStep(1);
-        setPlay(false);
       }
     };
 
@@ -121,8 +120,8 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
               style={{
                 cursor: "none !important",
               }}
-              autoPlay={play}
               loop={false}
+              autoPlay={play}
               onClick={handlePlay}
               onMouseMove={handleMouseMove}
               onMouseOver={handleCursorEnter}

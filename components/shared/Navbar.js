@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <div className="relative flex flex-col !font-manrope">
       <Wrapper
-        className="flex items-center justify-between bg-black nav-boxShadow !fixed w-full z-20 h-[12%] !overflow-hidden !pointer-events-auto"
+        className="flex items-center justify-between bg-black nav-boxShadow !fixed w-full z-20 h-[10%] sm:h-[12%] !overflow-hidden !pointer-events-auto"
         style={{ zIndex: 999999 }}
       >
         <Link href="/" className="no-underline hover:no-underline">

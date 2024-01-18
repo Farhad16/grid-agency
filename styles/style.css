@@ -9,6 +9,13 @@
   background-repeat: repeat;
 }
 
+.bg-paper-inner {
+  background: url("/assets/main_page/paper.jpg") center/cover;
+  background-position: top;
+  background-size: 120%;
+  background-repeat: repeat-x;
+}
+
 .bg-talk {
   background: url("/assets/main_page/talks.png") top/contain;
   background-position: top;
@@ -229,6 +236,18 @@ option[value=""][disabled] {
 }
 .rs-drawer-content {
   background: #2b2b2b !important;
+}
+
+.rs-drawer {
+  top: 12% !important;
+  height: 88% !important;
+}
+
+@media screen and (max-width: 640px) {
+  .rs-drawer {
+    top: 10% !important;
+    height: 90% !important;
+  }
 }
 
 .fade-container {

@@ -75,7 +75,7 @@ function ScrollTalks() {
 
   const router = useRouter();
   const workRoute = () => {
-    router.push("/portfolio");
+    router.push("/blogs");
   };
 
   return (

@@ -1,12 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import CursorView from "./CursorView";
 
 const Loading = ({ step, setStep, handleButtonClick }) => {
   const [play, setPlay] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
-  const [cursorPosition, setCursorPosition] = useState({ x: 300, y: 300 });
-  const [cursorPosition1, setCursorPosition1] = useState({ x: 300, y: 300 });
   const videoRef = useRef();
   const videoSectionRef = useRef();
 
@@ -39,48 +35,10 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
     };
   }, [setStep, setPlay, videoRef.current]);
 
-  const handleCursorEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleCursorMove = (e) => {
-    setCursorPosition1({ x: e.clientX, y: e.clientY });
-  };
-
-  const handleMouseMove = (e) => {
-    setCursorPosition({ x: e.clientX, y: e.clientY });
-  };
-
   const handleStep2 = () => {
     handleButtonClick();
     handlePlay();
   };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const handleScroll = () => {
-    const section = videoSectionRef.current;
-    if (section) {
-      const rect = section.getBoundingClientRect();
-      const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
-
-      if (isInViewport) {
-        handleCursorEnter();
-      } else {
-        handleMouseLeave();
-      }
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const renderContent = () => {
     switch (step) {
@@ -94,18 +52,8 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
               autoPlay
               loop
               muted
-              onMouseMove={handleCursorMove}
-              onMouseEnter={handleCursorEnter}
-              style={{ cursor: "none !important" }}
-              className="w-full h-full cover"
+              className="w-full h-full cover cursor-[url(/assets/intro/play.svg),_pointer]"
             ></video>
-
-            <CursorView
-              cursorPosition={cursorPosition1}
-              play={play}
-              step={step}
-              isHovered={isHovered}
-            />
           </div>
         );
 
@@ -117,24 +65,15 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
               src="/assets/intro/intro-video.mp4"
               width="100%"
               height="100%"
-              style={{
-                cursor: "none !important",
-              }}
               loop={false}
               autoPlay={play}
               onClick={handlePlay}
-              onMouseMove={handleMouseMove}
-              onMouseOver={handleCursorEnter}
-              onMouseOut={handleMouseLeave}
-              onMouseLeave={handleMouseLeave}
-              className="w-full h-full cover"
+              className={`"w-full h-full cover " ${
+                !play
+                  ? "cursor-[url(/assets/intro/play.svg),_pointer]"
+                  : "cursor-[url(/assets/intro/pause.svg),_pointer]"
+              }`}
             ></video>
-            <CursorView
-              cursorPosition={cursorPosition}
-              play={play}
-              step={step}
-              isHovered={isHovered}
-            />
           </div>
         );
       default:
@@ -146,8 +85,6 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
     <div
       className="sm:!flex !hidden flex-col items-center justify-center relative z-10 min-h-screen sm:pb-[40px] pb-[70px]"
       style={{ cursor: "none" }}
-      onMouseLeave={handleMouseLeave}
-      ref={videoSectionRef}
     >
       {renderContent()}
     </div>

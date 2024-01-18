@@ -22,22 +22,19 @@ function useOnScreen(ref) {
   return isIntersecting;
 }
 
-const Banner = ({ firstLoad }) => {
+const Banner = ({ setHideScrollButton }) => {
   const ref = useRef(null);
   const isVisible = useOnScreen(ref);
 
   useEffect(() => {
     if (isVisible) {
+      setHideScrollButton(true);
       localStorage.setItem("firstLoad", "yes");
     }
   }, [isVisible]);
 
   return (
-    <Wrapper
-      className={`"flex items-center justify-center sm:!px-[100px] !px-14 banner overflow-hidden " ${
-        firstLoad ? "sm:pt-[150px]" : "sm:pt-[50px]"
-      }`}
-    >
+    <div className="flex items-center justify-center sm:px-[100px] px-14 banner overflow-hidden">
       <div className="flex flex-col" ref={ref}>
         <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-extrabold mb-3">
           We make
@@ -119,7 +116,7 @@ const Banner = ({ firstLoad }) => {
           </p>
         </div>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 

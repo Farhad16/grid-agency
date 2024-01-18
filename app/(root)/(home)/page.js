@@ -20,6 +20,7 @@ import { useMediaQuery } from "react-responsive";
 
 const Page = () => {
   const [step, setStep] = useState(0);
+  const [hideScrollButton, setHideScrollButton] = useState(false);
   const ref = useRef();
 
   const handleButtonClick = () => {
@@ -74,6 +75,7 @@ const Page = () => {
                 <ImageAnimationMobile
                   step={step}
                   handleButtonClick={handleButtonClick}
+                  hideScrollButton={hideScrollButton}
                 />
               </div>
             </div>
@@ -93,7 +95,7 @@ const Page = () => {
               id="banner"
               ref={ref}
             >
-              <Banner />
+              <Banner setHideScrollButton={setHideScrollButton} />
               <MarqueeText />
               <Services />
               <SelectedWork />

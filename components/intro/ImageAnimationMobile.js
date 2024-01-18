@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function ImageAnimationMobile({ setFirstLoad }) {
+export default function ImageAnimationMobile({ hideScrollButton }) {
   const sections = [
     {
       el: (
@@ -77,7 +77,7 @@ export default function ImageAnimationMobile({ setFirstLoad }) {
 
   return (
     <div className="relative pt-[200px] flex items-center justify-center flex-col overflow-hidden">
-      {currentSection !== 2 && (
+      {currentSection !== 2 && !hideScrollButton && (
         <div
           onClick={handleClick}
           className="cursor-pointer z-[100] fixed sm:bottom-0 bottom-5 left-[50%] -translate-x-1/2 -translate-y-1/2 transform flex flex-col items-center"

@@ -264,3 +264,7 @@ option[value=""][disabled] {
   transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
     opacity 0.2s ease-in-out;
 }
+
+.custom-cursor {
+  cursor: url("https://res.cloudinary.com/dvkugaw3b/image/upload/v1641562028/cursor_ad12rf.png");
+}

@@ -34,7 +34,7 @@ const Banner = ({ setHideScrollButton }) => {
   }, [isVisible]);
 
   return (
-    <div className="flex items-center justify-center sm:px-[100px] px-14 banner overflow-hidden">
+    <Wrapper className="flex items-center justify-center sm:px-[100px] px-14 banner overflow-hidden">
       <div className="flex flex-col" ref={ref}>
         <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-extrabold mb-3">
           We make
@@ -116,7 +116,7 @@ const Banner = ({ setHideScrollButton }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Wrapper>
   );
 };
 

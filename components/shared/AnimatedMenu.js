@@ -78,7 +78,6 @@ const AnimatedMenu = ({ open, setOpen }) => {
                   },
                 },
               }}
-              whileTap="hidden"
             >
               <motion.div
                 initial="hidden"

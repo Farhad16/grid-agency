@@ -8,7 +8,7 @@ const budgetOptions = [
 
 const StupidWork = async () => {
   return (
-    <div className="flex sm:flex-row flex-col items-end justify-between sm:px-[100px] px-14">
+    <div className="flex flex-col sm:px-[100px] px-14">
       <div className="flex flex-col relative">
         <div className="flex gap-6">
           <img
@@ -26,7 +26,7 @@ const StupidWork = async () => {
           WORK
         </p>
       </div>
-      <div className="flex items-center gap-4 border-b h-fit pb-2">
+      <div className="flex items-center gap-4 border-b border-yellow-550 h-fit pb-2 w-[300px] mt-20">
         <select className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]">
           {budgetOptions.map((option) => (
             <option
@@ -40,7 +40,7 @@ const StupidWork = async () => {
             </option>
           ))}
         </select>
-        <p className="">OR</p>
+        <p className="text-yellow-550">OR</p>
         <select className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]">
           {budgetOptions.map((option) => (
             <option

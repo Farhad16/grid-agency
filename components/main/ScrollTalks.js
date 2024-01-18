@@ -30,7 +30,7 @@ function ScrollTalks() {
     } else if (screenWidth >= 1600 && screenWidth <= 2000) {
       return "-110vw";
     } else if (screenWidth >= 1400 && screenWidth < 1600) {
-      return "-140vw";
+      return "-130vw";
     } else if (screenWidth >= 1300 && screenWidth < 1400) {
       return "-160vw";
     } else if (screenWidth >= 1100 && screenWidth < 1300) {
@@ -60,7 +60,7 @@ function ScrollTalks() {
         ease: "none",
         duration: 1,
         scrollTrigger: {
-          trigger: "#stupid",
+          trigger: "#talks",
           start: `top top+=${topGap}`,
           end: "2000 top",
           scrub: 0.6,
@@ -79,10 +79,10 @@ function ScrollTalks() {
   };
 
   return (
-    <section className="scroll-section-outer sm:block hidden relative bg-talk">
-      <div id="stupid">
+    <section className="scroll-section-outer sm:block hidden relative">
+      <div id="talks">
         <div className="flex relative flex-row" id="stupid-inner">
-          <div className="flex px-20">
+          <div className="flex px-20 background-text">
             <VerticleEl className="-left-10 top-[50%] !text-[#E6E0D2] z-10 sm:block hidden">
               STUPID TALKS
             </VerticleEl>

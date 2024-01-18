@@ -1,46 +1,6 @@
-"use client";
-import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import CursorView from "./CursorView";
 
 const PortfolioItem = ({ port, colDynamic, firstGrid }) => {
-  const [cursorPosition, setCursorPosition] = useState({ x: 300, y: 300 });
-  const [isHovered, setIsHovered] = useState(false);
-  const itemRef = useRef();
-
-  const handleMouseMove = (e) => {
-    setCursorPosition({ x: e.clientX, y: e.clientY });
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  useEffect(() => {
-    const item = itemRef.current;
-
-    const handleScroll = () => {
-      const rect = item.getBoundingClientRect();
-      const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
-
-      if (isInViewport) {
-        handleMouseEnter();
-      } else {
-        handleMouseLeave();
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const classNames = !firstGrid
     ? `${
         colDynamic === 2 ? "sm:first:col-span-2 sm:mb-0 mb-10" : "col-span-3"
@@ -51,11 +11,7 @@ const PortfolioItem = ({ port, colDynamic, firstGrid }) => {
     <Link
       href={`/case/${port.casestudy.id}`}
       key={port.id}
-      className={classNames}
-      onMouseOver={handleMouseEnter}
-      onMouseMove={handleMouseMove}
-      onMouseOut={handleMouseLeave}
-      ref={itemRef}
+      className={`${classNames} cursor-[url(/assets/case/view.svg),_pointer]`}
     >
       <img
         src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}
@@ -71,7 +27,6 @@ const PortfolioItem = ({ port, colDynamic, firstGrid }) => {
           {port.desc}
         </span>
       </div>
-      <CursorView cursorPosition={cursorPosition} isHovered={isHovered} />
     </Link>
   );
 };

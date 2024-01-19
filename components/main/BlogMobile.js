@@ -1,16 +1,15 @@
-import { talkData } from "@/constance/talks.data";
 import React from "react";
 import VerticleEl from "../shared/VerticleEl";
 import Link from "next/link";
 
-const ScrollTalkMobile = () => {
+const BlogMobile = ({ blogData }) => {
   return (
     <div className="pb-6 w-full relative sm:!hidden block">
       <div className="background-text-verticle"></div>
       <VerticleEl className="-left-[10%] top-[30%] !text-light-50 z-10 text-[#e6e0d22e] tracking-[3.96px]">
         STUPID TALKS
       </VerticleEl>
-      {talkData.slice(0, 2).map((talk, i) => (
+      {blogData.slice(0, 2).map((talk, i) => (
         <div
           className="flex flex-col pt-2 items-center justify-center gap-12"
           key={i}
@@ -46,4 +45,4 @@ const ScrollTalkMobile = () => {
   );
 };
 
-export default ScrollTalkMobile;
+export default BlogMobile;

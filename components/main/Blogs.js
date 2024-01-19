@@ -4,6 +4,7 @@ import NoDataFound from "../shared/NoDataFound";
 import { CircularProgress } from "@mui/material";
 import BlogsDesktop from "./BlogsDesktop";
 import { talkData } from "@/constance/talks.data";
+import BlogMobile from "./BlogMobile";
 
 const Services = () => {
   const [loading, setLoading] = useState(true);
@@ -50,6 +51,7 @@ const Services = () => {
       ) : talkData.length > 0 ? (
         <>
           <BlogsDesktop blogData={talkData} screenWidth={screenWidth} />
+          <BlogMobile blogData={talkData} />
         </>
       ) : (
         <NoDataFound data="service" className="!text-black" />

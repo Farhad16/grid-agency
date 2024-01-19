@@ -57,7 +57,7 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
   };
 
   return (
-    <section className="overflow-hidden relative">
+    <section className="overflow-hidden relative sm:block hidden">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row">
           <div className="flex background-text xl:pr-[300px] pt-[50px] items-center justify-center">

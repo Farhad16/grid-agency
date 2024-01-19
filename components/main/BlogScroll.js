@@ -63,7 +63,7 @@ function BlogScroll() {
         scrollTrigger: {
           trigger: talkRef.current,
           start: `top top+=${topGap}`,
-          end: "2000 top",
+          end: "3000 top",
           scrub: 0.6,
           pin: true,
           markers: true,
@@ -82,8 +82,12 @@ function BlogScroll() {
 
   return (
     <div className="sm:block hidden relative overflow-hidden">
-      <div ref={talkRef}>
-        <div className="flex relative flex-row" ref={scrollTalkRef}>
+      <div ref={talkRef} id="blogId">
+        <div
+          className="flex relative flex-row"
+          ref={scrollTalkRef}
+          id="blogIdInner"
+        >
           <div className="flex px-20 background-text">
             <VerticleEl className="-left-10 top-[50%] !text-[#E6E0D2] z-10 sm:block hidden">
               STUPID TALKS

@@ -71,8 +71,12 @@ const ScrollSliderDesktop = ({ serviceData }) => {
 
   return (
     <section className="overflow-hidden relative">
-      <div ref={triggerRef}>
-        <div ref={sectionRef} className="flex relative flex-row">
+      <div ref={triggerRef} id="service">
+        <div
+          ref={sectionRef}
+          className="flex relative flex-row"
+          id="serviceInner"
+        >
           <div className="flex bg-paper-inner pl-[30px] md:pl-[60px] lg:pl-[150px] xl:pr-[300px] xl:pt-[100px] items-center justify-center">
             <div className="flex gap-20 sm:gap-32 md:gap-56 lg:gap-70 xl:gap-80 2xl:gap-96 3xl:gap-[560px] 4xl:gap-[620px] sm:pl-[100px] md:pl-[120px] lg:pl-[80px] xl:pl-[150px] xl:ml-[100px] 2xl:ml-[220px] 3xl:ml-[240px] 4xl:ml-[360px] mr-[300px] 4xl:mr-[500px]">
               <VerticleEl className="sm:-left-[3%] sm:top-[30%]  md:left-[0%] lg:left-[5%] xl:left-[10%] !text-[#231F20] z-10">

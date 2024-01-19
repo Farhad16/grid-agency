@@ -97,7 +97,7 @@ const Page = () => {
             >
               <Banner setHideScrollButton={setHideScrollButton} />
               <MarqueeText />
-              {/* <Services /> */}
+              <Services />
               <SelectedWork />
               <Pride />
               <StupidEnough />

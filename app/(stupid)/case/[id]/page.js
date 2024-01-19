@@ -72,7 +72,7 @@ const Page = ({ params }) => {
             </DividerElement>
           </Wrapper>
 
-          <Wrapper className="flex flex-col mt-[100px]">
+          <Wrapper className="flex flex-col mt-[100px] text-[24px] sm:text-[30px]">
             <HTMLParser content={caseDetails.casestudy?.description} />
           </Wrapper>
           <div className="flex flex-col sm:mt-[250px] mt-[100px] gap-4 overflow-hidden border-bottom">

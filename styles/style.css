@@ -64,7 +64,7 @@
   font-weight: 800;
   color: black;
   white-space: nowrap;
-  font-size: 500px;
+  font-size: 600px;
 }
 
 .background-text::before {
@@ -80,7 +80,7 @@
 .background-text::after {
   content: "talks";
   position: absolute;
-  top: -100px;
+  top: 0px;
   left: 0px;
   transform: translate(132%, 15%);
   width: fit-content;

@@ -2,7 +2,6 @@
 import Footer from "@/components/shared/Footer";
 import Wrapper from "@/components/shared/Wrapper";
 import React, { useEffect, useState } from "react";
-import DividerElement from "@/components/shared/DividerElement";
 import AnimateTitle from "@/components/case/AnimateTitle";
 import HTMLParser from "@/components/shared/HTMLParser";
 import NoDataFound from "@/components/shared/NoDataFound";
@@ -58,30 +57,15 @@ const Page = ({ params }) => {
               alt="blog"
               className="w-full h-full cover"
             />
-            <Wrapper>
-              <p className="text-[15px] font-semibold text-light-50 tracking-[3.75px] flex flex-row upperblog">
-                {blogDetails.tags.map((name, i) => (
-                  <>
-                    <span key={id}>{name}</span>
-                    {i !== blogDetails.tags?.length - 1 && " | "}
-                  </>
-                ))}
-              </p>
-            </Wrapper>
           </div>
-          <Wrapper className="sm:mt-[150px] mt-24 flex flex-col gap-2">
-            <DividerElement tag="Task">
-              <HTMLParser content={blogDetails.meta_title || ""} />
-            </DividerElement>
-          </Wrapper>
 
-          <Wrapper className="flex flex-col mt-[100px]">
+          <Wrapper className="flex flex-col mt-[100px] text-[24px] sm:text-[30px] ">
             <HTMLParser content={blogDetails.meta_description} />
           </Wrapper>
           <div className="flex flex-col sm:mt-[250px] mt-[100px] gap-4 overflow-hidden border-bottom">
             <Wrapper className="sm:!px-[100px]">
               <p className="text-base sm:text-[26px] text-light-50 leading-[30px]">
-                next <span className="font-extrabold">project</span>
+                next <span className="font-extrabold">blog</span>
               </p>
             </Wrapper>
 

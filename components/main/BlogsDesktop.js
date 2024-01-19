@@ -12,9 +12,11 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
   const triggerRef = useRef(null);
 
   function getScreenWidth() {
-    if (screenWidth > 1900) {
+    if (screenWidth > 2000) {
+      return "-55vw";
+    } else if (screenWidth > 1950 && screenWidth < 2000) {
       return "-60vw";
-    } else if (screenWidth >= 1600 && screenWidth <= 1900) {
+    } else if (screenWidth >= 1600 && screenWidth <= 1950) {
       return "-100vw";
     } else if (screenWidth > 1400 && screenWidth < 1600) {
       return "-120vw";
@@ -61,7 +63,7 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row">
           <div className="flex background-text xl:pr-[300px] pt-[50px] items-center justify-center">
-            <div className="flex gap-72 mr-[300px] px-[150px]">
+            <div className="flex gap-72 mr-[300px] px-[150px] mt-6">
               <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[0%] !text-light-50 z-10">
                 STUPID TALKS
               </VerticleEl>
@@ -79,7 +81,9 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
                 >
                   <div
                     className={`flex flex-row lg:min-w-[900px] sm:min-w-[750px] min-w-[600px] z-10 pt-2 h-[100vh] ${
-                      i % 2 === 0 ? "items-start" : "items-end"
+                      i % 2 === 0
+                        ? "items-start"
+                        : "items-end sm:mt-[-150px] md:mt-[-120px]"
                     }`}
                     key={i}
                   >

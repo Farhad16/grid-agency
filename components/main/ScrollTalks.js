@@ -1,4 +1,3 @@
-"use client";
 import { talkData } from "@/constance/talks.data";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -65,6 +64,7 @@ function ScrollTalks() {
           end: "2000 top",
           scrub: 0.6,
           pin: true,
+          markers: true,
         },
       }
     );

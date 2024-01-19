@@ -3,8 +3,6 @@ import HTMLParser from "../shared/HTMLParser";
 import VerticleEl from "../shared/VerticleEl";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
-import Wrapper from "../shared/Wrapper";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,7 +68,6 @@ const ScrollSliderDesktop = ({ serviceData }) => {
           end: "2000 top",
           scrub: 0.6,
           pin: true,
-          markers: true,
         },
       }
     );

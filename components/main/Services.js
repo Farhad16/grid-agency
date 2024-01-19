@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import VerticleEl from "../shared/VerticleEl";
-import Wrapper from "../shared/Wrapper";
 import { getServices } from "@/apis/service.api";
-import ServiceSlider from "./ServiceSlider";
 import NoDataFound from "../shared/NoDataFound";
 import { CircularProgress } from "@mui/material";
 import ScrollSliderDesktop from "./ScrollSliderDesktop";

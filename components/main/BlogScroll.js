@@ -6,7 +6,7 @@ import VerticleEl from "../shared/VerticleEl";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-function ScrollTalks() {
+function BlogScroll() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const talkRef = useRef();
   const scrollTalkRef = useRef();
@@ -133,4 +133,4 @@ function ScrollTalks() {
   );
 }
 
-export default ScrollTalks;
+export default BlogScroll;

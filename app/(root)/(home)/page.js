@@ -8,7 +8,6 @@ import Pride from "@/components/main/Pride";
 import SelectedWork from "@/components/main/SelectedWork";
 import Services from "@/components/main/Services";
 import StupidEnough from "@/components/main/StupidEnough";
-import Talks from "@/components/main/Talks";
 import Banner from "@/components/main/Banner";
 import MarqueeText from "@/components/main/MarqueeText";
 import Footer from "@/components/shared/Footer";
@@ -17,6 +16,7 @@ import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/shared/Navbar";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import Blogs from "@/components/main/Blogs";
 
 const Page = () => {
   const [step, setStep] = useState(0);
@@ -101,7 +101,7 @@ const Page = () => {
               <SelectedWork />
               <Pride />
               <StupidEnough />
-              <Talks />
+              <Blogs />
               <Footer />
             </div>
           </div>

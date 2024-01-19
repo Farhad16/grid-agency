@@ -90,25 +90,27 @@ function BlogScroll() {
             </VerticleEl>
             {talkData.map((talk, i) => (
               <div
-                className={`flex flex-row lg:min-w-[900px] sm:min-w-[750px] min-w-[600px] z-10 pt-2 h-[100vh]`}
+                className={`flex flex-row lg:min-w-[900px] sm:min-w-[750px] min-w-[600px] z-10 pt-2 h-[100vh] ${
+                  i % 2 === 0 ? "items-start" : "items-end"
+                }`}
                 key={i}
               >
                 <div className="flex gap-6 items-start">
                   <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">
                     {talk.serial}
                   </span>
-                  <div className="">
+                  <div className="relative">
                     <img
                       className="lg:max-w-[600px] sm:max-w-[450px] sm:h-[280px] max-w-[400px] lg:h-[385px] h-[250px] rounded-xl"
                       src={talk.img}
                       alt="img"
                     />
-                    {/* <Link
+                    <Link
                       href={`/blogs/${talk.id}`}
                       className="hover:no-underline no-underline hover:text-light-50 font-extrabold absolute text-4xl lg:text-[70px] sm:text-[60px] text-light-50 top-[40%] sm:-right-[200px] -right-[100px] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8"
                     >
                       {talk.about}
-                    </Link> */}
+                    </Link>
                   </div>
                   <p className="lg:text-lg md:text-base text-sm font-normal tracking-widest ml-8 w-[140px]">
                     {talk.date}

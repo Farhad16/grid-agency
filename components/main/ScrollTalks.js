@@ -1,13 +1,15 @@
 import { talkData } from "@/constance/talks.data";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import VerticleEl from "../shared/VerticleEl";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 function ScrollTalks() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const talkRef = useRef();
+  const scrollTalkRef = useRef();
 
   const updateScreenWidth = () => {
     setScreenWidth(window.innerWidth);
@@ -50,7 +52,7 @@ function ScrollTalks() {
 
   useEffect(() => {
     const pin = gsap.fromTo(
-      "#stupid-inner",
+      scrollTalkRef.current,
       {
         translateX: 0,
       },
@@ -59,7 +61,7 @@ function ScrollTalks() {
         ease: "none",
         duration: 1,
         scrollTrigger: {
-          trigger: "#talks",
+          trigger: talkRef.current,
           start: `top top+=${topGap}`,
           end: "2000 top",
           scrub: 0.6,
@@ -79,9 +81,9 @@ function ScrollTalks() {
   };
 
   return (
-    <section className="scroll-section-outer sm:block hidden relative">
-      <div id="talks">
-        <div className="flex relative flex-row" id="stupid-inner">
+    <div className="sm:block hidden relative overflow-hidden">
+      <div ref={talkRef}>
+        <div className="flex relative flex-row" ref={scrollTalkRef}>
           <div className="flex px-20 background-text">
             <VerticleEl className="-left-10 top-[50%] !text-[#E6E0D2] z-10 sm:block hidden">
               STUPID TALKS
@@ -127,7 +129,7 @@ function ScrollTalks() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

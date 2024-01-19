@@ -77,7 +77,7 @@ const ScrollSliderDesktop = ({ serviceData }) => {
   }, []);
 
   return (
-    <section className="scroll-section-outer relative">
+    <section className="overflow-hidden relative">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row">
           <div className="flex bg-paper-inner pl-[30px] md:pl-[60px] lg:pl-[150px] xl:pr-[300px] xl:pt-[100px] items-center justify-center">

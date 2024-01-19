@@ -6,6 +6,12 @@ const budgetOptions = [
   { value: "1K", label: "1K" },
 ];
 
+const catagory = [
+  { value: "", label: "Catagory", disabled: true, selected: true },
+  { value: "750-999", label: "750-999" },
+  { value: "1K", label: "1K" },
+];
+
 const StupidWork = async () => {
   return (
     <div className="flex flex-col sm:px-[100px] px-14">
@@ -42,7 +48,7 @@ const StupidWork = async () => {
         </select>
         <p className="text-yellow-550">OR</p>
         <select className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]">
-          {budgetOptions.map((option) => (
+          {catagory.map((option) => (
             <option
               key={option.value}
               value={option.value}

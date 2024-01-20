@@ -4,7 +4,6 @@ import ImageAnimationMobile from "@/components/intro/ImageAnimationMobile";
 import Loading from "@/components/intro/Loading";
 import MobileLoading from "@/components/intro/MobileLoading";
 import ReusableImageAnimation from "@/components/intro/ReusableImageAnimation";
-import Pride from "@/components/main/Pride";
 import SelectedWork from "@/components/main/SelectedWork";
 import Services from "@/components/main/Services";
 import StupidEnough from "@/components/main/StupidEnough";
@@ -28,7 +27,7 @@ const Page = () => {
   };
 
   useEffect(() => {
-    const delay = 1500;
+    const delay = 2000;
 
     const timeoutId = setTimeout(() => {
       setStep(1);
@@ -99,7 +98,6 @@ const Page = () => {
               <MarqueeText />
               <Services />
               <SelectedWork />
-              <Pride />
               <StupidEnough />
               <Blogs />
               <Footer />

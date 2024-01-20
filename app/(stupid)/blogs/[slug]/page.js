@@ -6,20 +6,20 @@ import AnimateTitle from "@/components/case/AnimateTitle";
 import HTMLParser from "@/components/shared/HTMLParser";
 import NoDataFound from "@/components/shared/NoDataFound";
 import { CircularProgress } from "@mui/material";
-import { getBlogsById, getSelectedBlog } from "@/apis/blogs.api";
+import { getBlogsById } from "@/apis/blogs.api";
 
 const Page = ({ params }) => {
-  const id = params.slug;
+  const slug = params.slug;
   const [loading, setLoading] = useState(true);
   const [blogDetails, setBlogDetails] = useState(null);
-  const [selected, setSelected] = useState(null);
 
   useEffect(() => {
+    const slug = params.slug;
     const fetchData = async () => {
       try {
-        const blogDetailsData = await getBlogsById(id);
-        const selectedBlog = await getSelectedBlog();
-        setSelected(selectedBlog);
+        const blogDetailsData = await getBlogsById(slug);
+        console.log("blogDetailsData", blogDetailsData);
+
         setBlogDetails(blogDetailsData);
       } catch (error) {
         console.error("Error fetching blog details:", error);
@@ -29,7 +29,7 @@ const Page = ({ params }) => {
     };
 
     fetchData();
-  }, [id]);
+  }, [slug]);
 
   const noBlogDetailsExist = Boolean(
     !blogDetails ||
@@ -38,6 +38,7 @@ const Page = ({ params }) => {
       blogDetails.error
   );
 
+  console.log(blogDetails);
   return (
     <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen relative items-center justify-center">
       {loading ? (
@@ -57,12 +58,23 @@ const Page = ({ params }) => {
               alt="blog"
               className="w-full h-full cover"
             />
+            <Wrapper>
+              <p className="text-[15px] font-semibold text-light-50 tracking-[3.75px] flex flex-row uppercase">
+                {blogDetails.tags.map((service, i) => (
+                  <>
+                    <span key={service.id} className="mr-1">
+                      {`${service} | `}
+                    </span>
+                  </>
+                ))}
+              </p>
+            </Wrapper>
           </div>
 
           <Wrapper className="flex flex-col mt-[100px] text-[24px] sm:text-[30px] ">
-            <HTMLParser content={blogDetails.meta_description} />
+            <HTMLParser content={blogDetails.description} />
           </Wrapper>
-          <div className="flex flex-col sm:mt-[250px] mt-[100px] gap-4 overflow-hidden border-bottom">
+          {/* <div className="flex flex-col sm:mt-[250px] mt-[100px] gap-4 overflow-hidden border-bottom">
             <Wrapper className="sm:!px-[100px]">
               <p className="text-base sm:text-[26px] text-light-50 leading-[30px]">
                 next <span className="font-extrabold">blog</span>
@@ -78,7 +90,7 @@ const Page = ({ params }) => {
                 />
               </a>
             </Wrapper>
-          </div>
+          </div> */}
         </>
       )}
 

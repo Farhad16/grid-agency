@@ -1,5 +1,4 @@
 import Link from "next/link";
-import HTMLParser from "../shared/HTMLParser";
 
 const BlogItem = ({ blog }) => {
   return (
@@ -13,13 +12,10 @@ const BlogItem = ({ blog }) => {
         className="object-cover min-h-[560px] sm:h-[560px] w-full h-full"
       />
 
-      <div className="flex gap-4 items-center text-[15px]">
+      <div className="flex items-center text-[15px]">
         <p className="hover:text-yellow-550 text-yellow-550 font-extrabold uppercase">
           {blog.title}
         </p>
-        <div className="hover:text-light-50 text-light-50 font-extrabold">
-          <HTMLParser content={blog.description} />
-        </div>
       </div>
     </Link>
   );

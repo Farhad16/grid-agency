@@ -65,16 +65,18 @@ const Page = ({ params }) => {
             ></video>
 
             <Wrapper>
-              <p className="text-[15px] font-semibold text-light-50 tracking-[3.75px] flex flex-row uppercase">
+              <div className="text-[15px] font-semibold text-light-50 tracking-[3.75px] flex flex-row uppercase items-center">
                 {caseDetails.data.services.map((service, i) => (
                   <>
-                    <span key={service.id}>{service}</span>
-                    {i !== caseDetails.data.services?.length - 1 && " | "}
+                    <span key={service.id} className="mr-1">
+                      {`${service} | `}
+                    </span>
                   </>
                 ))}
-              </p>
+              </div>
             </Wrapper>
           </div>
+
           <Wrapper className="my-28 sm:my-[200px] flex flex-col gap-2 ">
             <DividerElement tag="Task">
               <HTMLParser content={caseDetails.data.task || ""} />

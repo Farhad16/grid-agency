@@ -1,6 +1,7 @@
 import React from "react";
 import VerticleEl from "../shared/VerticleEl";
 import Link from "next/link";
+import dayjs from "dayjs";
 
 const BlogMobile = ({ blogData }) => {
   return (
@@ -16,20 +17,20 @@ const BlogMobile = ({ blogData }) => {
         >
           <div className="flex flex-col gap-6">
             <p className="text-sm font-normal tracking-[3.171px] z-10 text-right text-[#e6e0d22e]">
-              {talk.date}
+              {dayjs(talk.created_at).format("DD MMMM YYYY")}
             </p>
             <div className="flex flex-row items-start gap-2">
               <span className="font-extrabold text-lg text-left flex items-end justify-end text-yellow-550 z-10">
-                {talk.serial}
+                0{i + 1}
               </span>
               <div className="relative">
                 <img
                   className="w-[313.488px] h-[233.417px] rounded-xl"
-                  src={talk.img}
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${talk.featured_image}`}
                   alt="img"
                 />
                 <h1 className="font-extrabold absolute text-[32px] text-light-50 top-[30%] left-[10%] leading-[94.937%] tracking-[-1.63px] hover:bg-yellow-600 transition duration-300 ease">
-                  {talk.about}
+                  {talk.title}
                 </h1>
               </div>
             </div>

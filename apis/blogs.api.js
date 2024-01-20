@@ -10,10 +10,10 @@ export const getAllBlogs = async () => {
   }
 };
 
-export const getBlogsById = async (id) => {
+export const getBlogsById = async (slug) => {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs/${id}`
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs/${slug}`
     );
     const data = await response.json();
     return data.data;

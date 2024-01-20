@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
 import VerticleEl from "../shared/VerticleEl";
+import dayjs from "dayjs";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,23 +85,23 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
                   >
                     <div className="flex gap-6 items-start relative">
                       <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">
-                        {talk.serial}
+                        0{i + 1}
                       </span>
                       <div className="relative">
                         <img
                           className="sm:max-w-[450px] lg:max-w-[600px] 4xl:max-w-[700px] h-[250px] sm:h-[280px] lg:h-[385px] 4xl:h-[425px] rounded-xl"
-                          src={talk.img}
+                          src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${talk.featured_image}`}
                           alt="img"
                         />
                         <Link
-                          href={`/blogs/${talk.id}`}
+                          href={`/blogs/${talk.slug}`}
                           className="hover:no-underline no-underline hover:text-light-50 font-extrabold absolute text-4xl sm:text-[60px] lg:text-[70px] text-light-50 top-[40%] sm:-right-[200px] -right-[100px] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8"
                         >
-                          {talk.about}
+                          {talk.title}
                         </Link>
                       </div>
                       <p className="text-sm md:text-base lg:text-lg font-normal tracking-widest ml-8 w-[140px]">
-                        {talk.date}
+                        {dayjs(talk.created_at).format("DD MMMM YYYY")}
                       </p>
                       {i === blogData.length - 1 && (
                         <VerticleEl className="-rotate-90 font-extralight text-xs sm:text-[21px]tracking-[6.93px] !text-yellow-550 z-10 absolute lg:-right-[20%] 3xl:-right-[15%] top-[40%]">

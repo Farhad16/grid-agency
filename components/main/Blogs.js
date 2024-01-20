@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { getServices } from "@/apis/service.api";
 import NoDataFound from "../shared/NoDataFound";
 import { CircularProgress } from "@mui/material";
 import BlogsDesktop from "./BlogsDesktop";
-import { talkData } from "@/constance/talks.data";
 import BlogMobile from "./BlogMobile";
 import { getAllBlogs } from "@/apis/blogs.api";
 
@@ -31,7 +29,7 @@ const Services = () => {
     const fetchData = async () => {
       try {
         const data = await getAllBlogs();
-        setBlogData(data.data);
+        setBlogData(data);
       } catch (error) {
         console.error("Error fetching services:", error);
       } finally {

@@ -79,9 +79,9 @@ const ScrollSliderDesktop = ({ serviceData }) => {
           className="flex relative flex-row"
           id="serviceInner"
         >
-          <div className="flex bg-paper-inner pl-[30px] md:pl-[60px] lg:pl-[150px] xl:pr-[300px] xl:pt-[100px] items-center justify-center">
+          <div className="flex bg-paper-inner pl-[40px] sm:pl-[30px] md:pl-[60px] lg:pl-[150px] xl:pr-[300px] xl:pt-[100px] items-center justify-center">
             <div className="flex gap-20 sm:gap-32 md:gap-56 lg:gap-70 xl:gap-80 2xl:gap-96 3xl:gap-[560px] 4xl:gap-[620px] sm:pl-[100px] md:pl-[120px] lg:pl-[80px] xl:pl-[150px] xl:ml-[100px] 2xl:ml-[220px] 3xl:ml-[240px] 4xl:ml-[360px] mr-[300px] 4xl:mr-[500px] mt-16 sm:mt-10 md:mt-8 lg:mt-0">
-              <VerticleEl className="sm:-left-[3%] sm:top-[30%]  md:left-[0%] lg:left-[5%] xl:left-[10%] !text-[#231F20] z-10">
+              <VerticleEl className="-left-[2%] top-[30%] sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[5%] xl:left-[10%] !text-[#231F20] z-10">
                 SERVICES
               </VerticleEl>
               {serviceData.map((service, i) => (

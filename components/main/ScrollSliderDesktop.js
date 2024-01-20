@@ -39,7 +39,7 @@ const ScrollSliderDesktop = ({ serviceData }) => {
       return "-240vw";
     } else if (screenWidth < 700 && screenWidth > 500) {
       return "-300vw";
-    } else return "-320vw";
+    } else return "-340vw";
   }
 
   let topGap = 30;

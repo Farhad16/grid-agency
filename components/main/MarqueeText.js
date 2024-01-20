@@ -13,21 +13,22 @@ const Context = () => {
     </div>
   );
 };
+
 const MarqueeText = () => {
   return (
-    <div className="flex flex-col mt-[250px] relative z-10 w-full">
-      <div className="rotate-[4.2deg] absolute top-1/2 right-0 transform -translate-y-1/2 bg-black">
+    <div className="flex flex-col mt-[250px] relative z-10 w-full mb-6 sm:mb-10">
+      <div className="rotate-[4.2deg] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-black w-[110%]">
         <Marquee
-          className="flex items-center gap-2 sm:text-[30px] text-sm text-light-50 sm:tracking-[10.5px] tracking-[4.5px] p-3 border-t border-b border-[#E6E0D2]"
+          className="flex items-center gap-2 sm:text-[30px] text-sm text-light-50 sm:tracking-[10.5px] tracking-[4.5px] p-1.5 sm:p-3 border-t border-b border-[#E6E0D2]"
           speed={200}
         >
           <Context />
           <Context />
         </Marquee>
       </div>
-      <div className="-rotate-[4.2deg] relative bg-black">
+      <div className="-rotate-[4.2deg] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-black">
         <Marquee
-          className="flex items-center gap-2 sm:text-[30px] text-sm text-light-50 sm:tracking-[10.5px] tracking-[4.5px] p-3 border-t border-b border-[#E6E0D2]"
+          className="flex items-center gap-2 sm:text-[30px] text-sm text-light-50 sm:tracking-[10.5px] tracking-[4.5px] p-1.5 sm:p-3 border-t border-b border-[#E6E0D2]"
           speed={200}
         >
           <Context />

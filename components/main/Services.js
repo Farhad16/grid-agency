@@ -55,7 +55,10 @@ const Services = () => {
             />
           </>
         ) : (
-          <NoDataFound data="service" className="!text-black" />
+          <NoDataFound
+            data="service"
+            className="!text-light-50 mt-20 text-4xl"
+          />
         )}
       </div>
     </div>

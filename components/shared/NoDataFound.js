@@ -5,7 +5,7 @@ const NoDataFound = ({ className, data }) => {
     <div
       className={`flex flex-col items-center justify-center text-light-50 gap-4 ${className}`}
     >
-      <p className="text-base">{`No ${data} found or there is no ${data} available`}</p>
+      <p className="text-base md:text-lg lg:text-xl 4xl:text-2xl">{`No ${data} found or there is no ${data} available`}</p>
       <SentimentVeryDissatisfiedIcon sx={{ fontSize: "80px" }} />
     </div>
   );

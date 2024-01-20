@@ -5,10 +5,11 @@ import { CircularProgress } from "@mui/material";
 import BlogsDesktop from "./BlogsDesktop";
 import { talkData } from "@/constance/talks.data";
 import BlogMobile from "./BlogMobile";
+import { getAllBlogs } from "@/apis/blogs.api";
 
 const Services = () => {
   const [loading, setLoading] = useState(true);
-  const [serviceData, setServiceData] = useState([]);
+  const [blogData, setBlogData] = useState([]);
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -29,8 +30,8 @@ const Services = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getServices();
-        setServiceData(data);
+        const data = await getAllBlogs();
+        setBlogData(data.data);
       } catch (error) {
         console.error("Error fetching services:", error);
       } finally {
@@ -48,13 +49,13 @@ const Services = () => {
           className="text-light-50 mb-[100px]"
           style={{ color: "#E6E0D2" }}
         />
-      ) : talkData.length > 0 ? (
+      ) : blogData && blogData.length > 0 ? (
         <>
-          <BlogsDesktop blogData={talkData} screenWidth={screenWidth} />
-          <BlogMobile blogData={talkData} />
+          <BlogsDesktop blogData={blogData} screenWidth={screenWidth} />
+          <BlogMobile blogData={blogData} />
         </>
       ) : (
-        <NoDataFound data="service" className="!text-black" />
+        <NoDataFound data="blog" className="!text-light-50 py-20" />
       )}
     </div>
   );

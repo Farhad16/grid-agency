@@ -52,7 +52,7 @@ const SelectedWork = () => {
               OUR WORK
             </VerticleEl>
           </Wrapper>
-          {selectedCase.featured.map((port) => (
+          {selectedCase?.featured?.map((port) => (
             <div key={port.slug}>
               <Wrapper className="sm:mt-36 mt-20 flex flex-col mb-4 sm:!px-[100px] !px-14 pt-16">
                 <p className="text-yellow-550 md:text-xl uppercase text-[15px] tracking-[4.5px] font-extrabold">

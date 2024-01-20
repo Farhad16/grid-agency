@@ -75,12 +75,16 @@ const Page = ({ params }) => {
               </p>
             </Wrapper>
           </div>
-          <Wrapper className="sm:mt-[150px] mt-24 flex flex-col gap-2">
+          <Wrapper className="my-28 sm:my-[200px] flex flex-col gap-2 ">
             <DividerElement tag="Task">
               <HTMLParser content={caseDetails.data.task || ""} />
             </DividerElement>
           </Wrapper>
 
+          <img
+            src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.data.featured_video}`}
+            alt="featured_video"
+          />
           <Wrapper className="flex flex-col mt-[100px] text-[24px] sm:text-[30px]">
             <HTMLParser content={caseDetails.data.description} />
           </Wrapper>

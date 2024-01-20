@@ -3,7 +3,7 @@ import React from "react";
 import Wrapper from "../shared/Wrapper";
 import { motion } from "framer-motion";
 
-const AnimateTitle = ({ title }) => {
+const AnimateTitle = ({ title, clientName }) => {
   return (
     <Wrapper className="w-full">
       <motion.div
@@ -15,8 +15,8 @@ const AnimateTitle = ({ title }) => {
         <p className="text-light-50 md:text-[60px] lg:text-[80px] text-[40px] font-extrabold sm:leading-[70px] leading-[50px]">
           {title}
         </p>
-        <p className="text-yellow-550 tracking-[3.75px] flex items-end font-extrabold">
-          OSMOW'S
+        <p className="text-yellow-550 tracking-[3.75px] flex items-end font-extrabold uppercase">
+          {clientName}
         </p>
       </motion.div>
     </Wrapper>

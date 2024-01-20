@@ -9,22 +9,22 @@ const PortfolioItem = ({ port, colDynamic, firstGrid }) => {
 
   return (
     <Link
-      href={`/case/${port.casestudy.id}`}
+      href={`/case/${port.slug}`}
       key={port.id}
       className={`${classNames} cursor-[url(/assets/case/view.svg),_pointer]`}
     >
       <img
-        src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.img}`}
+        src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.port_img}`}
         alt="portimg"
         className="object-cover min-h-[560px] sm:h-[560px] w-full h-full"
       />
 
       <div className="flex gap-4 items-center text-[15px]">
         <p className="hover:text-yellow-550 text-yellow-550 font-extrabold uppercase">
-          {port.name}
+          {port.case_title}
         </p>
         <span className="hover:text-light-50 text-light-50 font-extrabold">
-          {port.desc}
+          {port.port_desc}
         </span>
       </div>
     </Link>

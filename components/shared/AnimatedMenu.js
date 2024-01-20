@@ -61,7 +61,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
             ></motion.div>
 
             <motion.div
-              className={`overflow-auto fixed right-0 !bg-black sm:w-1/2 w-full h-screen flex flex-col items-start justify-center sm:pl-24 pl-12 gap-4 z-100`}
+              className={`overflow-auto fixed right-0 !bg-black sm:w-1/2 w-full h-screen flex flex-col items-start justify-center pl-12 lg:pl-24 gap-4 z-100`}
               initial="hidden"
               animate="visible"
               variants={{
@@ -103,7 +103,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
                 menu
               </motion.div>
 
-              <motion.div className="flex flex-col xl:gap-16 md:gap-12 mt-6">
+              <motion.div className="flex flex-col gap-8 xl:gap-16 mt-10">
                 <motion.div
                   initial="hidden"
                   animate="visible"
@@ -126,7 +126,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
                 >
                   <Link
                     href="/about"
-                    className="text-light-50 hover:text-light-50 hover:no-underline md:text-[80px] lg:text-[90px] text-[60px] font-extrabold lg:tracking-[-5px] sm:leading-[34px] leading-normal tracking-[-3px] !font-manrope"
+                    className="text-light-50 hover:text-light-50 hover:no-underline text-[65px] lg:text-[80px] xl:text-[90px] font-extrabold lg:tracking-[-5px] sm:leading-[34px] leading-normal tracking-[-3px] !font-manrope"
                     onClick={() => setOpen(false)}
                   >
                     about us
@@ -154,7 +154,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
                 >
                   <Link
                     href="/portfolio"
-                    className="text-light-50 hover:text-light-50 hover:no-underline md:text-[80px] lg:text-[90px] text-[60px] font-extrabold lg:tracking-[-5px] sm:leading-[34px] leading-normal tracking-[-3px] !font-manrope"
+                    className="text-light-50 hover:text-light-50 hover:no-underline text-[65px] lg:text-[80px] xl:text-[90px] font-extrabold lg:tracking-[-5px] sm:leading-[34px] leading-normal tracking-[-3px] !font-manrope"
                     onClick={() => setOpen(false)}
                   >
                     our works
@@ -182,7 +182,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
                 >
                   <Link
                     href="/blogs"
-                    className="text-light-50 hover:text-light-50 hover:no-underline md:text-[80px] lg:text-[90px] text-[60px] font-extrabold lg:tracking-[-5px] sm:leading-[34px] leading-normal tracking-[-3px] !font-manrope"
+                    className="text-light-50 hover:text-light-50 hover:no-underline text-[65px] lg:text-[80px] xl:text-[90px] font-extrabold lg:tracking-[-5px] sm:leading-[34px] leading-normal tracking-[-3px] !font-manrope"
                     onClick={() => setOpen(false)}
                   >
                     talks

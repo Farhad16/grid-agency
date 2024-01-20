@@ -28,7 +28,7 @@ const Page = () => {
   };
 
   useEffect(() => {
-    const delay = 2000;
+    const delay = 1500;
 
     const timeoutId = setTimeout(() => {
       setStep(1);

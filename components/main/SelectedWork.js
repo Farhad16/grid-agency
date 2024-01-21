@@ -30,7 +30,7 @@ const SelectedWork = () => {
     <>
       {selectedCase && (
         <div className="flex flex-col w-full sm:mt-[200px] pt-16">
-          <div className="flex flex-col relative sm:px-[100px] px-14">
+          <div className="flex flex-col relative sm:px-[100px] px-14 mb-20 sm:mb-36">
             <div className="flex gap-6">
               <img
                 src="/assets/main_page/stupid.png"
@@ -54,11 +54,11 @@ const SelectedWork = () => {
           </Wrapper>
           {selectedCase?.featured?.map((port) => (
             <div key={port.slug} className="flex flex-col">
-              <Wrapper className="sm:mt-36 mt-20 flex flex-col mb-4 sm:!px-[100px] !px-14 pt-16">
+              <Wrapper className="flex flex-col mb-4 sm:!px-[100px] !px-14 pt-16">
                 <p className="text-yellow-550 md:text-xl uppercase text-[15px] tracking-[4.5px] font-extrabold">
                   {port.port_client}
                 </p>
-                <p className="text-light-50 text-[30px] md:text-[40px] lg:text-[90px] font-extrabold sm:tracking-[-4.5px] tracking-[-1.5px] sm:leading-[78.682px] leading-[26.227px]">
+                <p className="text-light-50 text-[30px] md:text-[40px] lg:text-[90px] font-extrabold lg:tracking-[-4.5px] tracking-[-1.5px] sm:leading-[78%] leading-[26.227px]">
                   {port.case_title}
                 </p>
               </Wrapper>
@@ -68,7 +68,7 @@ const SelectedWork = () => {
                   <img
                     src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.featured_video}`}
                     alt="dish"
-                    className="sm:rounded-xl w-full clip-path-triangle h-[420px] lg:h-[900px] object-cover"
+                    className="sm:rounded-xl w-full clip-path-triangle h-[300px] md:h-[400px] lg:h-[550px] xl:h-[800px] object-cover"
                   />
 
                   <Link

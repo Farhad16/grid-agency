@@ -39,8 +39,8 @@ const Banner = ({ setHideScrollButton }) => {
         <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-extrabold mb-3">
           We make
         </p>
-        <div className="flex flex-col">
-          <div className="flex items-center relative text-light-50 text-[110px] sm:text-[180px] md:text-[220px] lg:text-[312px] font-extrabold leading-[100px] sm:leading-[200px] md:tracking-[-15.6px] tracking-[-5.px] ">
+        <div className="flex flex-col w-fit">
+          <div className="flex items-center relative text-light-50 text-[120px] sm:text-[180px] md:text-[220px] lg:text-[312px] font-extrabold leading-[100px] sm:leading-[200px] md:tracking-[-15.6px] tracking-[-5px]">
             stup
             <div className="relative">
               i
@@ -49,7 +49,7 @@ const Banner = ({ setHideScrollButton }) => {
                 alt="cat"
                 width={220}
                 height={220}
-                className="absolute -top-[10%] -left-[20%] lg:-top-[40%] lg:-left-[40%] max-w-[80px] md:w-[150px] lg:max-w-[220px]"
+                className="absolute -left-[60%] -top-[50%] sm:-top-[10%] sm:-left-[20%] lg:-top-[40%] lg:-left-[40%] max-w-[70px] sm:max-w-[100px] sm:w-[100px] md:w-[150px] lg:max-w-[220px]"
               />
             </div>
             d
@@ -62,7 +62,7 @@ const Banner = ({ setHideScrollButton }) => {
               className="absolute -bottom-[10px] sm:-bottom-[90px] left-0 sm:max-w-[515px] max-w-[150px]"
             />
           </div>
-          <div className="flex flex-row items-center justify-end mt-2 md:mt-4 lg:mt-6 mr-[-10px] md:mr-[-20px]">
+          <div className="flex flex-row items-center justify-end mt-3 md:mt-4 lg:mt-6 mr-[-10px] md:mr-[-20px]">
             <img
               src="/assets/main_page/text-ani.gif"
               alt="animated"

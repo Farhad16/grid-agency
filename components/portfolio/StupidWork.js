@@ -32,7 +32,7 @@ const StupidWork = ({ setSelectClient, setSelectCategory }) => {
   };
 
   return (
-    <div className="flex flex-col sm:px-[100px] px-14">
+    <div className="flex flex-col sm:px-[100px] px-14 justify-start sm:justify-center overflow-hidden">
       <div className="flex flex-col relative">
         <div className="flex gap-6">
           <img
@@ -50,7 +50,7 @@ const StupidWork = ({ setSelectClient, setSelectCategory }) => {
           WORK
         </p>
       </div>
-      <div className="flex items-center gap-4 border-b border-yellow-550 h-fit pb-2 w-[400px] mt-20">
+      <div className="flex items-center gap-4 border-b border-yellow-550 h-fit pb-2 max-w-[400px] mt-20">
         <select
           onChange={handleClientChange}
           className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]"

@@ -7,8 +7,10 @@ import { useForm } from "react-hook-form";
 import { postContact } from "@/apis/contact.api";
 import { toast } from "react-toastify";
 import FormSelect from "./FormSelect";
+import { CircularProgress } from "@mui/material";
 
 const ContactHeader = () => {
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -24,6 +26,7 @@ const ContactHeader = () => {
   });
 
   const onSubmit = async (values) => {
+    setLoading(true);
     try {
       if (!values.name) {
         setError("name", { type: "manual", message: "The name is required" });
@@ -63,6 +66,8 @@ const ContactHeader = () => {
         autoClose: 3000,
       });
       reset();
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -163,8 +168,9 @@ const ContactHeader = () => {
           />
 
           <button
+            disabled={loading}
             type="submit"
-            className="font-extrabold text-yellow-550 hover:bg-yellow-550 hover:bg-opacity-20 focus:outline-none outline-none group flex items-center border border-1.5 justify-center rounded-full border-yellow-550 transition duration-300 py-[10px] px-[32px] sm:w-fit w-full"
+            className="font-extrabold text-yellow-550 hover:bg-yellow-550 hover:bg-opacity-20 focus:outline-none outline-none group flex items-center border border-1.5 justify-center rounded-full border-yellow-550 transition duration-300 py-[10px] px-[32px] sm:w-fit w-full min-w-[150px] min-h-[50px]"
           >
             GET A QUOTE
           </button>

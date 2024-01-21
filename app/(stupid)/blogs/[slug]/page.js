@@ -38,7 +38,6 @@ const Page = ({ params }) => {
       blogDetails.error
   );
 
-  console.log(blogDetails);
   return (
     <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen relative items-center justify-center">
       {loading ? (

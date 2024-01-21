@@ -1,48 +1,32 @@
-import React, { useEffect, useRef, useState } from "react";
-import VerticleEl from "../shared/VerticleEl";
+import dayjs from "dayjs";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { talkData } from "@/constance/talks.data";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import dayjs from "dayjs";
+import { useEffect, useRef } from "react";
+import VerticleEl from "../shared/VerticleEl";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BlogsDesktop = ({ blogData, screenWidth }) => {
+const BlogsDesktop = ({ blogData }) => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
-  function getScreenWidth() {
-    if (screenWidth > 2250) {
-      return "-40vw";
-    } else if (screenWidth > 2000 && screenWidth <= 2250) {
-      return "-55vw";
-    } else if (screenWidth > 1950 && screenWidth <= 2000) {
-      return "-60vw";
-    } else if (screenWidth > 1650 && screenWidth <= 1950) {
-      return "-90vw";
-    } else if ((screenWidth) => 1400 && screenWidth <= 1650) {
-      return "-125vw";
-    } else if (screenWidth >= 900 && screenWidth < 1400) {
-      return "-185vw";
-    } else if (screenWidth >= 700 && screenWidth < 900) {
-      return "-225vw";
-    } else if (screenWidth < 700) {
-      return "-290vw";
-    }
-  }
-
-  console.log(getScreenWidth());
-
   useEffect(() => {
+    const races = sectionRef.current;
+
+    function getScrollAmount() {
+      let racesWidth = races.scrollWidth;
+      return -(racesWidth - window.innerWidth);
+    }
+
     const pin = gsap.fromTo(
       sectionRef.current,
       {
         translateX: 0,
       },
       {
-        translateX: `${getScreenWidth()}`,
+        translateX: `${getScrollAmount()}px`,
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -51,6 +35,7 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
           end: "2000 top",
           scrub: 0.6,
           pin: true,
+          invalidateOnRefresh: true,
         },
       }
     );
@@ -67,9 +52,9 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
   return (
     <section className="overflow-hidden relative sm:block hidden">
       <div ref={triggerRef}>
-        <div ref={sectionRef} className="flex relative flex-row ">
-          <div className="flex background-text xl:pr-[300px] pt-[50px] items-center justify-center">
-            <div className="flex gap-56 xl:gap-60 mr-[300px] px-[150px] z-10">
+        <div ref={sectionRef} className="flex relative flex-row">
+          <div className="flex background-text pt-[50px] items-center justify-center px-[100px]">
+            <div className="flex gap-56 xl:gap-60 z-10">
               <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[0%] !text-light-50 z-10">
                 STUPID TALKS
               </VerticleEl>
@@ -114,7 +99,7 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
                     {i === blogData.length - 1 && (
                       <p
                         onClick={workRoute}
-                        className="sm:mt-40 lg:mt-80 cursor-pointer gap-4 -rotate-90 font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
+                        className="-rotate-90 absolute cursor-pointer gap-4 -right-[35%] top-[60%] font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
                       >
                         <span>READ </span> <span>MORE</span>
                       </p>

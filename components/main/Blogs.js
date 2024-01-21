@@ -9,22 +9,6 @@ const Services = () => {
   const [loading, setLoading] = useState(true);
   const [blogData, setBlogData] = useState([]);
 
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  const updateScreenWidth = () => {
-    setScreenWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    updateScreenWidth();
-
-    window.addEventListener("resize", updateScreenWidth);
-
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth);
-    };
-  }, [screenWidth]);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -49,7 +33,7 @@ const Services = () => {
         />
       ) : blogData && blogData.length > 0 ? (
         <>
-          <BlogsDesktop blogData={blogData} screenWidth={screenWidth} />
+          <BlogsDesktop blogData={blogData} />
           <BlogMobile blogData={blogData} />
         </>
       ) : (

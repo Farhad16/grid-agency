@@ -58,7 +58,7 @@ const SelectedWork = () => {
                 <p className="text-yellow-550 md:text-xl uppercase text-[15px] tracking-[4.5px] font-extrabold">
                   {port.port_client}
                 </p>
-                <p className="text-light-50 text-[30px] md:text-[40px] lg:text-[90px] font-extrabold lg:tracking-[-4.5px] tracking-[-1.5px] sm:leading-[78%] leading-[26.227px]">
+                <p className="text-light-50 text-[30px] md:text-[40px] lg:text-[90px] font-extrabold lg:tracking-[-4.5px] tracking-[-1.5px]  leading-[26.227px] sm:leading-[78%]">
                   {port.case_title}
                 </p>
               </Wrapper>

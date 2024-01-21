@@ -10,63 +10,30 @@ const ScrollSliderDesktop = ({ serviceData }) => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  const updateScreenWidth = () => {
-    setScreenWidth(window.innerWidth);
-  };
-
   useEffect(() => {
-    updateScreenWidth();
+    const races = sectionRef.current;
 
-    window.addEventListener("resize", updateScreenWidth);
+    function getScrollAmount() {
+      let racesWidth = races.scrollWidth;
+      return -(racesWidth - window.innerWidth);
+    }
 
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth);
-    };
-  }, [screenWidth]);
-
-  function getScreenWidth() {
-    if (screenWidth > 2200) {
-      return "-160vw";
-    } else if (screenWidth > 2000 && screenWidth <= 2200) {
-      return "-170vw";
-    } else if (screenWidth > 1800 && screenWidth <= 2000) {
-      return "-190vw";
-    } else if (screenWidth >= 1600 && screenWidth <= 1800) {
-      return "-205vw";
-    } else if (screenWidth > 1400 && screenWidth < 1600) {
-      return "-220vw";
-    } else if (screenWidth >= 900 && screenWidth <= 1400) {
-      return "-230vw";
-    } else if (screenWidth >= 700 && screenWidth < 900) {
-      return "-240vw";
-    } else if (screenWidth < 700 && screenWidth > 500) {
-      return "-300vw";
-    } else return "-340vw";
-  }
-
-  let topGap = 30;
-  if (screenWidth < 700) {
-    topGap = 50;
-  }
-
-  useEffect(() => {
     const pin = gsap.fromTo(
       sectionRef.current,
       {
         translateX: 0,
       },
       {
-        translateX: `${getScreenWidth()}`,
+        translateX: `${getScrollAmount()}px`,
         ease: "none",
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
-          start: `top top+=${topGap}`,
+          start: `top top`,
           end: "2000 top",
           scrub: 0.6,
           pin: true,
+          invalidateOnRefresh: true,
         },
       }
     );
@@ -77,15 +44,11 @@ const ScrollSliderDesktop = ({ serviceData }) => {
 
   return (
     <section className="overflow-hidden relative">
-      <div ref={triggerRef} id="service">
-        <div
-          ref={sectionRef}
-          className="flex relative flex-row"
-          id="serviceInner"
-        >
-          <div className="flex bg-paper-inner pl-[40px] sm:pl-[30px] md:pl-[60px] lg:pl-[150px] xl:pr-[300px] xl:pt-[100px] items-center justify-center">
-            <div className="flex gap-20 sm:gap-32 md:gap-56 lg:gap-70 xl:gap-80 2xl:gap-96 3xl:gap-[560px] 4xl:gap-[620px] sm:pl-[100px] md:pl-[120px] lg:pl-[80px] xl:pl-[150px] xl:ml-[100px] 2xl:ml-[220px] 3xl:ml-[240px] 4xl:ml-[360px] 5xl:ml-[450px] mr-[300px] 5xl:mr-[500px] mt-16 sm:mt-10 md:mt-8 lg:mt-0">
-              <VerticleEl className="-left-[2%] top-[30%] sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[5%] xl:left-[10%] !text-[#231F20] z-10">
+      <div ref={triggerRef}>
+        <div ref={sectionRef} className="flex relative flex-row">
+          <div className="flex bg-paper-inner pl-[40px] sm:pl-[30px] md:pl-[60px] lg:pl-[150px] pr-[50px] xl:pt-[100px] items-center justify-center">
+            <div className="flex gap-20 sm:gap-32 md:gap-56 lg:gap-70 xl:gap-80 2xl:gap-96 3xl:gap-[560px] 4xl:gap-[620px] sm:px-[100px] md:px-[120px] lg:px-[80px] xl:px-[150px] xl:mx-[100px] 2xl:mx-[220px] 3xl:mx-[240px] 4xl:mx-[360px] 5xl:mx-[450px]">
+              <VerticleEl className="left-[3%] top-[30%] !text-[#231F20] z-10">
                 SERVICES
               </VerticleEl>
               {serviceData.map((service, i) => (

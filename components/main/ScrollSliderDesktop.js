@@ -27,7 +27,11 @@ const ScrollSliderDesktop = ({ serviceData }) => {
   }, [screenWidth]);
 
   function getScreenWidth() {
-    if (screenWidth > 1800) {
+    if (screenWidth > 2200) {
+      return "-160vw";
+    } else if (screenWidth > 2000 && screenWidth <= 2200) {
+      return "-170vw";
+    } else if (screenWidth > 1800 && screenWidth <= 2000) {
       return "-190vw";
     } else if (screenWidth >= 1600 && screenWidth <= 1800) {
       return "-205vw";

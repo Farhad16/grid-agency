@@ -1,9 +1,10 @@
+import React, { useEffect, useRef, useState } from "react";
+import VerticleEl from "../shared/VerticleEl";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { talkData } from "@/constance/talks.data";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef } from "react";
-import VerticleEl from "../shared/VerticleEl";
 import dayjs from "dayjs";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -14,23 +15,29 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
 
   function getScreenWidth() {
     if (screenWidth > 2250) {
-      return "-40vw";
-    } else if (screenWidth > 2000 && screenWidth <= 2250) {
       return "-55vw";
-    } else if (screenWidth > 1950 && screenWidth <= 2000) {
+    } else if (screenWidth > 2000 && screenWidth <= 2250) {
       return "-60vw";
+    } else if (screenWidth > 1950 && screenWidth <= 2000) {
+      return "-80vw";
     } else if (screenWidth > 1650 && screenWidth <= 1950) {
       return "-90vw";
-    } else if ((screenWidth) => 1400 && screenWidth <= 1650) {
+    } else if (screenWidth > 1350 && screenWidth <= 1650) {
       return "-125vw";
-    } else if (screenWidth >= 900 && screenWidth < 1400) {
+    } else if (screenWidth > 1250 && screenWidth <= 1350) {
+      return "-150vw";
+    } else if (screenWidth > 1150 && screenWidth <= 1250) {
+      return "-170vw";
+    } else if (screenWidth > 900 && screenWidth <= 1150) {
       return "-185vw";
-    } else if (screenWidth >= 700 && screenWidth < 900) {
+    } else if (screenWidth > 800 && screenWidth <= 900) {
       return "-225vw";
-    } else if (screenWidth < 700) {
-      return "-290vw";
+    } else if (screenWidth <= 800) {
+      return "-260vw";
     }
   }
+
+  console.log(getScreenWidth());
 
   useEffect(() => {
     const pin = gsap.fromTo(
@@ -66,51 +73,59 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row">
           <div className="flex background-text xl:pr-[300px] pt-[50px] items-center justify-center">
-            <div className="flex gap-72 mr-[300px] px-[150px] mt-6">
+            <div className="flex gap-72 mr-[300px] px-[150px]">
               <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[0%] !text-light-50 z-10">
                 STUPID TALKS
               </VerticleEl>
               {blogData.map((talk, i) => (
                 <div
                   key={talk.id}
-                  className="relative w-[350px] h-[500px] sm:w-[450px] sm:h-[500px] md:w-[500px] md:h-[600px] lg:w-[710px] lg:h-[800px] mb-[50px] z-10"
+                  className="relative w-[350px] h-[500px] sm:w-[450px] sm:h-[500px] md:w-[500px] md:h-[600px] lg:w-[710px] lg:h-[800px] 4xl:w-[820px] 4xl:h-[840px] mb-[50px] z-10"
+                  style={{
+                    backgroundImage: `#cdcdcd`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100% auto",
+                    backgroundPosition: "top",
+                  }}
                 >
                   <div
-                    className={`flex flex-row lg:min-w-[900px] sm:min-w-[750px] min-w-[600px] z-10 pt-2 h-[100vh] ${
+                    className={`flex flex-row min-w-[600px] sm:min-w-[750px] lg:min-w-[900px] z-10 pt-2 h-[100vh] ${
                       i % 2 === 0
                         ? "items-start"
-                        : "items-end sm:mt-[-150px] md:mt-[-120px]"
+                        : "items-end -mt-[100px] lg:-mt-[50px] "
                     }`}
                     key={i}
                   >
-                    <div className="flex gap-6 items-start relative">
+                    <div className="flex gap-6 items-start">
                       <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">
                         0{i + 1}
                       </span>
                       <div className="relative">
                         <img
-                          className="sm:max-w-[450px] lg:max-w-[600px] 4xl:max-w-[700px] h-[250px] sm:h-[280px] lg:h-[385px] 4xl:h-[425px] rounded-xl"
+                          className="max-w-[450px] lg:max-w-[600px] 4xl:max-w-[750px] h-[250px] sm:h-[280px] lg:h-[385px] 4xl:h-[500px] rounded-xl"
                           src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${talk.featured_image}`}
                           alt="img"
                         />
                         <Link
                           href={`/blogs/${talk.slug}`}
-                          className="hover:no-underline no-underline hover:text-light-50 font-extrabold absolute text-4xl sm:text-[60px] lg:text-[70px] text-light-50 top-[40%] sm:-right-[200px] -right-[100px] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8"
+                          className="hover:no-underline no-underline hover:text-light-50 font-extrabold absolute text-4xl sm:text-[60px] lg:text-[70px] 4xl:text-[80px] text-light-50 top-[40%] -right-[20%] sm:-right-[30%] lg:-right-[40%] w-[100%] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8"
                         >
                           {talk.title}
                         </Link>
                       </div>
                       <p className="text-sm md:text-base lg:text-lg font-normal tracking-widest ml-8 w-[140px]">
-                        {dayjs(talk.created_at).format("DD MMMM YYYY")}
+                        {dayjs(talk.date).format("DD MMM YYYY")}
                       </p>
-                      {i === blogData.length - 1 && (
-                        <VerticleEl className="-rotate-90 font-extralight text-xs sm:text-[21px]tracking-[6.93px] !text-yellow-550 z-10 absolute lg:-right-[20%] 3xl:-right-[15%] top-[40%]">
-                          <span onClick={workRoute} className="cursor-pointer">
-                            READ MORE
-                          </span>
-                        </VerticleEl>
-                      )}
                     </div>
+                    {i === blogData.length - 1 && (
+                      <p
+                        onClick={workRoute}
+                        className="sm:mt-40 lg:mt-80 cursor-pointer gap-4 -rotate-90 font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
+                      >
+                        <span>READ </span> <span>MORE</span>
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}

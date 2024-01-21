@@ -1,18 +1,36 @@
-import React from "react";
+"use client";
+import { getCategories, getClients } from "@/apis/case.api";
+import React, { useEffect, useState } from "react";
 
-const budgetOptions = [
-  { value: "", label: "Client", disabled: true, selected: true },
-  { value: "750-999", label: "750-999" },
-  { value: "1K", label: "1K" },
-];
+const StupidWork = ({ setSelectClient, setSelectCategory }) => {
+  const [cliets, setClients] = useState([]);
+  const [categories, setCategories] = useState([]);
 
-const catagory = [
-  { value: "", label: "Catagory", disabled: true, selected: true },
-  { value: "750-999", label: "750-999" },
-  { value: "1K", label: "1K" },
-];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getClients();
+        const category = await getCategories();
+        setClients(data);
+        setCategories(category);
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
-const StupidWork = async () => {
+    fetchData();
+  }, []);
+
+  const handleClientChange = (event) => {
+    const selectedClient = event.target.value;
+    setSelectClient(selectedClient);
+  };
+
+  const handleCategoryChange = (event) => {
+    const selectedCategory = event.target.value;
+    setSelectCategory(selectedCategory);
+  };
+
   return (
     <div className="flex flex-col sm:px-[100px] px-14">
       <div className="flex flex-col relative">
@@ -32,33 +50,45 @@ const StupidWork = async () => {
           WORK
         </p>
       </div>
-      <div className="flex items-center gap-4 border-b border-yellow-550 h-fit pb-2 w-[300px] mt-20">
-        <select className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]">
-          {budgetOptions.map((option) => (
-            <option
-              key={option.value}
-              value={option.value}
-              disabled={option.disabled}
-              selected={option.selected}
-              className="text-[#e6e0d299] opacity-50"
-            >
-              {option.label}
-            </option>
-          ))}
+      <div className="flex items-center gap-4 border-b border-yellow-550 h-fit pb-2 w-[400px] mt-20">
+        <select
+          onChange={handleClientChange}
+          className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]"
+        >
+          <option disabled className="text-[#e6e0d299] opacity-50" selected>
+            Cliets
+          </option>
+          {cliets &&
+            cliets.length > 0 &&
+            cliets.map((option, i) => (
+              <option
+                key={i}
+                value={option.client_name}
+                className="text-[#e6e0d299] opacity-50"
+              >
+                {option.client_name}
+              </option>
+            ))}
         </select>
         <p className="text-yellow-550">OR</p>
-        <select className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]">
-          {catagory.map((option) => (
-            <option
-              key={option.value}
-              value={option.value}
-              disabled={option.disabled}
-              selected={option.selected}
-              className="text-[#e6e0d299] opacity-50"
-            >
-              {option.label}
-            </option>
-          ))}
+        <select
+          onChange={handleCategoryChange}
+          className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]"
+        >
+          <option disabled className="text-[#e6e0d299] opacity-50" selected>
+            Category
+          </option>
+          {categories &&
+            categories.length > 0 &&
+            categories.map((option, i) => (
+              <option
+                key={i}
+                value={option.client_name}
+                className="text-[#e6e0d299] opacity-50"
+              >
+                {option.name}
+              </option>
+            ))}
         </select>
       </div>
     </div>

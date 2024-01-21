@@ -53,7 +53,7 @@ const SelectedWork = () => {
             </VerticleEl>
           </Wrapper>
           {selectedCase?.featured?.map((port) => (
-            <div key={port.slug}>
+            <div key={port.slug} className="flex flex-col">
               <Wrapper className="sm:mt-36 mt-20 flex flex-col mb-4 sm:!px-[100px] !px-14 pt-16">
                 <p className="text-yellow-550 md:text-xl uppercase text-[15px] tracking-[4.5px] font-extrabold">
                   {port.port_client}
@@ -68,7 +68,7 @@ const SelectedWork = () => {
                   <img
                     src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${port.featured_video}`}
                     alt="dish"
-                    className="sm:rounded-xl w-full h-full clip-path-triangle"
+                    className="sm:rounded-xl w-full clip-path-triangle h-[420px] lg:h-[900px] object-cover"
                   />
 
                   <Link

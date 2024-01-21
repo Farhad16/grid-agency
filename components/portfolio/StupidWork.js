@@ -55,7 +55,7 @@ const StupidWork = ({ setSelectClient, setSelectCategory }) => {
           onChange={handleClientChange}
           className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]"
         >
-          <option disabled className="text-[#e6e0d299] opacity-50" selected>
+          <option value="" className="text-[#e6e0d299] opacity-50" selected>
             Cliets
           </option>
           {cliets &&
@@ -75,7 +75,7 @@ const StupidWork = ({ setSelectClient, setSelectCategory }) => {
           onChange={handleCategoryChange}
           className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]"
         >
-          <option disabled className="text-[#e6e0d299] opacity-50" selected>
+          <option value="" className="text-[#e6e0d299] opacity-50" selected>
             Category
           </option>
           {categories &&

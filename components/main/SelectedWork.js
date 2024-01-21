@@ -30,7 +30,7 @@ const SelectedWork = () => {
   }
 
   return (
-    <div className="flex flex-col w-full sm:mt-[200px] pt-16">
+    <div className="flex flex-col w-full sm:mt-[200px] sm:pt-16">
       <div className="flex flex-col relative sm:px-[100px] px-14 mb-20 sm:mb-36">
         <div className="flex gap-6">
           <img

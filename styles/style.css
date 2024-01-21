@@ -12,7 +12,7 @@
 .bg-paper-inner {
   background: url("/assets/main_page/paper.jpg") center/cover;
   background-position: top;
-  background-size: 100%;
+  background-size: 120%;
   background-repeat: no-repeat;
 }
 
@@ -90,7 +90,7 @@
 .background-text-verticle::before {
   content: "stupid";
   position: absolute;
-  top: 20%;
+  top: 25%;
   right: -10%;
   color: #161515;
   text-align: center;

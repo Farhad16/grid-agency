@@ -25,7 +25,6 @@ const PortfolioFunctionalPage = ({ portfolioData }) => {
     });
   }, [data, selectClient, selectCategory]);
 
-  console.log("filteredData", filteredData.length < 0);
   return (
     <>
       <StupidWork

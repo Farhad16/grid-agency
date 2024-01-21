@@ -15,25 +15,21 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
 
   function getScreenWidth() {
     if (screenWidth > 2250) {
-      return "-55vw";
+      return "-40vw";
     } else if (screenWidth > 2000 && screenWidth <= 2250) {
-      return "-60vw";
+      return "-55vw";
     } else if (screenWidth > 1950 && screenWidth <= 2000) {
-      return "-80vw";
+      return "-60vw";
     } else if (screenWidth > 1650 && screenWidth <= 1950) {
       return "-90vw";
-    } else if (screenWidth > 1350 && screenWidth <= 1650) {
+    } else if ((screenWidth) => 1400 && screenWidth <= 1650) {
       return "-125vw";
-    } else if (screenWidth > 1250 && screenWidth <= 1350) {
-      return "-150vw";
-    } else if (screenWidth > 1150 && screenWidth <= 1250) {
-      return "-170vw";
-    } else if (screenWidth > 900 && screenWidth <= 1150) {
+    } else if (screenWidth >= 900 && screenWidth < 1400) {
       return "-185vw";
-    } else if (screenWidth > 800 && screenWidth <= 900) {
+    } else if (screenWidth >= 700 && screenWidth < 900) {
       return "-225vw";
-    } else if (screenWidth <= 800) {
-      return "-260vw";
+    } else if (screenWidth < 700) {
+      return "-290vw";
     }
   }
 
@@ -71,18 +67,17 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
   return (
     <section className="overflow-hidden relative sm:block hidden">
       <div ref={triggerRef}>
-        <div ref={sectionRef} className="flex relative flex-row">
+        <div ref={sectionRef} className="flex relative flex-row ">
           <div className="flex background-text xl:pr-[300px] pt-[50px] items-center justify-center">
-            <div className="flex gap-72 mr-[300px] px-[150px]">
+            <div className="flex gap-56 xl:gap-60 mr-[300px] px-[150px] z-10">
               <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[0%] !text-light-50 z-10">
                 STUPID TALKS
               </VerticleEl>
               {blogData.map((talk, i) => (
                 <div
                   key={talk.id}
-                  className="relative w-[350px] h-[500px] sm:w-[450px] sm:h-[500px] md:w-[500px] md:h-[600px] lg:w-[710px] lg:h-[800px] 4xl:w-[820px] 4xl:h-[840px] mb-[50px] z-10"
+                  className="relative w-[350px] h-[500px] sm:w-[450px] sm:h-[500px] md:w-[500px] md:h-[600px] lg:w-[710px] lg:h-[800px] 5xl:w-[850px] 5xl:h-[900px] mb-[50px]"
                   style={{
-                    backgroundImage: `#cdcdcd`,
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "100% auto",
@@ -90,10 +85,8 @@ const BlogsDesktop = ({ blogData, screenWidth }) => {
                   }}
                 >
                   <div
-                    className={`flex flex-row min-w-[600px] sm:min-w-[750px] lg:min-w-[900px] z-10 pt-2 h-[100vh] ${
-                      i % 2 === 0
-                        ? "items-start"
-                        : "items-end -mt-[100px] lg:-mt-[50px] "
+                    className={`flex flex-row z-10 pt-2 h-[100vh] ${
+                      i % 2 === 0 ? "items-start" : "items-end"
                     }`}
                     key={i}
                   >

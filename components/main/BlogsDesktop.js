@@ -10,18 +10,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 const BlogsDesktop = ({ blogData }) => {
   const blogSection = useRef(null);
-  const blogTarget = useRef(null);
 
   useEffect(() => {
-    const races = blogSection.current;
+    const blogs = blogSection.current;
 
     function getScrollAmount() {
-      let racesWidth = races.scrollWidth;
+      let racesWidth = blogs.scrollWidth;
       return -(racesWidth - window.innerWidth);
     }
 
     const pin = gsap.fromTo(
-      blogSection.current,
+      ".blog-inner",
       {
         translateX: 0,
       },
@@ -30,7 +29,7 @@ const BlogsDesktop = ({ blogData }) => {
         ease: "none",
         duration: 1,
         scrollTrigger: {
-          trigger: blogTarget.current,
+          trigger: ".blog-outer",
           start: `top top+=50`,
           end: "2000 top",
           scrub: 0.6,
@@ -51,15 +50,15 @@ const BlogsDesktop = ({ blogData }) => {
 
   return (
     <section className="overflow-hidden relative">
-      <div ref={blogTarget}>
-        <div ref={blogSection} className="flex relative flex-row">
-          <div className="flex pt-[50px] items-center justify-center px-[100px]">
-            <div className="flex gap-56 xl:gap-60 z-10">
+      <div className="blog-outer">
+        <div ref={blogSection} className="flex relative flex-row blog-inner">
+          <div className="flex background-text pt-[50px] items-center justify-center px-[100px]">
+            <div className="flex gap-48 z-10">
               <VerticleEl className="-left-[2%] top-[50%] z-10">
                 STUPID TALKS
               </VerticleEl>
               {blogData.map((talk, i) => (
-                <div key={talk.id} className="relative mb-[50px] min-h-screen">
+                <div key={talk.id} className="relative h-screen">
                   <div
                     className={`flex gap-6 items-start ${
                       i % 2 === 0 ? "mt-0" : "mt-[100px] lg:mt-[150px]"

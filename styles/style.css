@@ -82,7 +82,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  transform: translate(132%, 15%);
+  transform: translate(132%, 0%);
   width: fit-content;
   letter-spacing: -50px;
 }

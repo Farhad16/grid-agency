@@ -70,10 +70,11 @@ const BlogsDesktop = ({ blogData }) => {
                   }}
                 >
                   <div
-                    className={`flex flex-row z-10 pt-2 h-[100vh] ${
-                      i % 2 === 0 ? "items-start" : "items-end"
+                    className={`flex flex-row z-10 pt-2 h-full ${
+                      i % 2 === 0
+                        ? "items-start"
+                        : "items-end -mt-[100px] lg:-mt-[150px]"
                     }`}
-                    key={i}
                   >
                     <div className="flex gap-6 items-start">
                       <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">

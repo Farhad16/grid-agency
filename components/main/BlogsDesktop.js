@@ -53,7 +53,7 @@ const BlogsDesktop = ({ blogData }) => {
     <section className="overflow-hidden relative">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row">
-          <div className="flex pt-[50px] items-center justify-center px-[100px]">
+          <div className="flex background-text pt-[50px] items-center justify-center px-[100px]">
             <div className="flex gap-56 xl:gap-60 z-10">
               <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[0%] !text-light-50 z-10">
                 STUPID TALKS
@@ -70,11 +70,12 @@ const BlogsDesktop = ({ blogData }) => {
                   }}
                 >
                   <div
-                    className={`flex flex-row z-10 pt-2 h-full ${
-                      i % 2 === 0
-                        ? "items-start"
-                        : "items-end -mt-[100px] lg:-mt-[150px]"
-                    }`}
+                    className={`flex flex-row z-10 pt-2 h-full`}
+                    //  ${
+                    // i % 2 === 0
+                    //   ? "items-start"
+                    //   : "items-end -mt-[100px] lg:-mt-[150px]"
+                    // }`}
                   >
                     <div className="flex gap-6 items-start">
                       <span className="font-extrabold text-lg sm:text-[40px] text-left flex items-end justify-end text-yellow-550">

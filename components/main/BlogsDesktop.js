@@ -53,7 +53,7 @@ const BlogsDesktop = ({ blogData }) => {
       <div className="blog-outer">
         <div ref={blogSection} className="flex relative flex-row blog-inner">
           <div className="flex background-text pt-[50px] items-center justify-center px-[100px]">
-            <div className="flex gap-48 z-10">
+            <div className="flex gap-48 z-10 pr-[100px]">
               <VerticleEl className="-left-[2%] top-[50%] z-10">
                 STUPID TALKS
               </VerticleEl>
@@ -86,7 +86,7 @@ const BlogsDesktop = ({ blogData }) => {
                   </div>
                   {i === blogData.length - 1 && (
                     <VerticleEl
-                      className="-right-[12%] top-[40%] z-10 !text-yellow-550"
+                      className="-right-[20%] top-[40%] z-10 !text-yellow-550"
                       onClick={workRoute}
                     >
                       READ MORE

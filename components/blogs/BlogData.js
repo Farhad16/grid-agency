@@ -3,10 +3,7 @@ import NoDataFound from "../shared/NoDataFound";
 import BlogItem from "./BlogItem";
 import StupidBlogs from "./StupidBlogs";
 
-const BlogData = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs`);
-  const blogData = await res.json();
-
+const BlogData = async ({ blogData }) => {
   return (
     <>
       <StupidBlogs />

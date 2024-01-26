@@ -3,7 +3,7 @@ import { getCategories, getClients } from "@/apis/case.api";
 import React, { useEffect, useState } from "react";
 
 const StupidWork = ({ setSelectClient, setSelectCategory }) => {
-  const [cliets, setClients] = useState([]);
+  const [clients, setClients] = useState([]);
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -56,11 +56,11 @@ const StupidWork = ({ setSelectClient, setSelectCategory }) => {
           className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]"
         >
           <option value="" className="text-[#e6e0d299] opacity-50" selected>
-            Cliets
+            Clients
           </option>
-          {cliets &&
-            cliets.length > 0 &&
-            cliets.map((option, i) => (
+          {clients &&
+            clients.length > 0 &&
+            clients.map((option, i) => (
               <option
                 key={i}
                 value={option.client_name}

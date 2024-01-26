@@ -27,7 +27,7 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
         scrollTrigger: {
           trigger: trigger,
           start: "center center",
-          end: "3000 top",
+          end: "2500 top",
           scrub: 1,
           pin: true,
         },
@@ -44,7 +44,7 @@ function ReusableImageAnimation({ imageSrc, imageAlt, scale }) {
       scrollTrigger: {
         trigger: trigger,
         start: "center center",
-        end: "3500 top",
+        end: "2500 top",
         scrub: 0.6,
       },
     });

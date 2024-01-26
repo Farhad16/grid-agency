@@ -4,10 +4,13 @@ import { CircularProgress } from "@mui/material";
 import BlogsDesktop from "./BlogsDesktop";
 import BlogMobile from "./BlogMobile";
 import { getAllBlogs } from "@/apis/blogs.api";
+import { useMediaQuery } from "react-responsive";
 
 const Services = () => {
   const [loading, setLoading] = useState(true);
   const [blogData, setBlogData] = useState([]);
+
+  const isMobile = useMediaQuery({ maxWidth: 640 });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,8 +36,11 @@ const Services = () => {
         />
       ) : blogData && blogData.length > 0 ? (
         <>
-          <BlogsDesktop blogData={blogData} />
-          <BlogMobile blogData={blogData} />
+          {isMobile ? (
+            <BlogMobile blogData={blogData} />
+          ) : (
+            <BlogsDesktop blogData={blogData} />
+          )}
         </>
       ) : (
         <NoDataFound data="blog" className="!text-light-50 py-20" />

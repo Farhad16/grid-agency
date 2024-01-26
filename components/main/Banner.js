@@ -34,7 +34,10 @@ const Banner = ({ setHideScrollButton }) => {
   }, [isVisible]);
 
   return (
-    <Wrapper className="flex items-center justify-center sm:px-[100px] px-14 banner overflow-hidden">
+    <Wrapper
+      className="flex items-center justify-center sm:px-[100px] px-14 banner overflow-hidden pt-[60px] sm:pt-0"
+      id="banner"
+    >
       <div className="flex flex-col" ref={ref}>
         <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-extrabold mb-3">
           We make
@@ -49,7 +52,7 @@ const Banner = ({ setHideScrollButton }) => {
                 alt="cat"
                 width={220}
                 height={220}
-                className="absolute -left-[60%] -top-[50%] sm:-top-[10%] sm:-left-[20%] lg:-top-[40%] lg:-left-[40%] max-w-[70px] sm:max-w-[100px] sm:w-[100px] md:w-[150px] lg:max-w-[220px]"
+                className="absolute -left-[60%] -top-[30%] sm:-top-[10%] sm:-left-[20%] lg:-top-[40%] lg:-left-[40%] max-w-[70px] sm:max-w-[100px] sm:w-[100px] md:w-[150px] lg:max-w-[220px]"
               />
             </div>
             d
@@ -71,7 +74,7 @@ const Banner = ({ setHideScrollButton }) => {
           </div>
         </div>
         <div className="relative mt-[220px] flex items-center sm:!justify-start justify-center">
-          <VerticleEl className="-left-20 -top-8 md:-left-[24%] md:top-[-20%] lg:-left-[180px] lg:top-14 ">
+          <VerticleEl className="-left-16 -top-8 md:-left-[24%] md:top-[-20%] lg:-left-[180px] lg:top-14 ">
             WHO WE ARE
           </VerticleEl>
           <p className="sm:leading-normal leading-[34px] text-light-50 text-[24px] md:text-[28px] lg:text-[34px] font-medium sm:tracking-[-1.7px] tracking-[-1.25px] sm:!text-left text-center">
@@ -84,7 +87,7 @@ const Banner = ({ setHideScrollButton }) => {
           </p>
         </div>
         <div className="relative mt-[220px] flex items-center sm:!justify-end justify-center">
-          <VerticleEl className="-right-4 -top-48 md:right-[-5%] md:-top-[100%] lg:-right-[120px] lg:top-14  rotate-[0deg]">
+          <VerticleEl className="-right-2 -top-48 md:right-[-5%] md:-top-[100%] lg:-right-[120px] lg:top-14  rotate-[0deg]">
             <Image
               src="/assets/main_page/line-v.png"
               alt="line"

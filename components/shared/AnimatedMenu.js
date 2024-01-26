@@ -103,7 +103,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
                 menu
               </motion.div>
 
-              <motion.div className="flex flex-col gap-8 xl:gap-16 mt-10">
+              <motion.div className="flex flex-col md:gap-8 xl:gap-16 mt-10">
                 <motion.div
                   initial="hidden"
                   animate="visible"
@@ -157,7 +157,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
                     className="text-light-50 hover:text-light-50 hover:no-underline text-[65px] lg:text-[80px] xl:text-[90px] font-extrabold lg:tracking-[-5px] sm:leading-[34px] leading-normal tracking-[-3px] !font-manrope"
                     onClick={() => setOpen(false)}
                   >
-                    our works
+                    our work
                   </Link>
                 </motion.div>
                 <motion.div

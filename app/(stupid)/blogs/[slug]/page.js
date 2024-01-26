@@ -18,7 +18,6 @@ const Page = ({ params }) => {
     const fetchData = async () => {
       try {
         const blogDetailsData = await getBlogsById(slug);
-        console.log("blogDetailsData", blogDetailsData);
 
         setBlogDetails(blogDetailsData);
       } catch (error) {
@@ -58,7 +57,7 @@ const Page = ({ params }) => {
               className="w-full h-full cover"
             />
             <Wrapper>
-              <p className="text-[15px] font-semibold text-light-50 tracking-[3.75px] flex flex-row uppercase">
+              <p className="text-[15px] font-semibold text-light-50 tracking-[3.75px] flex flex-row uppercase flex-wrap">
                 {blogDetails.tags.map((service, i) => (
                   <>
                     <span key={service.id} className="mr-1">

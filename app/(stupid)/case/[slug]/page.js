@@ -31,6 +31,7 @@ const Page = ({ params }) => {
     fetchData();
   }, [slug]);
 
+  console.log(caseDetails?.data);
   const noCaseDetailsExist = Boolean(
     caseDetails.data === null ||
       !caseDetails.data ||
@@ -65,7 +66,7 @@ const Page = ({ params }) => {
             ></video>
 
             <Wrapper>
-              <div className="text-[15px] font-semibold text-light-50 tracking-[3.75px] flex flex-row uppercase items-center">
+              <p className="text-[15px] font-semibold text-light-50 tracking-[3.75px] flex flex-row uppercase flex-wrap">
                 {caseDetails.data.services.map((service, i) => (
                   <>
                     <span key={service.id} className="mr-1">
@@ -73,7 +74,7 @@ const Page = ({ params }) => {
                     </span>
                   </>
                 ))}
-              </div>
+              </p>
             </Wrapper>
           </div>
 
@@ -90,7 +91,23 @@ const Page = ({ params }) => {
           <Wrapper className="flex flex-col mt-[100px] text-[24px] sm:text-[30px]">
             <HTMLParser content={caseDetails.data.description} />
           </Wrapper>
-          <div className="flex flex-col sm:mt-[250px] mt-[100px] gap-4 overflow-hidden border-bottom">
+          <Wrapper className="mt-[100px] sm:mt-[200px] flex flex-col gap-3">
+            {caseDetails.data.work_videos !== null &&
+              caseDetails.data.work_videos &&
+              caseDetails.data.work_videos.map((vi, i) => (
+                <video
+                  key={i}
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${vi}`}
+                  width="100%"
+                  height="100%"
+                  loop
+                  autoPlay
+                  muted
+                  className="w-full h-full cover"
+                ></video>
+              ))}
+          </Wrapper>
+          <div className="flex flex-col mt-[100px] sm:mt-[200px] gap-4 overflow-hidden border-bottom">
             <Wrapper className="sm:!px-[100px]">
               <p className="text-base sm:text-[26px] text-light-50 leading-[30px]">
                 next <span className="font-extrabold">project</span>

@@ -50,10 +50,10 @@ const BlogsDesktop = ({ blogData }) => {
   };
 
   return (
-    <section className="overflow-hidden relative sm:block hidden">
+    <section className="overflow-hidden relative">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row">
-          <div className="flex background-text pt-[50px] items-center justify-center px-[100px]">
+          <div className="flex pt-[50px] items-center justify-center px-[100px]">
             <div className="flex gap-56 xl:gap-60 z-10">
               <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[0%] !text-light-50 z-10">
                 STUPID TALKS
@@ -87,7 +87,7 @@ const BlogsDesktop = ({ blogData }) => {
                         />
                         <Link
                           href={`/blogs/${talk.slug}`}
-                          className="hover:no-underline no-underline hover:text-light-50 font-extrabold absolute text-4xl sm:text-[60px] lg:text-[70px] 4xl:text-[80px] text-light-50 top-[40%] -right-[20%] sm:-right-[30%] lg:-right-[40%] w-[100%] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8"
+                          className="hover:no-underline no-underline active:bg-yellow-600 hover:text-light-50 font-extrabold absolute text-4xl sm:text-[60px] lg:text-[70px] 4xl:text-[80px] text-light-50 top-[40%] -right-[20%] sm:-right-[30%] lg:-right-[40%] w-[100%] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8"
                         >
                           {talk.title}
                         </Link>

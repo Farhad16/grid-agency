@@ -57,7 +57,7 @@ const Footer = () => {
                 >
                   <ArrowForwardIcon className="text-light-50 hover:text-light-50" />
                 </motion.p>
-                <motion.p
+                <motion.div
                   className="sm:min-w-[150px] text-left sm:hidden block"
                   animate={{
                     x: hovered ? 100 : -50,
@@ -67,7 +67,7 @@ const Footer = () => {
                     className="text-light-50 hover:text-light-50"
                     style={{ fontSize: "20px", fontWeight: 200 }}
                   />
-                </motion.p>
+                </motion.div>
                 <motion.span
                   className={`${
                     hovered ? "sm:-ml-44 -ml-10" : "sm:-ml-36 -ml-32"

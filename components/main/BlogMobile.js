@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 
 const BlogMobile = ({ blogData }) => {
   return (
-    <div className="pb-6 w-full relative sm:!hidden block">
+    <div className="pb-6 w-full relative block">
       <div className="background-text-verticle"></div>
       <VerticleEl className="-left-[10%] top-[30%] !text-light-50 z-10 text-[#e6e0d22e] tracking-[3.96px]">
         STUPID TALKS
@@ -29,9 +29,12 @@ const BlogMobile = ({ blogData }) => {
                   src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${talk.featured_image}`}
                   alt="img"
                 />
-                <h1 className="font-extrabold absolute text-[32px] text-light-50 top-[30%] left-[10%] leading-[94.937%] tracking-[-1.63px] hover:bg-yellow-600 transition duration-300 ease">
+                <Link
+                  href={`/blogs/${talk.slug}`}
+                  className="no-underline focus:bg-yellow-600 outline-none hover:no-underline font-extrabold absolute text-[32px] text-light-50 top-[30%] left-[10%] leading-[94.937%] tracking-[-1.63px] hover:bg-yellow-600 transition duration-300 ease"
+                >
                   {talk.title}
-                </h1>
+                </Link>
               </div>
             </div>
           </div>

@@ -83,7 +83,7 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
 
   return (
     <div
-      className="sm:!flex !hidden flex-col items-center justify-center relative z-10 min-h-screen sm:pb-[40px] pb-[70px]"
+      className="sm:!flex !hidden flex-col items-center justify-center relative z-10 min-h-screen"
       style={{ cursor: "none" }}
     >
       {renderContent()}

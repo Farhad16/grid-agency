@@ -7,7 +7,7 @@ import Wrapper from "@/components/shared/Wrapper";
 
 const Page = () => {
   return (
-    <div className="bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen">
+    <div className="bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen overflow-hidden">
       <div className="flex flex-col relative">
         <Wrapper className="relative sm:!px-[100px] !px-10">
           <div className="flex flex-col relative gap-2">

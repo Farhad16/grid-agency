@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 
 const BlogMobile = ({ blogData }) => {
   return (
-    <div className="pb-6 w-full relative block">
+    <div className="pb-6 w-full relative sm:!hidden block">
       <div className="background-text-verticle"></div>
       <VerticleEl className="-left-[10%] top-[30%] !text-light-50 z-10 text-[#e6e0d22e] tracking-[3.96px]">
         STUPID TALKS

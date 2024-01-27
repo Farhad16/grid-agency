@@ -100,9 +100,7 @@ const Page = ({ params }) => {
                   src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${vi}`}
                   width="100%"
                   height="100%"
-                  loop
-                  autoPlay
-                  muted
+                  controls
                   className="w-full h-full cover"
                 ></video>
               ))}

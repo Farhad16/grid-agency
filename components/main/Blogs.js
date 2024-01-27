@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react";
+"use client";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import NoDataFound from "../shared/NoDataFound";
 import { CircularProgress } from "@mui/material";
-import BlogsDesktop from "./BlogsDesktop";
-import BlogMobile from "./BlogMobile";
 import { getAllBlogs } from "@/apis/blogs.api";
-import { useMediaQuery } from "react-responsive";
+
+const BlogsDesktop = lazy(() => import("./BlogsDesktop"));
+const BlogMobile = lazy(() => import("./BlogMobile"));
 
 const Services = () => {
   const [loading, setLoading] = useState(true);
   const [blogData, setBlogData] = useState([]);
-
-  const isMobile = useMediaQuery({ maxWidth: 640 });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,13 +34,19 @@ const Services = () => {
           style={{ color: "#E6E0D2" }}
         />
       ) : blogData && blogData.length > 0 ? (
-        <>
-          {isMobile ? (
-            <BlogMobile blogData={blogData} />
-          ) : (
+        <Suspense
+          fallback={
+            <CircularProgress
+              className="text-light-50 mb-[100px]"
+              style={{ color: "#E6E0D2" }}
+            />
+          }
+        >
+          <>
             <BlogsDesktop blogData={blogData} />
-          )}
-        </>
+            <BlogMobile blogData={blogData} />
+          </>
+        </Suspense>
       ) : (
         <NoDataFound data="blog" className="!text-light-50 py-20" />
       )}

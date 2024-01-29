@@ -7,7 +7,7 @@ const Mesh = () => {
       <img
         src="/assets/about/aline.png"
         alt="aline"
-        className="sm:w-[800px] sm:h-[700px] md:h-[913px] xl:w-[1000px] w-[275px] h-[282px] 2xl:w-[1300px]"
+        className="sm:w-[800px] sm:h-[700px] md:h-[913px] xl:w-[1000px] w-[275px] h-[282px] 2xl:w-[1100px] 4xl:w-[1200px] 5xl:w-[1250px] 6xl:w-[1400px]"
       />
       <div className="flex flex-col absolute top-[10%] left-[10%] md:left-[30%] lg:left-[40%] ">
         <p className="text-yellow-550 font-extrabold text-base sm:text-xl lg:text-[26px] sm:tracking-[5.4px] tracking-[2.4px]">
@@ -15,7 +15,7 @@ const Mesh = () => {
         </p>
       </div>
       <Circle
-        className="xl:top-0 xl:right-[17%] lg:right-[8%] lg:-top-[7%] md:right-[15%] md:top-[5%] top-8 right-14"
+        className="right-14 md:right-[15%] lg:right-[8%] xl:right-[17%] 3xl:right-[22%] 5xl:right-[24%] 6xl:right-[26%] top-8 md:top-[5%] lg:-top-[7%] xl:top-0"
         data={{
           text1: <span>Curiosity</span>,
           text2: (
@@ -27,7 +27,7 @@ const Mesh = () => {
         }}
       />
       <Circle
-        className="xl:left-[48%] xl:top-[35%] md:left-[48%] left-[42%]"
+        className="left-[42%] md:left-[48%] xl:left-[48%] xl:top-[35%]"
         data={{
           text1: (
             <span>
@@ -44,7 +44,7 @@ const Mesh = () => {
         }}
       />
       <Circle
-        className="2xl:top-[20%] xl:left-[10%] xl:top-[28%] lg:left-[0%] lg:top-[20%] md:left-[8%] md:top-[30%] left-5 top-[24%]"
+        className="left-5 md:left-[8%] top-[25%] md:top-[30%] lg:left-[2%] xl:left-[10%] 3xl:left-[18%] 5xl:left-[15%] 6xl:left-[20%] lg:top-[20%] xl:top-[28%] 4xl:top-[24%]"
         data={{
           text1: (
             <span>
@@ -62,7 +62,7 @@ const Mesh = () => {
         }}
       />
       <Circle
-        className="xl:bottom-[4%] xl:left-[32%] lg:left-[33%] lg:bottom-[4%] md:left-[30%] md:bottom-[6%] left-[30%] bottom-16"
+        className="left-[30%] md:left-[30%] lg:left-[33%] xl:left-[32%] 4xl:left-[38%] bottom-16 md:bottom-[6%] lg:bottom-[4%] xl:bottom-[4%] 4xl:bottom-[3%]"
         data={{
           text1: (
             <span>
@@ -82,7 +82,7 @@ const Mesh = () => {
       />
 
       <Circle
-        className="xl:right-[10%] lg:bottom-[25%] md:right-[8%] md:bottom-[30%] right-[5%] bottom-[30%]"
+        className="right-[5%] md:right-[8%] xl:right-[10%] 5xl:right-[18%] 6xl:right-[20%] bottom-[30%] md:bottom-[30%] lg:bottom-[25%]"
         data={{
           text1: (
             <span>

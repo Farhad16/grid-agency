@@ -39,6 +39,11 @@ const Page = ({ params }) => {
       caseDetails.data.error
   );
 
+  const checkFileExtension = (fileExtension) => {
+    const isVideo = ["mp4", "avi", "mkv", "mov"].includes(fileExtension);
+    return isVideo;
+  };
+
   return (
     <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen relative items-center justify-center">
       {loading ? (
@@ -55,15 +60,31 @@ const Page = ({ params }) => {
               title={caseDetails?.data.case_title}
               clientName={caseDetails.data.port_client}
             />
-            <video
-              src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.data.image_file}`}
-              width="100%"
-              height="100%"
-              loop
-              autoPlay
-              muted
-              className="w-full h-full cover"
-            ></video>
+            {checkFileExtension(
+              caseDetails.data.image_file
+                .substring(caseDetails.data.image_file.lastIndexOf(".") + 1)
+                .toLowerCase()
+            ) ? (
+              <video
+                src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.data.image_file}`}
+                width="100%"
+                height="100%"
+                loop
+                autoPlay
+                muted
+                className="w-full h-full cover"
+              ></video>
+            ) : (
+              <img
+                src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.data.image_file}`}
+                width="100%"
+                height="100%"
+                loop
+                autoPlay
+                muted
+                className="w-full h-full cover"
+              />
+            )}
 
             <Wrapper>
               <p className="text-[15px] font-semibold text-light-50 tracking-[3.75px] flex flex-row uppercase flex-wrap">

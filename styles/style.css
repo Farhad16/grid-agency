@@ -82,7 +82,7 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  transform: translate(132%, 0%);
+  transform: translate(132%, 15%);
   width: fit-content;
   letter-spacing: -50px;
 }
@@ -331,4 +331,17 @@ body {
 
 .space-100vh {
   height: 100vh;
+}
+
+a:active {
+  color: #e6e0d2;
+}
+
+.MuiPaginationItem-root{
+  color: #e6e0d2 !important;
+}
+
+.Mui-selected{
+  background: #e6e0d2 !important;
+  color: black !important;
 }

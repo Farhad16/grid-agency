@@ -1,13 +1,14 @@
 "use client";
-import Footer from "@/components/shared/Footer";
-import Wrapper from "@/components/shared/Wrapper";
-import React, { useEffect, useState } from "react";
-import DividerElement from "@/components/shared/DividerElement";
 import { getCaseById } from "@/apis/case.api";
 import AnimateTitle from "@/components/case/AnimateTitle";
+import DividerElement from "@/components/shared/DividerElement";
+import Footer from "@/components/shared/Footer";
 import HTMLParser from "@/components/shared/HTMLParser";
 import NoDataFound from "@/components/shared/NoDataFound";
+import Wrapper from "@/components/shared/Wrapper";
+import { checkFileExtension } from "@/utils/fileChecking";
 import { CircularProgress } from "@mui/material";
+import { useEffect, useState } from "react";
 
 const Page = ({ params }) => {
   const slug = params.slug;
@@ -39,11 +40,6 @@ const Page = ({ params }) => {
       caseDetails.data.error
   );
 
-  const checkFileExtension = (fileExtension) => {
-    const isVideo = ["mp4", "avi", "mkv", "mov"].includes(fileExtension);
-    return isVideo;
-  };
-
   return (
     <div className="flex flex-col text-light-50 bg-[#0A0808] pt-[150px] sm:pt-[200px] min-h-screen relative items-center justify-center">
       {loading ? (
@@ -60,11 +56,7 @@ const Page = ({ params }) => {
               title={caseDetails?.data.case_title}
               clientName={caseDetails.data.port_client}
             />
-            {checkFileExtension(
-              caseDetails.data.image_file
-                .substring(caseDetails.data.image_file.lastIndexOf(".") + 1)
-                .toLowerCase()
-            ) ? (
+            {checkFileExtension(caseDetails.data.image_file) ? (
               <video
                 src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.data.image_file}`}
                 width="100%"
@@ -105,10 +97,23 @@ const Page = ({ params }) => {
             </DividerElement>
           </Wrapper>
 
-          <img
-            src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.data.featured_video}`}
-            alt="featured_video"
-          />
+          {checkFileExtension(caseDetails.data.featured_video) ? (
+            <video
+              src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.data.featured_video}`}
+              width="100%"
+              height="100%"
+              loop
+              autoPlay
+              muted
+              className="w-full h-full cover"
+            ></video>
+          ) : (
+            <img
+              src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.data.featured_video}`}
+              alt="featured_video"
+            />
+          )}
+
           <Wrapper className="flex flex-col mt-[100px] text-[24px] sm:text-[30px]">
             <HTMLParser content={caseDetails.data.description} />
           </Wrapper>
@@ -135,11 +140,25 @@ const Page = ({ params }) => {
 
             <Wrapper className="max-h-[350px] sm:!px-[100px] !px-0">
               <a href={`/case/${caseDetails.related_case_study?.slug}`}>
-                <img
-                  src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.related_case_study?.featured_video}`}
-                  alt="pride"
-                  className="sm:rounded-t-xl w-full h-full object-cover"
-                />
+                {checkFileExtension(
+                  caseDetails.related_case_study?.featured_video
+                ) ? (
+                  <video
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.related_case_study?.featured_video}`}
+                    width="100%"
+                    height="100%"
+                    loop
+                    autoPlay
+                    muted
+                    className="w-full h-full cover"
+                  ></video>
+                ) : (
+                  <img
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/${caseDetails.related_case_study?.featured_video}`}
+                    alt="next-project"
+                    className="sm:rounded-t-xl w-full h-full object-cover"
+                  />
+                )}
               </a>
             </Wrapper>
           </div>

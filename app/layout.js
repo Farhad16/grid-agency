@@ -9,7 +9,7 @@ export const metadata = {
     "Independent creative agency empowering businesses to embrace the unconventional.",
   images: [
     {
-      url: "/assets/images/intro/og.png",
+      url: "/assets/intro/og.png",
       width: 1800,
       height: 1600,
       alt: "My custom alt",

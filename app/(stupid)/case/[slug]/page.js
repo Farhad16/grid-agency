@@ -32,7 +32,6 @@ const Page = ({ params }) => {
     fetchData();
   }, [slug]);
 
-  console.log(caseDetails?.data);
   const noCaseDetailsExist = Boolean(
     caseDetails.data === null ||
       !caseDetails.data ||

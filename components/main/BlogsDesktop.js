@@ -3,17 +3,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import VerticleEl from "../shared/VerticleEl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogsDesktop = ({ blogData }) => {
-  const sectionRef = useRef(null);
-  const triggerRef = useRef(null);
-
   useEffect(() => {
-    const races = sectionRef.current;
+    const races = document.getElementById("blogsSection");
 
     function getScrollAmount() {
       let racesWidth = races.scrollWidth;
@@ -21,7 +18,7 @@ const BlogsDesktop = ({ blogData }) => {
     }
 
     const pin = gsap.fromTo(
-      sectionRef.current,
+      races,
       {
         translateX: 0,
       },
@@ -30,7 +27,7 @@ const BlogsDesktop = ({ blogData }) => {
         ease: "none",
         duration: 1,
         scrollTrigger: {
-          trigger: triggerRef.current,
+          trigger: "#triggerElement",
           start: `top top+=50`,
           end: "2000 top",
           scrub: 0.6,
@@ -51,8 +48,8 @@ const BlogsDesktop = ({ blogData }) => {
 
   return (
     <section className="overflow-hidden relative sm:block hidden">
-      <div ref={triggerRef}>
-        <div ref={sectionRef} className="flex relative flex-row">
+      <div id="triggerElement">
+        <div id="blogsSection" className="flex relative flex-row">
           <div className="flex background-text pt-[50px] items-center justify-center px-[100px]">
             <div className="flex gap-56 xl:gap-60 z-10">
               <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[0%] !text-light-50 z-10">

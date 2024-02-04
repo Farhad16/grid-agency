@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import Wrapper from "../shared/Wrapper";
 import Image from "next/image";
+import { useEffect, useMemo, useRef, useState } from "react";
 import VerticleEl from "../shared/VerticleEl";
+import Wrapper from "../shared/Wrapper";
 
 function useOnScreen(ref) {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -35,7 +35,7 @@ const Banner = ({ setHideScrollButton }) => {
 
   return (
     <Wrapper
-      className="flex items-center justify-center sm:px-[100px] px-14 banner overflow-hidden pt-[60px] sm:pt-0"
+      className="flex items-center justify-center sm:px-[100px] px-14 banner overflow-hidden pt-[60px] sm:pt-0 !font-manrope"
       id="banner"
     >
       <div className="flex flex-col" ref={ref}>

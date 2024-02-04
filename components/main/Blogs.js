@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useState, lazy, Suspense } from "react";
-import NoDataFound from "../shared/NoDataFound";
-import { CircularProgress } from "@mui/material";
 import { getAllBlogs } from "@/apis/blogs.api";
+import { CircularProgress } from "@mui/material";
+import { Suspense, lazy, useEffect, useState } from "react";
+import NoDataFound from "../shared/NoDataFound";
 
 const BlogsDesktop = lazy(() => import("./BlogsDesktop"));
 const BlogMobile = lazy(() => import("./BlogMobile"));

@@ -112,7 +112,7 @@ const Page = () => {
             )}
 
             <div
-              className="flex flex-col text-light-50 bg-[#0A0808] sm:pt-[250px] min-h-screen relative overflow-hidden"
+              className="flex flex-col text-light-50 bg-[#0A0808] sm:pt-[250px] min-h-screen relative overflow-hidden !font-manrope"
               id="banner"
               ref={ref}
             >

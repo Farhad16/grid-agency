@@ -1,18 +1,28 @@
 "use client";
 import { getCategories, getClients } from "@/apis/case.api";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const StupidWork = ({ setSelectClient, setSelectCategory }) => {
-  const [clients, setClients] = useState([]);
-  const [categories, setCategories] = useState([]);
+const StupidWork = ({
+  setSelectClient,
+  setSelectCategory,
+  selectClient,
+  selectCategory,
+}) => {
+  const [clients, setClients] = useState([{ name: "Clients", value: "" }]);
+  const [categories, setCategories] = useState([
+    { name: "Categories", value: "" },
+  ]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await getClients();
         const category = await getCategories();
-        setClients(data);
-        setCategories(category);
+        const updatedClients = [...clients, ...data];
+        const updatedCategories = [...categories, ...category];
+
+        setClients(updatedClients);
+        setCategories(updatedCategories);
       } catch (err) {
         console.log(err);
       }
@@ -53,37 +63,33 @@ const StupidWork = ({ setSelectClient, setSelectCategory }) => {
       <div className="flex items-center gap-4 border-b border-yellow-550 h-fit pb-2 max-w-[400px] mt-20">
         <select
           onChange={handleClientChange}
+          value={selectClient}
           className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]"
         >
-          <option value="" className="text-[#e6e0d299] opacity-50" selected>
-            Clients
-          </option>
           {clients &&
             clients.length > 0 &&
             clients.map((option, i) => (
               <option
                 key={i}
-                value={option.client_name}
+                value={option.client_name || option.value}
                 className="text-[#e6e0d299] opacity-50"
               >
-                {option.client_name}
+                {option.client_name || option.name}
               </option>
             ))}
         </select>
         <p className="text-yellow-550">OR</p>
         <select
           onChange={handleCategoryChange}
+          value={selectCategory}
           className="uppercase w-full text-[#e6e0d299] font-semibold focus:outline-none boder-2 bg-transparent placeholder:text-[15px] placeholder:text-shadow placeholder:pl-2 placeholder:opacity-50 placeholder:uppercase  placeholder:text-[#e6e0d299]"
         >
-          <option value="" className="text-[#e6e0d299] opacity-50" selected>
-            Category
-          </option>
           {categories &&
             categories.length > 0 &&
             categories.map((option, i) => (
               <option
                 key={i}
-                value={option.client_name}
+                value={option.client_name || option.value}
                 className="text-[#e6e0d299] opacity-50"
               >
                 {option.name}

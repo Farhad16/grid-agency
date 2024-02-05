@@ -118,7 +118,9 @@ const Page = () => {
                 <LazyServices />
                 <LazySelectedWork />
                 <LazyStupidEnough />
-                <LazyBlogSection />
+                {/* <LazyBlogSection /> */}
+                <LazyServices />
+
                 <LazyFooter />
               </Suspense>
             </div>

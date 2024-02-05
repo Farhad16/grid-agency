@@ -1,6 +1,6 @@
 "use client";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import PortfolioItem from "./PortfolioItem";
 import StupidWork from "./StupidWork";
 
@@ -37,11 +37,12 @@ const PortfolioFunctionalPage = ({ portfolioData, setCount, count }) => {
     if (selectClient || selectCategory) {
       fetchData();
     } else {
+      console.log("this is calling");
       setData(portfolioData.data);
       replace(`${pathname}`);
       setCount(count);
     }
-  }, [selectClient, selectCategory]);
+  }, [selectClient, selectCategory, portfolioData.data]);
 
   const colThree = Math.floor(data.length / 3);
   const colDynamic = data.length % 3;
@@ -89,4 +90,4 @@ const PortfolioFunctionalPage = ({ portfolioData, setCount, count }) => {
   );
 };
 
-export default PortfolioFunctionalPage;
+export default memo(PortfolioFunctionalPage);

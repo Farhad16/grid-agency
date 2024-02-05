@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
-import HTMLParser from "../shared/HTMLParser";
-import VerticleEl from "../shared/VerticleEl";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useLayoutEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import HTMLParser from "../shared/HTMLParser";
+import VerticleEl from "../shared/VerticleEl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +13,7 @@ const ScrollSliderDesktop = ({ serviceData }) => {
 
   const isMobile = useMediaQuery({ maxWidth: 640 });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const races = sectionRef.current;
 
     function getScrollAmount() {
@@ -21,7 +21,7 @@ const ScrollSliderDesktop = ({ serviceData }) => {
       return -(racesWidth - window.innerWidth);
     }
 
-    let top = 50;
+    let top = 40;
     if (isMobile) {
       top = 150;
     }
@@ -53,8 +53,8 @@ const ScrollSliderDesktop = ({ serviceData }) => {
     <section className="overflow-hidden relative">
       <div ref={triggerRef}>
         <div ref={sectionRef} className="flex relative flex-row">
-          <div className="flex bg-paper-inner pl-[40px] sm:pl-[30px] md:pl-[60px] lg:pl-[150px] pr-[50px] xl:pt-[100px] items-center justify-center">
-            <div className="flex gap-20 sm:gap-32 md:gap-56 lg:gap-70 xl:gap-80 2xl:gap-96 3xl:gap-[560px] 4xl:gap-[620px] sm:px-[100px] md:px-[120px] lg:px-[80px] xl:px-[150px] xl:mx-[100px] 2xl:mx-[220px] 3xl:mx-[240px] 4xl:mx-[360px] 5xl:mx-[450px] py-10">
+          <div className="flex bg-paper-inner pl-[40px] sm:pl-[30px] md:pl-[60px] lg:pl-[150px] pr-[50px]lg:pt-[50px] 2xl:pt-[100px] items-center justify-center">
+            <div className="flex gap-20 sm:gap-32 md:gap-56 lg:gap-70 xl:gap-80 2xl:gap-96 3xl:gap-[560px] 4xl:gap-[620px] sm:px-[100px] md:px-[120px] lg:px-[80px] xl:px-[150px] mx-[60px] xl:mx-[100px] 2xl:mx-[220px] 3xl:mx-[240px] 4xl:mx-[360px] 5xl:mx-[450px] py-10">
               <VerticleEl className="left-[3%] top-[30%] !text-[#231F20] z-10">
                 SERVICES
               </VerticleEl>

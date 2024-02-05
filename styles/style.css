@@ -70,7 +70,7 @@
 .background-text::before {
   content: "stupid";
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 0;
   transform: translate(0%, -50%);
   width: fit-content;
@@ -80,9 +80,9 @@
 .background-text::after {
   content: "talks";
   position: absolute;
-  top: 0px;
+  bottom: 0px;
   left: 0px;
-  transform: translate(132%, 15%);
+  transform: translate(132%, 5%);
   width: fit-content;
   letter-spacing: -50px;
 }
@@ -136,11 +136,11 @@
   position: relative;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .background-text::before,
   .background-text::after {
     font-size: 400px;
-    letter-spacing: 10px;
+    letter-spacing: -5px;
   }
 }
 
@@ -337,11 +337,11 @@ a:active {
   color: #e6e0d2;
 }
 
-.MuiPaginationItem-root{
+.MuiPaginationItem-root {
   color: #e6e0d2 !important;
 }
 
-.Mui-selected{
+.Mui-selected {
   background: #e6e0d2 !important;
   color: black !important;
 }

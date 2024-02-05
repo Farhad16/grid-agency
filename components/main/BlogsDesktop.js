@@ -3,18 +3,18 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import VerticleEl from "../shared/VerticleEl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogsDesktop = ({ blogData }) => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const races = document.getElementById("blogsSection");
 
     function getScrollAmount() {
       let racesWidth = races.scrollWidth;
-      return -(racesWidth - window.innerWidth);
+      return -(racesWidth + 50 - window.innerWidth);
     }
 
     const pin = gsap.fromTo(
@@ -33,6 +33,7 @@ const BlogsDesktop = ({ blogData }) => {
           scrub: 0.6,
           pin: true,
           invalidateOnRefresh: true,
+          markers: true,
         },
       }
     );
@@ -68,7 +69,9 @@ const BlogsDesktop = ({ blogData }) => {
                 >
                   <div
                     className={`flex flex-row z-10 pt-2 h-[100vh] ${
-                      i % 2 === 0 ? "items-start" : "items-end"
+                      i % 2 === 0
+                        ? "items-start"
+                        : "items-end -mt-[80px] lg:-mt-[60px] 2xl:-mt-[150px]"
                     }`}
                     key={i}
                   >
@@ -90,13 +93,13 @@ const BlogsDesktop = ({ blogData }) => {
                         </Link>
                       </div>
                       <p className="text-sm md:text-base lg:text-lg font-normal tracking-widest ml-8 w-[140px]">
-                        {dayjs(talk.date).format("DD MMM YYYY")}
+                        {dayjs(talk.created_at).format("DD MMM YYYY")}
                       </p>
                     </div>
                     {i === blogData.length - 1 && (
                       <p
                         onClick={workRoute}
-                        className="-rotate-90 absolute cursor-pointer gap-4 -right-[35%] top-[60%] font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
+                        className="-rotate-90 absolute cursor-pointer gap-4 -right-[50%] lg:-right-[35%] top-[60%] font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
                       >
                         <span>READ </span> <span>MORE</span>
                       </p>

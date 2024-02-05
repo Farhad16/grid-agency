@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Wrapper from "../shared/Wrapper";
-import VerticleEl from "../shared/VerticleEl";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import VerticleEl from "../shared/VerticleEl";
+import Wrapper from "../shared/Wrapper";
 
 const SelectedWork = () => {
   const [selectedCase, setselectedCase] = useState([]);
@@ -30,7 +30,7 @@ const SelectedWork = () => {
   }
 
   return (
-    <div className="flex flex-col w-full sm:mt-[200px] sm:pt-16">
+    <div className="flex flex-col w-full sm:mt-[200px] sm:pt-16 oveflow-hidden">
       <div className="flex flex-col relative sm:px-[100px] px-14 mb-20 sm:mb-36">
         <div className="flex gap-6">
           <img

@@ -116,9 +116,9 @@ const Page = () => {
                 <LazyBanner setHideScrollButton={setHideScrollButton} />
                 <LazyMarqueeText />
                 <LazyServices />
-                <LazyBlogSection />
                 <LazySelectedWork />
                 <LazyStupidEnough />
+                <LazyBlogSection />
                 <LazyFooter />
               </Suspense>
             </div>

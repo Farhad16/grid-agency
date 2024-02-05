@@ -1,4 +1,3 @@
-import { useGSAP } from "@gsap/react";
 import dayjs from "dayjs";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -11,38 +10,38 @@ gsap.registerPlugin(ScrollTrigger);
 
 const BlogsDesktop = ({ blogData }) => {
   const blogSection = useRef();
-  useGSAP(
-    () => {
-      const races = document.getElementById("blogsSection");
+  // useGSAP(
+  //   () => {
+  //     const races = document.getElementById("blogsSection");
 
-      function getScrollAmount() {
-        let racesWidth = races.scrollWidth;
-        return -(racesWidth + 50 - window.innerWidth);
-      }
+  //     function getScrollAmount() {
+  //       let racesWidth = races.scrollWidth;
+  //       return -(racesWidth + 50 - window.innerWidth);
+  //     }
 
-      gsap.fromTo(
-        races,
-        {
-          translateX: 0,
-        },
-        {
-          translateX: `${getScrollAmount()}px`,
-          ease: "none",
-          duration: 1,
-          scrollTrigger: {
-            trigger: "#triggerElement",
-            start: `top top+=50`,
-            end: "2000 top",
-            scrub: 0.6,
-            pin: true,
-            invalidateOnRefresh: true,
-            markers: true,
-          },
-        }
-      );
-    },
-    { scope: blogSection }
-  );
+  //     gsap.fromTo(
+  //       races,
+  //       {
+  //         translateX: 0,
+  //       },
+  //       {
+  //         translateX: `${getScrollAmount()}px`,
+  //         ease: "none",
+  //         duration: 1,
+  //         scrollTrigger: {
+  //           trigger: "#triggerElement",
+  //           start: `top top+=50`,
+  //           end: "2000 top",
+  //           scrub: 0.6,
+  //           pin: true,
+  //           invalidateOnRefresh: true,
+  //           markers: true,
+  //         },
+  //       }
+  //     );
+  //   },
+  //   { scope: blogSection }
+  // );
 
   const router = useRouter();
   const workRoute = () => {

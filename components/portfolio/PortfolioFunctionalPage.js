@@ -37,7 +37,6 @@ const PortfolioFunctionalPage = ({ portfolioData, setCount, count }) => {
     if (selectClient || selectCategory) {
       fetchData();
     } else {
-      console.log("this is calling");
       setData(portfolioData.data);
       replace(`${pathname}`);
       setCount(count);

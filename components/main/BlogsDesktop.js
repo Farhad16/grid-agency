@@ -4,40 +4,45 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useRef } from "react";
 import VerticleEl from "../shared/VerticleEl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogsDesktop = ({ blogData }) => {
-  useGSAP(() => {
-    const races = document.getElementById("blogsSection");
+  const blogSection = useRef();
+  useGSAP(
+    () => {
+      const races = document.getElementById("blogsSection");
 
-    function getScrollAmount() {
-      let racesWidth = races.scrollWidth;
-      return -(racesWidth + 50 - window.innerWidth);
-    }
-
-    gsap.fromTo(
-      races,
-      {
-        translateX: 0,
-      },
-      {
-        translateX: `${getScrollAmount()}px`,
-        ease: "none",
-        duration: 1,
-        scrollTrigger: {
-          trigger: "#triggerElement",
-          start: `top top+=50`,
-          end: "2000 top",
-          scrub: 0.6,
-          pin: true,
-          invalidateOnRefresh: true,
-          markers: true,
-        },
+      function getScrollAmount() {
+        let racesWidth = races.scrollWidth;
+        return -(racesWidth + 50 - window.innerWidth);
       }
-    );
-  });
+
+      gsap.fromTo(
+        races,
+        {
+          translateX: 0,
+        },
+        {
+          translateX: `${getScrollAmount()}px`,
+          ease: "none",
+          duration: 1,
+          scrollTrigger: {
+            trigger: "#triggerElement",
+            start: `top top+=50`,
+            end: "2000 top",
+            scrub: 0.6,
+            pin: true,
+            invalidateOnRefresh: true,
+            markers: true,
+          },
+        }
+      );
+    },
+    { scope: blogSection }
+  );
 
   const router = useRouter();
   const workRoute = () => {
@@ -45,7 +50,10 @@ const BlogsDesktop = ({ blogData }) => {
   };
 
   return (
-    <section className="overflow-hidden relative sm:block hidden">
+    <section
+      className="overflow-hidden relative sm:block hidden"
+      ref={blogSection}
+    >
       <div id="triggerElement">
         <div id="blogsSection" className="flex relative flex-row">
           <div className="flex background-text pt-[50px] items-center justify-center px-[100px]">

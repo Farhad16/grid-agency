@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import HTMLParser from "../shared/HTMLParser";
 import VerticleEl from "../shared/VerticleEl";
@@ -13,7 +13,7 @@ const ScrollSliderDesktop = ({ serviceData }) => {
 
   const isMobile = useMediaQuery({ maxWidth: 640 });
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const races = sectionRef.current;
 
     function getScrollAmount() {

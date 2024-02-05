@@ -1,15 +1,15 @@
+import { useGSAP } from "@gsap/react";
 import dayjs from "dayjs";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useLayoutEffect } from "react";
 import VerticleEl from "../shared/VerticleEl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogsDesktop = ({ blogData }) => {
-  useLayoutEffect(() => {
+  useGSAP(() => {
     const races = document.getElementById("blogsSection");
 
     function getScrollAmount() {
@@ -17,7 +17,7 @@ const BlogsDesktop = ({ blogData }) => {
       return -(racesWidth + 50 - window.innerWidth);
     }
 
-    const pin = gsap.fromTo(
+    gsap.fromTo(
       races,
       {
         translateX: 0,
@@ -37,10 +37,7 @@ const BlogsDesktop = ({ blogData }) => {
         },
       }
     );
-    return () => {
-      pin.kill();
-    };
-  }, []);
+  });
 
   const router = useRouter();
   const workRoute = () => {

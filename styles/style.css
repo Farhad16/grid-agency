@@ -313,26 +313,6 @@ body {
   background: #e1e1ff;
 }
 
-.lightBG {
-  background: #313143;
-}
-
-.space-20vh {
-  height: 20vh;
-}
-
-.space-30vh {
-  height: 30vh;
-}
-
-.space-50vh {
-  height: 50vh;
-}
-
-.space-100vh {
-  height: 100vh;
-}
-
 a:active {
   color: #e6e0d2;
 }
@@ -344,4 +324,37 @@ a:active {
 .Mui-selected {
   background: #e6e0d2 !important;
   color: black !important;
+}
+
+.bloging {
+  width: 300%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.scroll {
+  width: 100vw;
+  height: 100vh;
+  /*   overflow: auto; */
+}
+
+.description.panel p {
+  text-align: center;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box.active {
+  background-color: orange;
+  border: 2px solid white;
 }

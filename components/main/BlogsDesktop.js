@@ -1,3 +1,4 @@
+import { useGSAP } from "@gsap/react";
 import dayjs from "dayjs";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -10,38 +11,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 const BlogsDesktop = ({ blogData }) => {
   const blogSection = useRef();
-  // useGSAP(
-  //   () => {
-  //     const races = document.getElementById("blogsSection");
+  useGSAP(() => {
+    const races = document.getElementById("blogsSection");
 
-  //     function getScrollAmount() {
-  //       let racesWidth = races.scrollWidth;
-  //       return -(racesWidth + 50 - window.innerWidth);
-  //     }
+    function getScrollWidth() {
+      let racesWidth = races.scrollWidth;
+      return -(racesWidth + 50 - window.innerWidth);
+    }
 
-  //     gsap.fromTo(
-  //       races,
-  //       {
-  //         translateX: 0,
-  //       },
-  //       {
-  //         translateX: `${getScrollAmount()}px`,
-  //         ease: "none",
-  //         duration: 1,
-  //         scrollTrigger: {
-  //           trigger: "#triggerElement",
-  //           start: `top top+=50`,
-  //           end: "2000 top",
-  //           scrub: 0.6,
-  //           pin: true,
-  //           invalidateOnRefresh: true,
-  //           markers: true,
-  //         },
-  //       }
-  //     );
-  //   },
-  //   { scope: blogSection }
-  // );
+    gsap.fromTo(
+      races,
+      {
+        translateX: 0,
+      },
+      {
+        translateX: `${getScrollWidth()}px`,
+        ease: "none",
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#triggerElement",
+          start: `top top+=50`,
+          end: "2000 top",
+          scrub: 0.6,
+          pin: true,
+          markers: true,
+        },
+      }
+    );
+  });
 
   const router = useRouter();
   const workRoute = () => {
@@ -55,7 +52,7 @@ const BlogsDesktop = ({ blogData }) => {
     >
       <div id="triggerElement">
         <div id="blogsSection" className="flex relative flex-row">
-          <div className="flex background-text pt-[50px] items-center justify-center px-[100px]">
+          <div className="flex  pt-[50px] items-center justify-center px-[100px]">
             <div className="flex gap-56 xl:gap-60 z-10">
               <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[0%] !text-light-50 z-10">
                 STUPID TALKS

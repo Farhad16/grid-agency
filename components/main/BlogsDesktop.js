@@ -1,31 +1,29 @@
-import { useGSAP } from "@gsap/react";
 import dayjs from "dayjs";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useRef } from "react";
+import { useEffect } from "react";
 import VerticleEl from "../shared/VerticleEl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogsDesktop = ({ blogData }) => {
-  const blogSection = useRef();
-  useGSAP(() => {
+  useEffect(() => {
     const races = document.getElementById("blogsSection");
 
-    function getScrollWidth() {
+    function getScrollAmount() {
       let racesWidth = races.scrollWidth;
       return -(racesWidth + 50 - window.innerWidth);
     }
 
-    gsap.fromTo(
+    const pin = gsap.fromTo(
       races,
       {
         translateX: 0,
       },
       {
-        translateX: `${getScrollWidth()}px`,
+        translateX: `${getScrollAmount()}px`,
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -34,11 +32,14 @@ const BlogsDesktop = ({ blogData }) => {
           end: "2000 top",
           scrub: 0.6,
           pin: true,
-          markers: true,
+          invalidateOnRefresh: true,
         },
       }
     );
-  });
+    return () => {
+      pin.kill();
+    };
+  }, []);
 
   const router = useRouter();
   const workRoute = () => {
@@ -46,10 +47,7 @@ const BlogsDesktop = ({ blogData }) => {
   };
 
   return (
-    <section
-      className="overflow-hidden relative sm:block hidden"
-      ref={blogSection}
-    >
+    <section className="overflow-hidden relative sm:block hidden">
       <div id="triggerElement">
         <div id="blogsSection" className="flex relative flex-row">
           <div className="flex background-text pt-[50px] items-center justify-center px-[100px]">
@@ -60,7 +58,13 @@ const BlogsDesktop = ({ blogData }) => {
               {blogData.map((talk, i) => (
                 <div
                   key={talk.id}
-                  className="relative w-[350px] h-[500px] sm:w-[450px] sm:h-[500px] md:w-[500px] md:h-[600px] lg:w-[710px] lg:h-[800px] 5xl:w-[850px] 5xl:h-[900px] mb-[50px] border"
+                  className="relative w-[350px] h-[500px] sm:w-[450px] sm:h-[500px] md:w-[500px] md:h-[600px] lg:w-[710px] lg:h-[800px] 5xl:w-[850px] 5xl:h-[900px] mb-[50px]"
+                  style={{
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100% auto",
+                    backgroundPosition: "top",
+                  }}
                 >
                   <div
                     className={`flex flex-row z-10 pt-2 h-[100vh] ${

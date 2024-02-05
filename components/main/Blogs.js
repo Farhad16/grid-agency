@@ -1,12 +1,13 @@
 "use client";
 import { getAllBlogs } from "@/apis/blogs.api";
 import { CircularProgress } from "@mui/material";
-import { useEffect, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import NoDataFound from "../shared/NoDataFound";
-import BlogMobile from "./BlogMobile";
-import BlogScroll from "./BlogScroll";
 
-const BlogSection = () => {
+const BlogsDesktop = lazy(() => import("./BlogsDesktop"));
+const BlogMobile = lazy(() => import("./BlogMobile"));
+
+const Services = () => {
   const [loading, setLoading] = useState(true);
   const [blogData, setBlogData] = useState([]);
 
@@ -33,10 +34,19 @@ const BlogSection = () => {
           style={{ color: "#E6E0D2" }}
         />
       ) : blogData && blogData.length > 0 ? (
-        <>
-          <BlogScroll blogData={blogData} />
-          <BlogMobile blogData={blogData} />
-        </>
+        <Suspense
+          fallback={
+            <CircularProgress
+              className="text-light-50 mb-[100px]"
+              style={{ color: "#E6E0D2" }}
+            />
+          }
+        >
+          <>
+            <BlogsDesktop blogData={blogData} />
+            <BlogMobile blogData={blogData} />
+          </>
+        </Suspense>
       ) : (
         <NoDataFound data="blog" className="!text-light-50 py-20" />
       )}
@@ -44,4 +54,4 @@ const BlogSection = () => {
   );
 };
 
-export default BlogSection;
+export default Services;

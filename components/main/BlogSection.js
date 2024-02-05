@@ -4,7 +4,7 @@ import { CircularProgress } from "@mui/material";
 import { useEffect, useState } from "react";
 import NoDataFound from "../shared/NoDataFound";
 import BlogMobile from "./BlogMobile";
-import BlogsDesktop from "./BlogsDesktop";
+import BlogScroll from "./BlogScroll";
 
 const BlogSection = () => {
   const [loading, setLoading] = useState(true);
@@ -34,7 +34,7 @@ const BlogSection = () => {
         />
       ) : blogData && blogData.length > 0 ? (
         <>
-          <BlogsDesktop blogData={blogData} />
+          <BlogScroll blogData={blogData} />
           <BlogMobile blogData={blogData} />
         </>
       ) : (

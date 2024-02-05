@@ -52,7 +52,7 @@ const BlogsDesktop = ({ blogData }) => {
     >
       <div id="triggerElement">
         <div id="blogsSection" className="flex relative flex-row">
-          <div className="flex  pt-[50px] items-center justify-center px-[100px]">
+          <div className="flex background-text pt-[50px] items-center justify-center px-[100px]">
             <div className="flex gap-56 xl:gap-60 z-10">
               <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[0%] !text-light-50 z-10">
                 STUPID TALKS
@@ -60,13 +60,7 @@ const BlogsDesktop = ({ blogData }) => {
               {blogData.map((talk, i) => (
                 <div
                   key={talk.id}
-                  className="relative w-[350px] h-[500px] sm:w-[450px] sm:h-[500px] md:w-[500px] md:h-[600px] lg:w-[710px] lg:h-[800px] 5xl:w-[850px] 5xl:h-[900px] mb-[50px]"
-                  style={{
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "100% auto",
-                    backgroundPosition: "top",
-                  }}
+                  className="relative w-[350px] h-[500px] sm:w-[450px] sm:h-[500px] md:w-[500px] md:h-[600px] lg:w-[710px] lg:h-[800px] 5xl:w-[850px] 5xl:h-[900px] mb-[50px] border"
                 >
                   <div
                     className={`flex flex-row z-10 pt-2 h-[100vh] ${

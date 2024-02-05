@@ -118,8 +118,8 @@ const Page = () => {
                 <LazyServices />
                 <LazySelectedWork />
                 <LazyStupidEnough />
-                {/* <LazyBlogSection /> */}
-                <LazyServices />
+                <LazyBlogSection />
+                {/* <LazyServices /> */}
 
                 <LazyFooter />
               </Suspense>

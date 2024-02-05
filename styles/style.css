@@ -70,7 +70,7 @@
 .background-text::before {
   content: "stupid";
   position: absolute;
-  top: 25%;
+  top: 35%;
   left: 0;
   transform: translate(0%, -50%);
   width: fit-content;
@@ -82,7 +82,7 @@
   position: absolute;
   bottom: 0px;
   left: 0px;
-  transform: translate(132%, 5%);
+  transform: translate(132%, 15%);
   width: fit-content;
   letter-spacing: -50px;
 }

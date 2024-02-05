@@ -6,23 +6,23 @@ import IntroTextThree from "@/components/intro/IntroTextThree";
 import IntroTextTwo from "@/components/intro/IntroTextTwo";
 import Loading from "@/components/intro/Loading";
 import MobileLoading from "@/components/intro/MobileLoading";
-import Banner from "@/components/main/Banner";
-import Blogs from "@/components/main/Blogs";
-import MarqueeText from "@/components/main/MarqueeText";
-import SelectedWork from "@/components/main/SelectedWork";
-import Services from "@/components/main/Services";
-import StupidEnough from "@/components/main/StupidEnough";
-import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
+
+const LazyBanner = lazy(() => import("@/components/main/Banner"));
+const LazyMarqueeText = lazy(() => import("@/components/main/MarqueeText"));
+const LazyServices = lazy(() => import("@/components/main/Services"));
+const LazySelectedWork = lazy(() => import("@/components/main/SelectedWork"));
+const LazyStupidEnough = lazy(() => import("@/components/main/StupidEnough"));
+const LazyBlogSection = lazy(() => import("@/components/main/BlogSection"));
+const LazyFooter = lazy(() => import("@/components/shared/Footer"));
 
 const Page = () => {
   const [step, setStep] = useState(0);
   const [hideScrollButton, setHideScrollButton] = useState(false);
   const [hideIntro, setHideIntro] = useState(false);
-  const ref = useRef();
 
   const handleButtonClick = () => {
     setStep((prevStep) => prevStep + 1);
@@ -111,18 +111,16 @@ const Page = () => {
               </div>
             )}
 
-            <div
-              className="flex flex-col text-light-50 bg-[#0A0808] sm:pt-[250px] min-h-screen relative overflow-hidden !font-manrope"
-              id="banner"
-              ref={ref}
-            >
-              <Banner setHideScrollButton={setHideScrollButton} />
-              <MarqueeText />
-              <Services />
-              <SelectedWork />
-              <StupidEnough />
-              <Blogs />
-              <Footer />
+            <div className="flex flex-col text-light-50 bg-[#0A0808] sm:pt-[250px] min-h-screen relative overflow-hidden !font-manrope">
+              <Suspense fallback={<div>Loading...</div>}>
+                <LazyBanner setHideScrollButton={setHideScrollButton} />
+                <LazyMarqueeText />
+                <LazyServices />
+                <LazySelectedWork />
+                <LazyStupidEnough />
+                <LazyBlogSection />
+                <LazyFooter />
+              </Suspense>
             </div>
           </div>
         </motion.div>

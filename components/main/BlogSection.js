@@ -7,7 +7,7 @@ import NoDataFound from "../shared/NoDataFound";
 const BlogsDesktop = lazy(() => import("./BlogsDesktop"));
 const BlogMobile = lazy(() => import("./BlogMobile"));
 
-const Services = () => {
+const BlogSection = () => {
   const [loading, setLoading] = useState(true);
   const [blogData, setBlogData] = useState([]);
 
@@ -54,4 +54,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default BlogSection;

@@ -11,8 +11,6 @@ import Blogs from "@/components/main/Blogs";
 import MarqueeText from "@/components/main/MarqueeText";
 import SelectedWork from "@/components/main/SelectedWork";
 import Services from "@/components/main/Services";
-import StupidEnough from "@/components/main/StupidEnough";
-import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -120,9 +118,9 @@ const Page = () => {
               <MarqueeText />
               <Services />
               <SelectedWork />
-              <StupidEnough />
+              {/* <StupidEnough /> */}
               <Blogs />
-              <Footer />
+              {/* <Footer /> */}
             </div>
           </div>
         </motion.div>

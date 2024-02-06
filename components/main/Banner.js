@@ -105,7 +105,7 @@ const Banner = ({ setHideScrollButton }) => {
             consistently
             <br />
             <span className="text-yellow-550 font-extrabold">
-              redefine what's attainable period
+              redefine what's attainable.
             </span>
           </p>
         </div>

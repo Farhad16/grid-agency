@@ -1,17 +1,17 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRef } from "react";
 
+gsap.registerPlugin(ScrollTrigger);
 function IntroTextThree() {
-  gsap.registerPlugin(ScrollTrigger);
+  const sectionRef3 = useRef(null);
+  const triggerRef3 = useRef(null);
 
-  const sectionRef = useRef(null);
-  const triggerRef = useRef(null);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    const trigger = triggerRef.current;
+  useGSAP(() => {
+    const section = sectionRef3.current;
+    const trigger = triggerRef3.current;
 
     const pin = gsap.fromTo(
       section,
@@ -57,9 +57,9 @@ function IntroTextThree() {
 
   return (
     <section>
-      <div ref={triggerRef} className="flex items-center justify-center">
+      <div ref={triggerRef3} className="flex items-center justify-center">
         <div
-          ref={sectionRef}
+          ref={sectionRef3}
           className="scroll-section-inner flex items-center justify-center"
         >
           <div className="overlay-three uppercase font-extrabold flex flex-col text-light-50 items-center text-xl text-center relative">

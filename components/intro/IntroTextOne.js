@@ -1,15 +1,16 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function IntroTextOne() {
-  gsap.registerPlugin(ScrollTrigger);
-
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const section = sectionRef.current;
     const trigger = triggerRef.current;
 

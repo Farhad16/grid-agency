@@ -2,13 +2,10 @@
 import GlobalLoading from "@/components/intro/GlobalLoading";
 import ImageAnimationMobile from "@/components/intro/ImageAnimationMobile";
 import IntroTextOne from "@/components/intro/IntroTextOne";
-import IntroTextThree from "@/components/intro/IntroTextThree";
-import IntroTextTwo from "@/components/intro/IntroTextTwo";
 import Loading from "@/components/intro/Loading";
 import MobileLoading from "@/components/intro/MobileLoading";
 import Banner from "@/components/main/Banner";
 import Blogs from "@/components/main/Blogs";
-import MarqueeText from "@/components/main/MarqueeText";
 import SelectedWork from "@/components/main/SelectedWork";
 import Services from "@/components/main/Services";
 import Navbar from "@/components/shared/Navbar";
@@ -103,8 +100,8 @@ const Page = () => {
                 </div>
                 <div className="w-full h-full sm:block hidden overflow-hidden items-center justify-center scroll-section-outer">
                   <IntroTextOne />
-                  <IntroTextTwo />
-                  <IntroTextThree />
+                  {/* <IntroTextTwo />
+                  <IntroTextThree /> */}
                 </div>
               </div>
             )}
@@ -115,12 +112,9 @@ const Page = () => {
               ref={ref}
             >
               <Banner setHideScrollButton={setHideScrollButton} />
-              <MarqueeText />
               <Services />
               <SelectedWork />
-              {/* <StupidEnough /> */}
               <Blogs />
-              {/* <Footer /> */}
             </div>
           </div>
         </motion.div>

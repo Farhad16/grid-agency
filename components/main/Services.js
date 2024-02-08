@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
 import { getServices } from "@/apis/service.api";
-import NoDataFound from "../shared/NoDataFound";
 import { CircularProgress } from "@mui/material";
+import { useEffect, useState } from "react";
+import NoDataFound from "../shared/NoDataFound";
+import MarqueeText from "./MarqueeText";
 import ScrollSliderDesktop from "./ScrollSliderDesktop";
 
 const Services = () => {
@@ -40,28 +41,31 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="w-full relative">
-      <div className="w-full h-full flex items-center justify-center ">
-        {loading ? (
-          <CircularProgress
-            className="text-light-50 mb-[100px]"
-            style={{ color: "#E6E0D2" }}
-          />
-        ) : serviceData.length > 0 ? (
-          <>
-            <ScrollSliderDesktop
-              serviceData={serviceData}
-              screenWidth={screenWidth}
+    <>
+      {!loading && <MarqueeText />}
+      <div className="w-full relative">
+        <div className="w-full h-full flex items-center justify-center ">
+          {loading ? (
+            <CircularProgress
+              className="text-light-50 mb-[100px]"
+              style={{ color: "#E6E0D2" }}
             />
-          </>
-        ) : (
-          <NoDataFound
-            data="service"
-            className="!text-light-50 mt-20 text-4xl"
-          />
-        )}
+          ) : serviceData.length > 0 ? (
+            <>
+              <ScrollSliderDesktop
+                serviceData={serviceData}
+                screenWidth={screenWidth}
+              />
+            </>
+          ) : (
+            <NoDataFound
+              data="service"
+              className="!text-light-50 mt-20 text-4xl"
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

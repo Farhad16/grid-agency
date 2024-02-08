@@ -1,15 +1,15 @@
+import { useGSAP } from "@gsap/react";
 import dayjs from "dayjs";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import VerticleEl from "../shared/VerticleEl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogsDesktop = ({ blogData }) => {
-  useEffect(() => {
+  useGSAP(() => {
     const races = document.getElementById("blogsSection");
 
     function getScrollAmount() {
@@ -50,9 +50,9 @@ const BlogsDesktop = ({ blogData }) => {
     <section className="overflow-hidden relative sm:block hidden">
       <div id="triggerElement">
         <div id="blogsSection" className="flex relative flex-row">
-          <div className="flex background-text pt-[50px] items-center justify-center px-[100px]">
-            <div className="flex gap-56 xl:gap-60 z-10">
-              <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:left-[0%] !text-light-50 z-10">
+          <div className="flex background-text pt-[50px] items-center justify-center px-[120px]">
+            <div className="flex gap-56 xl:gap-60 z-10 lg:pt-6 xl:pt-10">
+              <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:-left-[0%] !text-light-50 z-10">
                 STUPID TALKS
               </VerticleEl>
               {blogData.map((talk, i) => (
@@ -67,7 +67,7 @@ const BlogsDesktop = ({ blogData }) => {
                   }}
                 >
                   <div
-                    className={`flex flex-row z-10 pt-2 h-[100vh] ${
+                    className={`flex flex-row z-10 h-[100vh] ${
                       i % 2 === 0
                         ? "items-start"
                         : "items-end -mt-[80px] lg:-mt-[60px] 2xl:-mt-[150px]"

@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import HTMLParser from "../shared/HTMLParser";
 import VerticleEl from "../shared/VerticleEl";
+import MarqueeText from "./MarqueeText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,6 +13,8 @@ const ScrollSliderDesktop = ({ serviceData }) => {
   const triggerRef = useRef(null);
 
   const isMobile = useMediaQuery({ maxWidth: 640 });
+  const isDesktop = useMediaQuery({ minWidth: 641, maxWidth: 1025 });
+  const isLargeScreen = useMediaQuery({ minWidth: 1640 });
 
   useEffect(() => {
     const races = sectionRef.current;
@@ -21,10 +24,18 @@ const ScrollSliderDesktop = ({ serviceData }) => {
       return -(racesWidth - window.innerWidth);
     }
 
-    let top = 40;
-    if (isMobile) {
+    let top = 90;
+    if (isDesktop) {
       top = 150;
     }
+    // if (isMobile) {
+    //   top = 150;
+    // } else if (isLargeScreen) {
+    //   top = 200;
+    // } else if (isDesktop) {
+    //   top = 80;
+    // }
+
     const pin = gsap.fromTo(
       sectionRef.current,
       {
@@ -50,13 +61,14 @@ const ScrollSliderDesktop = ({ serviceData }) => {
   }, []);
 
   return (
-    <section className="overflow-hidden relative">
+    <section className="overflow-hidden relative pt-[50px]">
       <div ref={triggerRef}>
+        <MarqueeText />
         <div ref={sectionRef} className="flex relative flex-row">
           <div className="flex bg-paper-inner pl-[40px] sm:pl-[30px] md:pl-[60px] lg:pl-[150px] pr-[50px]lg:pt-[50px] 2xl:pt-[100px] items-center justify-center">
             <div className="flex gap-20 sm:gap-32 md:gap-56 lg:gap-70 xl:gap-80 2xl:gap-96 3xl:gap-[560px] 4xl:gap-[620px] sm:px-[100px] md:px-[120px] lg:px-[80px] xl:px-[150px] mx-[60px] xl:mx-[100px] 2xl:mx-[220px] 3xl:mx-[240px] 4xl:mx-[360px] 5xl:mx-[450px] py-10">
-              <VerticleEl className="left-[3%] top-[30%] !text-[#231F20] z-10">
-                SERVICES
+              <VerticleEl className="left-[3%] top-[30%] !text-[#231F20] z-10 uppercase">
+                OUR capabilities
               </VerticleEl>
               {serviceData.map((service, i) => (
                 <div
@@ -87,8 +99,8 @@ const ScrollSliderDesktop = ({ serviceData }) => {
                     </div>
                   </div>
                   {i === serviceData.length && (
-                    <VerticleEl className="-right-[35%] top-[40%] !text-[#231F20] z-10">
-                      OUR CAPABILITIES
+                    <VerticleEl className="-right-[35%] top-[40%] !text-[#231F20] z-10 uppercase">
+                      OUR capabilities
                     </VerticleEl>
                   )}
                 </div>

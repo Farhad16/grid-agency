@@ -1,4 +1,3 @@
-import { menuItem } from "@/constance/menu.data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Drawer } from "rsuite";
@@ -33,7 +32,7 @@ const AnimatedMenu = ({ open, setOpen }) => {
           zIndex: "999",
           background: "transparent !important",
         }}
-        className="top-[8%] sm:top-[12%] h-[92%] sm:h-[88%]"
+        className="top-[8%] xl:top-[12%] h-[92%] xl:h-[88%]"
       >
         <motion.div
           initial={{ opacity: 1, x: "15%" }}

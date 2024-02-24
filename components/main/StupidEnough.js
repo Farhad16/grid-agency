@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 const StupidEnough = () => {
   return (
@@ -13,8 +12,9 @@ const StupidEnough = () => {
         </span>
       </p>
       <Link
+        style={{ textDecoration: "none" }}
         href="/portfolio"
-        className="no-underline hover:no-underline hover:bg-light-50 transition duration-300 ease bg-yellow-550 rotate-[2deg] inline-block text-[18px] sm:text-[29px] text-[#231F20] hover:text-[#231F20] px-4 sm:py-2 font-extrabold tracking-[-1.45px] sm:leading-normal sm:h-[60px]"
+        className="no-underline hover:no-underline hover:bg-light-50 transition duration-300 ease bg-yellow-550 rotate-[2deg] inline-block text-[18px] sm:text-[29px] !text-[#231F20] hover:!text-[#231F20] px-4 sm:py-2 font-extrabold tracking-[-1.45px] sm:leading-normal sm:h-[60px]"
       >
         Boy, we got more
       </Link>

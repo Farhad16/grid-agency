@@ -2,28 +2,11 @@ import { getServices } from "@/apis/service.api";
 import { CircularProgress } from "@mui/material";
 import { useEffect, useState } from "react";
 import NoDataFound from "../shared/NoDataFound";
-import MarqueeText from "./MarqueeText";
 import ScrollSliderDesktop from "./ScrollSliderDesktop";
 
 const Services = () => {
   const [loading, setLoading] = useState(true);
   const [serviceData, setServiceData] = useState([]);
-
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  const updateScreenWidth = () => {
-    setScreenWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    updateScreenWidth();
-
-    window.addEventListener("resize", updateScreenWidth);
-
-    return () => {
-      window.removeEventListener("resize", updateScreenWidth);
-    };
-  }, [screenWidth]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,7 +25,6 @@ const Services = () => {
 
   return (
     <>
-      {!loading && <MarqueeText />}
       <div className="w-full relative">
         <div className="w-full h-full flex items-center justify-center ">
           {loading ? (
@@ -52,10 +34,7 @@ const Services = () => {
             />
           ) : serviceData.length > 0 ? (
             <>
-              <ScrollSliderDesktop
-                serviceData={serviceData}
-                screenWidth={screenWidth}
-              />
+              <ScrollSliderDesktop serviceData={serviceData} />
             </>
           ) : (
             <NoDataFound

@@ -1,4 +1,3 @@
-import React from "react";
 import Circle from "./Circle";
 
 const Mesh = () => {
@@ -73,7 +72,7 @@ const Mesh = () => {
           text2: (
             <span>
               We navigate digital <br /> trends with a <br />
-              practical approach , <br />
+              practical approach, <br />
               finding where you
               <br /> best fit.
             </span>

@@ -35,11 +35,11 @@ const Banner = ({ setHideScrollButton }) => {
 
   return (
     <Wrapper
-      className="flex items-center justify-center sm:px-[100px] px-14 banner overflow-hidden pt-[60px] sm:pt-0 !font-manrope"
+      className="flex items-center justify-center sm:px-[100px] px-14 banner overflow-hidden pt-[100px] sm:pt-0 !font-manrope"
       id="banner"
     >
       <div className="flex flex-col" ref={ref}>
-        <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-extrabold mb-3">
+        <p className="text-light-50 text-4xl md:text-[40px] lg:text-[60px] font-extrabold -mb-2 sm:mb-3">
           We make
         </p>
         <div className="flex flex-col w-fit">
@@ -65,11 +65,11 @@ const Banner = ({ setHideScrollButton }) => {
               className="absolute -bottom-[10px] sm:-bottom-[90px] left-0 sm:max-w-[515px] max-w-[150px]"
             />
           </div>
-          <div className="flex flex-row items-center justify-end mt-3 md:mt-4 lg:mt-6 mr-[-10px] md:mr-[-20px]">
+          <div className="flex flex-row items-center justify-end md:mt-4 lg:mt-6 mr-[-10px] md:mr-[-20px]">
             <img
               src="/assets/main_page/text-ani.gif"
               alt="animated"
-              className="w-[200px] sm:w-[250px] lg:w-[350px] lg:h-[80px]"
+              className="w-[150px] sm:w-[250px] lg:w-[350px] lg:h-[80px]"
             />
           </div>
         </div>
@@ -109,7 +109,7 @@ const Banner = ({ setHideScrollButton }) => {
             </span>
           </p>
         </div>
-        <div className="mt-[220px]">
+        <div className="mt-[220px] mb-[150px]">
           <p className="text-light-50 text-[28px] md:text-[40px] lg:text-[54px] font-medium text-center sm:tracking-[-2.7px] tracking-[-1.05px] sm:leading-normal leading-[34px]">
             We transform the seemingly ‘stupid’
             <br />

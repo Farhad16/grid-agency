@@ -1,6 +1,6 @@
 "use client";
 import { Pagination } from "@mui/material";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import PortfolioFunctionalPage from "./PortfolioFunctionalPage";
 import ProductSkeleton from "./ProductSkeleton";
 
@@ -32,11 +32,14 @@ const PortfolioData = () => {
 
   return (
     <>
-      <PortfolioFunctionalPage
-        portfolioData={data.data}
-        setCount={setCount}
-        count={initialCount}
-      />
+      <Suspense fallback={<ProductSkeleton />}>
+        <PortfolioFunctionalPage
+          portfolioData={data.data}
+          setCount={setCount}
+          count={initialCount}
+        />
+      </Suspense>
+
       <div className="flex justify-center sm:pb-[150px] pb-24 mt-10 text-light-50">
         <Pagination count={count} page={page} onChange={handlePageChange} />
       </div>

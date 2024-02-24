@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import Wrapper from "../shared/Wrapper";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GridHoverTop from "./GridHoverTop";
-import GridHoverBottom from "./GridHoverBottom";
 import Link from "next/link";
+import { useState } from "react";
+import Wrapper from "../shared/Wrapper";
+import GridHoverBottom from "./GridHoverBottom";
+import GridHoverTop from "./GridHoverTop";
 
 const GridAgency = () => {
   const [isTextHovered, setIsTextHovered] = useState(false);
@@ -42,14 +42,16 @@ const GridAgency = () => {
       </Wrapper>
       <Wrapper className="flex items-center justify-end sm:mt-0 mt-10 text-light-50">
         <Link
+          style={{ textDecoration: "none" }}
           href="https://www.instagram.com/gridagencyinc/"
-          className="hover:text-yellow-550 transition duration-300 ease-in-out text-light-50"
+          className="hover:!text-yellow-550 transition duration-300 ease-in-out !text-light-50"
         >
           <InstagramIcon sx={{ fontSize: "50px" }} />
         </Link>
         <Link
+          style={{ textDecoration: "none" }}
           href="https://www.linkedin.com/company/gridcommunications"
-          className="hover:text-yellow-550 transition duration-300 ease-in-out text-light-50"
+          className="hover:!text-yellow-550 transition duration-300 ease-in-out !text-light-50"
         >
           <LinkedInIcon sx={{ fontSize: "50px" }} />
         </Link>

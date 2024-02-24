@@ -1,7 +1,6 @@
-import React from "react";
-import VerticleEl from "../shared/VerticleEl";
-import Link from "next/link";
 import dayjs from "dayjs";
+import Link from "next/link";
+import VerticleEl from "../shared/VerticleEl";
 
 const BlogMobile = ({ blogData }) => {
   return (
@@ -30,8 +29,9 @@ const BlogMobile = ({ blogData }) => {
                   alt="img"
                 />
                 <Link
+                  style={{ textDecoration: "none" }}
                   href={`/blogs/${talk.slug}`}
-                  className="no-underline focus:bg-yellow-600 outline-none hover:no-underline font-extrabold absolute text-[32px] text-light-50 top-[30%] left-[10%] leading-[94.937%] tracking-[-1.63px] hover:bg-yellow-600 transition duration-300 ease"
+                  className="no-underline focus:!bg-yellow-600 outline-none hover:no-underline font-extrabold absolute text-[32px] !text-light-50 top-[30%] left-[10%] leading-[94.937%] tracking-[-1.63px] hover:bg-yellow-600 transition duration-300 ease"
                 >
                   {talk.title}
                 </Link>
@@ -40,8 +40,11 @@ const BlogMobile = ({ blogData }) => {
           </div>
         </div>
       ))}
-      <Link href="/blogs">
-        <p className="no-underline hover:no-underline hover:!text-yellow-550 text-center !text-yellow-550 z-[9999] tracking-[3.96px] pt-16">
+      <Link href="/blogs" style={{ textDecoration: "none" }}>
+        <p
+          className="no-underline hover:no-underline hover:!text-yellow-550 text-center !text-yellow-550 z-[9999] tracking-[3.96px] pt-16"
+          style={{ textDecoration: "none" }}
+        >
           READ MORE
         </p>
       </Link>

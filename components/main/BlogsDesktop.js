@@ -51,14 +51,14 @@ const BlogsDesktop = ({ blogData }) => {
       <div id="triggerElement">
         <div id="blogsSection" className="flex relative flex-row">
           <div className="flex background-text pt-[50px] items-center justify-center px-[120px]">
-            <div className="flex gap-56 xl:gap-60 z-10 lg:pt-6 xl:pt-10">
+            <div className="flex gap-40 z-10 lg:pt-6 xl:pt-10">
               <VerticleEl className="sm:-left-[3%] sm:top-[30%] md:left-[0%] lg:-left-[0%] !text-light-50 z-10">
                 STUPID TALKS
               </VerticleEl>
-              {blogData.map((talk, i) => (
+              {blogData.slice(0, 3).map((talk, i) => (
                 <div
                   key={talk.id}
-                  className="relative w-[350px] h-[500px] sm:w-[450px] sm:h-[500px] md:w-[500px] md:h-[600px] lg:w-[710px] lg:h-[800px] 5xl:w-[850px] 5xl:h-[900px] mb-[50px]"
+                  className="relative min-w-[350px] h-[500px] sm:min-w-[450px] sm:h-[500px] md:min-w-[500px] md:h-[600px] lg:min-w-[710px] lg:h-[800px] 5xl:min-w-[850px] 5xl:h-[900px] mb-[50px]"
                   style={{
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
@@ -70,7 +70,7 @@ const BlogsDesktop = ({ blogData }) => {
                     className={`flex flex-row z-10 h-[100vh] ${
                       i % 2 === 0
                         ? "items-start"
-                        : "items-end -mt-[80px] lg:-mt-[60px] 2xl:-mt-[150px]"
+                        : "items-center 2xl:items-end mt-[80px] 2xl:-mt-[150px]"
                     }`}
                     key={i}
                   >
@@ -85,6 +85,8 @@ const BlogsDesktop = ({ blogData }) => {
                           alt="img"
                         />
                         <Link
+                          style={{ textDecoration: "none" }}
+                          s
                           href={`/blogs/${talk.slug}`}
                           className="hover:no-underline no-underline active:bg-yellow-600 hover:text-light-50 font-extrabold absolute text-4xl sm:text-[60px] lg:text-[70px] 4xl:text-[80px] text-light-50 top-[40%] -right-[20%] sm:-right-[30%] lg:-right-[40%] w-[100%] sm:leading-[70px] tracking-[-3.5px] hover:bg-yellow-600 transition duration-300 ease px-8"
                         >
@@ -95,10 +97,10 @@ const BlogsDesktop = ({ blogData }) => {
                         {dayjs(talk.created_at).format("DD MMM YYYY")}
                       </p>
                     </div>
-                    {i === blogData.length - 1 && (
+                    {i === 2 && (
                       <p
                         onClick={workRoute}
-                        className="-rotate-90 absolute cursor-pointer gap-4 -right-[50%] lg:-right-[35%] top-[60%] font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
+                        className="-rotate-90 absolute cursor-pointer gap-4 -right-[10%] md:-right-[20%] lg:-right-[40%] top-[60%] font-extralight text-xs sm:text-[21px] tracking-[6.93px] !text-yellow-550 z-10 flex flex-row"
                       >
                         <span>READ </span> <span>MORE</span>
                       </p>

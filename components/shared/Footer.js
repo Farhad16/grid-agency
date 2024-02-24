@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
-import Wrapper from "./Wrapper";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import React from "react";
+import Wrapper from "./Wrapper";
 
 const Footer = () => {
   const [hovered, setHovered] = React.useState(false);
@@ -44,6 +44,7 @@ const Footer = () => {
                 idea?
               </p>
               <Link
+                style={{ textDecoration: "none" }}
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
                 href="/contact"
@@ -90,19 +91,28 @@ const Footer = () => {
           </div>
           <div className="uppercase flex flex-col text-light-50 gap-1">
             <span className="sm:hidden">MIAMI, OPENING SOON</span>
-            <span>242 Applewood Cres</span>
-            <span>Concord, ON L4K 4E5</span>
+            <a
+              href="https://www.google.com/maps/dir/43.688379,-79.6165101/grid+communications/@43.7480746,-79.6505914,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x882b34db89136fab:0x2925ba3cafa9d191!2m2!1d-79.5372414!2d43.8084782?entry=ttu"
+              target="blank"
+              className="flex flex-col !text-light-50"
+              style={{ textDecoration: "none" }}
+            >
+              <span>242 Applewood Cres</span>
+              <span>Concord, ON L4K 4E5</span>
+            </a>
           </div>
           <div className="items-center gap-2 text-light-50 sm:hidden">
             <Link
+              style={{ textDecoration: "none" }}
               href="https://www.instagram.com/gridagencyinc/"
-              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
+              className="hover:!text-yellow-550 transition duration-300 ease-in-out outline-none !text-light-50"
             >
               <InstagramIcon />
             </Link>
             <Link
+              style={{ textDecoration: "none" }}
               href="https://www.linkedin.com/company/gridcommunications"
-              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
+              className="hover:!text-yellow-550 transition duration-300 ease-in-out outline-none !text-light-50"
             >
               <LinkedInIcon />
             </Link>
@@ -110,28 +120,32 @@ const Footer = () => {
           <div className="flex flex-row gap-4">
             <div className="uppercase flex flex-col text-light-50 sm:items-end gap-1">
               <Link
+                style={{ textDecoration: "none" }}
                 href="mailto:info@gridagenyinc.ca"
-                className="text-left underline hover:text-light-50 outline-none text-light-50"
+                className="text-left underline hover:!text-light-50 outline-none !text-light-50"
               >
                 info@gridagenyinc.ca
               </Link>
               <Link
+                style={{ textDecoration: "none" }}
                 href="tel:416 557-4773"
-                className="text-left underline hover:text-light-50 outline-none text-light-50"
+                className="text-left underline hover:!text-light-50 outline-none !text-light-50"
               >
                 (416) 557-4773
               </Link>
             </div>
             <div className="sm:flex items-center gap-2 text-light-50 hidden">
               <Link
+                style={{ textDecoration: "none" }}
                 href="https://www.instagram.com/gridagencyinc/"
-                className="hover:text-yellow-550 transition duration-300 ease-in-out text-light-50"
+                className="hover:!text-yellow-550 transition duration-300 ease-in-out !text-light-50"
               >
                 <InstagramIcon />
               </Link>
               <Link
+                style={{ textDecoration: "none" }}
                 href="https://www.linkedin.com/company/gridcommunications"
-                className="hover:text-yellow-550 transition duration-300 ease-in-out text-light-50"
+                className="hover:!text-yellow-550 transition duration-300 ease-in-out !text-light-50"
               >
                 <LinkedInIcon />
               </Link>

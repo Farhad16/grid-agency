@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
-import Wrapper from "./Wrapper";
-import AnimatedMenu from "./AnimatedMenu";
 import Link from "next/link";
+import { useState } from "react";
+import AnimatedMenu from "./AnimatedMenu";
+import Wrapper from "./Wrapper";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -13,9 +13,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative flex flex-col !font-manrope">
+    <div className="relative flex flex-col !font-manrope h-[10%] xl:h-[12%]">
       <Wrapper
-        className="flex items-center justify-between bg-black nav-boxShadow !fixed w-full z-20 h-[10%] sm:h-[12%] !overflow-hidden !pointer-events-auto"
+        className="flex items-center justify-between bg-black nav-boxShadow !fixed w-full z-20 h-[10%] xl:h-[12%] !overflow-hidden !pointer-events-auto"
         style={{ zIndex: 999999 }}
       >
         <Link href="/" className="no-underline hover:no-underline">

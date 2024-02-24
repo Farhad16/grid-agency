@@ -35,6 +35,18 @@
   );
 }
 
+.clip-path-triangle-mobile {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 94%,
+    92.8% 94%,
+    88.4% 100%,
+    83.5% 94%,
+    0% 94%
+  );
+}
+
 .swiper-pagination-bullet {
   background-color: rgb(194, 195, 196);
   height: 12px;
@@ -344,4 +356,22 @@ a:active {
 .Mui-selected {
   background: #e6e0d2 !important;
   color: black !important;
+}
+
+figcaption {
+  display: none;
+}
+
+.mixBg {
+  background: url("/assets/about/mix.png") center/contain;
+}
+
+.manBg {
+  background: url("/assets/about/man-c.gif") center/contain;
+  background-repeat: no-repeat;
+}
+
+.placeholder {
+  background: url("/assets/about/gif-c.gif") center/contain;
+  background-repeat: no-repeat;
 }

@@ -1,13 +1,12 @@
 "use client";
-import React, { useState } from "react";
-import Wrapper from "../shared/Wrapper";
-import Image from "next/image";
-import FormInput from "./FormInput";
-import { useForm } from "react-hook-form";
 import { postContact } from "@/apis/contact.api";
+import Image from "next/image";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import Wrapper from "../shared/Wrapper";
+import FormInput from "./FormInput";
 import FormSelect from "./FormSelect";
-import { CircularProgress } from "@mui/material";
 
 const ContactHeader = () => {
   const [loading, setLoading] = useState(false);
@@ -73,31 +72,31 @@ const ContactHeader = () => {
 
   return (
     <Wrapper className="border-bottom w-full flex flex-col relative contact-bg md:!px-[80px] lg:!px-[100px] sm:pb-[100px] pb-[50px] pt-[150px] sm:pt-[200px]">
-      <div className="flex flex-col md:flex-row items-center lg:gap-16 gap-12 py-10 lg:px-10">
+      <div className="flex flex-col md:flex-row items-center lg:gap-16 gap-12 py-10 xl:px-10">
         <img
           src="/assets/footer/footer.gif"
           layout="responsive"
-          className="lg:w-[308px] md:w-[250px] w-[224px]"
+          className="lg:w-[308px] md:w-[250px] w-[224px] sm:block hidden"
           alt="footergif"
         />
         <div className="flex flex-col ml-0 md:ml-10">
           <div className="flex flex-col">
             <div className="text-center bg-yellow-550 rotate-[2deg] text-[29px] text-[#231F20] px-4 sm:py-1 w-fit xs:-mb-3 -mb-1.5 font-extrabold">
-              talk to us
+              say hello
             </div>
-            <div className="flex text-light-50 md:text-[90px] lg:text-[130px] xs:text-[80px] text-[65px] font-extrabold sm:tracking-[-6.5px] tracking-[-4.5px] leading-[87.424%]">
-              have a
+            <div className="flex flex-row flex-wrap text-light-50 xs:text-[80px] text-[65px] md:text-[90px] lg:text-[110px] xl:text-[130px] font-extrabold sm:tracking-[-6.5px] tracking-[-4.5px] leading-[87.424%]">
+              <div> have a</div>
               <Image
                 src="/assets/main_page/Cat.gif"
                 alt="cat"
                 width={160}
                 height={160}
-                className="w-[120px] h-[120px] sm:mt-0 -mt-6"
+                className="w-[100px] h-[100px] xl:w-[120px] xl:h-[120px] sm:mt-0 -mt-6"
                 objectFit="cover"
               />
             </div>
           </div>
-          <div className="text-light-50 md:text-[90px] lg:text-[130px] xs:text-[80px] text-[65px] font-extrabold relative sm:tracking-[-6.5px] tracking-[-4.5px] md:leading-[130px] leading-[90px] -mt-8">
+          <div className="text-light-50 md:text-[90px] xs:text-[80px] text-[65px] lg:text-[110px] xl:text-[130px]  font-extrabold relative sm:tracking-[-6.5px] tracking-[-4.5px] md:leading-[130px] leading-[90px] -mt-8">
             project in
             <img
               src="/assets/contact/lines.png"
@@ -109,8 +108,8 @@ const ContactHeader = () => {
         </div>
       </div>
 
-      <div className="gap-16 sm:mt-[100px] flex sm:flex-row flex-col-reverse items-center">
-        <div className="flex flex-col lg:ml-16 items-center justify-center text-center">
+      <div className="gap-12 xl:gap-16 sm:mt-[100px] flex sm:flex-row flex-col-reverse">
+        <div className="flex flex-col lg:ml-16 items-center justify-start text-center">
           <p className="bg-yellow-550 rotate-[2deg] inline-block w-fit text-[30px] md:text-[24px] lg:text-[30px] text-[#231F20] px-4 sm:py-0 py-2 font-extrabold leading-[19px] tracking-[-1.5px] sm:leading-normal">
             prefer email?
           </p>

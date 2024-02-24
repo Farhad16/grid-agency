@@ -1,16 +1,15 @@
-import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Wrapper from "../shared/Wrapper";
 import Link from "next/link";
+import Wrapper from "../shared/Wrapper";
 
 const ContactFooter = () => {
   return (
     <Wrapper className="w-full flex flex-col bg-black sm:pb-16 pb-8 sm:!px-[100px] xs:!px-14 px-8">
       <div className="sm:tracking-[3px] flex flex-row justify-between items-center sm:mt-[150px] mt-[50px] text-[10px] md:text-[15px] gap-4">
         <div className="uppercase sm:flex flex-col text-light-50 gap-1 hidden">
-          <p>MIAMI, OPENING SOON</p>
-          <p className="underline">jointheteam@gridagenyinc.ca</p>
+          <span>MIAMI</span>
+          <span>OPENING SOON</span>
         </div>
         <div className="uppercase flex flex-col text-light-50 gap-1">
           <p>242 Applewood Cres</p>
@@ -18,14 +17,16 @@ const ContactFooter = () => {
         </div>
         <div className="items-center gap-2 text-light-50 sm:hidden">
           <Link
+            style={{ textDecoration: "none" }}
             href="https://www.instagram.com/gridagencyinc/"
-            className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
+            className="hover:!text-yellow-550 transition duration-300 ease-in-out outline-none !text-light-50"
           >
             <InstagramIcon />
           </Link>
           <Link
+            style={{ textDecoration: "none" }}
             href="https://www.linkedin.com/company/gridcommunications"
-            className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
+            className="hover:!text-yellow-550 transition duration-300 ease-in-out outline-none !text-light-50"
           >
             <LinkedInIcon />
           </Link>
@@ -37,14 +38,16 @@ const ContactFooter = () => {
           </div>
           <div className="sm:flex items-center gap-2 text-light-50 hidden">
             <Link
+              style={{ textDecoration: "none" }}
               href="https://www.instagram.com/gridagencyinc/"
-              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
+              className="hover:!text-yellow-550 transition duration-300 ease-in-out outline-none !text-light-50"
             >
               <InstagramIcon />
             </Link>
             <Link
+              style={{ textDecoration: "none" }}
               href="https://www.linkedin.com/company/gridcommunications"
-              className="hover:text-yellow-550 transition duration-300 ease-in-out outline-none text-light-50"
+              className="hover:!text-yellow-550 transition duration-300 ease-in-out outline-none !text-light-50"
             >
               <LinkedInIcon />
             </Link>

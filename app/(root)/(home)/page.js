@@ -1,8 +1,7 @@
 "use client";
 import GlobalLoading from "@/components/intro/GlobalLoading";
 import ImageAnimationMobile from "@/components/intro/ImageAnimationMobile";
-import IntroTextOne from "@/components/intro/IntroTextOne";
-import Loading from "@/components/intro/Loading";
+import IntroAndTextScroll from "@/components/intro/IntroAndTextScroll";
 import MobileLoading from "@/components/intro/MobileLoading";
 import Banner from "@/components/main/Banner";
 import Blogs from "@/components/main/Blogs";
@@ -57,7 +56,7 @@ const Page = () => {
   const isMobile = useMediaQuery({ maxWidth: 640 });
 
   return (
-    <div className="flex flex-col text-light-50 bg-[#0A0808] font-manrope">
+    <div className="flex flex-col text-light-50 bg-[#0A0808] font-manrope w-full h-full">
       {step === 0 && (
         <div className={`"fade-container" ${hideIntro ? "hidden" : "block"}`}>
           <GlobalLoading />
@@ -72,17 +71,21 @@ const Page = () => {
         >
           <Navbar />
 
-          <div className="lg:mt-0 mt-[12%]">
+          <div className="mt-[5%] xl:mt-0 overflow-hidden">
+            {!isMobile && (
+              <IntroAndTextScroll
+                hideIntro={hideIntro}
+                step={step}
+                handleButtonClick={handleButtonClick}
+                setStep={setStep}
+                hideScrollButton={hideScrollButton}
+              />
+            )}
+
             {!hideIntro && (
               <div className={`flex-col ${hideIntro ? "hidden" : "flex"}`}>
-                {isMobile ? (
+                {isMobile && (
                   <MobileLoading
-                    step={step}
-                    handleButtonClick={handleButtonClick}
-                    setStep={setStep}
-                  />
-                ) : (
-                  <Loading
                     step={step}
                     handleButtonClick={handleButtonClick}
                     setStep={setStep}
@@ -90,7 +93,7 @@ const Page = () => {
                 )}
 
                 <div className="w-full h-full sm:hidden block">
-                  <div className="flex flex-col scroll-section-outer items-center justify-center mt-[-80px]">
+                  <div className="flex flex-col items-center justify-center mt-[-80px]">
                     <ImageAnimationMobile
                       step={step}
                       handleButtonClick={handleButtonClick}
@@ -98,16 +101,11 @@ const Page = () => {
                     />
                   </div>
                 </div>
-                <div className="w-full h-full sm:block hidden overflow-hidden items-center justify-center scroll-section-outer">
-                  <IntroTextOne />
-                  {/* <IntroTextTwo />
-                  <IntroTextThree /> */}
-                </div>
               </div>
             )}
 
             <div
-              className="flex flex-col text-light-50 bg-[#0A0808] sm:pt-[250px] min-h-screen relative overflow-hidden !font-manrope"
+              className="flex flex-col text-light-50 bg-[#0A0808] sm:pt-[250px] min-h-screen relative overflow-hidden !font-manrope lg:mt-0"
               id="banner"
               ref={ref}
             >

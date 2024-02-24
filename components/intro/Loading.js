@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Loading = ({ step, setStep, handleButtonClick }) => {
   const [play, setPlay] = useState(true);
@@ -44,7 +44,11 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
     switch (step) {
       case 1:
         return (
-          <div className="min-h-screen w-full" onClick={handleStep2}>
+          <div
+            ref={videoSectionRef}
+            className="h-fit w-full video-zoom-in"
+            onClick={handleStep2}
+          >
             <video
               src="/assets/intro/intro-v.mp4"
               width="100%"
@@ -59,7 +63,7 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
 
       case 2:
         return (
-          <div className="min-h-screen w-full" onClick={handlePlay}>
+          <div className="h-fit w-full" onClick={handlePlay}>
             <video
               ref={videoRef}
               src="/assets/intro/intro-video.mp4"
@@ -68,7 +72,7 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
               loop={false}
               autoPlay={play}
               onClick={handlePlay}
-              className={`"w-full h-full cover " ${
+              className={`"w-full h-full object-cover" ${
                 !play
                   ? "cursor-[url(/assets/intro/play.svg),_pointer]"
                   : "cursor-[url(/assets/intro/pause.svg),_pointer]"
@@ -83,7 +87,7 @@ const Loading = ({ step, setStep, handleButtonClick }) => {
 
   return (
     <div
-      className="sm:!flex !hidden flex-col items-center justify-center relative z-10 min-h-screen"
+      className="sm:!flex !hidden flex-col items-center justify-center relative h-fit"
       style={{ cursor: "none" }}
     >
       {renderContent()}

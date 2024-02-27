@@ -28,13 +28,6 @@ const ScrollSliderDesktop = ({ serviceData }) => {
     if (isDesktop) {
       top = 150;
     }
-    // if (isMobile) {
-    //   top = 150;
-    // } else if (isLargeScreen) {
-    //   top = 200;
-    // } else if (isDesktop) {
-    //   top = 80;
-    // }
 
     const pin = gsap.fromTo(
       sectionRef.current,

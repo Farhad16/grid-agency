@@ -375,3 +375,17 @@ figcaption {
   background: url("/assets/about/gif-c.gif") center/contain;
   background-repeat: no-repeat;
 }
+
+.bg-content {
+  background: url("/assets/content/header.png") center/contain;
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bg-work {
+  background: url("/assets/content/work.png") center/cover;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
